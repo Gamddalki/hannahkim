@@ -116,6 +116,7 @@ span{
   color: white;
   line-height: 20px;
   font-size: 15px;
+  display: block;
 }
 `;
 

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Anne of the Black Hair",
+    "subtitle": "Mobile Running Game",
+    "where": "2021 Summer Project at KING",
+    "thumbnail": "/img/projects/AnneoftheBlackHair.jpg",
+    "techStack": "Unity, C#, Aesprite",
+    "startDate": "2021-05",
+    "endDate": "2021-09",
+    "content": "Did you know that Anne was actually black haired? In this running game, no one in the town should know that she is. Change your route to avoid the villagers' eyes and safely deliver the fruit as Marilla asked. Be especially careful not to be seen by children—they spread rumors the fastest! If you lose all the fruit or the news of Anne’s black hair spreads throughout the village, the game is over.",
+    "link": "https://github.com/Gamddalki/Anne-of-BlackHair"
+  },
+  {
+    "id": 2,
+    "title": "reICEcle",
+    "subtitle": "Point-Based Ice Pack Recycling Application",
+    "where": "2021 Software Engineering and Creative Design Project",
+    "thumbnail": "/img/projects/reICEcle.jpg",
+    "techStack": "Software Design, Prototyping, UML (Use Case Scenarios, Sequence Diagrams, Functional Structure), Wireframing",
+    "startDate": "2021-03",
+    "endDate": "2021-06",
+    "content": "reICEcle is a mobile application that aims to collect ice packs from households and rewards users with points. These points can be used at local businesses, helping to boost sales that have declined due to COVID-19.",
+    "link": "https://gamddalki.tistory.com/7"
+  }
+]

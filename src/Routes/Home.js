@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import homeBg from "../img/home.jpg";
 import aboutBg from "../img/about.jpg";
+import projectData from "../data/projects.json";
 
 const Section = styled.section`
   height: ${(props) => props.secHeight || "100vh"};
@@ -44,7 +45,8 @@ const Gallery = styled.div`
 `;
 
 const Thumbnail = styled.div`
-  background: gray;
+  background: ${(props) =>
+    props.bgImg ? `url(${props.bgImg}) center/cover no-repeat` : "gray"};
   display: flex;
   height: 300px;
   align-items: center;
@@ -63,6 +65,7 @@ const TitleOverlay = styled.div`
   background: rgba(0, 0, 0, 0.3);
   padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -74,7 +77,6 @@ const Text = styled.div`
   min-width: 500px;
   width: 100%;
   span {
-    display: block;
     margin: 20px;
   }
 `;
@@ -86,6 +88,8 @@ const AboutText = styled(Text)`
 `;
 
 function Home() {
+  const nav = useNavigate();
+
   React.useEffect(() => {
     const contentsWrappers = document.querySelectorAll(".contents-wrapper");
 
@@ -114,10 +118,15 @@ function Home() {
         <ContentsWrapper className="contents-wrapper">
           <GalleryTitle>Projects</GalleryTitle>
           <Gallery>
-            {[...Array(6)].map((_, i) => (
-              <Thumbnail key={i}>
+            {projectData.map((project) => (
+              <Thumbnail
+                key={project.id}
+                bgImg={project.thumbnail}
+                onClick={() => nav(`/project/${project.id}`)}
+              >
                 <TitleOverlay>
-                  <h3>Project {i + 1}</h3>
+                  <h3>{project.title}</h3>
+                  <span>{project.subtitle}</span>
                 </TitleOverlay>
               </Thumbnail>
             ))}
