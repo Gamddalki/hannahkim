@@ -8,8 +8,14 @@
     "techStack": "Unity, C#, Aesprite",
     "startDate": "2021-05",
     "endDate": "2021-09",
-    "content": "Did you know that Anne was actually black haired? In this running game, no one in the town should know that she is. Change your route to avoid the villagers' eyes and safely deliver the fruit as Marilla asked. Be especially careful not to be seen by children—they spread rumors the fastest! If you lose all the fruit or the news of Anne’s black hair spreads throughout the village, the game is over.",
-    "link": "https://github.com/Gamddalki/Anne-of-BlackHair"
+    "summary": "Did you know that Anne was actually black haired? In this running game, no one in the town should know that she is. Change your route to avoid the villagers' eyes and safely deliver the fruit as Marilla asked. Be especially careful not to be seen by children—they spread rumors the fastest! If you lose all the fruit or the news of Anne’s black hair spreads throughout the village, the game is over.",
+    "link": "https://github.com/Gamddalki/Anne-of-BlackHair",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/AnneoftheBlackHair2.png"
+      }
+    ]
   },
   {
     "id": 2,
@@ -20,7 +26,167 @@
     "techStack": "Software Design, Prototyping, UML (Use Case Scenarios, Sequence Diagrams, Functional Structure), Wireframing",
     "startDate": "2021-03",
     "endDate": "2021-06",
-    "content": "reICEcle is a mobile application that aims to collect ice packs from households and rewards users with points. These points can be used at local businesses, helping to boost sales that have declined due to COVID-19.",
-    "link": "https://gamddalki.tistory.com/7"
+    "summary": "reICEcle is a mobile application that aims to collect ice packs from households and rewards users with points. These points can be used at local businesses, helping to boost sales that have declined due to COVID-19.",
+    "link": "https://gamddalki.tistory.com/7",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/reICEcle1.png"
+      },
+      {
+        "type": "text",
+        "value": "As the project manager, I led the team through a structured process of selecting a project topic. We began by brainstorming recent problems and narrowing them down to four key issues based on individual evaluations. After defining solutions for each, we analyzed their feasibility, demand, and relevance, selecting the final topic. We then conducted a thorough investigation, utilizing the 5 Whys method to define the true problem, followed by in-depth research into the severity of the issue, current solutions, and similar case studies. After collecting data, I facilitated a brainstorming session to generate ideas for an ice pack recycling system. We grouped similar ideas and clearly defined the core features of the 'Point-based Ice Pack Recycling Service' project."
+      },
+      {
+        "type": "text",
+        "value": "In the detailed design phase of the project, we specifically defined the user environment and development environment, created service usage scenarios, and developed use case diagrams and use case lists to form an overview of the system. Based on this, we then created detailed scenarios for each use case and drew sequence diagrams."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/reICEcle2.png"
+      },
+      {
+        "type": "text",
+        "value": "Next, we refined the detailed features by creating a functional structure diagram, a feature list, and mapping the functions to the screens. We then designed the screen layouts and transition flow diagrams, followed by protocol design, and ultimately developed the final prototype."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/reICEcle3.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Sun the Light",
+    "subtitle": "Classic PC Shooting Game",
+    "where": "3rd MaKINGJam first-place winning work",
+    "thumbnail": "/img/projects/SunTheLight3.gif",
+    "techStack": "Unity, C#, Aesprite",
+    "startDate": "2022-11",
+    "endDate": "2023-01",
+    "summary": "Helios, the God of the Sun loses his Sun one day. Let’s go find out what happened with the Golden Chariot.",
+    "link": "https://github.com/22MaKINGJam/Sun-the-Light",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight.jpg"
+      },
+      {
+        "type": "text",
+        "value": "I designed the scenario for this classic PC shooting game where the story follows Helios, the First Sun God, who rises each day from the eastern palace and sinks into the land of the Hesperides in the west. However, the sun mysteriously vanishes one day, Helios must embark on a quest to recover it, risking his fame and his fragile position in Olympus. The game captures the mythological journey of Helios and the tension surrounding his struggle to maintain control over the sun, blending ancient myth with an action-packed adventure."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight1.gif"
+      },
+      {
+        "type": "text",
+        "value": "The scenario is given through the animation at the beginning of the game. I joined in development of the animations."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight2.gif"
+      },
+      {
+        "type": "text",
+        "value": "The player controls the chariot, avoiding or attacking light winds, strong winds, and dark clouds. Contact with the wind causes immediate damage, while successfully attacking results in points. Additionally, if the chariot is driven too low, villages will burn, and if driven too high, the roars of constellations will be heard. In both cases, the player will take damage. The player can use a skill that shoots fire in all directions after a certain period."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight3.gif"
+      },
+      {
+        "type": "text",
+        "value": "At specific level, thunderlight also comes out with daner sign. Helios gets to meet the Boss mob, Dionysos. Or maybe... another one."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight4.gif"
+      },
+      {
+        "type": "text",
+        "value": "Player gets to find out what happened to Helios, Dyonisos, and Zeus with Game Over / Clear Animation."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Canticum Choir",
+    "subtitle": "Webpage",
+    "where": "Freelance Web Development Project",
+    "thumbnail": "/img/projects/Canticum.png",
+    "techStack": "TypeScript, React, Node.js, MySQL",
+    "startDate": "2023-02",
+    "endDate": "2024-07",
+    "summary": "Designed UX/XI and Developed the whole webpage.",
+    "link": "http://canticum.co.kr/",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/Canticum1.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "EtoE",
+    "subtitle": "Webpage",
+    "where": "Freelance Web Development Project",
+    "thumbnail": "/img/projects/Etoe.gif",
+    "techStack": "pug, SCSS, Node.js",
+    "startDate": "2022-02",
+    "endDate": "2022-08",
+    "summary": "Designed UX/XI and Developed the whole webpage.",
+    "link": "http://www.etoe.co.kr/",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/EtoE1.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "HalmaeYakson",
+    "subtitle": "Household Medicine Delivery Service Application",
+    "where": "EWHA Abeek Design-Thinking Prototype Development Education Award-winning work",
+    "thumbnail": "/img/projects/HalmaeYakson.png",
+    "techStack": "Design Thinking, Software Design, Prototyping, Wireframing",
+    "startDate": "2021-08",
+    "endDate": "2021-08",
+    "summary": "Led the project, ‘Delivery service application of household medicines and other supplies’.",
+    "link": "https://gamddalki.tistory.com/4",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/HalmaeYakson1.png"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Eat:WHA",
+    "subtitle": "Ewha Campus Restaurant Guide Web Application",
+    "where": "2022 Open SW Platform Project",
+    "thumbnail": "/img/projects/EatWHA.gif",
+    "techStack": "HTML, CSS, JS, Python, Python Flask, Firebase",
+    "startDate": "2022-09",
+    "endDate": "2022-12",
+    "summary": "Eat:WHA, the future we crEATe! – A Web Application for Busy Ewha Students to Find the Best Restaurants around campus.",
+    "link": "https://github.com/Gamddalki/EatWHA",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/EatWHA1.png"
+      },
+      {
+        "type": "text",
+        "value": "We developed an intuitive web application that allows users to check a list of restaurants around Ewha Campus based on location, using a cute map feature."
+      },
+      {
+        "type": "text",
+        "value": "I was responsible for the UI design and backend development of the web page, which includes features such as sign-up, login, logout, and account deletion, as well as restaurant search, menu browsing, themed lists, liking functionality, vegan badges, writing and viewing reviews."
+      }
+    ]
   }
 ]
