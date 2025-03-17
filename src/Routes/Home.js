@@ -122,7 +122,7 @@ function Home() {
         <ContentsWrapper className="contents-wrapper">
           <GalleryTitle>Projects</GalleryTitle>
           <Gallery>
-            {projectData.map((project) => (
+            {sortedProjectData.map((project) => (
               <Thumbnail
                 key={project.id}
                 bgImg={project.thumbnail}
