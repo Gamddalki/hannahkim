@@ -119,7 +119,7 @@ function Home() {
       <Section id="home" secHeight="600px" bgUrl={homeBg}>
         <h1>On a Journey to Discover and Pursue My Passion</h1>
       </Section>
-      <Section id="project" bgColor="#045739">
+      <Section id="project" secHeight="1300px" bgColor="#045739">
         <ContentsWrapper className="contents-wrapper">
           <GalleryTitle>Projects</GalleryTitle>
           <Gallery>
