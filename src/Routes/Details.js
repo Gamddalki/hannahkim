@@ -2,10 +2,18 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import projectData from "../data/projects.json";
+import researchData from "../data/researches.json";
 
-const Container = styled.div`
-  padding: 50px;
+const Section = styled.section`
   background-color: #181617;
+  display: flex;
+  justify-content: center;
+`;
+
+const ContentsWrapper = styled.div`
+  padding: 100px 0;
+  width: 60%;
+  max-width: 820px;
   h1 {
     margin-top: 70px;
   }
@@ -14,14 +22,15 @@ const Container = styled.div`
   }
   h3 {
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   span {
-    margin: 20px;
+    margin: 20px 0;
   }
   a {
     color: white;
-    margin: 20px;
+    margin: 20px 0;
+    display: block;
     cursor: pointer;
     &:hover {
       color: #f36766;
@@ -29,37 +38,66 @@ const Container = styled.div`
   }
 `;
 
+const ContentBlock = styled.div`
+  margin: 40px 0;
+`;
+
 const Image = styled.img`
-  width: 60%;
-  max-width: 500px;
-  height: auto;
-  margin: 20px;
+  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
+  margin: 10px;
 `;
 
 const Details = () => {
-  const { id } = useParams();
-  const project = projectData.find((p) => p.id.toString() === id);
+  const { category, id } = useParams();
+  let data;
 
-  if (!project) {
-    return <Container>Can't find the details.</Container>;
+  if (category === "project") {
+    data = projectData;
+  } else if (category === "research") {
+    data = researchData;
+  }
+
+  console.log(category, id);
+
+  const item = data ? data.find((i) => i.id.toString() === id) : null;
+
+  if (!item) {
+    return <ContentsWrapper>Can't find the details.</ContentsWrapper>;
   }
 
   return (
-    <Container>
-      <h1>{project.title}</h1>
-      <h2>{project.subtitle}</h2>
-      <h3>
-        {project.where} ({project.startDate} ~ {project.endDate})
-      </h3>
-      <Image src={project.thumbnail} alt={project.title} />
-      <span>👩🏻‍💻 Tech Stack: {project.techStack}</span>
-      <span>{project.content}</span>
-      {project.link && (
-        <a href={project.link} target="_blank" rel="noopener noreferrer">
-          🔗 Link to Project
+    <Section>
+      <ContentsWrapper>
+        <h1>{item.title}</h1>
+        <h2>{item.subtitle}</h2>
+        <h3>
+          {category === "project"
+            ? `${item.where} (${item.startDate} ~ ${item.endDate})`
+            : `${item.where} | ${item.date}`}
+        </h3>
+        <span>{item.summary}</span>
+        {category === "project" ? (
+          <span>👩🏻‍💻 Tech Stack: {item.techStack}</span>
+        ) : (
+          <span>🏷️ Index Terms: {item.indexTerms}</span>
+        )}
+        <a href={item.link} target="_blank" rel="noopener noreferrer">
+          {category === "project" ? "🔗 Link to Project" : "🔗 Link to Paper"}
         </a>
-      )}
-    </Container>
+
+        <ContentBlock>
+          {item.content.map((i, index) =>
+            i.type === "text" ? (
+              <span key={index}>{i.value}</span>
+            ) : (
+              <Image key={index} src={i.value} alt="Project img" />
+            )
+          )}
+        </ContentBlock>
+      </ContentsWrapper>
+    </Section>
   );
 };
 

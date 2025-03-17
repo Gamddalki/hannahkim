@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import homeBg from "../img/home.jpg";
 import aboutBg from "../img/about.jpg";
 import projectData from "../data/projects.json";
+import researchData from "../data/researches.json";
 
 const Section = styled.section`
   height: ${(props) => props.secHeight || "100vh"};
@@ -137,14 +138,19 @@ function Home() {
           </Gallery>
         </ContentsWrapper>
       </Section>
-      <Section id="research" bgColor="#C42E2F">
+      <Section id="research" secHeight="700px" bgColor="#C42E2F">
         <ContentsWrapper className="contents-wrapper">
           <GalleryTitle>Researches</GalleryTitle>
           <Gallery>
-            {[...Array(6)].map((_, i) => (
-              <Thumbnail key={i}>
+            {researchData.map((research) => (
+              <Thumbnail
+                key={research.id}
+                bgImg={research.thumbnail}
+                onClick={() => nav(`/research/${research.id}`)}
+              >
                 <TitleOverlay>
-                  <h3>Research {i + 1}</h3>
+                  <h3>{research.title}</h3>
+                  <span>{research.subtitle}</span>
                 </TitleOverlay>
               </Thumbnail>
             ))}
