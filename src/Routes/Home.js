@@ -90,6 +90,10 @@ const AboutText = styled(Text)`
 function Home() {
   const nav = useNavigate();
 
+  const sortedProjectData = projectData.sort((a, b) => {
+    return b.startDate.localeCompare(a.startDate);
+  });
+
   React.useEffect(() => {
     const contentsWrappers = document.querySelectorAll(".contents-wrapper");
 
