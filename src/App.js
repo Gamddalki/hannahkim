@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Routes/Home";
 import Footer from "./Components/Footer";
@@ -16,7 +11,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project/:id" element={<Details />} />
+          <Route path="/:category/:id" element={<Details />} />
         </Routes>
         <Footer />
       </Router>
