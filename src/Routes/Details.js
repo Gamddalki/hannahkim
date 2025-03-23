@@ -5,7 +5,7 @@ import projectData from "../data/projects.json";
 import researchData from "../data/researches.json";
 
 const Section = styled.section`
-  background-color: #181617;
+  background-color: #fdfff5;
   display: flex;
   justify-content: center;
 `;
@@ -15,7 +15,7 @@ const ContentsWrapper = styled.div`
   width: 60%;
   max-width: 820px;
   h1 {
-    margin-top: 70px;
+    margin-top: 50px;
   }
   h2 {
     margin-top: 5px;
@@ -84,12 +84,12 @@ const Details = () => {
       </ToHome>
       <ContentsWrapper>
         <h1>{item.title}</h1>
-        <h2>{item.subtitle}</h2>
-        <h3>
+        <h3>{item.subtitle}</h3>
+        <h4>
           {category === "project"
             ? `${item.where} (${item.startDate} ~ ${item.endDate})`
             : `${item.where} | ${item.date}`}
-        </h3>
+        </h4>
         <span>{item.summary}</span>
         {category === "project" ? (
           <span>👩🏻‍💻 Tech Stack: {item.techStack}</span>
