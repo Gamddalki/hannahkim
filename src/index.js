@@ -6,6 +6,24 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
+    font-family: 'NewYorkRegular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NewYork Regular'), url('/fonts/NewYork.woff') format('woff');
+}
+@font-face {
+    font-family: 'QuastroRegular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quastro Regular'), url('/fonts/Quastro-Rpx0l.woff') format('woff');
+}
+@font-face {
+  font-family: 'Newsreader';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Newsreader'), url('/fonts/Newsreader.woff') format('woff');
+}
+@font-face {
     font-family: 'Paperlogy-8ExtraBold';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
     font-weight: 800;
@@ -94,26 +112,32 @@ button {
     background: none;
   }
 h1 {
-  font-family: 'Paperlogy-8ExtraBold', -apple-system, sans-serif;
-  color: white;
-  line-height: 35px;
-  font-size: 25px;
+  font-family: 'NewYorkRegular', -apple-system, sans-serif;
+  color: #D90311;
+  line-height: 40px;
+  font-size: 30px;
 }
 h2 {
-  font-family: 'Paperlogy-4Regular', -apple-system, sans-serif;
-  color: white;
+  font-family: 'QuastroRegular', -apple-system, sans-serif;
+  color: #D90311;
   line-height: 35px;
   font-size: 25px;
 }
 h3 {
+  font-family: 'Paperlogy-4Regular', -apple-system, sans-serif;
+  color: #D90311;
+  line-height: 35px;
+  font-size: 25px;
+}
+h4 {
   font-family: 'GmarketSansMedium', -apple-system, sans-serif;
-  color: white;
+  color: #DB3938;
   line-height: 20px;
   font-size: 15px;
 }
 span{
   font-family: 'GmarketSansLight', -apple-system, sans-serif;
-  color: white;
+  color: #DB3938;
   line-height: 20px;
   font-size: 15px;
   display: block;
