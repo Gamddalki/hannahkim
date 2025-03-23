@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../Components/Header";
@@ -130,8 +130,7 @@ function Home() {
 
   return (
     <>
-      <Section id="home" secHeight="600px" bgUrl={homeBg}>
-        <h1>On a Journey to Discover and Pursue My Passion</h1>
+      {showHeader && <Header />}
       </Section>
       <Section id="project" secHeight="1300px" bgColor="#045739">
         <ContentsWrapper className="contents-wrapper">
