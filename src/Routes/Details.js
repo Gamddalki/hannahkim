@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import projectData from "../data/projects.json";
 import researchData from "../data/researches.json";
@@ -49,6 +49,16 @@ const Image = styled.img`
   margin: 10px;
 `;
 
+const ToHome = styled(Link)`
+  span {
+    margin-top: 50px;
+    color: black;
+    &:hover {
+      color: #db3938;
+    }
+  }
+`;
+
 const Details = () => {
   const { category, id } = useParams();
   let data;
@@ -69,6 +79,9 @@ const Details = () => {
 
   return (
     <Section>
+      <ToHome to={"/"}>
+        <span>&lt; Home</span>
+      </ToHome>
       <ContentsWrapper>
         <h1>{item.title}</h1>
         <h2>{item.subtitle}</h2>
