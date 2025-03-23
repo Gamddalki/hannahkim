@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import homeBg from "../img/home.jpg";
+import Header from "../Components/Header";
 import aboutBg from "../img/about.jpg";
 import projectData from "../data/projects.json";
 import researchData from "../data/researches.json";
@@ -90,6 +90,20 @@ const AboutText = styled(Text)`
 
 function Home() {
   const nav = useNavigate();
+  const [showHeader, setShowHeader] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > window.innerHeight * 0.8) {
+      setShowHeader(true);
+    } else {
+      setShowHeader(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const sortedProjectData = projectData.sort((a, b) => {
     return b.startDate.localeCompare(a.startDate);

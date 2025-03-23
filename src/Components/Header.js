@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
@@ -11,7 +11,7 @@ const HeaderDiv = styled.header`
   justify-content: center;
   align-items: center;
   padding: 20px 40px;
-  background: black;
+  background: white;
   z-index: 1000;
 `;
 
@@ -26,10 +26,10 @@ const Nav = styled.nav`
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: black;
   cursor: pointer;
   &:hover {
-    color: #f36766;
+    color: #db3938;
   }
 `;
 
