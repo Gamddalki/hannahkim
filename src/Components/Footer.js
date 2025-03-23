@@ -14,13 +14,14 @@ const FooterDiv = styled.div`
   bottom: 0;
   padding: 30px;
   height: 150px;
-  background-color: black;
+  background-color: #d8d2a5;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   span {
     padding: 5px;
+    color: white;
   }
 `;
 
@@ -37,16 +38,29 @@ function Footer() {
       <a
         href="https://www.linkedin.com/in/hannah-kim-b03272322/"
         target={"_blank"}
+        rel="noreferrer"
       >
         <Icon icon={faLinkedinIn} />
       </a>
-      <a href="https://github.com/Gamddalki/" target={"_blank"}>
+      <a
+        href="https://github.com/Gamddalki/"
+        target={"_blank"}
+        rel="noreferrer"
+      >
         <Icon icon={faGithub} />
       </a>
-      <a href="https://www.instagram.com/llorjjrk/" target={"_blank"}>
+      <a
+        href="https://www.instagram.com/llorjjrk/"
+        target={"_blank"}
+        rel="noreferrer"
+      >
         <Icon icon={faInstagram} />
       </a>
-      <a href="https://www.youtube.com/@dahae01" target={"_blank"}>
+      <a
+        href="https://www.youtube.com/@dahae01"
+        target={"_blank"}
+        rel="noreferrer"
+      >
         <Icon icon={faYoutube} />
       </a>
     </FooterDiv>
