@@ -15,9 +15,7 @@ const Section = styled.section`
   justify-content: center;
   position: relative;
   background: ${(props) =>
-    props.bgUrl
-      ? `url(${props.bgUrl}) center/cover no-repeat`
-      : props.bgColor || "#181617"};
+    props.bgUrl ? `url(${props.bgUrl}) center/cover no-repeat` : "#FDFFF5"};
   padding: 0 300px;
 `;
 
@@ -34,7 +32,7 @@ const ContentsWrapper = styled.div`
 
 const GalleryTitle = styled.h1`
   text-align: center;
-  margin: 20px;
+  margin: 30px;
 `;
 
 const Gallery = styled.div`
@@ -63,7 +61,7 @@ const TitleOverlay = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.9);
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -134,7 +132,7 @@ function Home() {
       </Section>
       <Section id="project" secHeight="1300px" bgColor="#045739">
         <ContentsWrapper className="contents-wrapper">
-          <GalleryTitle>Projects</GalleryTitle>
+          <GalleryTitle>PROJECTS</GalleryTitle>
           <Gallery>
             {sortedProjectData.map((project) => (
               <Thumbnail
@@ -143,7 +141,7 @@ function Home() {
                 onClick={() => nav(`/project/${project.id}`)}
               >
                 <TitleOverlay>
-                  <h3>{project.title}</h3>
+                  <h4>{project.title}</h4>
                   <span>{project.subtitle}</span>
                 </TitleOverlay>
               </Thumbnail>
@@ -153,7 +151,7 @@ function Home() {
       </Section>
       <Section id="research" secHeight="700px" bgColor="#C42E2F">
         <ContentsWrapper className="contents-wrapper">
-          <GalleryTitle>Researches</GalleryTitle>
+          <GalleryTitle>RESEARCHES</GalleryTitle>
           <Gallery>
             {researchData.map((research) => (
               <Thumbnail
