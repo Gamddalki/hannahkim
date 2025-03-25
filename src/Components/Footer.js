@@ -14,19 +14,19 @@ const FooterDiv = styled.div`
   bottom: 0;
   padding: 30px;
   height: 150px;
-  background-color: #d8d2a5;
+  background-color: ${(props) => props.theme.colors.footer};
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   span {
     padding: 5px;
-    color: white;
+    color: ${(props) => props.theme.colors.footerText};
   }
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-  color: white;
+  color: ${(props) => props.theme.colors.footerText};
   size: 1x;
   padding: 5px;
 `;

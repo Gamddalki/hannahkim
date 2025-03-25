@@ -5,7 +5,7 @@ import projectData from "../data/projects.json";
 import researchData from "../data/researches.json";
 
 const Section = styled.section`
-  background-color: #fdfff5;
+  background-color: ${(props) => props.theme.colors.background};
   display: flex;
   justify-content: center;
 `;
@@ -29,17 +29,21 @@ const ContentsWrapper = styled.div`
   }
   a {
     color: white;
+    color: ${(props) => props.theme.colors.primary};
     margin: 20px 0;
     display: block;
     cursor: pointer;
     &:hover {
-      color: #f36766;
+      color: ${(props) => props.theme.colors.hover};
     }
   }
 `;
 
 const ContentBlock = styled.div`
   margin: 40px 0;
+  span {
+    color: ${(props) => props.theme.colors.content};
+  }
 `;
 
 const Image = styled.img`
@@ -52,9 +56,9 @@ const Image = styled.img`
 const ToHome = styled(Link)`
   span {
     margin-top: 50px;
-    color: black;
+    color: ${(props) => props.theme.colors.primary};
     &:hover {
-      color: #db3938;
+      color: ${(props) => props.theme.colors.hover};
     }
   }
 `;

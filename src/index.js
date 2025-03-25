@@ -113,31 +113,38 @@ button {
   }
 h1 {
   font-family: 'NewYorkRegular', -apple-system, sans-serif;
-  color: #D90311;
+  color: #F92927;
   line-height: 40px;
   font-size: 30px;
+  font-weight: bold;
 }
 h2 {
   font-family: 'QuastroRegular', -apple-system, sans-serif;
-  color: #D90311;
+  color: #F92927;
   line-height: 35px;
   font-size: 25px;
 }
 h3 {
-  font-family: 'Paperlogy-4Regular', -apple-system, sans-serif;
-  color: #D90311;
+  font-family: 'Newsreader', -apple-system, sans-serif;
+  color: #F92927;
   line-height: 35px;
   font-size: 25px;
 }
 h4 {
+  font-family: 'Paperlogy-4Regular', -apple-system, sans-serif;
+  color:  #F92927;
+  line-height: 25px;
+  font-size: 20px;
+}
+h5 {
   font-family: 'GmarketSansMedium', -apple-system, sans-serif;
-  color: #DB3938;
+  color:  #F92927;
   line-height: 20px;
   font-size: 15px;
 }
 span{
   font-family: 'GmarketSansLight', -apple-system, sans-serif;
-  color: #DB3938;
+  color: #F92927;
   line-height: 20px;
   font-size: 15px;
   display: block;

@@ -11,7 +11,7 @@ const HeaderDiv = styled.header`
   justify-content: center;
   align-items: center;
   padding: 20px 40px;
-  background: white;
+  background: ${(props) => props.theme.colors.header};
   z-index: 1000;
 `;
 
@@ -26,10 +26,10 @@ const Nav = styled.nav`
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${(props) => props.theme.colors.headerText};
   cursor: pointer;
   &:hover {
-    color: #db3938;
+    color: ${(props) => props.theme.colors.hover};
   }
 `;
 
