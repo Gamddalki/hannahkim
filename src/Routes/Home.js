@@ -278,7 +278,7 @@ function Home() {
               <br />
               AI-DRIVEN INTERACTION, AND DATA-DRIVEN UX
               <br />
-              FOR ENHANCING AUDIENCE EXPERIENCES
+              FOR ENHANCING USER EXPERIENCES
               <br />
               IN LIVE PERFORMANCES AND DIGITAL MEDIA.
             </span>
