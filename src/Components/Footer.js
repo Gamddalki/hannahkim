@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faInstagram,
   faYoutube,
   faLinkedinIn,
   faGithub,
@@ -48,13 +47,6 @@ function Footer() {
         rel="noreferrer"
       >
         <Icon icon={faGithub} />
-      </a>
-      <a
-        href="https://www.instagram.com/llorjjrk/"
-        target={"_blank"}
-        rel="noreferrer"
-      >
-        <Icon icon={faInstagram} />
       </a>
       <a
         href="https://www.youtube.com/@dahae01"
