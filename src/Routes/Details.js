@@ -40,6 +40,7 @@ const ContentsWrapper = styled.div`
     &:hover {
       color: ${(props) => props.theme.colors.hover};
     }
+    color: ${(props) => props.theme.colors.content};
   }
 `;
 
@@ -59,7 +60,7 @@ const InfoBlock = styled.div`
     padding: 0;
   }
   li {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.content};
     margin-bottom: 7px;
     line-height: 20px;
     font-size: 15px;
