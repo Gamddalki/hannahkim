@@ -26,6 +26,7 @@ const VerticalTextLeft = styled.h5`
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
+  white-space: nowrap;
 `;
 
 const VerticalTextRight = styled.h5`
@@ -34,11 +35,12 @@ const VerticalTextRight = styled.h5`
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
+  white-space: nowrap;
 `;
 
 const CircleText = styled.div`
-  height: 60px;
-  width: 260px;
+  height: clamp(40px, 4vw, 60px);
+  width: clamp(200px, 20vw, 300px);
   border: 1px solid ${(props) => props.theme.colors.primary};
   border-radius: 100%;
   text-align: center;
@@ -48,7 +50,7 @@ const CircleText = styled.div`
   margin: 30px;
   span {
     font-family: "NewYorkRegular", -apple-system, sans-serif;
-    font-size: 23px;
+    font-size: clamp(17px, 2vw, 23px);
     font-style: italic;
     margin-top: 0 !important;
   }
@@ -65,12 +67,12 @@ const TypoWrapper = styled.div`
   h1 {
     font-family: "Newsreader", -apple-system, sans-serif;
     text-align: center;
-    font-size: 40px;
-    line-height: 45px;
+    font-size: clamp(30px, 5vw, 40px);
+    line-height: clamp(32px, 5.2vw, 45px);
     font-weight: normal;
     span {
-      font-size: 40px;
-      line-height: 45px;
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: clamp(32px, 5.2vw, 45px);
       display: inline;
     }
   }
@@ -79,9 +81,7 @@ const TypoWrapper = styled.div`
     margin-top: 40px;
   }
   img {
-    width: 20vw;
-    max-width: 300px;
-    min-width: 150px;
+    width: clamp(150px, 23vw, 300px);
   }
 `;
 
@@ -92,6 +92,7 @@ const Highlight = styled.span`
 
 const TechFont = styled.span`
   font-family: "Paperlogy-8ExtraBold", -apple-system, sans-serif;
+  font-size: clamp(25px, 4vw, 35px) !important;
   &:hover {
     color: ${(props) => props.theme.colors.hover};
   }
