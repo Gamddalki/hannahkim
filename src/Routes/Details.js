@@ -8,6 +8,8 @@ const Section = styled.section`
   background-color: ${(props) => props.theme.colors.background};
   display: flex;
   justify-content: center;
+  width: 100%;
+  min-width: 820px;
 `;
 
 const ContentsWrapper = styled.div`
@@ -81,6 +83,7 @@ const Image = styled.img`
 const ToHome = styled(Link)`
   span {
     margin-top: 50px;
+    position: absolute;
     color: ${(props) => props.theme.colors.primary};
     &:hover {
       color: ${(props) => props.theme.colors.hover};
