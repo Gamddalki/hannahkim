@@ -36,7 +36,7 @@ function Footer() {
     <FooterDiv>
       <span>&copy; 2025 Hannah Kim</span>
       <a
-        href="https://www.linkedin.com/in/hannah-kim-b03272322/"
+        href="https://www.linkedin.com/in/hannahk01/"
         target={"_blank"}
         rel="noreferrer"
       >
