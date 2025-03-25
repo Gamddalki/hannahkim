@@ -47,9 +47,6 @@ function Header() {
         <NavLink to="research" smooth={true} duration={500}>
           Researches
         </NavLink>
-        <NavLink to="about" smooth={true} duration={500}>
-          About
-        </NavLink>
         <NavLink to="contact" smooth={true} duration={500}>
           Contact
         </NavLink>

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../Components/Header";
-import aboutBg from "../img/about.jpg";
+import HomeBerry from "../img/HomeBerry.svg";
+import aboutBg from "../img/about.JPG";
 import projectData from "../data/projects.json";
 import researchData from "../data/researches.json";
 
@@ -19,6 +20,118 @@ const Section = styled.section`
   padding: 0 300px;
 `;
 
+const VerticalTextLeft = styled.h5`
+  writing-mode: vertical-rl;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
+const VerticalTextRight = styled.h5`
+  writing-mode: vertical-lr;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
+const CircleText = styled.div`
+  height: 60px;
+  width: 260px;
+  border: 1px solid ${(props) => props.theme.colors.primary};
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+  span {
+    font-family: "NewYorkRegular", -apple-system, sans-serif;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 0 !important;
+  }
+`;
+
+const TypoWrapper = styled.div`
+  width: 80%;
+  max-width: 900px;
+  position: absolute;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-family: "Newsreader", -apple-system, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: normal;
+    span {
+      font-size: 40px;
+      line-height: 45px;
+      display: inline;
+    }
+  }
+  span {
+    font-style: italic;
+    margin-top: 40px;
+  }
+  img {
+    width: 20vw;
+    max-width: 300px;
+    min-width: 150px;
+  }
+`;
+
+const Highlight = styled.span`
+  font-family: "NewYorkRegular", -apple-system, sans-serif;
+  font-weight: bold;
+`;
+
+const TechFont = styled.span`
+  font-family: "Paperlogy-8ExtraBold", -apple-system, sans-serif;
+  &:hover {
+    color: ${(props) => props.theme.colors.hover};
+  }
+`;
+
+const Emphasize = styled.span`
+  font-weight: bold;
+  font-family: "Newsreader", -apple-system, sans-serif;
+`;
+
+const LeftTextWrapper = styled.div`
+  text-align: left;
+  width: 100%;
+  a {
+    display: block;
+    margin: 20px;
+    color: ${(props) => props.theme.colors.primary};
+    &:hover {
+      color: ${(props) => props.theme.colors.hover};
+    }
+  }
+`;
+
+const RightTextWrapper = styled.div`
+  text-align: right;
+  width: 100%;
+  a {
+    font-family: "NewYorkRegular", -apple-system, sans-serif;
+    color: ${(props) => props.theme.colors.primary};
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin: 20px;
+    &:hover {
+      color: ${(props) => props.theme.colors.hover};
+    }
+  }
+`;
+
 const ContentsWrapper = styled.div`
   opacity: 0;
   transform: translateY(50px);
@@ -32,7 +145,7 @@ const ContentsWrapper = styled.div`
 
 const GalleryTitle = styled.h1`
   text-align: center;
-  margin: 30px;
+  margin: 40px;
 `;
 
 const Gallery = styled.div`
@@ -61,7 +174,7 @@ const TitleOverlay = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: ${(props) => props.theme.colors.thumbnail};
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -72,18 +185,34 @@ const TitleOverlay = styled.div`
   transition: opacity 0.3s ease-in-out;
 `;
 
-const Text = styled.div`
-  min-width: 500px;
+const ContactWrapper = styled.div`
   width: 100%;
-  span {
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+`;
+
+const OvalImg = styled.div`
+  height: 250px;
+  width: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+  img {
+    object-fit: cover;
+    height: 100%;
   }
 `;
 
-const AboutText = styled(Text)`
-  width: 50%;
-  min-width: 400px;
-  margin-left: 50%;
+const Text = styled.div`
+  min-width: 450px;
+  width: 85%;
+  div {
+    margin: 50px 0;
+  }
 `;
 
 function Home() {
@@ -129,8 +258,49 @@ function Home() {
   return (
     <>
       {showHeader && <Header />}
+      <Section id="home">
+        <TypoWrapper>
+          <img src={HomeBerry} alt="Main Icon"></img>
+          <h1>
+            <Highlight>Hannah</Highlight> is a <Highlight>researcher</Highlight>{" "}
+            and <Highlight>designer</Highlight>
+            <br /> passionate about creating{" "}
+            <Emphasize>immersive user experiences</Emphasize> <br />
+            that blend <TechFont>technology</TechFont>,{" "}
+            <TechFont>storytelling</TechFont>,<br />
+            and <TechFont>human computer interaction</TechFont>
+          </h1>
+
+          <LeftTextWrapper>
+            <span>
+              I AM INTERESTED IN IMMERSIVE PERFORMANCE TECHNOLOGY,
+              <br />
+              AI-DRIVEN INTERACTION, AND DATA-DRIVEN UX
+              <br />
+              FOR ENHANCING AUDIENCE EXPERIENCES
+              <br />
+              IN LIVE PERFORMANCES AND DIGITAL MEDIA.
+            </span>
+          </LeftTextWrapper>
+          <RightTextWrapper>
+            <span>
+              I AIM TO CREATE SEAMLESS, INTERACTIVE,
+              <br />
+              AND PERSONALIZED EXPERIENCES
+              <br />
+              IN ENTERTAINMENT, DIGITAL MEDIA, AND BEYOND.
+            </span>
+          </RightTextWrapper>
+          <CircleText>
+            <span>Glad to have you here</span>
+          </CircleText>
+        </TypoWrapper>
+        <VerticalTextLeft>Exploring HCI & UX</VerticalTextLeft>
+        <VerticalTextRight>
+          Currently B.S. student @ Ewha Womans University
+        </VerticalTextRight>
       </Section>
-      <Section id="project" secHeight="1300px" bgColor="#045739">
+      <Section id="project" secHeight="1000px">
         <ContentsWrapper className="contents-wrapper">
           <GalleryTitle>PROJECTS</GalleryTitle>
           <Gallery>
@@ -141,7 +311,7 @@ function Home() {
                 onClick={() => nav(`/project/${project.id}`)}
               >
                 <TitleOverlay>
-                  <h4>{project.title}</h4>
+                  <h5>{project.title}</h5>
                   <span>{project.subtitle}</span>
                 </TitleOverlay>
               </Thumbnail>
@@ -149,7 +319,7 @@ function Home() {
           </Gallery>
         </ContentsWrapper>
       </Section>
-      <Section id="research" secHeight="700px" bgColor="#C42E2F">
+      <Section id="research" secHeight="500px">
         <ContentsWrapper className="contents-wrapper">
           <GalleryTitle>RESEARCHES</GalleryTitle>
           <Gallery>
@@ -160,7 +330,7 @@ function Home() {
                 onClick={() => nav(`/research/${research.id}`)}
               >
                 <TitleOverlay>
-                  <h3>{research.title}</h3>
+                  <h5>{research.title}</h5>
                   <span>{research.subtitle}</span>
                 </TitleOverlay>
               </Thumbnail>
@@ -168,51 +338,29 @@ function Home() {
           </Gallery>
         </ContentsWrapper>
       </Section>
-      <Section id="about" bgUrl={aboutBg}>
+      <Section id="contact" secHeight="400px">
         <ContentsWrapper className="contents-wrapper">
-          <AboutText>
-            <h1>Hannah Kim</h1>
-            <span>
-              I am a multidisciplinary researcher exploring the intersection of
-              technology, arts, and user experience. With a background in
-              Computer Science & Engineering and Humanities, I have worked on
-              interactive media, immersive technology, and AI-driven
-              experiences. My academic journey includes international research
-              experiences in Europe, where I studied digital media, performance
-              technology, and human-computer interaction. Professionally, I have
-              contributed to Edu-tech startups and research labs, focusing on
-              innovative applications of AI, VR, and data-driven UX.
-            </span>
-            <span>
-              My research interests revolve around immersive performance
-              technology, AI-powered interaction, and data-driven design. I am
-              particularly interested in how emerging technologies like XR,
-              spatial computing, and AI can enhance storytelling and audience
-              engagement. By integrating real-time data analysis and adaptive
-              systems, I aim to create seamless, interactive, and personalized
-              experiences in digital media, entertainment, and beyond.
-            </span>
-            <h2>Skills</h2>
-            <span>
-              HCI, Project Management, Content Development
-              <br />
-              Front-end: TypeScript, React
-              <br />
-              Back-end: Python, Node.js, MySQL, MongoDB, Firebase
-              <br />
-              UX/UI: Figma
-              <br />
-              XR: Unity, C#
-            </span>
-          </AboutText>
-        </ContentsWrapper>
-      </Section>
-      <Section id="contact" secHeight="400px" bgColor="#C42E2F">
-        <ContentsWrapper className="contents-wrapper">
-          <Text>
-            <h2>Contact</h2>
-            <span>Email: hanahk01@ewha.ac.kr</span>
-          </Text>
+          <ContactWrapper>
+            <OvalImg>
+              <img src={aboutBg} alt="Profile" />
+            </OvalImg>
+
+            <Text>
+              <LeftTextWrapper>
+                <h1>Let's create something amazing!</h1>
+                <a href="mailto:hanahk01@ewha.ac.kr">hanahk01@ewha.ac.kr</a>
+              </LeftTextWrapper>
+              <RightTextWrapper>
+                <a
+                  href="https://drive.google.com/file/d/1ES03UN2SNawUAEug7f3tjniFzFf3jFJk/view?usp=drive_link"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Unfold my journey ↗
+                </a>
+              </RightTextWrapper>
+            </Text>
+          </ContactWrapper>
         </ContentsWrapper>
       </Section>
     </>
