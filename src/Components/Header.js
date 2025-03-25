@@ -15,10 +15,6 @@ const HeaderDiv = styled.header`
   z-index: 1000;
 `;
 
-const Logo = styled.h1`
-  padding: 0 40px;
-`;
-
 const Nav = styled.nav`
   display: flex;
   gap: 20px;
@@ -36,7 +32,6 @@ const NavLink = styled(Link)`
 function Header() {
   return (
     <HeaderDiv>
-      <Logo>Hannah</Logo>
       <Nav>
         <NavLink to="home" smooth={true} duration={500}>
           Home
