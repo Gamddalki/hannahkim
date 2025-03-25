@@ -28,18 +28,6 @@ const ContentsWrapper = styled.div`
   }
   span {
     margin: 20px 0;
-  }
-  a {
-    font-family: "GmarketSansMedium", -apple-system, sans-serif;
-    line-height: 20px;
-    font-size: 15px;
-    color: ${(props) => props.theme.colors.primary};
-    margin: 20px 0;
-    display: block;
-    cursor: pointer;
-    &:hover {
-      color: ${(props) => props.theme.colors.hover};
-    }
     color: ${(props) => props.theme.colors.content};
   }
 `;
@@ -64,6 +52,17 @@ const InfoBlock = styled.div`
     margin-bottom: 7px;
     line-height: 20px;
     font-size: 15px;
+  }
+  a {
+    font-family: "GmarketSansMedium", -apple-system, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+    color: ${(props) => props.theme.colors.primary};
+    display: block;
+    cursor: pointer;
+    &:hover {
+      color: ${(props) => props.theme.colors.hover};
+    }
   }
 `;
 
@@ -128,6 +127,14 @@ const Details = () => {
 
         <InfoGrid>
           <InfoBlock>
+            <h5>🍓 My Role</h5>
+            <ul>
+              {item.myRole.map((role, index) => (
+                <li key={index}>{role}</li>
+              ))}
+            </ul>
+          </InfoBlock>
+          <InfoBlock>
             {category === "project" ? (
               <>
                 <h5>👩🏻‍💻 Tech Stack</h5>
@@ -147,14 +154,6 @@ const Details = () => {
                 </ul>
               </>
             )}
-          </InfoBlock>
-          <InfoBlock>
-            <h5>🍓 My Role</h5>
-            <ul>
-              {item.myRole.map((role, index) => (
-                <li key={index}>{role}</li>
-              ))}
-            </ul>
           </InfoBlock>
           <InfoBlock>
             <a href={item.link} target="_blank" rel="noopener noreferrer">
