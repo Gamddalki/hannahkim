@@ -9,12 +9,16 @@
     "myRole": ["Project Manager", "Script Writer", "Character Designer"],
     "startDate": "2021-05",
     "endDate": "2021-09",
-    "summary": "Did you know that Anne was actually black haired? In this running game, no one in the town should know that she is. Change your route to avoid the villagers' eyes and safely deliver the fruit as Marilla asked. Be especially careful not to be seen by children—they spread rumors the fastest! If you lose all the fruit or the news of Anne’s black hair spreads throughout the village, the game is over.",
+    "summary": "Did you know that Anne was actually black haired? Maybe you did, but no one in the village should.",
     "link": "https://github.com/Gamddalki/Anne-of-BlackHair",
     "content": [
       {
         "type": "image",
         "value": "/img/projects/AnneoftheBlackHair2.png"
+      },
+      {
+        "type": "text",
+        "value": "In this running game, no one in the village should know that she is black haired. Change your route to avoid the villagers' eyes and safely deliver the fruit as Marilla asked. Be especially careful not to be seen by children — they spread rumors the fastest! If you lose all the fruit or the news of Anne’s black hair spreads throughout the village, the game is over."
       }
     ]
   },
@@ -33,16 +37,16 @@
     "myRole": ["Project Manager"],
     "startDate": "2021-03",
     "endDate": "2021-06",
-    "summary": "reICEcle is a mobile application that aims to collect ice packs from households and rewards users with points. These points can be used at local businesses, helping to boost sales that have declined due to COVID-19.",
+    "summary": "Prototype of a Mobile Application that aims to collect ice packs from households and rewards users with points. These points can be used at local businesses, helping to boost sales that have declined due to COVID-19.",
     "link": "https://gamddalki.tistory.com/7",
     "content": [
       {
-        "type": "image",
-        "value": "/img/projects/reICEcle1.png"
+        "type": "text",
+        "value": "Development of 'reICEcle' began by brainstorming recent problems and narrowing them down to four key issues. After defining solutions for each, we analyzed their feasibility, demand, and relevance, selecting the final topic. We then conducted a thorough investigation using the '5 Whys method' to define the true problem, followed by in-depth research into the severity of the issue, current solutions, and similar case studies. After collecting data, we grouped similar ideas and clearly defined the core features of the 'Point-based Ice Pack Recycling Service System.'"
       },
       {
-        "type": "text",
-        "value": "As the project manager, I led the team through a structured process of selecting a project topic. We began by brainstorming recent problems and narrowing them down to four key issues based on individual evaluations. After defining solutions for each, we analyzed their feasibility, demand, and relevance, selecting the final topic. We then conducted a thorough investigation, utilizing the 5 Whys method to define the true problem, followed by in-depth research into the severity of the issue, current solutions, and similar case studies. After collecting data, I facilitated a brainstorming session to generate ideas for an ice pack recycling system. We grouped similar ideas and clearly defined the core features of the 'Point-based Ice Pack Recycling Service' project."
+        "type": "image",
+        "value": "/img/projects/reICEcle1.png"
       },
       {
         "type": "text",
@@ -54,11 +58,15 @@
       },
       {
         "type": "text",
-        "value": "Next, we refined the detailed features by creating a functional structure diagram, a feature list, and mapping the functions to the screens. We then designed the screen layouts and transition flow diagrams, followed by protocol design, and ultimately developed the final prototype."
+        "value": "Next, we refined the detailed features by creating functional structure diagram, feature list, and mapping the functions to the screens."
       },
       {
         "type": "image",
         "value": "/img/projects/reICEcle3.png"
+      },
+      {
+        "type": "text",
+        "value": "We then designed the screen layouts and transition flow diagrams, followed by protocol design, and ultimately developed the final prototype."
       }
     ]
   },
@@ -79,7 +87,7 @@
     ],
     "startDate": "2022-11",
     "endDate": "2023-01",
-    "summary": "Helios, the God of the Sun loses his Sun one day. Let’s go find out what happened with the Golden Chariot.",
+    "summary": "Helios, the God of the Sun has lost his Sun one day. Let’s go find out what happened to his Sun, with the Golden Chariot.",
     "link": "https://github.com/22MaKINGJam/Sun-the-Light",
     "content": [
       {
@@ -88,7 +96,7 @@
       },
       {
         "type": "text",
-        "value": "I designed the scenario for this classic PC shooting game where the story follows Helios, the First Sun God, who rises each day from the eastern palace and sinks into the land of the Hesperides in the west. However, the sun mysteriously vanishes one day, Helios must embark on a quest to recover it, risking his fame and his fragile position in Olympus. The game captures the mythological journey of Helios and the tension surrounding his struggle to maintain control over the sun, blending ancient myth with an action-packed adventure."
+        "value": "This classic PC shooting game captures the mythological journey of Helios and the tension surrounding his struggle to maintain control over the Sun, blending ancient myth with an action-packed adventure."
       },
       {
         "type": "image",
@@ -96,7 +104,7 @@
       },
       {
         "type": "text",
-        "value": "The scenario is given through the animation at the beginning of the game. I joined in development of the animations."
+        "value": "Helios, the First God of the Sun, rises from the eastern palace and sinks into the land of the Hesperides in the west each day. However, the Sun mysteriously vanishes one day, while he was dozing off for a while. So, unfortunately, Helios must embark on a quest to recover it, risking his fame and his fragile position in Olympus. This scenario is given through the animation at the beginning of the game."
       },
       {
         "type": "image",
@@ -104,7 +112,7 @@
       },
       {
         "type": "text",
-        "value": "The player controls the chariot, avoiding or attacking light winds, strong winds, and dark clouds. Contact with the wind causes immediate damage, while successfully attacking results in points. Additionally, if the chariot is driven too low, villages will burn, and if driven too high, the roars of constellations will be heard. In both cases, the player will take damage. The player can use a skill that shoots fire in all directions after a certain period."
+        "value": "The player controls the golden chariot, avoiding or attacking light winds, strong winds, and dark clouds. Bumping onto the winds and clouds causes immediate damage, while successfully attacking them results in points. Additionally, if the chariot is driven too low, villages will burn, and if driven too high, the screams of constellations will be heard. In both cases, the player will take damage. The player can use a skill that shoots fire in all directions at regular intervals."
       },
       {
         "type": "image",
@@ -112,7 +120,7 @@
       },
       {
         "type": "text",
-        "value": "At specific level, thunderlight also comes out with daner sign. Helios gets to meet the Boss mob, Dionysos. Or maybe... another one."
+        "value": "At level 3, Helios gets to meet the Boss mob, Dionysos. Or maybe... another one later on. Guess who's coming next with the thunder light striking out after a danger sign."
       },
       {
         "type": "image",
@@ -134,12 +142,16 @@
     "myRole": ["Developer", "UX/UI Designer"],
     "startDate": "2023-02",
     "endDate": "2024-07",
-    "summary": "Designed UX/XI and Developed the whole webpage.",
+    "summary": "Designed UX/UI and Developed the whole webpage of Canticum Choir – A choir that heals the soul with inspirational music from medieval mass music to oratorio and contemporary church music.",
     "link": "http://canticum.co.kr/",
     "content": [
       {
         "type": "image",
         "value": "/img/projects/Canticum1.png"
+      },
+      {
+        "type": "text",
+        "value": "Designed UX/UI and developed the whole webpage including the Admin page where the choir manager can change wallpaper and upload concert information, newsletters, and notices."
       }
     ]
   },
@@ -153,12 +165,16 @@
     "myRole": ["Developer", "UX/UI Designer"],
     "startDate": "2022-02",
     "endDate": "2022-08",
-    "summary": "Designed UX/XI and Developed the whole webpage.",
+    "summary": "Designed UX/UI and Developed the whole webpage of EtoE – An Oracle DMP (Directly Managed Partner) Company.",
     "link": "http://www.etoe.co.kr/",
     "content": [
       {
         "type": "image",
         "value": "/img/projects/EtoE1.png"
+      },
+      {
+        "type": "text",
+        "value": "Designed UX/UI and developed the whole webpage."
       }
     ]
   },
@@ -177,12 +193,16 @@
     "myRole": ["Project Manager", "UX/UI Designer"],
     "startDate": "2021-08",
     "endDate": "2021-08",
-    "summary": "Led the project, ‘Delivery service application of household medicines and other supplies’.",
+    "summary": "Prototype of s Delivery Service Application for Household Medicines and Other Supplies.",
     "link": "https://gamddalki.tistory.com/4",
     "content": [
       {
         "type": "image",
         "value": "/img/projects/HalmaeYakson1.png"
+      },
+      {
+        "type": "text",
+        "value": "'HalmaeYakson' is an award-winning application aimed at addressing a critical issue for single-person households. Our design process began by defining our primary user persona, Se-eun Lee, and identifying the challenges she faced. We focused on safely delivering medicines and other medical supplies to individuals living alone, particularly women, who need assistance when they are unwell. To provide a solution, we developed an application named 'HalmaeYakson (Grandma's Healing Hands)', inspired by the traditional Korean children's song, 'Grandma's Hands are Healing Hands.' Following the ideation stage, we proceeded with screen design and prototype development, ultimately presenting our completed concept. Our work was recognized for its innovation and user-centered approach."
       }
     ]
   },
@@ -205,11 +225,90 @@
       },
       {
         "type": "text",
-        "value": "We developed an intuitive web application that allows users to check a list of restaurants around Ewha Campus based on location, using a cute map feature."
+        "value": "Eat:WHA is an intuitive web application that allows users to check a list of restaurants around Ewha Campus based on location, using a cute map feature."
       },
       {
         "type": "text",
-        "value": "I was responsible for the UI design and backend development of the web page, which includes features such as sign-up, login, logout, and account deletion, as well as restaurant search, menu browsing, themed lists, liking functionality, vegan badges, writing and viewing reviews."
+        "value": "I was responsible for the UI design and backend development of the whole web page, which includes features such as sign-up, login, logout, and account deletion, as well as restaurant search, menu browsing, themed lists, liking functionality, vegan badges, writing and viewing reviews."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Vivid Nightmare",
+    "subtitle": "VR escape game",
+    "where": "2023 EPITA Summer Program Project",
+    "thumbnail": "/img/projects/VividNightmare.png",
+    "techStack": ["Unity", "C#", "Oculus Quest 2"],
+    "myRole": ["Script Writer", "Designer", "Developer"],
+    "startDate": "2023-07",
+    "endDate": "2023-07",
+    "summary": "You are in a nightmare! Avoid obstacles and find a right key within the given time. Pick up the key and press A at the door to escape from your dream. Otherwise, you'll never get out of the White Christmas's nightmare forever. Check the remaining time on your left wrist, and Good Luck!",
+    "link": "https://github.com/Gamddalki/VividNightmare",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/projects/VividNightmare.png"
+      },
+      {
+        "type": "text",
+        "value": "Level 1 ☃️ Find the key and open the door to go out. Beware of candy canes!"
+      },
+      {
+        "type": "text",
+        "value": "Level 2 🌵 Find one real key out of three keys and open the door to go out. Beware of rocks! (*The real key is randomly changed every time)"
+      },
+      {
+        "type": "text",
+        "value": "Level 3 ♟️ Find one real key out of six keys and open the door to go out. Beware of chess pieces and teddy bears dropping down from above! (*The real key is randomly changed every time)"
+      },
+      {
+        "type": "text",
+        "value": "Game Clear ⏰ Congratulations! You're awake!"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Jeogiyo",
+    "subtitle": "VUI Application for Assisting Contactless Ordering Services in Stores",
+    "where": "2023 Human Computer Interaction Project",
+    "thumbnail": "/img/projects/Jeogiyo.png",
+    "techStack": ["Figma"],
+    "myRole": ["Designer", "Developer"],
+    "startDate": "2023-09",
+    "endDate": "2023-12",
+    "summary": "Virtual Assistant Application that helps middle-aged and older adults to easily use contactless ordering services at stores by VUI (Voice User Interface).",
+    "link": "https://gamddalki.tistory.com",
+    "content": [
+      {
+        "type": "text",
+        "value": "'Jeogiyo' is a personal virtual assistant application designed to help middle-aged and older adults use contactless services with ease. We made a goal to eliminate barriers in digital interactions by improving accessibility and simplifying complex user interfaces."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Jeogiyo1.png"
+      },
+      {
+        "type": "text",
+        "value": "To validate the need for our service, we conducted a survey, which revealed that individuals over the age of 40 find current contactless systems (e.g. kiosk) difficult to use due to complex operations, poor readability, and insufficient guidance."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Jeogiyo.png"
+      },
+
+      {
+        "type": "text",
+        "value": "To address these challenges, we developed 'Jeogiyo', a virtual assistant application that enhances the user experience through conversational interactions. 'Jeogiyo' activates through voice commands and provides real-time responses, ensuring seamless transactions with minimal effort. The system supports multiple interface types, including voice interaction and typing, for greater accessibility."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Jeogiyo2.png"
+      },
+      {
+        "type": "text",
+        "value": "Key functional and non-functional requirements were determined to ensure effortless use with minimal device operation."
       }
     ]
   }
