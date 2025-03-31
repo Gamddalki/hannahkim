@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../Components/Header";
 import HomeBerry from "../img/HomeBerry.svg";
-import aboutBg from "../img/about.JPG";
+import aboutBg from "../img/about.jpg";
 import projectData from "../data/projects.json";
 import researchData from "../data/researches.json";
 
@@ -312,7 +312,7 @@ function Home() {
             {sortedProjectData.map((project) => (
               <Thumbnail
                 key={project.id}
-                bgImg={project.thumbnail}
+                bgImg={`${process.env.PUBLIC_URL}${project.thumbnail}`}
                 onClick={() => nav(`/project/${project.id}`)}
               >
                 <TitleOverlay>
@@ -331,7 +331,7 @@ function Home() {
             {researchData.map((research) => (
               <Thumbnail
                 key={research.id}
-                bgImg={research.thumbnail}
+                bgImg={`${process.env.PUBLIC_URL}${research.thumbnail}`}
                 onClick={() => nav(`/research/${research.id}`)}
               >
                 <TitleOverlay>
