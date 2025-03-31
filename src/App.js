@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:category/:id" element={<Details />} />
