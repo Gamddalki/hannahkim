@@ -65,11 +65,11 @@ const TypoWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   h1 {
-    font-family: "Newsreader", -apple-system, sans-serif;
+    font-family: "Paperlogy-4Regular", -apple-system, sans-serif;
     text-align: center;
-    font-size: clamp(30px, 5vw, 40px);
+    font-size: clamp(20px, 5vw, 30px);
     line-height: clamp(32px, 5.2vw, 45px);
-    font-weight: normal;
+    font-weight: bold;
     span {
       font-size: clamp(30px, 5vw, 40px);
       line-height: clamp(32px, 5.2vw, 45px);
@@ -88,6 +88,10 @@ const TypoWrapper = styled.div`
 const Highlight = styled.span`
   font-family: "NewYorkRegular", -apple-system, sans-serif;
   font-weight: bold;
+  margin-right: 4px;
+  &:hover {
+    color: ${(props) => props.theme.colors.hover};
+  }
 `;
 
 const TechFont = styled.span`
