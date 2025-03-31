@@ -9,19 +9,19 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'NewYorkRegular';
     font-style: normal;
     font-weight: normal;
-    src: local('NewYork Regular'), url('/fonts/NewYork.woff') format('woff');
+    src: local('NewYork Regular'), url('${process.env.PUBLIC_URL}/fonts/NewYork.woff') format('woff');
 }
 @font-face {
     font-family: 'QuastroRegular';
     font-style: normal;
     font-weight: normal;
-    src: local('Quastro Regular'), url('/fonts/Quastro-Rpx0l.woff') format('woff');
+    src: local('Quastro Regular'), url('${process.env.PUBLIC_URL}/fonts/Quastro-Rpx0l.woff') format('woff');
 }
 @font-face {
   font-family: 'Newsreader';
     font-style: normal;
     font-weight: normal;
-    src: local('Newsreader'), url('/fonts/Newsreader.woff') format('woff');
+    src: local('Newsreader'), url('${process.env.PUBLIC_URL}/fonts/Newsreader.woff') format('woff');
 }
 @font-face {
     font-family: 'Paperlogy-8ExtraBold';
