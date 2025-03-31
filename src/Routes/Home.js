@@ -271,8 +271,8 @@ function Home() {
             and <Highlight>designer</Highlight>
             <br /> passionate about creating{" "}
             <Emphasize>immersive user experiences</Emphasize> <br />
-            that blend <TechFont>technology</TechFont>,{" "}
-            <TechFont>storytelling</TechFont>,<br />
+            that blend <TechFont>technology</TechFont>, <TechFont>art</TechFont>
+            ,<br />
             and <TechFont>human computer interaction</TechFont>
           </h1>
 
