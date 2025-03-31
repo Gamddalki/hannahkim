@@ -305,7 +305,7 @@ function Home() {
           Currently B.S. student @ Ewha Womans University
         </VerticalTextRight>
       </Section>
-      <Section id="project" secHeight="1000px">
+      <Section id="project" secHeight="1100px">
         <ContentsWrapper className="contents-wrapper">
           <GalleryTitle>PROJECTS</GalleryTitle>
           <Gallery>
@@ -343,7 +343,7 @@ function Home() {
           </Gallery>
         </ContentsWrapper>
       </Section>
-      <Section id="contact" secHeight="400px">
+      <Section id="contact" secHeight="500px">
         <ContentsWrapper className="contents-wrapper">
           <ContactWrapper>
             <OvalImg>
