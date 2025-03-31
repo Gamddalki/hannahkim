@@ -160,7 +160,7 @@
     "title": "EtoE",
     "subtitle": "Webpage",
     "where": "Freelance Web Development Project",
-    "thumbnail": "/img/projects/Etoe.gif",
+    "thumbnail": "/img/projects/EtoE.gif",
     "techStack": ["pug", "SCSS", "Node.js"],
     "myRole": ["Developer", "UX/UI Designer"],
     "startDate": "2022-02",
