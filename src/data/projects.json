@@ -27,7 +27,7 @@
     "title": "reICEcle",
     "subtitle": "Point-Based Ice Pack Recycling Application",
     "where": "2021 Software Engineering and Creative Design Project",
-    "thumbnail": "/img/projects/reICEcle.jpg",
+    "thumbnail": "/img/projects/reICEcle.png",
     "techStack": [
       "Software Design",
       "Prototyping",
@@ -160,7 +160,7 @@
     "title": "EtoE",
     "subtitle": "Webpage",
     "where": "Freelance Web Development Project",
-    "thumbnail": "/img/projects/EtoE.gif",
+    "thumbnail": "/img/projects/EtoE.png",
     "techStack": ["pug", "SCSS", "Node.js"],
     "myRole": ["Developer", "UX/UI Designer"],
     "startDate": "2022-02",
