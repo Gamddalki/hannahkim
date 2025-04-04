@@ -53,6 +53,7 @@ const CircleText = styled.div`
     font-size: clamp(17px, 2vw, 23px);
     font-style: italic;
     margin-top: 0 !important;
+    color: ${(props) => props.theme.colors.primary} !important;
   }
 `;
 
@@ -74,11 +75,13 @@ const TypoWrapper = styled.div`
       font-size: clamp(30px, 5vw, 40px);
       line-height: clamp(32px, 5.2vw, 45px);
       display: inline;
+      color: ${(props) => props.theme.colors.primary};
     }
   }
   span {
     font-style: italic;
     margin-top: 40px;
+    color: ${(props) => props.theme.colors.hover};
   }
   img {
     width: clamp(150px, 23vw, 300px);
