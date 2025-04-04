@@ -353,7 +353,7 @@ function Home() {
             <Text>
               <LeftTextWrapper>
                 <h1>Let's create something amazing!</h1>
-                <a href="mailto:hanahk01@ewha.ac.kr">hanahk01@ewha.ac.kr</a>
+                <a href="mailto:hannahk01@ewha.ac.kr">hannahk01@ewha.ac.kr</a>
               </LeftTextWrapper>
               <RightTextWrapper>
                 <a
