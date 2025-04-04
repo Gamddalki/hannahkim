@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/hannahkim/static/js/main.41b0c34f.js",
+    "main.js": "/hannahkim/static/js/main.eda6b75b.js",
     "static/media/about.jpg": "/hannahkim/static/media/about.60adda4fbeebe955fe1c.jpg",
     "static/media/HomeBerry.svg": "/hannahkim/static/media/HomeBerry.cc650d0f950cb397f6795714f1f4ccdb.svg",
     "index.html": "/hannahkim/index.html",
-    "main.41b0c34f.js.map": "/hannahkim/static/js/main.41b0c34f.js.map"
+    "main.eda6b75b.js.map": "/hannahkim/static/js/main.eda6b75b.js.map"
   },
   "entrypoints": [
-    "static/js/main.41b0c34f.js"
+    "static/js/main.eda6b75b.js"
   ]
 }
