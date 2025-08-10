@@ -6,28 +6,10 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
-    font-family: 'NewYorkRegular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('NewYork Regular'), url('${process.env.PUBLIC_URL}/fonts/NewYork.woff') format('woff');
-}
-@font-face {
-    font-family: 'QuastroRegular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Quastro Regular'), url('${process.env.PUBLIC_URL}/fonts/Quastro-Rpx0l.woff') format('woff');
-}
-@font-face {
-  font-family: 'Newsreader';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Newsreader'), url('${process.env.PUBLIC_URL}/fonts/Newsreader.woff') format('woff');
-}
-@font-face {
-    font-family: 'Paperlogy-8ExtraBold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
+  font-family: "Unbounded";
+  src: url("https://fonts.gstatic.com/s/unbounded/v11/Yq6W-LOTXCb04q32xlpwu8Zf.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
 }
 @font-face {
     font-family: 'Paperlogy-4Regular';
@@ -36,15 +18,9 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
 }
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Paperlogy-7Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 html, body, div, span, applet, object, iframe,
@@ -91,15 +67,17 @@ table {
 }
 *{
   box-sizing: border-box;
-  font-family: "GmarketSansLight", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Paperlogy-4Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   line-height: 1.2;
+  ::selection {
+  background-color: #FF2020;
   color: white;
+}
 }
 a{
   text-decoration: none;
-  color: inherit;
 }
 input, select, textarea {
     border: none;
@@ -111,42 +89,35 @@ button {
     border: none;
     background: none;
   }
-h1 {
-  font-family: 'NewYorkRegular', -apple-system, sans-serif;
+h1{
+  font-family: 'Unbounded', -apple-system, sans-serif;
   color: #F92927;
-  line-height: 40px;
-  font-size: 30px;
-  font-weight: bold;
-}
-h2 {
-  font-family: 'QuastroRegular', -apple-system, sans-serif;
-  color: #F92927;
-  line-height: 35px;
-  font-size: 25px;
-}
-h3 {
-  font-family: 'Newsreader', -apple-system, sans-serif;
-  color: #F92927;
-  line-height: 35px;
-  font-size: 25px;
-}
-h4 {
-  font-family: 'Paperlogy-4Regular', -apple-system, sans-serif;
-  color:  #F92927;
-  line-height: 25px;
-  font-size: 20px;
-}
-h5 {
-  font-family: 'GmarketSansMedium', -apple-system, sans-serif;
-  color:  #F92927;
-  line-height: 20px;
+  font-weight: 400;
+  line-height: 55px;
   font-size: 15px;
+  display: block;
+}
+h2{
+  font-family: 'Unbounded', -apple-system, sans-serif;
+  color: #F92927;
+  font-weight: 400;
+  line-height: 45px;
+  font-size: 10px;
+  display: block;
+}
+h3{
+  font-family: 'Unbounded', -apple-system, sans-serif;
+  color: #F92927;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 10px;
+  display: block;
 }
 span{
-  font-family: 'GmarketSansLight', -apple-system, sans-serif;
+  font-family: 'Paperlogy-4Regular', -apple-system, sans-serif;
   color: #F92927;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 14px;
   display: block;
 }
 `;
