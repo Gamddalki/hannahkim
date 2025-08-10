@@ -27,7 +27,7 @@
     "title": "reICEcle",
     "subtitle": "Point-Based Ice Pack Recycling Application",
     "where": "2021 Software Engineering and Creative Design Project",
-    "thumbnail": "/img/projects/reICEcle.jpg",
+    "thumbnail": "/img/projects/reICEcle.png",
     "techStack": [
       "Software Design",
       "Prototyping",
@@ -157,15 +157,15 @@
   },
   {
     "id": 5,
-    "title": "EtoE",
+    "title": "ETOE Solutions Co., Ltd.",
     "subtitle": "Webpage",
     "where": "Freelance Web Development Project",
-    "thumbnail": "/img/projects/Etoe.gif",
+    "thumbnail": "/img/projects/EtoE.png",
     "techStack": ["pug", "SCSS", "Node.js"],
     "myRole": ["Developer", "UX/UI Designer"],
     "startDate": "2022-02",
     "endDate": "2022-08",
-    "summary": "Designed UX/UI and Developed the whole webpage of EtoE – An Oracle DMP (Directly Managed Partner) Company.",
+    "summary": "Designed UX/UI and Developed the whole webpage of ETOE Solutions Co., Ltd. – An Oracle DMP (Directly Managed Partner) Company.",
     "link": "http://www.etoe.co.kr/",
     "content": [
       {

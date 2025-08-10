@@ -2,7 +2,7 @@ export const theme = {
   colors: {
     background: "#FDFFF5",
     primary: "#F92927",
-    hover: "#B5D45F",
+    hover: "rgb(101, 151, 101)",
     header: "white",
     headerText: "black",
     footer: "#d8d2a5",

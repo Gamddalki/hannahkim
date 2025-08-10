@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../Components/Header";
 import HomeBerry from "../img/HomeBerry.svg";
-import aboutBg from "../img/about.JPG";
+import aboutBg from "../img/about.jpg";
 import projectData from "../data/projects.json";
 import researchData from "../data/researches.json";
 
@@ -53,6 +53,7 @@ const CircleText = styled.div`
     font-size: clamp(17px, 2vw, 23px);
     font-style: italic;
     margin-top: 0 !important;
+    color: ${(props) => props.theme.colors.primary} !important;
   }
 `;
 
@@ -74,11 +75,13 @@ const TypoWrapper = styled.div`
       font-size: clamp(30px, 5vw, 40px);
       line-height: clamp(32px, 5.2vw, 45px);
       display: inline;
+      color: ${(props) => props.theme.colors.primary};
     }
   }
   span {
     font-style: italic;
     margin-top: 40px;
+    color: ${(props) => props.theme.colors.hover};
   }
   img {
     width: clamp(150px, 23vw, 300px);
@@ -312,7 +315,7 @@ function Home() {
             {sortedProjectData.map((project) => (
               <Thumbnail
                 key={project.id}
-                bgImg={project.thumbnail}
+                bgImg={`${process.env.PUBLIC_URL}${project.thumbnail}`}
                 onClick={() => nav(`/project/${project.id}`)}
               >
                 <TitleOverlay>
@@ -331,7 +334,7 @@ function Home() {
             {researchData.map((research) => (
               <Thumbnail
                 key={research.id}
-                bgImg={research.thumbnail}
+                bgImg={`${process.env.PUBLIC_URL}${research.thumbnail}`}
                 onClick={() => nav(`/research/${research.id}`)}
               >
                 <TitleOverlay>
@@ -353,7 +356,7 @@ function Home() {
             <Text>
               <LeftTextWrapper>
                 <h1>Let's create something amazing!</h1>
-                <a href="mailto:hanahk01@ewha.ac.kr">hanahk01@ewha.ac.kr</a>
+                <a href="mailto:hannahk01@ewha.ac.kr">hannahk01@ewha.ac.kr</a>
               </LeftTextWrapper>
               <RightTextWrapper>
                 <a

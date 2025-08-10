@@ -169,7 +169,11 @@ const Details = () => {
             i.type === "text" ? (
               <span key={index}>{i.value}</span>
             ) : (
-              <Image key={index} src={i.value} alt="Project img" />
+              <Image
+                key={index}
+                src={`${process.env.PUBLIC_URL}${i.value}`}
+                alt="Project img"
+              />
             )
           )}
         </ContentBlock>
