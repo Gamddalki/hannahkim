@@ -210,6 +210,9 @@ function Header() {
           >
             PUBLICATIONS
           </NavLink>
+          <NavLink to="/arts" className={isActive("/arts") ? "active" : ""}>
+            ARTS
+          </NavLink>
         </Nav>
 
         <MobileMenuButton onClick={toggleMenu}>
@@ -244,6 +247,13 @@ function Header() {
             className={isActive("/publications") ? "active" : ""}
           >
             PUBLICATIONS
+          </MobileNavLink>
+          <MobileNavLink
+            to="/arts"
+            onClick={handleNavClick}
+            className={isActive("/arts") ? "active" : ""}
+          >
+            ARTS
           </MobileNavLink>
         </MobileNav>
       </MobileMenu>
