@@ -191,7 +191,7 @@ function Header() {
     <>
       <HeaderDiv>
         <Logo onClick={handleLogoClick}>
-          <img src={`${process.env.PUBLIC_URL}/fabicon3.svg`} alt="HANNAH" />
+          <img src={`${process.env.PUBLIC_URL}/fabicon.svg`} alt="HANNAH" />
         </Logo>
 
         <Nav>
