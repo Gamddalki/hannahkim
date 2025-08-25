@@ -8,6 +8,7 @@ import {
   YoutubeIcon,
 } from "@hugeicons/core-free-icons";
 import PageContainer from "../Components/PageContainer";
+import journeyData from "../data/journey.json";
 
 const CVIcon = () => (
   <svg
@@ -257,110 +258,9 @@ const MoreButton = styled.button`
 function Hannah() {
   const [showAll, setShowAll] = React.useState(false);
 
-  const journeyData = [
-    {
-      year: "2025.07 - present",
-      type: "Activity",
-      icon: "🌎",
-      title: "Language Exchange Cafe Leader @ Culcom",
-    },
-    {
-      year: "2025.06 - 2025.08",
-      type: "Volunteer",
-      title:
-        "2025 Incheon Pentaport Rock Festival “Penta Rockers” Information Team Lead",
-    },
-    {
-      year: "2024.09 - 2025.02",
-      type: "Education",
-      title: "Exchange Student @ KU Leuven (Faculty of Arts)",
-    },
-    {
-      year: "2024.08",
-      type: "Research",
-      title: "Presented an accepted paper @ IEEE IRI'24 in San Jose, USA",
-    },
-    {
-      year: "2024.02 - 2024.07",
-      type: "Volunteer",
-      title: "Museum Staff and Docent @ Ewha Womans University Museum",
-    },
-    {
-      year: "2023.07",
-      type: "Activity",
-      icon: "🎮",
-      title: "EWHA-EPITA SUMMER IT PROGRAM — IT Trends in IoT & VR @ EPITA",
-    },
-    {
-      year: "2023.02 - 2024.08",
-      type: "Scholarship",
-      title: "EWHA Major Top Student Scholarship",
-    },
-    {
-      year: "2022.09 - 2023.07",
-      type: "Club Activity",
-      icon: "🌍",
-      title:
-        "Ewha Womans University Korean Language Tutoring & Cultural Exchange Club “Hangeulassi”",
-    },
-    {
-      year: "2022.05 - present",
-      type: "Activity",
-      icon: "🎸",
-      title: "Band “RGBN”",
-    },
-    {
-      year: "2021.11 - 2022.05",
-      type: "Work Experience",
-      title: "Mildang Math Intern @ Mildang PT",
-    },
-    {
-      year: "2021.03 - 2024.02",
-      type: "Club Activity",
-      icon: "🎮",
-      title: "Game Development Club “KING” @ Ewha Womans University",
-    },
-    {
-      year: "2020.07 - 2021.08",
-      type: "Research",
-      title: "Undergraduate Research Intern @ HCIL EWHA (Prof. Uran Oh)",
-    },
-    {
-      year: "2020.03 - 2026.02",
-      type: "Education",
-      title:
-        "B.E. in Computer Science and Engineering & B.A. in Humanities, Art and Media (Summa Cum Laude) @ Ewha Womans University",
-    },
-    {
-      year: "2018.03 - 2018.07",
-      type: "Education",
-      title:
-        "Drone manufacturing and flight training program @ Seoul Polytechnic School",
-    },
-    {
-      year: "2017.05 - 2019.07",
-      type: "Volunteer",
-      title:
-        "Teaching 'Scratch & micro:bit' to children from low-income families",
-    },
-    {
-      year: "2017.03 - 2020.02",
-      type: "Club Activity",
-      icon: "🎙️",
-      title: "Broadcasting System “JEBS” 41st @ Jinseon Girl's High School",
-    },
-  ];
+  const { journeyData: journeyItems, icons } = journeyData;
 
-  const icons = {
-    Education: "🎓",
-    "Work Experience": "💼",
-    Scholarship: "🎖️",
-    Volunteer: "🤝",
-    Award: "🏆",
-    Research: "🔬",
-  };
-
-  const visibleItems = showAll ? journeyData : journeyData.slice(0, 5);
+  const visibleItems = showAll ? journeyItems : journeyItems.slice(0, 5);
 
   return (
     <PageContainer>
@@ -490,7 +390,7 @@ function Hannah() {
             </JourneyItem>
           ))}
         </JourneyList>
-        {journeyData.length > 5 && (
+        {journeyItems.length > 5 && (
           <MoreButton onClick={() => setShowAll(!showAll)}>
             {showAll ? "Hide" : "More"}
           </MoreButton>
