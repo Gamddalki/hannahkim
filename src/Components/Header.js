@@ -26,6 +26,12 @@ const HeaderDiv = styled.header`
 
 const Logo = styled.div`
   cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   img {
     height: 40px;
     width: auto;
