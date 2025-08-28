@@ -21,6 +21,15 @@ const lineReveal = keyframes`
   }
 `;
 
+const scrollLeft = keyframes`
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+`;
+
 const Main = styled.div`
   width: 100%;
   height: 100vh;
@@ -35,7 +44,7 @@ const Main = styled.div`
 const AnimationContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,50 +223,130 @@ const ArtText = styled.div`
 `;
 
 const TextContainer = styled.div`
-  margin-top: 80px;
+  margin-top: 70px;
   text-align: center;
-  max-width: 600px;
+  width: 100%;
+  height: 100px;
   padding: 0 20px;
 `;
 
-const Title = styled.h2`
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: ${(props) => props.theme.colors.primary};
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: ${fadeIn} 1s ease-in-out forwards;
+const TitleContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 140px;
+  background: transparent;
+  margin-left: calc(-50vw + 50%);
+
+  @media (max-width: 768px) {
+    height: 80px;
+  }
+
+  @media (max-width: 480px) {
+    height: 60px;
+  }
+`;
+
+const ScrollingTitle = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  white-space: nowrap;
+  animation: ${scrollLeft} 100s linear infinite;
   animation-delay: 3s;
+  width: max-content;
+  min-width: 100vw;
+
+  @media (max-width: 768px) {
+    animation-duration: 75s;
+  }
+
+  @media (max-width: 480px) {
+    animation-duration: 62s;
+  }
+`;
+
+const ScrollingTitleText = styled.h2`
+  font-size: 7rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1.2px ${(props) => props.theme.colors.primary};
+  margin-right: 30px;
+  white-space: nowrap;
+  line-height: 1.2;
+  flex-shrink: 0;
 
   @media (max-width: 768px) {
     font-size: 2rem;
-    margin-bottom: 16px;
-    line-height: 1.2;
+    margin-right: 30px;
+    padding: 5px 0;
   }
 
   @media (max-width: 480px) {
     font-size: 1.5rem;
-    margin-bottom: 12px;
-    line-height: 1.2;
+    margin-right: 30px;
+    padding: 3px 0;
   }
 `;
 
-const Description = styled.p`
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #666;
-  opacity: 0;
-  animation: ${fadeIn} 1s ease-in-out forwards;
-  animation-delay: 3.5s;
+const Description = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 50px;
+  background: transparent;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 20px;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.5;
+    height: 40px;
   }
 
   @media (max-width: 480px) {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    height: 40px;
+  }
+`;
+
+const ScrollingDescription = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  white-space: nowrap;
+  animation: ${scrollLeft} 120s linear infinite;
+  animation-delay: 4s;
+  width: max-content;
+  min-width: 100vw;
+
+  @media (max-width: 768px) {
+    animation-duration: 112s;
+  }
+
+  @media (max-width: 480px) {
+    animation-duration: 93s;
+  }
+`;
+
+const ScrollingDescriptionText = styled.h3`
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-right: 10px;
+  white-space: nowrap;
+  line-height: 1.8;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    margin-right: 50px;
+    padding: 5px 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+    margin-right: 30px;
+    padding: 3px 0;
   }
 `;
 
@@ -279,14 +368,64 @@ function Home() {
       </AnimationContainer>
 
       <TextContainer>
-        <Title>
-          From Technology <br />
-          towards Art
-        </Title>
         <Description>
-          Crafting Narrative-driven User Experiences <br />
-          at the Intersection of Technology and Art
+          <ScrollingDescription>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+            <ScrollingDescriptionText>
+              Crafting Narrative-driven User Experiences at the Intersection of
+              Technology and Art 🍓
+            </ScrollingDescriptionText>
+          </ScrollingDescription>
         </Description>
+        <TitleContainer>
+          <ScrollingTitle>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+            <ScrollingTitleText>From Technology Towards Art</ScrollingTitleText>
+          </ScrollingTitle>
+        </TitleContainer>
       </TextContainer>
     </Main>
   );
