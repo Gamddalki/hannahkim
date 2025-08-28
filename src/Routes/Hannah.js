@@ -272,12 +272,13 @@ function Hannah() {
               alt="Hannah Kim"
             />
           </ProfileImage>
-          <SocialIcons>
-            <IconContainer>
+          <SocialIcons data-no-hover>
+            <IconContainer data-no-hover>
               <IconLink
                 href="mailto:hannahk01@ewha.ac.kr"
                 target="_blank"
                 rel="noreferrer"
+                data-no-hover
               >
                 <HugeiconsIcon icon={Mail01Icon} />
               </IconLink>
@@ -285,6 +286,7 @@ function Hannah() {
                 href="https://www.linkedin.com/in/hannahk01/"
                 target="_blank"
                 rel="noreferrer"
+                data-no-hover
               >
                 <HugeiconsIcon icon={Linkedin02Icon} />
               </IconLink>
@@ -292,6 +294,7 @@ function Hannah() {
                 href="https://github.com/Gamddalki/"
                 target="_blank"
                 rel="noreferrer"
+                data-no-hover
               >
                 <HugeiconsIcon icon={GithubIcon} />
               </IconLink>
@@ -299,6 +302,7 @@ function Hannah() {
                 href="https://www.youtube.com/@dahae01"
                 target="_blank"
                 rel="noreferrer"
+                data-no-hover
               >
                 <HugeiconsIcon icon={YoutubeIcon} />
               </IconLink>
@@ -307,13 +311,14 @@ function Hannah() {
                 target="_blank"
                 rel="noreferrer"
                 title="CV"
+                data-no-hover
               >
                 <CVIcon />
               </IconLink>
             </IconContainer>
           </SocialIcons>
         </LeftColumn>
-        <ProfileInfo>
+        <ProfileInfo data-no-hover>
           <h2>Hello, I'm Hannah Kim</h2>
           <span>
             I am a <i>Creative Technologist&nbsp;</i> crafting narrative-driven
@@ -391,7 +396,7 @@ function Hannah() {
           ))}
         </JourneyList>
         {journeyItems.length > 5 && (
-          <MoreButton onClick={() => setShowAll(!showAll)}>
+          <MoreButton onClick={() => setShowAll(!showAll)} data-no-hover>
             {showAll ? "Hide" : "More"}
           </MoreButton>
         )}

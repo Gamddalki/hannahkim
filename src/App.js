@@ -6,12 +6,14 @@ import Hannah from "./Routes/Hannah";
 import Projects from "./Routes/Projects";
 import Publications from "./Routes/Publications";
 import Details from "./Routes/Details";
+import CustomCursor from "./Components/CustomCursor";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 
 function App() {
   return (
     <>
+      <CustomCursor />
       <ThemeProvider theme={theme}>
         <Router basename={process.env.PUBLIC_URL}>
           <Header />

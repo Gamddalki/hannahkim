@@ -120,6 +120,18 @@ span{
   font-size: 14px;
   display: block;
 }
+
+body {
+  background-color: #ffffff;
+}
+
+  /* force cursor to be none for all elements */
+html, body, * {
+  cursor: none !important;
+}
+a, button, input, select, textarea, [role="button"], [onclick], .clickable, .hoverable {
+  cursor: none !important;
+}
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

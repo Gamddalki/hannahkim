@@ -195,34 +195,44 @@ function Header() {
 
   return (
     <>
-      <HeaderDiv>
-        <Logo onClick={handleLogoClick}>
+      <HeaderDiv data-no-hover>
+        <Logo onClick={handleLogoClick} data-no-hover>
           <img src={`${process.env.PUBLIC_URL}/fabicon.svg`} alt="HANNAH" />
         </Logo>
 
-        <Nav>
-          <NavLink to="/hannah" className={isActive("/hannah") ? "active" : ""}>
+        <Nav data-no-hover>
+          <NavLink
+            to="/hannah"
+            className={isActive("/hannah") ? "active" : ""}
+            data-no-hover
+          >
             HANNAH
           </NavLink>
           <NavLink
             to="/projects"
             className={isActive("/projects") ? "active" : ""}
+            data-no-hover
           >
             PROJECTS
           </NavLink>
           <NavLink
             to="/publications"
             className={isActive("/publications") ? "active" : ""}
+            data-no-hover
           >
             PUBLICATIONS
           </NavLink>
-          <NavLink to="/arts" className={isActive("/arts") ? "active" : ""}>
+          <NavLink
+            to="/arts"
+            className={isActive("/arts") ? "active" : ""}
+            data-no-hover
+          >
             ARTS
           </NavLink>
         </Nav>
 
-        <MobileMenuButton onClick={toggleMenu}>
-          <HamburgerIcon isOpen={isMenuOpen}>
+        <MobileMenuButton onClick={toggleMenu} data-no-hover>
+          <HamburgerIcon isOpen={isMenuOpen} data-no-hover>
             <span></span>
             <span></span>
             <span></span>
@@ -237,6 +247,7 @@ function Header() {
             to="/hannah"
             onClick={handleNavClick}
             className={isActive("/hannah") ? "active" : ""}
+            data-no-hover
           >
             HANNAH
           </MobileNavLink>
@@ -244,6 +255,7 @@ function Header() {
             to="/projects"
             onClick={handleNavClick}
             className={isActive("/projects") ? "active" : ""}
+            data-no-hover
           >
             PROJECTS
           </MobileNavLink>
@@ -251,6 +263,7 @@ function Header() {
             to="/publications"
             onClick={handleNavClick}
             className={isActive("/publications") ? "active" : ""}
+            data-no-hover
           >
             PUBLICATIONS
           </MobileNavLink>
@@ -258,6 +271,7 @@ function Header() {
             to="/arts"
             onClick={handleNavClick}
             className={isActive("/arts") ? "active" : ""}
+            data-no-hover
           >
             ARTS
           </MobileNavLink>

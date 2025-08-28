@@ -193,7 +193,7 @@ function Projects() {
   return (
     <PageContainer title="PROJECTS">
       {selectedTags.length > 0 && (
-        <SelectedTagContainer>
+        <SelectedTagContainer data-no-hover>
           {selectedTags.map((tag, index) => (
             <SelectedTag key={index} onClick={() => handleRemoveTag(tag)}>
               #{tag}
@@ -205,7 +205,11 @@ function Projects() {
 
       <ProjectsGrid>
         {filteredProjects.map((project, index) => (
-          <ProjectCard key={index} onClick={() => handleCardClick(project.id)}>
+          <ProjectCard
+            key={index}
+            onClick={() => handleCardClick(project.id)}
+            data-more-hover
+          >
             <ProjectImage>
               <img
                 src={`${process.env.PUBLIC_URL}/${project.thumbnail}`}
@@ -222,6 +226,7 @@ function Projects() {
                         e.stopPropagation();
                         handleMetaTagClick(tech);
                       }}
+                      data-no-hover
                     >
                       #{tech}
                     </MetaTag>
