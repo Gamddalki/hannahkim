@@ -21,9 +21,9 @@ const CursorText = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  font-size: 10px;
-  font-weight: bold;
-  font-family: "Paperlogy-4Regular", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: "PlusJakartaSans", -apple-system, sans-serif;
   opacity: 1;
   pointer-events: none;
   letter-spacing: 0.5px;

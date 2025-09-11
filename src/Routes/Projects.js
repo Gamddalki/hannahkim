@@ -69,7 +69,7 @@ const ProjectMetaTags = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 `;
 
 const SelectedTagContainer = styled.div`

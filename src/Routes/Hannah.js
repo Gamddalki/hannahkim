@@ -75,25 +75,25 @@ const ProfileInfo = styled.div`
   flex: 1;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     color: ${(props) => props.theme.colors.primary};
   }
 
   span {
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.6;
     margin-bottom: 15px;
     color: ${(props) => props.theme.colors.text};
     display: block;
     @media (max-width: 1024px) {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
 `;
 
 const HighlightLink = styled.a`
-  font-weight: bold;
+  font-weight: 700;
   color: ${(props) => props.theme.colors.text};
   text-decoration: none;
   transition: color 0.2s ease;
@@ -137,7 +137,7 @@ const JourneySection = styled.div`
 `;
 
 const JourneyTitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
   color: ${(props) => props.theme.colors.primary};
   text-align: left;
@@ -168,7 +168,7 @@ const JourneyList = styled.div`
 const JourneyItem = styled.div`
   display: flex;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   gap: 20px;
   position: relative;
   padding-left: 0;
@@ -206,10 +206,10 @@ const Content = styled.div`
 
 const ItemType = styled.span`
   font-size: 0.8rem;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: ${(props) => props.theme.colors.subText};
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.2;
   opacity: 0.7;
 
   @media (max-width: 1024px) {
@@ -321,14 +321,14 @@ function Hannah() {
         <ProfileInfo data-no-hover>
           <h2>Hello, I'm Hannah Kim</h2>
           <span>
-            I am a <i>Creative Technologist&nbsp;</i> crafting narrative-driven
-            user experiences.
+            I am a <i>Creative Technologist</i> crafting narrative-driven user
+            experiences.
           </span>
           <span>
             I thrive at the intersection of technology and art, designing{" "}
-            <i>interactive systems&nbsp;</i> that merge <i>story and emotion</i>
-            . From emotion-driven prompt engineering research to XR games, my
-            work brings abstract ideas into tangible, interactive realities.
+            <i>interactive systems</i> that merge <i>story and emotion</i>. From
+            emotion-driven prompt engineering research to XR games, my work
+            brings abstract ideas into tangible, interactive realities.
           </span>
           <span>
             With a &nbsp;

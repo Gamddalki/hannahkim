@@ -1,28 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import "./fonts.css";
 
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: "Unbounded";
-  src: url("https://fonts.gstatic.com/s/unbounded/v11/Yq6W-LOTXCb04q32xlpwu8Zf.woff2") format("woff2");
-  font-weight: 200 900;
-  font-style: normal;
-}
-@font-face {
-    font-family: 'Paperlogy-4Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Paperlogy-7Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -67,7 +50,7 @@ table {
 }
 *{
   box-sizing: border-box;
-  font-family: "Paperlogy-4Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "PlusJakartaSans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   line-height: 1.2;
@@ -90,34 +73,34 @@ button {
     background: none;
   }
 h1{
-  font-family: 'Unbounded', -apple-system, sans-serif;
+  font-family: 'BricolageGrotesque', -apple-system, sans-serif;
   color: #F92927;
-  font-weight: 400;
+  font-weight: 900;
   line-height: 55px;
   font-size: 15px;
   display: block;
 }
 h2{
-  font-family: 'Unbounded', -apple-system, sans-serif;
+  font-family: 'BricolageGrotesque', -apple-system, sans-serif;
   color: #F92927;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 45px;
   font-size: 10px;
   display: block;
 }
 h3{
-  font-family: 'Unbounded', -apple-system, sans-serif;
+  font-family: 'BricolageGrotesque', -apple-system, sans-serif;
   color: #F92927;
-  font-weight: 400;
-  line-height: 30px;
-  font-size: 10px;
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 12px;
   display: block;
 }
 span{
-  font-family: 'Paperlogy-4Regular', -apple-system, sans-serif;
+  font-family: 'PlusJakartaSans', -apple-system, sans-serif;
   color: #F92927;
-  line-height: 20px;
-  font-size: 14px;
+  line-height: 22px;
+  font-size: 16px;
   display: block;
 }
 
