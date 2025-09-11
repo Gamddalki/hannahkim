@@ -154,9 +154,8 @@ const MobileNavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.headerText};
   cursor: pointer;
-  font-size: 18px;
   font-weight: 500;
-  padding: 10px 0;
+  padding: 8px 0;
   transition: color 0.3s ease;
 
   &:hover {
@@ -197,7 +196,7 @@ function Header() {
     <>
       <HeaderDiv data-no-hover>
         <Logo onClick={handleLogoClick} data-no-hover>
-          <img src={`${process.env.PUBLIC_URL}/fabicon.svg`} alt="HANNAH" />
+          <img src={`${process.env.PUBLIC_URL}/Heart.svg`} alt="HANNAH" />
         </Logo>
 
         <Nav data-no-hover>
