@@ -29,15 +29,18 @@
     "where": "2021 Software Engineering and Creative Design Project",
     "thumbnail": "/img/projects/reICEcle.svg",
     "techStack": [
-      "Software Design",
+      "Mobile Application",
       "Prototyping",
-      "UML (Use Case Scenarios, Sequence Diagrams, Functional Structure)",
-      "Wireframing"
+      "Software Design",
+      "UML"
     ],
-    "myRole": ["Project Manager"],
+    "myRole": ["Team Lead", "System Analyst & Designer", "UX/UI Designer"],
+    "category": ["Mobile Application", "Prototyping", "Software Design", "UML"],
+    "credits": ["Sunyu Pang", "Jiyeon Kim", "Yongyeon Kim"],
+    "tools": ["Visual Paradigm", "Proto.io"],
     "startDate": "2021-03",
     "endDate": "2021-06",
-    "summary": "Prototype of a Mobile Application that aims to collect ice packs from households and rewards users with points. These points can be used at local businesses, helping to boost sales that have declined due to COVID-19.",
+    "summary": "Prototype of a Mobile Application  \n that aims to **collect ice packs from households**  \n and **rewards users with points**.  \n These points can be used at local businesses,  \n helping to **boost sales that have declined   \n due to COVID-19**.",
     "link": "https://gamddalki.tistory.com/7",
     "content": [
       {
