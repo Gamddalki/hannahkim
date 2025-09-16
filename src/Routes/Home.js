@@ -110,7 +110,7 @@ const ScrollIndicator = styled.div`
   color: ${(props) => props.theme.colors.text};
   font-size: 0.9rem;
   font-weight: 500;
-  opacity: 0.7;
+  opacity: 0.5;
   animation: bounce 2s infinite;
   z-index: 10;
   align-items: center;
