@@ -182,6 +182,10 @@ const ProjectCard = styled.div`
 
   &:hover {
     transform: scale(1.02);
+
+    img {
+      filter: none;
+    }
   }
 
   @media (max-width: 1024px) {
@@ -200,12 +204,16 @@ const ProjectCard = styled.div`
 const ProjectThumbnail = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url(${process.env.PUBLIC_URL}/${(props) =>
-    props.thumbnail});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
+    transition: filter 0.3s ease;
+  }
 
   &::before {
     content: "";
@@ -215,6 +223,7 @@ const ProjectThumbnail = styled.div`
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
 `;
 
@@ -450,25 +459,27 @@ function Home() {
           </TextContainer>
         </ContentContainer>
       </Main>
-
-      <SelectedWorksSection ref={selectedWorksRef}>
-        <SectionTitle>Selected Works</SectionTitle>
-        <HorizontalScrollContainer>
-          <ProjectsContainer ref={projectsContainerRef}>
-            {selectedWorks.map((work) => (
-              <ProjectCard key={work.id}>
-                <ProjectThumbnail
-                  src={`${process.env.PUBLIC_URL}/${work.thumbnail}`}
-                />
-                <ProjectInfo>
-                  <ProjectTitle>{work.title}</ProjectTitle>
-                  <ProjectSubtitle>{work.subtitle}</ProjectSubtitle>
-                </ProjectInfo>
-              </ProjectCard>
-            ))}
-          </ProjectsContainer>
-        </HorizontalScrollContainer>
-      </SelectedWorksSection>
+        <SelectedWorksSection ref={selectedWorksRef}>
+          <SectionTitle>Selected Works</SectionTitle>
+          <HorizontalScrollContainer>
+            <ProjectsContainer ref={projectsContainerRef}>
+              {selectedWorks.map((work) => (
+                <ProjectCard key={work.id} data-more-hover>
+                  <ProjectThumbnail>
+                    <img
+                      src={`${process.env.PUBLIC_URL}${work.thumbnail}`}
+                      alt={work.title}
+                    />
+                  </ProjectThumbnail>
+                  <ProjectInfo>
+                    <ProjectTitle>{work.title}</ProjectTitle>
+                    <ProjectSubtitle>{work.subtitle}</ProjectSubtitle>
+                  </ProjectInfo>
+                </ProjectCard>
+              ))}
+            </ProjectsContainer>
+          </HorizontalScrollContainer>
+        </SelectedWorksSection>
     </>
   );
 }
