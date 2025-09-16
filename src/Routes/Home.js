@@ -102,6 +102,43 @@ const ScrambleText = styled.span`
   will-change: transform, opacity;
 `;
 
+const ScrollIndicator = styled.div`
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: ${(props) => props.theme.colors.text};
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+  animation: bounce 2s infinite;
+  z-index: 10;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    40% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+      transform: translateX(-50%) translateY(-5px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    bottom: 30px;
+    font-size: 0.8rem;
+  }
+`;
+
 const SelectedWorksSection = styled.section`
   width: 100%;
   height: 100vh;
@@ -213,6 +250,9 @@ const ProjectThumbnail = styled.div`
     object-fit: cover;
     filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
     transition: filter 0.3s ease;
+    @media (max-width: 768px) {
+      filter: none;
+    }
   }
 
   &::before {
@@ -458,6 +498,10 @@ function Home() {
             </RightText>
           </TextContainer>
         </ContentContainer>
+        <ScrollIndicator>
+          <span>Scroll for more</span>
+          <span>|</span>
+        </ScrollIndicator>
       </Main>
       <div>
         <SelectedWorksSection ref={selectedWorksRef}>
