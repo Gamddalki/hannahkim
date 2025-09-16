@@ -262,7 +262,7 @@ const ProjectThumbnail = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
   }
 `;
@@ -279,7 +279,7 @@ const ProjectInfo = styled.div`
 `;
 
 const ProjectTitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0 0 0.5rem 0;
   line-height: 1.2;
   color: white;
