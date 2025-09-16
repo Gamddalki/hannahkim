@@ -6,6 +6,7 @@ import {
   Linkedin02Icon,
   Mail01Icon,
   YoutubeIcon,
+  SoundcloudIcon,
 } from "@hugeicons/core-free-icons";
 import PageContainer from "../Components/PageContainer";
 import journeyData from "../data/journey.json";
@@ -307,7 +308,15 @@ function Hannah() {
                 <HugeiconsIcon icon={YoutubeIcon} />
               </IconLink>
               <IconLink
-                href="https://drive.google.com/file/d/1QEQvaSuWca5mdzDIbpyuP-I8dz1hLe3l/view"
+                href="https://soundcloud.com/llorjjrk"
+                target="_blank"
+                rel="noreferrer"
+                data-no-hover
+              >
+                <HugeiconsIcon icon={SoundcloudIcon} />
+              </IconLink>
+              <IconLink
+                href="https://drive.google.com/file/d/1AE1wXTG0kT37ymQAC8_eZoldSjfxnBHb/view"
                 target="_blank"
                 rel="noreferrer"
                 title="CV"
