@@ -71,7 +71,8 @@
         "type": "text",
         "value": "We then designed the screen layouts and transition flow diagrams, followed by protocol design, and ultimately developed the final prototype."
       }
-    ]
+    ],
+    "selected": true
   },
   {
     "id": 3,
@@ -133,7 +134,8 @@
         "type": "text",
         "value": "Player gets to find out what happened to Helios, Dyonisos, and Zeus with Game Over / Clear Animation."
       }
-    ]
+    ],
+    "selected": true
   },
   {
     "id": 4,

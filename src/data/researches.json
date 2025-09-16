@@ -36,6 +36,35 @@
         "type": "text",
         "value": "We evaluated Prompirit empirically in comparisons to other prompt engineering methods in terms of both objective and subjective metrics."
       }
+    ],
+    "selected": true
+  },
+  {
+    "id": 2,
+    "title": "Three Voices Narrating ‘Love in the Big City’",
+    "subtitle": "A Comparative Study of Narrative Transformation and Character Reconstruction across Novel, Film, and Drama Series – Focusing on episode ‘Jaehee/Miae’",
+    "where": "Bachelor’s Thesis, Ewha Womans University, 2025",
+    "thumbnail": "/img/researches/LoveintheBigCity.svg",
+    "date": "19 May 2025",
+    "summary": "요약",
+    "indexTerms": [
+      "Narrative Transformation",
+      "Character Reconstruction",
+      "Novel",
+      "Film",
+      "Drama Series"
+    ],
+    "myRole": ["Author"],
+    "link": "",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/researches/LoveintheBigCity.svg"
+      },
+      {
+        "type": "text",
+        "value": "요약"
+      }
     ]
   }
 ]
