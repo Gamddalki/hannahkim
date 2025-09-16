@@ -74,15 +74,15 @@ button {
   }
 h1{
   font-family: 'BricolageGrotesque', -apple-system, sans-serif;
-  color: #F92927;
-  font-weight: 900;
+  color:#222222;
+  font-weight: 700;
   line-height: 55px;
-  font-size: 15px;
+  font-size: 90px;
   display: block;
 }
 h2{
   font-family: 'BricolageGrotesque', -apple-system, sans-serif;
-  color: #F92927;
+  color: #FF2020;
   font-weight: 700;
   line-height: 45px;
   font-size: 10px;
@@ -90,7 +90,7 @@ h2{
 }
 h3{
   font-family: 'BricolageGrotesque', -apple-system, sans-serif;
-  color: #F92927;
+  color: #FF2020;
   font-weight: 500;
   line-height: 25px;
   font-size: 12px;
@@ -98,14 +98,25 @@ h3{
 }
 span{
   font-family: 'PlusJakartaSans', -apple-system, sans-serif;
-  color: #F92927;
+  color: #444444;
   line-height: 22px;
   font-size: 16px;
   display: block;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #eeeeee;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
 }
 
   /* force cursor to be none for all elements */
