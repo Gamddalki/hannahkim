@@ -207,6 +207,22 @@ const MasonryGrid = ({
               {getSubtitle && (
                 <ProjectSubtitle>{getSubtitle(item)}</ProjectSubtitle>
               )}
+              <ProjectMetaTags>
+                {getMetaTags &&
+                  getMetaTags(item) &&
+                  getMetaTags(item).map((tech, techIndex) => (
+                    <MetaTag
+                      key={techIndex}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleMetaTagClick(tech);
+                      }}
+                      data-no-hover
+                    >
+                      #{tech}
+                    </MetaTag>
+                  ))}
+              </ProjectMetaTags>
             </ProjectInfo>
           </ProjectCard>
         ))}
