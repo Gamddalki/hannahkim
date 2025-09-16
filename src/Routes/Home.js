@@ -459,6 +459,7 @@ function Home() {
           </TextContainer>
         </ContentContainer>
       </Main>
+      <div>
         <SelectedWorksSection ref={selectedWorksRef}>
           <SectionTitle>Selected Works</SectionTitle>
           <HorizontalScrollContainer>
@@ -480,6 +481,7 @@ function Home() {
             </ProjectsContainer>
           </HorizontalScrollContainer>
         </SelectedWorksSection>
+      </div>
     </>
   );
 }
