@@ -41,15 +41,15 @@ const ProjectImage = styled.div`
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
     @media (max-width: 768px) {
       filter: none;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
   }
 
   ${ProjectCard}:hover & img {
-    transform: scale(1.05);
     filter: none;
   }
 `;
