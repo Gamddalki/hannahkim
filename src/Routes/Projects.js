@@ -16,7 +16,7 @@ function Projects() {
     `${process.env.PUBLIC_URL}/${project.thumbnail}`;
   const getTitle = (project) => project.title;
   const getSubtitle = (project) => project.subtitle;
-  const getMetaTags = (project) => project.techStack;
+  const getMetaTags = (project) => project.category;
   const getKey = (project) => project.id;
 
   return (
@@ -29,7 +29,7 @@ function Projects() {
         getSubtitle={getSubtitle}
         getMetaTags={getMetaTags}
         getKey={getKey}
-        tagField="techStack"
+        tagField="category"
         sortField="startDate"
       />
     </PageContainer>

@@ -5,11 +5,13 @@
     "subtitle": "Mobile Running Game",
     "where": "2021 Summer Project at KING",
     "thumbnail": "/img/projects/AnneoftheBlackHair.jpg",
-    "techStack": ["Unity", "C#", "Aesprite"],
     "myRole": ["Project Manager", "Script Writer", "Character Designer"],
+    "category": ["Mobile Game"],
+    "credits": ["Minjung Jung", "Ayeon Kim", "Heejin Park", "Jiwon Seo"],
+    "tools": ["Unity", "C#", "Aesprite"],
     "startDate": "2021-05",
     "endDate": "2021-09",
-    "summary": "Did you know that Anne was actually black haired? Maybe you did, but no one in the village should.",
+    "keyInsights": "Did you know that Anne was actually **black-haired**? Maybe you did, but **no one in the village should**.",
     "link": "https://github.com/Gamddalki/Anne-of-BlackHair",
     "content": [
       {
@@ -25,27 +27,20 @@
   {
     "id": 2,
     "title": "reICEcle",
-    "subtitle": "Point-Based Ice Pack Recycling Application",
-    "where": "2021 Software Engineering and Creative Design Project",
+    "subtitle": "Point-Based Ice Pack Recycling Mobile Application",
+    "where": "2021 Software Engineering and Creative Design Course Work (Best Project)",
     "thumbnail": "/img/projects/reICEcle.svg",
-    "techStack": [
-      "Mobile Application",
-      "Prototyping",
-      "Software Design",
-      "UML"
-    ],
     "myRole": ["Team Lead", "System Analyst & Designer", "UX/UI Designer"],
     "category": ["Mobile Application", "Prototyping", "Software Design", "UML"],
     "credits": ["Sunyu Pang", "Jiyeon Kim", "Yongyeon Kim"],
     "tools": ["Visual Paradigm", "Proto.io"],
     "startDate": "2021-03",
     "endDate": "2021-06",
-    "summary": "Prototype of a Mobile Application  \n that aims to **collect ice packs from households**  \n and **rewards users with points**.  \n These points can be used at local businesses,  \n helping to **boost sales that have declined   \n due to COVID-19**.",
-    "link": "https://gamddalki.tistory.com/7",
-    "content": [
+    "accentColor": "#65AAF8",
+    "keyInsights": [
       {
-        "type": "text",
-        "value": "Development of 'reICEcle' began by brainstorming recent problems and narrowing them down to four key issues. After defining solutions for each, we analyzed their feasibility, demand, and relevance, selecting the final topic. We then conducted a thorough investigation using the '5 Whys method' to define the true problem, followed by in-depth research into the severity of the issue, current solutions, and similar case studies. After collecting data, we grouped similar ideas and clearly defined the core features of the 'Point-based Ice Pack Recycling Service System.'"
+        "type": "title",
+        "value": "# Transforming **Household Waste** \n # into **Community Value**"
       },
       {
         "type": "image",
@@ -53,7 +48,17 @@
       },
       {
         "type": "text",
-        "value": "In the detailed design phase of the project, we specifically defined the user environment and development environment, created service usage scenarios, and developed use case diagrams and use case lists to form an overview of the system. Based on this, we then created detailed scenarios for each use case and drew sequence diagrams."
+        "value": "— incentivizing **ice pack recycling** through a user-friendly mobile application connected to real-world collection bins."
+      }
+    ],
+    "overview": [
+      {
+        "type": "text",
+        "value": "**ReICEcle** is a prototype mobile application designed to encourage households to **recycle used ice packs** through a point-based reward system. The system integrates a physical collection bin equipped with weight measurement, enabling users to deposit ice packs, track their contributions, and redeem points at local businesses affected by COVID-19."
+      },
+      {
+        "type": "text",
+        "value": "As **team leader**, I led the project from problem definition to final prototype delivery, overseeing both the design process and system integration."
       },
       {
         "type": "image",
@@ -61,17 +66,20 @@
       },
       {
         "type": "text",
-        "value": "Next, we refined the detailed features by creating functional structure diagram, feature list, and mapping the functions to the screens."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/reICEcle3.png"
-      },
-      {
-        "type": "text",
-        "value": "We then designed the screen layouts and transition flow diagrams, followed by protocol design, and ultimately developed the final prototype."
+        "value": "We designed and conducted a **user survey (N=42)** to capture household recycling behaviors. Insights guided reward system design and interface priorities. Our approach combined **software engineering methodologies** (e.g. UML modeling) and prototyping to meet user requirements."
       }
     ],
+    "outcomes": [
+      "Demonstrated how digital incentives can connect environmental responsibility with local economic recovery.",
+      "Delivered a fully designed app prototype and system concept through software engineering methodologies.",
+      "Recognized as **Best Project of the Course** by the professor."
+    ],
+    "presentation": "https://drive.google.com/file/d/17o8u7_fPe6iJCsUjke00HlAbPVtyByoK/preview",
+    "links": [
+      { "type": "reflection", "value": "https://gamddalki.tistory.com/7" },
+      { "type": "document", "value": "https://gamddalki.tistory.com/7" }
+    ],
+    "reflection": "This project marked my first experience conducting user research, which enabled us to design a product that met real user requirements. It also strengthened my ability to **translate social issues into actionable, design-driven solutions** — a skill I continue to apply in interactive media and human-centered design.",
     "selected": true
   },
   {
@@ -80,7 +88,6 @@
     "subtitle": "Classic PC Shooting Game",
     "where": "3rd MaKINGJam first-place winning work",
     "thumbnail": "/img/projects/SunTheLight3.gif",
-    "techStack": ["Unity", "C#", "Aesprite"],
     "myRole": [
       "Project Manager",
       "Script Writer",
@@ -89,9 +96,12 @@
       "Map Designer",
       "Logo Designer"
     ],
+    "category": ["PC Game"],
+    "credits": ["Gabin Lee", "Dohee Kim", "Jooie Hwang", "Yoojin Jeon"],
+    "tools": ["Unity", "C#", "Aesprite"],
     "startDate": "2022-11",
     "endDate": "2023-01",
-    "summary": "Helios, the God of the Sun has lost his Sun one day. Let’s go find out what happened to his Sun, with the Golden Chariot.",
+    "keyInsights": "Helios, the God of the Sun has lost his Sun one day. Let’s go find out what happened to his Sun, with the Golden Chariot.",
     "link": "https://github.com/22MaKINGJam/Sun-the-Light",
     "content": [
       {
@@ -143,11 +153,13 @@
     "subtitle": "Webpage",
     "where": "Freelance Web Development Project",
     "thumbnail": "/img/projects/Canticum.svg",
-    "techStack": ["TypeScript", "React", "Node.js", "MySQL"],
     "myRole": ["Developer", "UX/UI Designer"],
+    "category": ["Webpage"],
+    "credits": ["Canticum Choir"],
+    "tools": ["TypeScript", "React", "Node.js", "MySQL"],
     "startDate": "2023-02",
     "endDate": "2024-07",
-    "summary": "Designed UX/UI and Developed the whole webpage of Canticum Choir – A choir that heals the soul with inspirational music from medieval mass music to oratorio and contemporary church music.",
+    "keyInsights": "Designed UX/UI and Developed the whole webpage of Canticum Choir – A choir that heals the soul with inspirational music from medieval mass music to oratorio and contemporary church music.",
     "link": "http://canticum.co.kr/",
     "content": [
       {
@@ -166,11 +178,13 @@
     "subtitle": "Webpage",
     "where": "Freelance Web Development Project",
     "thumbnail": "/img/projects/EtoE.svg",
-    "techStack": ["pug", "SCSS", "Node.js"],
     "myRole": ["Developer", "UX/UI Designer"],
+    "category": ["Webpage"],
+    "credits": ["ETOE Solutions Co., Ltd."],
+    "tools": ["pug", "SCSS", "Node.js"],
     "startDate": "2022-02",
     "endDate": "2022-08",
-    "summary": "Designed UX/UI and Developed the whole webpage of ETOE Solutions Co., Ltd. – An Oracle DMP (Directly Managed Partner) Company.",
+    "keyInsights": "Designed UX/UI and Developed the whole webpage of ETOE Solutions Co., Ltd. – An Oracle DMP (Directly Managed Partner) Company.",
     "link": "http://www.etoe.co.kr/",
     "content": [
       {
@@ -189,16 +203,13 @@
     "subtitle": "Household Medicine Delivery Service Application",
     "where": "EWHA Abeek Design-Thinking Prototype Development Education Award-winning work",
     "thumbnail": "/img/projects/HalmaeYakson.png",
-    "techStack": [
-      "Design Thinking",
-      "Software Design",
-      "Prototyping",
-      "Wireframing"
-    ],
     "myRole": ["Project Manager", "UX/UI Designer"],
+    "category": ["Mobile Application"],
+    "credits": ["Serin Park", "Minji Park"],
+    "tools": ["Figma"],
     "startDate": "2021-08",
     "endDate": "2021-08",
-    "summary": "Prototype of s Delivery Service Application for Household Medicines and Other Supplies.",
+    "keyInsights": "Prototype of s Delivery Service Application for Household Medicines and Other Supplies.",
     "link": "https://gamddalki.tistory.com/4",
     "content": [
       {
@@ -217,11 +228,13 @@
     "subtitle": "Ewha Campus Restaurant Guide Web Application",
     "where": "2022 Open SW Platform Project",
     "thumbnail": "/img/projects/EatWHA.gif",
-    "techStack": ["HTML", "CSS", "JS", "Python", "Python Flask", "Firebase"],
     "myRole": ["Backend Developer", "UX/UI Designer"],
+    "category": ["Web Application"],
+    "credits": ["Gabin Lee", "Jinyoung Oh", "Yelynn Oh", "Yunsun Jung"],
+    "tools": ["HTML", "CSS", "JS", "Python", "Python Flask", "Firebase"],
     "startDate": "2022-09",
     "endDate": "2022-12",
-    "summary": "Eat:WHA, the future we crEATe! – A Web Application for Busy Ewha Students to Find the Best Restaurants around campus.",
+    "keyInsights": "Eat:WHA, the future we crEATe! – A Web Application for Busy Ewha Students to Find the Best Restaurants around campus.",
     "link": "https://github.com/Gamddalki/EatWHA",
     "content": [
       {
@@ -244,11 +257,13 @@
     "subtitle": "VR escape game",
     "where": "2023 EPITA Summer Program Project",
     "thumbnail": "/img/projects/VividNightmare.png",
-    "techStack": ["Unity", "C#", "Oculus Quest 2"],
     "myRole": ["Script Writer", "Designer", "Developer"],
+    "category": ["VR Game"],
+    "credits": ["Minchae Kang", "Soyoung Park"],
+    "tools": ["Unity", "C#", "Oculus Quest 2"],
     "startDate": "2023-07",
     "endDate": "2023-07",
-    "summary": "You are in a nightmare! Avoid obstacles and find a right key within the given time. Pick up the key and press A at the door to escape from your dream. Otherwise, you'll never get out of the White Christmas's nightmare forever. Check the remaining time on your left wrist, and Good Luck!",
+    "keyInsights": "You are in a nightmare! Avoid obstacles and find a right key within the given time. Pick up the key and press A at the door to escape from your dream. Otherwise, you'll never get out of the White Christmas's nightmare forever. Check the remaining time on your left wrist, and Good Luck!",
     "link": "https://github.com/Gamddalki/VividNightmare",
     "content": [
       {
@@ -279,11 +294,13 @@
     "subtitle": "VUI Application for Assisting Contactless Ordering Services in Stores",
     "where": "2023 Human Computer Interaction Project",
     "thumbnail": "/img/projects/Jeogiyo.png",
-    "techStack": ["Figma"],
     "myRole": ["Designer", "Developer"],
+    "category": ["Prototyping", "Software Design", "UML"],
+    "credits": ["Sunyu Pang", "Minjung Jung", "Gabin Lee", "Jimin Song"],
+    "tools": ["Figma"],
     "startDate": "2023-09",
     "endDate": "2023-12",
-    "summary": "Virtual Assistant Application that helps middle-aged and older adults to easily use contactless ordering services at stores by VUI (Voice User Interface).",
+    "keyInsights": "Virtual Assistant Application that helps middle-aged and older adults to easily use contactless ordering services at stores by VUI (Voice User Interface).",
     "link": "https://gamddalki.tistory.com",
     "content": [
       {
