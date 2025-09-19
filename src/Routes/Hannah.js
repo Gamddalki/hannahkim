@@ -71,6 +71,33 @@ const ProfileImage = styled.div`
   }
 `;
 
+const SocialIcons = styled.div`
+  margin-top: 0;
+  width: 100%;
+  max-width: 400px;
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+`;
+
+const IconLink = styled.a`
+  color: ${(props) => props.theme.colors.text};
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+`;
+
 const ProfileInfo = styled.div`
   text-align: left;
   flex: 1;
@@ -79,16 +106,20 @@ const ProfileInfo = styled.div`
     font-size: 3.5rem;
     margin-bottom: 20px;
     color: ${(props) => props.theme.colors.primary};
+    line-height: 1;
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
 
   span {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.7;
     margin-bottom: 15px;
     color: ${(props) => props.theme.colors.text};
     display: block;
-    @media (max-width: 1024px) {
-      font-size: 1rem;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
     }
   }
 `;
@@ -224,7 +255,7 @@ const ItemType = styled.span`
   line-height: 1.2;
   opacity: 0.7;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     font-size: 0.7rem;
     margin-bottom: 3px;
   }
@@ -238,7 +269,7 @@ const ItemTitle = styled.span`
   word-wrap: break-word;
   overflow-wrap: break-word;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     font-size: 0.9rem;
   }
 `;
