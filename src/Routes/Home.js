@@ -464,7 +464,7 @@ const Home = memo(() => {
               {selectedWorks.map((work, index) => (
                 <ProjectCard
                   key={work.id}
-                  onClick={() => handleProjectClick(work)}
+                  onClick={() => navigate(`/${work.category}/${work.id}`)}
                   data-more-hover
                 >
                   <ProjectThumbnail>
