@@ -568,11 +568,9 @@ function Home() {
             </RightText>
           </TextContainer>
         </ContentContainer>
-        <ScrollIndicator>
-          <span>Scroll for more</span>
-          <span>|</span>
-        </ScrollIndicator>
+        <ScrollIndicator />
       </Main>
+
       <div>
         <SelectedWorksSection ref={selectedWorksRef}>
           <SectionTitle>Selected Works</SectionTitle>
