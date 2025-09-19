@@ -16,6 +16,7 @@ gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
+/* Main Text Animation */
 const Main = styled.div`
   width: 100%;
   height: 100vh;
@@ -167,6 +168,7 @@ const ProjectsContainer = styled.div`
   align-items: center;
   padding: 0 2rem;
   will-change: transform;
+  transform: translateZ(0); /* Activate GPU acceleration */
 
   @media (max-width: 1024px) {
     gap: 2rem;
@@ -260,6 +262,7 @@ const ProjectSubtitle = styled.p`
   }
 `;
 
+/* More Works Section */
 const MoreWorksSection = styled.section`
   width: 100%;
   height: 60vh;
@@ -301,7 +304,7 @@ const MoreWorksGrid = styled.div`
   }
 `;
 
-const MoreWorkCard = styled(ProjectCard)`
+const MoreWorkCard = styled.div`
   flex: 1;
   width: auto;
   height: 100%;
@@ -311,21 +314,30 @@ const MoreWorkCard = styled(ProjectCard)`
   align-items: center;
   text-align: center;
   padding: 0;
+  border: 1px solid ${(props) => props.theme.colors.text};
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
 
-  ${ProjectThumbnail} {
-    width: 100%;
-    height: 100%;
+  &:hover {
+    transform: scale(1.02);
+    img {
+      filter: none;
+    }
   }
+
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
 
-const MoreWorkTitle = styled(ProjectTitle)`
+const MoreWorkTitle = styled.h3`
   font-size: 1.5rem;
   margin: 0 0 0.5rem 0;
   font-weight: 600;
   padding: 0 1rem;
+  color: white;
+  text-align: center;
 
   @media (max-width: 1024px) {
     font-size: 1.2rem;
