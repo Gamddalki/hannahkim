@@ -525,12 +525,12 @@ function Home() {
               key={work.id}
               onClick={() => navigate(`/${work.categoryDisplayName}`)}
             >
-              <ProjectThumbnail>
-                <img
-                  src={`${process.env.PUBLIC_URL}${work.thumbnail}`}
-                  alt={work.title}
-                />
-              </ProjectThumbnail>
+              <OptimizedThumbnail
+                src={`${process.env.PUBLIC_URL}${work.thumbnail}`}
+                alt={work.title}
+                priority={false}
+                layout="cover"
+              />
               <ProjectInfo>
                 <MoreWorkTitle>{work.categoryDisplayName}</MoreWorkTitle>
               </ProjectInfo>
