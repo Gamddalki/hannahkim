@@ -389,18 +389,6 @@ const MoreWorkTitle = styled(ProjectTitle)`
   }
 `;
 
-const MoreWorkSubtitle = styled(ProjectSubtitle)`
-  font-size: 0.9rem;
-  margin: 0;
-  opacity: 0.7;
-  padding: 0 1rem;
-  line-height: 1.3;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
-`;
-
 function Home() {
   const navigate = useNavigate();
   const fromLettersRef = useRef([]);
