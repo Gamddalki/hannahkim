@@ -91,6 +91,7 @@ const Letter = styled.span`
   color: inherit;
   line-height: inherit;
   will-change: opacity;
+  transform: translateZ(0); /*Activate GPU acceleration*/
 `;
 
 const ScrambleText = styled.span`
@@ -139,6 +140,7 @@ const ScrollIndicator = styled.div`
     bottom: 30px;
     font-size: 0.8rem;
   }
+  transform: translateZ(0); /* Activate GPU acceleration */
 `;
 
 const SelectedWorksSection = styled.section`
