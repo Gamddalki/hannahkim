@@ -434,7 +434,7 @@ function Hannah() {
               <InterestTag data-no-hover>#Creative Technology</InterestTag>
               <InterestTag data-no-hover>#User Experience</InterestTag>
               <InterestTag data-no-hover>#Interactive Design</InterestTag>
-              <InterestTag data-no-hover>#XR Development</InterestTag>
+              <InterestTag data-no-hover>#XR</InterestTag>
               <InterestTag data-no-hover>#Storytelling</InterestTag>
               <InterestTag data-no-hover>#Music Production</InterestTag>
               <InterestTag data-no-hover>#Live Performance</InterestTag>
