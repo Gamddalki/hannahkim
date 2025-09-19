@@ -9,10 +9,11 @@ const Cursor = styled.div`
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
+  transition: width 0.15s ease, height 0.15s ease;
   opacity: 0.7;
   mix-blend-mode: difference;
   z-index: 9999;
+  will-change: transform, width, height;
 `;
 
 const CursorText = styled.div`

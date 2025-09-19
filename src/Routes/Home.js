@@ -315,10 +315,12 @@ const MoreWorkCard = styled.div`
   border: 1px solid ${(props) => props.theme.colors.text};
   overflow: hidden;
   position: relative;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
+  will-change: transform;
+  transform: translateZ(0); /* Activate GPU acceleration */
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.02) translateZ(0);
     img {
       filter: none;
     }
@@ -489,7 +491,7 @@ const Home = memo(() => {
       <MoreWorksSection>
         <SectionTitle>More Works of...</SectionTitle>
         <MoreWorksGrid>
-          {moreWorks.map((work) => (
+          {moreWorks.map((work, index) => (
             <MoreWorkCard
               data-more-hover
               key={work.id}
@@ -498,7 +500,7 @@ const Home = memo(() => {
               <OptimizedThumbnail
                 src={`${process.env.PUBLIC_URL}${work.thumbnail}`}
                 alt={work.title}
-                priority={false}
+                priority={index < 2} // 첫 2개는 우선 로딩
                 layout="cover"
               />
               <ProjectInfo>
