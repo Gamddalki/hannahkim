@@ -1,0 +1,109 @@
+[
+  {
+    "id": "bugeffect",
+    "title": "BugEffect",
+    "subtitle": "Scenario writing for short film",
+    "where": "2023 screenwriting and visualization course work",
+    "thumbnail": "/img/art/BugEffect.png",
+    "startDate": "2023-03",
+    "endDate": "2023-06",
+    "keyInsights": "Scenario writing for short film",
+    "indexTerms": ["Screenwriting"],
+    "myRole": ["Screenwriter"],
+    "category": ["Screenwriting", "Short Film"],
+    "credits": ["Soojin Lee*"],
+    "tools": ["Premiere Pro"],
+    "links": [
+      {
+        "type": "document",
+        "value": "https://ieeexplore.ieee.org/document/10703854"
+      }
+    ],
+    "overview": [
+      {
+        "type": "text",
+        "value": "Scenario writing for short film"
+      }
+    ],
+    "selected": true
+  },
+  {
+    "id": "0505",
+    "title": "0505 M/V",
+    "subtitle": "Original Song Composition and M/V Production",
+    "where": "RGBN band",
+    "thumbnail": "/img/arts/0505.png",
+    "date": "5 May 2023",
+    "keyInsights": "요약",
+    "indexTerms": [
+      "Narrative Transformation",
+      "Character Reconstruction",
+      "Novel",
+      "Film",
+      "Drama Series"
+    ],
+    "myRole": ["Author"],
+    "category": [
+      "Narrative Transformation",
+      "Character Reconstruction",
+      "Novel",
+      "Film",
+      "Drama Series"
+    ],
+    "credits": ["RGBN band", "Juyeop Kim", "Yeji Seo"],
+    "links": [
+      {
+        "type": "video",
+        "value": "https://www.youtube.com/watch?v=Sjir0rqZ4yE"
+      },
+      { "type": "soundcloud", "value": "https://soundcloud.com/rgbn/0505rgbn" }
+    ],
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/researches/LoveintheBigCity.svg"
+      },
+      {
+        "type": "text",
+        "value": "요약"
+      }
+    ]
+  },
+  {
+    "id": "runtimeerror",
+    "title": "RuntimeError",
+    "subtitle": "Original Song Composition and M/V Production",
+    "where": "RGBN band",
+    "thumbnail": "/img/arts/RuntimeError.png",
+    "date": "3 March 2024",
+    "keyInsights": "요약",
+    "indexTerms": [
+      "Narrative Transformation",
+      "Character Reconstruction",
+      "Novel",
+      "Film",
+      "Drama Series"
+    ],
+    "myRole": ["Author"],
+    "category": [
+      "Narrative Transformation",
+      "Character Reconstruction",
+      "Novel",
+      "Film",
+      "Drama Series"
+    ],
+    "credits": ["RGBN band", "Juyeop Kim", "Yeji Seo"],
+    "links": "https://www.youtube.com/watch?v=Sjir0rqZ4yE",
+    "content": [
+      {
+        "type": "image",
+        "value": "/img/researches/LoveintheBigCity.svg"
+      },
+      {
+        "type": "text",
+        "value": "요약"
+      }
+    ],
+    "more": true
+  }
+]

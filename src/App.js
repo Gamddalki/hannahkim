@@ -5,6 +5,7 @@ import Home from "./Routes/Home";
 import Hannah from "./Routes/Hannah";
 import Projects from "./Routes/Projects";
 import Publications from "./Routes/Publications";
+import Arts from "./Routes/Arts";
 import Details from "./Routes/Details";
 import CustomCursor from "./Components/CustomCursor";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/hannah" element={<Hannah />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/publications" element={<Publications />} />
+            <Route path="/arts" element={<Arts />} />
             <Route path="/:category/:id" element={<Details />} />
           </Routes>
           <Footer />
