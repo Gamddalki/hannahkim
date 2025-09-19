@@ -104,30 +104,41 @@ const HighlightLink = styled.a`
   }
 `;
 
-const SocialIcons = styled.div`
-  margin-top: 0;
-  width: 100%;
-  max-width: 400px;
+const InterestsSection = styled.div`
+  margin-top: 30px;
 `;
 
-const IconContainer = styled.div`
+const InterestsTitle = styled.h3`
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: ${(props) => props.theme.colors.primary};
+  text-align: left;
+`;
+
+const InterestsTags = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 6px;
 `;
 
-const IconLink = styled.a`
-  color: ${(props) => props.theme.colors.text};
-  font-size: 1.5rem;
-  transition: color 0.2s ease;
+const InterestTag = styled.span`
+  color: ${(props) => props.theme.colors.hashText};
+  border: 1px solid ${(props) => props.theme.colors.hashText};
+  padding: 4px 8px;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  margin: 0 !important;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+    padding: 2px 7px;
+  }
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 1.2rem;
+    border: 1px solid ${(props) => props.theme.colors.primary};
   }
 `;
 
@@ -385,6 +396,22 @@ function Hannah() {
             also emotionally resonant — where technology becomes a stage for
             human stories.
           </span>
+
+          <InterestsSection data-no-hover>
+            <InterestsTitle>Interests</InterestsTitle>
+            <InterestsTags>
+              <InterestTag data-no-hover>#Creative Technology</InterestTag>
+              <InterestTag data-no-hover>#User Experience</InterestTag>
+              <InterestTag data-no-hover>#Interactive Design</InterestTag>
+              <InterestTag data-no-hover>#XR Development</InterestTag>
+              <InterestTag data-no-hover>#Storytelling</InterestTag>
+              <InterestTag data-no-hover>#Music Production</InterestTag>
+              <InterestTag data-no-hover>#Live Performance</InterestTag>
+              <InterestTag data-no-hover>
+                #Human-Computer Interaction
+              </InterestTag>
+            </InterestsTags>
+          </InterestsSection>
         </ProfileInfo>
       </ProfileSection>
 
