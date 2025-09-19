@@ -9,6 +9,7 @@ import projectsData from "../data/projects.json";
 import researchesData from "../data/researches.json";
 import artsData from "../data/arts.json";
 import ScrollIndicator from "../Components/ScrollIndicator";
+import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 import { useHorizontalScroll } from "../hooks/useHorizontalScroll";
 
 gsap.registerPlugin(TextPlugin);
@@ -108,6 +109,7 @@ const ScrambleText = styled.span`
   transform: translateZ(0); /* Activate GPU acceleration */
 `;
 
+/* Selected Works Section */
 const SelectedWorksSection = styled.section`
   width: 100%;
   height: 100vh;
@@ -213,28 +215,6 @@ const ProjectThumbnail = styled.div`
   height: 100%;
   position: relative;
   overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
-    transition: filter 0.3s ease;
-    @media (max-width: 768px) {
-      filter: none;
-    }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
 `;
 
 const ProjectInfo = styled.div`
@@ -499,12 +479,18 @@ function Home() {
           <SectionTitle>Selected Works</SectionTitle>
           <HorizontalScrollContainer>
             <ProjectsContainer ref={projectsContainerRef}>
-              {selectedWorks.map((work) => (
-                <ProjectCard key={work.id} data-more-hover>
+              {selectedWorks.map((work, index) => (
+                <ProjectCard
+                  key={work.id}
+                  onClick={() => handleProjectClick(work)}
+                  data-more-hover
+                >
                   <ProjectThumbnail>
-                    <img
+                    <OptimizedThumbnail
                       src={`${process.env.PUBLIC_URL}${work.thumbnail}`}
                       alt={work.title}
+                      priority={index < 2} // 첫 2개 이미지는 우선 로딩
+                      layout="cover"
                     />
                   </ProjectThumbnail>
                   <ProjectInfo>

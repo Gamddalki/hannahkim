@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const ProjectsGrid = styled.div`
   column-count: 3;
@@ -36,19 +37,6 @@ const ProjectCard = styled.div`
 const ProjectImage = styled.div`
   width: 100%;
   overflow: hidden;
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
-    @media (max-width: 768px) {
-      filter: none;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-  }
-
   ${ProjectCard}:hover & img {
     filter: none;
   }
@@ -195,9 +183,11 @@ const MasonryGrid = ({
             data-more-hover
           >
             <ProjectImage>
-              <img
+              <OptimizedThumbnail
                 src={getImageSrc ? getImageSrc(item) : item.thumbnail}
                 alt={getTitle ? getTitle(item) : item.title}
+                layout="auto"
+                priority={false}
               />
             </ProjectImage>
             <ProjectInfo>
