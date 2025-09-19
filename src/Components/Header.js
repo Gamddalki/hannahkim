@@ -112,7 +112,7 @@ const HamburgerIcon = styled.div`
     }
 
     &:nth-child(3) {
-      top: ${(props) => (props.isOpen ? "10px" : "11px")};
+      top: ${(props) => (props.isOpen ? "10px" : "10px")};
       transform: ${(props) =>
         props.isOpen ? "rotate(-45deg)" : "rotate(0deg)"};
     }
