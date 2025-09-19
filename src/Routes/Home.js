@@ -510,6 +510,8 @@ const Home = memo(() => {
       </MoreWorksSection>
     </>
   );
-}
+});
+
+Home.displayName = "Home";
 
 export default Home;
