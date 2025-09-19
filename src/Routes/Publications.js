@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import researchData from "../data/researches.json";
+import publicationData from "../data/publications.json";
 import PageContainer from "../Components/PageContainer";
 import MasonryGrid from "../Components/MasonryGrid";
 
@@ -22,7 +22,7 @@ function Publications() {
   return (
     <PageContainer title="PUBLICATIONS">
       <MasonryGrid
-        items={researchData}
+        items={publicationData}
         onItemClick={handleCardClick}
         getImageSrc={getImageSrc}
         getTitle={getTitle}
