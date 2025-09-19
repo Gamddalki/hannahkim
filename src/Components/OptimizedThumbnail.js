@@ -13,10 +13,14 @@ const ThumbnailContainer = styled.div`
     height: ${(props) => (props.layout === "auto" ? "auto" : "100%")};
     object-fit: ${(props) => (props.layout === "auto" ? "auto" : "cover")};
     display: ${(props) => (props.layout === "auto" ? "block" : "initial")};
-    filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
-    transition: filter 0.2s ease, opacity 0.2s ease;
+    filter: ${(props) =>
+      props.layout === "cover"
+        ? "none"
+        : "grayscale(95%) hue-rotate(-30deg) saturate(3)"};
+    transition: filter 0.15s ease, opacity 0.15s ease;
     opacity: ${(props) => (props.loaded ? 1 : 0)};
-    will-change: transform, opacity;
+    will-change: ${(props) =>
+      props.layout === "cover" ? "transform, opacity" : "filter, opacity"};
     transform: translateZ(0); /* Activate GPU acceleration */
 
     @media (max-width: 768px) {
@@ -53,7 +57,7 @@ const Placeholder = styled.div`
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   opacity: ${(props) => (props.loaded ? 0 : 1)};
-  transition: opacity 0.3s ease;
+  transition: opacity 0.15s ease;
 `;
 
 const OptimizedThumbnail = memo(
@@ -110,7 +114,7 @@ const OptimizedThumbnail = memo(
           onError={handleError}
           style={{
             opacity: loaded ? 1 : 0,
-            transition: "opacity 0.3s ease",
+            transition: "opacity 0.15s ease",
           }}
         />
       </ThumbnailContainer>

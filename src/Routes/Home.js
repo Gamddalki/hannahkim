@@ -191,10 +191,6 @@ const ProjectCard = styled.div`
 
   &:hover {
     transform: scale(1.02);
-
-    img {
-      filter: none;
-    }
   }
 
   @media (max-width: 1024px) {
@@ -272,6 +268,9 @@ const MoreWorksSection = styled.section`
   background: ${(props) => props.theme.colors.background};
   position: relative;
   overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0); /* Activate GPU acceleration */
+
   @media (max-width: 1024px) {
     height: 50vh;
     padding: 0 50px 200px 50px;
@@ -290,6 +289,8 @@ const MoreWorksGrid = styled.div`
   width: 100%;
   justify-content: space-between;
   margin-top: 3vh;
+  will-change: transform;
+  transform: translateZ(0); /* Activate GPU acceleration */
 
   @media (max-width: 1024px) {
     gap: 1.5rem;
@@ -321,9 +322,6 @@ const MoreWorkCard = styled.div`
 
   &:hover {
     transform: scale(1.02) translateZ(0);
-    img {
-      filter: none;
-    }
   }
 
   @media (max-width: 768px) {
