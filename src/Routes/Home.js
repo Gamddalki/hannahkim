@@ -4,8 +4,10 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import researchesData from "../data/researches.json";
+import artsData from "../data/arts.json";
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -310,7 +312,96 @@ const ProjectSubtitle = styled.p`
   }
 `;
 
+const MoreWorksSection = styled.section`
+  width: 100%;
+  height: 60vh;
+  padding: 0 280px 200px 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: ${(props) => props.theme.colors.background};
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 1024px) {
+    height: 50vh;
+    padding: 0 50px 200px 50px;
+  }
+  @media (max-width: 768px) {
+    height: 70vh;
+    padding: 0 30px 100px 30px;
+  }
+`;
+
+const MoreWorksGrid = styled.div`
+  display: flex;
+  gap: 2rem;
+  height: 40%;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 3vh;
+
+  @media (max-width: 1024px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+`;
+
+const MoreWorkCard = styled(ProjectCard)`
+  flex: 1;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+
+  ${ProjectThumbnail} {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const MoreWorkTitle = styled(ProjectTitle)`
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  padding: 0 1rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
+const MoreWorkSubtitle = styled(ProjectSubtitle)`
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.7;
+  padding: 0 1rem;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+`;
+
 function Home() {
+  const navigate = useNavigate();
   const fromLettersRef = useRef([]);
   const personalStoryLettersRef = useRef(null);
   const toLettersRef = useRef([]);
@@ -324,6 +415,30 @@ function Home() {
     (research) => research.selected
   );
   const selectedWorks = [...selectedProjects, ...selectedResearches];
+
+  const moreProjects = projectsData.filter((project) => project.more === true);
+  const moreResearches = researchesData.filter(
+    (research) => research.more === true
+  );
+  const moreArts = artsData.filter((art) => art.more === true);
+
+  const moreWorks = [
+    ...moreProjects.map((project) => ({
+      ...project,
+      category: "projects",
+      categoryDisplayName: "Projects",
+    })),
+    ...moreResearches.map((research) => ({
+      ...research,
+      category: "researches",
+      categoryDisplayName: "Publications",
+    })),
+    ...moreArts.map((art) => ({
+      ...art,
+      category: "arts",
+      categoryDisplayName: "Arts",
+    })),
+  ];
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -526,6 +641,29 @@ function Home() {
           </HorizontalScrollContainer>
         </SelectedWorksSection>
       </div>
+
+      <MoreWorksSection>
+        <SectionTitle>More Works of...</SectionTitle>
+        <MoreWorksGrid>
+          {moreWorks.map((work) => (
+            <MoreWorkCard
+              data-more-hover
+              key={work.id}
+              onClick={() => navigate(`/${work.categoryDisplayName}`)}
+            >
+              <ProjectThumbnail>
+                <img
+                  src={`${process.env.PUBLIC_URL}${work.thumbnail}`}
+                  alt={work.title}
+                />
+              </ProjectThumbnail>
+              <ProjectInfo>
+                <MoreWorkTitle>{work.categoryDisplayName}</MoreWorkTitle>
+              </ProjectInfo>
+            </MoreWorkCard>
+          ))}
+        </MoreWorksGrid>
+      </MoreWorksSection>
     </>
   );
 }
