@@ -163,11 +163,12 @@ const SectionTitle = styled.h2`
 
   @media (max-width: 1024px) {
     font-size: 2rem;
+    padding: 5rem 0 1rem 0;
   }
 
   @media (max-width: 480px) {
     font-size: 1.5rem;
-    padding: 2rem 0 1.5rem 0;
+    padding: 1.5rem 0 1rem 0;
   }
 `;
 
