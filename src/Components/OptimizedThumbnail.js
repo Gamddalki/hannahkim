@@ -14,8 +14,10 @@ const ThumbnailContainer = styled.div`
     object-fit: ${(props) => (props.layout === "auto" ? "auto" : "cover")};
     display: ${(props) => (props.layout === "auto" ? "block" : "initial")};
     filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
-    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    transition: filter 0.2s ease, opacity 0.2s ease;
     opacity: ${(props) => (props.loaded ? 1 : 0)};
+    will-change: transform, opacity;
+    transform: translateZ(0); /* Activate GPU acceleration */
 
     @media (max-width: 768px) {
       filter: none;
