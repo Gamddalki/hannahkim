@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo, useCallback } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -348,7 +348,7 @@ const MoreWorkTitle = styled.h3`
   }
 `;
 
-function Home() {
+const Home = memo(() => {
   const navigate = useNavigate();
   const fromLettersRef = useRef([]);
   const personalStoryLettersRef = useRef(null);
