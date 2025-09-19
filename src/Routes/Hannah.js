@@ -161,15 +161,11 @@ const InterestTag = styled.span`
   border-radius: 999px;
   transition: all 0.2s ease;
   margin: 0 !important;
+  opacity: 0.8;
 
   @media (max-width: 768px) {
     font-size: 0.7rem;
     padding: 2px 7px;
-  }
-
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    border: 1px solid ${(props) => props.theme.colors.primary};
   }
 `;
 
@@ -277,12 +273,11 @@ const ItemTitle = styled.span`
 const MoreButton = styled.button`
   color: ${(props) => props.theme.colors.hashText};
   border: 1px solid ${(props) => props.theme.colors.hashText};
-  padding: 10px 20px;
-  font-size: 0.7rem;
+  padding: 8px 16px;
+  font-size: 0.8rem;
   font-weight: 500;
-  border-radius: 20px;
+  border-radius: 999px;
   transition: all 0.2s ease;
-  cursor: pointer;
   background: none;
   margin: 20px auto 0;
   display: block;
@@ -292,8 +287,8 @@ const MoreButton = styled.button`
     border: 1px solid ${(props) => props.theme.colors.primary};
   }
 
-  @media (max-width: 1024px) {
-    font-size: 0.6rem;
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
     padding: 6px 12px;
   }
 `;
