@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import researchesData from "../data/researches.json";
 import artsData from "../data/arts.json";
+import ScrollIndicator from "../Components/ScrollIndicator";
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -103,43 +104,6 @@ const ScrambleText = styled.span`
   color: inherit;
   line-height: inherit;
   will-change: transform, opacity;
-`;
-
-const ScrollIndicator = styled.div`
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: ${(props) => props.theme.colors.text};
-  font-size: 0.9rem;
-  font-weight: 500;
-  opacity: 0.5;
-  animation: bounce 2s infinite;
-  z-index: 10;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateX(-50%) translateY(0);
-    }
-    40% {
-      transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-      transform: translateX(-50%) translateY(-5px);
-    }
-  }
-
-  @media (max-width: 768px) {
-    bottom: 30px;
-    font-size: 0.8rem;
-  }
   transform: translateZ(0); /* Activate GPU acceleration */
 `;
 
