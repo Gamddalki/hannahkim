@@ -260,7 +260,7 @@ const ProjectSubtitle = styled.p`
 const MoreWorksSection = styled.section`
   width: 100%;
   height: 60vh;
-  padding: 0 280px 200px 280px;
+  padding: 0 300px 200px 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
