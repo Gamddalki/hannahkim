@@ -9,6 +9,7 @@ import projectsData from "../data/projects.json";
 import researchesData from "../data/researches.json";
 import artsData from "../data/arts.json";
 import ScrollIndicator from "../Components/ScrollIndicator";
+import { useHorizontalScroll } from "../hooks/useHorizontalScroll";
 
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -451,84 +452,6 @@ function Home() {
       tl.kill();
     };
   }, []);
-
-  useEffect(() => {
-    if (!selectedWorksRef.current || !projectsContainerRef.current) return;
-
-    const container = selectedWorksRef.current;
-    const projectsContainer = projectsContainerRef.current;
-
-    const getCardWidth = () => {
-      if (window.innerWidth <= 480) return 350;
-      if (window.innerWidth <= 768) return 560;
-      if (window.innerWidth <= 1024) return 640;
-      return 900;
-    };
-
-    const getGap = () => {
-      if (window.innerWidth <= 768) return 24;
-      if (window.innerWidth <= 1024) return 32;
-      return 48;
-    };
-
-    const cardWidth = getCardWidth();
-    const gap = getGap();
-    const totalWidth =
-      selectedWorks.length * cardWidth + (selectedWorks.length - 1) * gap;
-
-    gsap.set(projectsContainer, {
-      x: 0,
-      width: totalWidth,
-    });
-
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: container,
-      start: "top top",
-      end: "bottom top",
-      scrub: 0.5,
-      pin: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const currentCardWidth = getCardWidth();
-        const currentGap = getGap();
-        const currentTotalWidth =
-          selectedWorks.length * currentCardWidth +
-          (selectedWorks.length - 1) * currentGap;
-        const maxScroll = currentTotalWidth - window.innerWidth;
-        const x = -maxScroll * progress;
-        gsap.set(projectsContainer, {
-          x,
-          ease: "power2.out",
-        });
-      },
-    });
-
-    let resizeTimeout;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        const newCardWidth = getCardWidth();
-        const newGap = getGap();
-        const newTotalWidth =
-          selectedWorks.length * newCardWidth +
-          (selectedWorks.length - 1) * newGap;
-
-        gsap.set(projectsContainer, {
-          width: newTotalWidth,
-        });
-
-        scrollTrigger.refresh();
-      }, 100);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      clearTimeout(resizeTimeout);
-      scrollTrigger.kill();
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [selectedWorks.length]);
 
   return (
     <>
