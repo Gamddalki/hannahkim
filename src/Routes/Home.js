@@ -5,11 +5,9 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
-import projectsData from "../data/projects.json";
-import researchesData from "../data/researches.json";
-import artsData from "../data/arts.json";
 import ScrollIndicator from "../Components/ScrollIndicator";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
+import { useDataProcessing } from "../hooks/useDataProcessing";
 import { useHorizontalScroll } from "../hooks/useHorizontalScroll";
 
 gsap.registerPlugin(TextPlugin);
@@ -350,43 +348,15 @@ const MoreWorkTitle = styled.h3`
 
 const Home = memo(() => {
   const navigate = useNavigate();
+  const { selectedWorks, moreWorks } = useDataProcessing();
+  const { selectedWorksRef, projectsContainerRef } =
+    useHorizontalScroll(selectedWorks);
+
   const fromLettersRef = useRef([]);
   const personalStoryLettersRef = useRef(null);
   const toLettersRef = useRef([]);
   const sharedLettersRef = useRef([]);
   const pulseWordRef = useRef(null);
-  const selectedWorksRef = useRef(null);
-  const projectsContainerRef = useRef(null);
-
-  const selectedProjects = projectsData.filter((project) => project.selected);
-  const selectedResearches = researchesData.filter(
-    (research) => research.selected
-  );
-  const selectedWorks = [...selectedProjects, ...selectedResearches];
-
-  const moreProjects = projectsData.filter((project) => project.more === true);
-  const moreResearches = researchesData.filter(
-    (research) => research.more === true
-  );
-  const moreArts = artsData.filter((art) => art.more === true);
-
-  const moreWorks = [
-    ...moreProjects.map((project) => ({
-      ...project,
-      category: "projects",
-      categoryDisplayName: "Projects",
-    })),
-    ...moreResearches.map((research) => ({
-      ...research,
-      category: "researches",
-      categoryDisplayName: "Publications",
-    })),
-    ...moreArts.map((art) => ({
-      ...art,
-      category: "arts",
-      categoryDisplayName: "Arts",
-    })),
-  ];
 
   useEffect(() => {
     const tl = gsap.timeline({
