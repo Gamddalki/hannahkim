@@ -7,6 +7,7 @@ import Projects from "./Routes/Projects";
 import Publications from "./Routes/Publications";
 import Details from "./Routes/Details";
 import CustomCursor from "./Components/CustomCursor";
+import ScrollToTop from "./Components/ScrollToTop";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 
@@ -16,6 +17,7 @@ function App() {
       <CustomCursor />
       <ThemeProvider theme={theme}>
         <Router basename={process.env.PUBLIC_URL}>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
