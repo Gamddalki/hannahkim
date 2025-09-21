@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { PinIcon } from "@hugeicons/core-free-icons";
 import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const ProjectsGrid = styled.div`
@@ -28,6 +30,7 @@ const ProjectCard = styled.div`
   flex-direction: column;
   break-inside: avoid;
   margin-bottom: 30px;
+  position: relative;
 
   &:hover {
     transform: translateY(-5px);
@@ -112,6 +115,19 @@ const ProjectSubtitle = styled.h4`
   line-height: 1.3;
 `;
 
+const PinIconWrapper = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  color: ${(props) => props.theme.colors.primary};
+  transition: color 0.3s ease;
+
+  ${ProjectCard}:hover & {
+    color: ${(props) => props.theme.colors.white};
+  }
+`;
+
 const MasonryGrid = ({
   items,
   onItemClick,
@@ -149,18 +165,23 @@ const MasonryGrid = ({
   };
 
   const filteredItems = useMemo(() => {
-    if (selectedTags.length === 0) {
-      return items.sort(
-        (a, b) => new Date(b[sortField]) - new Date(a[sortField])
-      );
-    }
+    let filtered = items;
 
-    return items
-      .filter((item) => {
+    if (selectedTags.length > 0) {
+      filtered = items.filter((item) => {
         const itemTags = getMetaTags ? getMetaTags(item) : item[tagField];
         return itemTags && selectedTags.every((tag) => itemTags.includes(tag));
-      })
-      .sort((a, b) => new Date(b[sortField]) - new Date(a[sortField]));
+      });
+    }
+
+    return filtered.sort((a, b) => {
+      // First, prioritize pinned items
+      if (a.pinned && !b.pinned) return -1;
+      if (!a.pinned && b.pinned) return 1;
+
+      // Then sort by date
+      return new Date(b[sortField]) - new Date(a[sortField]);
+    });
   }, [selectedTags, items, getMetaTags, tagField, sortField]);
 
   return (
@@ -182,6 +203,11 @@ const MasonryGrid = ({
             onClick={() => handleCardClick(item)}
             data-more-hover
           >
+            {item.pinned && (
+              <PinIconWrapper>
+                <HugeiconsIcon icon={PinIcon} size={20} />
+              </PinIconWrapper>
+            )}
             <ProjectImage>
               <OptimizedThumbnail
                 src={getImageSrc ? getImageSrc(item) : item.thumbnail}
