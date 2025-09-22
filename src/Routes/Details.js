@@ -266,6 +266,7 @@ const InsightTitle = styled.h1`
   }
   @media (max-width: 768px) {
     font-size: 2rem;
+    line-height: 2.3rem;
   }
 
   strong {
@@ -288,7 +289,7 @@ const InsightText = styled.h3`
   }
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-top: 10px;
+    line-height: 1.5rem;
   }
 
   strong {
@@ -301,7 +302,7 @@ const StyledParagraph = styled.p`
   margin: 0;
   color: ${(props) => props.theme.colors.text};
 
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.4;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -310,10 +311,11 @@ const StyledParagraph = styled.p`
   margin-bottom: 10px;
 
   @media (max-width: 1024px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   @media (max-width: 768px) {
     font-size: 0.8rem;
+    line-height: 1.6;
   }
 
   strong {
@@ -356,6 +358,9 @@ const OutcomesContainer = styled.div`
     flex-direction: column;
     gap: 10px;
   }
+  @media (max-width: 768px) {
+    margin-bottom: 0px;
+  }
 `;
 
 const OutcomesList = styled.div`
@@ -384,13 +389,13 @@ const PDFSection = styled.div`
 
   @media (max-width: 1024px) {
     flex: 1;
-    max-width: 100%;
+    width: 100%;
   }
 `;
 
 const PDFViewer = styled.iframe`
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   border: 1px solid ${(props) => props.theme.colors.black};
   margin-bottom: 20px;
 
@@ -400,8 +405,11 @@ const PDFViewer = styled.iframe`
     margin: 0 auto 20px auto;
   }
   @media (max-width: 768px) {
-    width: 70vw;
-    height: 20vh;
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+`;
+
 const VideoSection = styled.div`
   flex: 0 0 500px;
   max-width: 500px;
@@ -438,11 +446,11 @@ const LinkSection = styled.div`
 const LinkItem = styled.a`
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: ${(props) => props.theme.colors.text};
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 6px 12px;
+  gap: 6px;
   border: 1px solid ${(props) => props.theme.colors.text};
   border-radius: 999px;
   transition: all 0.3s ease;
@@ -455,17 +463,18 @@ const LinkItem = styled.a`
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
-    padding: 6px 12px;
+    padding: 3px 6px;
+    gap: 3px;
   }
 `;
 
 const LinkIcon = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  height: 1.5rem;
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    height: 1.2rem;
   }
 `;
 
