@@ -391,6 +391,23 @@ const PDFViewer = styled.iframe`
   @media (max-width: 768px) {
     width: 70vw;
     height: 20vh;
+const VideoSection = styled.div`
+  flex: 0 0 500px;
+  max-width: 500px;
+
+  @media (max-width: 1024px) {
+    flex: 1;
+    width: 100%;
+  }
+`;
+
+const VideoViewer = styled.iframe`
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid ${(props) => props.theme.colors.black};
+  margin-bottom: 20px;
+
+  @media (max-width: 1024px) {
     margin: 0 auto 20px auto;
   }
 `;
@@ -741,53 +758,25 @@ const Details = () => {
         <ContentWrapper>
           <h2>Outcomes</h2>
 
-          {(item.presentation ||
-            (Array.isArray(item.outcomes) && item.outcomes.length > 0)) && (
-            <OutcomesContainer>
-              {item.presentation && (
-                <PDFSection>
-                  <PDFViewer
-                    src={`${item.presentation}`}
-                    title="PDF Document"
-                  />
-                </PDFSection>
-              )}
+          <OutcomesContainer>
+            {item.presentation && (
+              <PDFSection>
+                <PDFViewer src={`${item.presentation}`} title="PDF Document" />
+              </PDFSection>
+            )}
 
-              {Array.isArray(item.outcomes) && item.outcomes.length > 0 && (
-                <OutcomesList>
-                  {item.links &&
-                    Array.isArray(item.links) &&
-                    item.links.length > 0 && (
-                      <LinkSection>
-                        {item.links.map((link, index) => (
-                          <LinkItem
-                            key={index}
-                            href={link.value}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            accentColor={item?.accentColor}
-                            data-no-hover
-                          >
-                            <LinkIcon>{getLinkIcon(link.type)}</LinkIcon>
-                            {link.type}
-                          </LinkItem>
-                        ))}
-                      </LinkSection>
-                    )}
+            {item.video && (
+              <VideoSection>
+                <VideoViewer
+                  src={`${item.video}?autoplay=1&mute=1`}
+                  title="Video"
+                  frameBorder="0"
+                  allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </VideoSection>
+            )}
 
-                  {item.outcomes.map((outcome, index) => (
-                    <OutcomeItem key={index}>
-                      <OutcomeBullet>•</OutcomeBullet>
-                      <OutcomeContent>
-                        <ReactMarkdown
-                          components={{
-                            p: (props) => (
-                              <StyledParagraph
-                                {...props}
-                                accentColor={item?.accentColor}
-                              />
-                            ),
-                          }}
                         >
                           {outcome}
                         </ReactMarkdown>
