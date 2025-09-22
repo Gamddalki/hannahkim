@@ -39,7 +39,7 @@ const InformationSection = styled(Section)`
   align-items: flex-start;
 
   @media (max-width: 768px) {
-    padding-top: 120px;
+    padding-top: 140px;
     padding-bottom: 40px;
   }
 `;
@@ -74,9 +74,13 @@ const OverviewSection = styled(Section)`
   align-items: flex-start;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 30px;
     color: ${(props) => props.theme.colors.text};
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
   }
 `;
 
@@ -84,9 +88,13 @@ const OutcomesSection = styled(Section)`
   align-items: flex-start;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 30px;
     color: ${(props) => props.theme.colors.text};
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
   }
 `;
 
@@ -95,9 +103,13 @@ const ReflectionSection = styled(Section)`
   padding-bottom: 200px;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 30px;
     color: ${(props) => props.theme.colors.text};
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
   }
 `;
 
@@ -144,14 +156,18 @@ const MetaInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
   max-width: 800px;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
-    gap: 8px;
-    margin: 0 auto 20px auto;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  @media (max-width: 768px) {
+    gap: 5px;
+    align-items: flex-end;
   }
 `;
 
