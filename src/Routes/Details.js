@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import projectData from "../data/projects.json";
-import researchData from "../data/researches.json";
+import publicationData from "../data/publications.json";
+import artsData from "../data/arts.json";
 import ReactMarkdown from "react-markdown";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -481,30 +482,61 @@ const LinkIcon = styled.div`
 const Details = () => {
   const { category, id } = useParams();
   const insightTitleRefs = useRef([]);
-  let data;
 
-  const getLinkIcon = (type) => {
-    switch (type) {
-      case "reflection":
-        return <HugeiconsIcon icon={Notebook02Icon} />;
-      case "github":
-        return <HugeiconsIcon icon={GithubIcon} />;
-      case "video":
-        return <HugeiconsIcon icon={YoutubeIcon} />;
-      case "document":
-        return <HugeiconsIcon icon={File02Icon} />;
-      default:
-        return null;
-    }
-  };
+  const data = useMemo(() => {
+    const dataMap = {
+      projects: projectData,
+      publications: publicationData,
+      arts: artsData,
+    };
+    return dataMap[category] || null;
+  }, [category]);
 
-  if (category === "projects") {
-    data = projectData;
-  } else if (category === "publications") {
-    data = researchData;
-  }
+  const item = useMemo(() => {
+    return data ? data.find((i) => i.id.toString() === id) : null;
+  }, [data, id]);
 
-  const item = data ? data.find((i) => i.id.toString() === id) : null;
+  const accentColor = item?.accentColor;
+
+  const renderMarkdownWithParagraph = useCallback(
+    (content) => (
+      <ReactMarkdown
+        components={{
+          p: (props) => (
+            <StyledParagraph {...props} accentColor={accentColor} />
+          ),
+        }}
+      >
+        {content}
+      </ReactMarkdown>
+    ),
+    [accentColor]
+  );
+
+  const renderInfoList = useCallback(
+    (title, list) => (
+      <InfoBlock>
+        <h4>{title}</h4>
+        <ul>
+          {(list || []).map((value, index) => (
+            <li key={index}>{value}</li>
+          ))}
+        </ul>
+      </InfoBlock>
+    ),
+    []
+  );
+
+  const getLinkIcon = useCallback((type) => {
+    const iconMap = {
+      reflection: Notebook02Icon,
+      github: GithubIcon,
+      video: YoutubeIcon,
+      document: File02Icon,
+    };
+    const Icon = iconMap[type];
+    return Icon ? <HugeiconsIcon icon={Icon} /> : null;
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -600,54 +632,12 @@ const Details = () => {
           </MetaInfo>
 
           <InfoGrid>
-            <InfoBlock>
-              <h4>Category</h4>
-              <ul>
-                {item.category.map((category, index) => (
-                  <li key={index}>{category}</li>
-                ))}
-              </ul>
-            </InfoBlock>
-
-            <InfoBlock>
-              <h4>Role</h4>
-              <ul>
-                {item.myRole.map((role, index) => (
-                  <li key={index}>{role}</li>
-                ))}
-              </ul>
-            </InfoBlock>
-
-            <InfoBlock>
-              {category === "projects" ? (
-                <>
-                  <h4>Tools</h4>
-                  <ul>
-                    {item.tools.map((tech, index) => (
-                      <li key={index}>{tech}</li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <>
-                  <h4>Index Terms</h4>
-                  <ul>
-                    {item.indexTerms.map((term, index) => (
-                      <li key={index}>{term}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </InfoBlock>
-
-            <InfoBlock>
-              <h4>Credits</h4>
-              <ul>
-                {item.credits.map((credit, index) => (
-                  <li key={index}>{credit}</li>
-                ))}
-              </ul>
-            </InfoBlock>
+            {renderInfoList("Category", item.category)}
+            {renderInfoList("Role", item.myRole)}
+            {category === "projects"
+              ? renderInfoList("Tools", item.tools)
+              : renderInfoList("Index Terms", item.indexTerms)}
+            {renderInfoList("Credits", item.credits)}
           </InfoGrid>
         </ContentWrapper>
       </InformationSection>
@@ -714,63 +704,33 @@ const Details = () => {
       <OverviewSection className="overview-section">
         <ContentWrapper>
           <h2>Overview</h2>
-          {Array.isArray(item.overview) ? (
-            item.overview.map((overviewItem, index) => {
-              if (typeof overviewItem === "string") {
-                // for past data
-                return (
-                  <ReactMarkdown
-                    key={index}
-                    components={{
-                      p: (props) => (
-                        <StyledParagraph
-                          {...props}
-                          accentColor={item?.accentColor}
-                        />
-                      ),
-                    }}
-                  >
-                    {overviewItem}
-                  </ReactMarkdown>
-                );
-              } else if (overviewItem.type === "text") {
-                return (
-                  <ReactMarkdown
-                    key={index}
-                    components={{
-                      p: (props) => (
-                        <StyledParagraph
-                          {...props}
-                          accentColor={item?.accentColor}
-                        />
-                      ),
-                    }}
-                  >
-                    {overviewItem.value}
-                  </ReactMarkdown>
-                );
-              } else if (overviewItem.type === "image") {
-                return (
-                  <OverviewImage
-                    key={index}
-                    src={`${process.env.PUBLIC_URL}${overviewItem.value}`}
-                    alt="Overview image"
-                  />
-                );
-              }
-              return null;
-            })
-          ) : (
-            <ReactMarkdown
-              components={{
-                p: (props) => (
-                  <StyledParagraph {...props} accentColor={item?.accentColor} />
-                ),
-              }}
-            >
-              {item.overview}
-            </ReactMarkdown>
-          )}
+          {Array.isArray(item.overview)
+            ? item.overview.map((overviewItem, index) => {
+                if (typeof overviewItem === "string") {
+                  // for past data
+                  return (
+                    <div key={index}>
+                      {renderMarkdownWithParagraph(overviewItem)}
+                    </div>
+                  );
+                } else if (overviewItem.type === "text") {
+                  return (
+                    <div key={index}>
+                      {renderMarkdownWithParagraph(overviewItem.value)}
+                    </div>
+                  );
+                } else if (overviewItem.type === "image") {
+                  return (
+                    <OverviewImage
+                      key={index}
+                      src={`${process.env.PUBLIC_URL}${overviewItem.value}`}
+                      alt="Overview image"
+                    />
+                  );
+                }
+                return null;
+              })
+            : renderMarkdownWithParagraph(item.overview)}
         </ContentWrapper>
       </OverviewSection>
 
@@ -797,16 +757,39 @@ const Details = () => {
               </VideoSection>
             )}
 
+            {Array.isArray(item.outcomes) && item.outcomes.length > 0 && (
+              <OutcomesList>
+                {item.links &&
+                  Array.isArray(item.links) &&
+                  item.links.length > 0 && (
+                    <LinkSection>
+                      {item.links.map((link, index) => (
+                        <LinkItem
+                          key={index}
+                          href={link.value}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          accentColor={item?.accentColor}
+                          data-no-hover
                         >
-                          {outcome}
-                        </ReactMarkdown>
-                      </OutcomeContent>
-                    </OutcomeItem>
-                  ))}
-                </OutcomesList>
-              )}
-            </OutcomesContainer>
-          )}
+                          <LinkIcon>{getLinkIcon(link.type)}</LinkIcon>
+                          {link.type}
+                        </LinkItem>
+                      ))}
+                    </LinkSection>
+                  )}
+
+                {item.outcomes.map((outcome, index) => (
+                  <OutcomeItem key={index}>
+                    <OutcomeBullet>•</OutcomeBullet>
+                    <OutcomeContent>
+                      {renderMarkdownWithParagraph(outcome)}
+                    </OutcomeContent>
+                  </OutcomeItem>
+                ))}
+              </OutcomesList>
+            )}
+          </OutcomesContainer>
         </ContentWrapper>
       </OutcomesSection>
 
@@ -814,15 +797,7 @@ const Details = () => {
         <ReflectionSection className="reflection-section">
           <ContentWrapper>
             <h2>Reflection</h2>
-            <ReactMarkdown
-              components={{
-                p: (props) => (
-                  <StyledParagraph {...props} accentColor={item?.accentColor} />
-                ),
-              }}
-            >
-              {item.reflection}
-            </ReactMarkdown>
+            {renderMarkdownWithParagraph(item.reflection)}
           </ContentWrapper>
         </ReflectionSection>
       )}
