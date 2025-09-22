@@ -197,28 +197,23 @@ const Date = styled.div`
 `;
 
 const InfoGrid = styled.div`
-  display: flex;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(10px, 5vw, 100px);
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0;
-  margin-top: auto;
+  justify-items: stretch;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: auto;
+    margin-bottom: 20px;
   }
 `;
 
 const InfoBlock = styled.div`
   text-align: left;
-  flex: 0 0 auto;
-  @media (max-width: 1200px) and (min-width: 768px) {
-    max-width: 160px;
-  }
 
   h4 {
     margin: 0 0 10px 0;
