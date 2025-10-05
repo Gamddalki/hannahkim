@@ -14,13 +14,13 @@ const HeaderDiv = styled.header`
   padding: 20px 220px;
   background: ${(props) => props.theme.colors.header};
   z-index: 1000;
-  border-bottom: 1px solid ${(props) => props.theme.colors.headerText};
+  border-bottom: 1px solid ${(props) => props.theme.colors.black};
 
   @media (min-width: 769px) and (max-width: 1024px) {
     padding: 20px 50px;
   }
   @media (max-width: 768px) {
-    padding: 15px 15px;
+    padding: 18px 18px;
   }
 `;
 
@@ -59,7 +59,7 @@ const NavLink = styled(Link)`
   transition: color 0.3s ease;
 
   &:hover {
-    color: ${(props) => props.theme.colors.hover};
+    color: ${(props) => props.theme.colors.primary};
   }
 
   &.active {
@@ -81,7 +81,7 @@ const MobileMenuButton = styled.button`
 
 const HamburgerIcon = styled.div`
   width: 20px;
-  height: 12px;
+  height: 14px;
   position: relative;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
@@ -92,33 +92,32 @@ const HamburgerIcon = styled.div`
     position: absolute;
     height: 2px;
     width: 100%;
-    background: ${(props) => props.theme.colors.headerText};
-    border-radius: 2px;
+    background: ${(props) => props.theme.colors.black};
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
 
     &:nth-child(1) {
-      top: ${(props) => (props.isOpen ? "10px" : "0px")};
+      top: ${(props) => (props.isOpen ? "6px" : "0px")};
       transform: ${(props) =>
         props.isOpen ? "rotate(45deg)" : "rotate(0deg)"};
     }
 
     &:nth-child(2) {
-      top: 5px;
+      top: 6px;
       opacity: ${(props) => (props.isOpen ? "0" : "1")};
       transform: ${(props) => (props.isOpen ? "scaleX(0)" : "scaleX(1)")};
     }
 
     &:nth-child(3) {
-      top: ${(props) => (props.isOpen ? "10px" : "10px")};
+      top: ${(props) => (props.isOpen ? "6px" : "12px")};
       transform: ${(props) =>
         props.isOpen ? "rotate(-45deg)" : "rotate(0deg)"};
     }
 
     &:nth-child(4) {
-      top: 5px;
+      top: 6px;
       opacity: ${(props) => (props.isOpen ? "0" : "1")};
       transform: ${(props) => (props.isOpen ? "scaleX(0)" : "scaleX(1)")};
     }
