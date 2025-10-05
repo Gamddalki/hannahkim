@@ -187,7 +187,6 @@ const ProjectCard = styled.div`
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
-  border: 1px solid ${(props) => props.theme.colors.text};
 
   &:hover {
     transform: scale(1.02);
@@ -313,7 +312,6 @@ const MoreWorkCard = styled.div`
   align-items: center;
   text-align: center;
   padding: 0;
-  border: 1px solid ${(props) => props.theme.colors.text};
   overflow: hidden;
   position: relative;
   transition: transform 0.2s ease;

@@ -7,7 +7,7 @@ import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const ProjectsGrid = styled.div`
   column-count: 3;
-  column-gap: 30px;
+  column-gap: 40px;
   margin-top: 40px;
 
   @media (max-width: 1200px) {
@@ -21,19 +21,20 @@ const ProjectsGrid = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  background: ${(props) => props.theme.colors.cardBackground || "#fff"};
   overflow: hidden;
   transition: transform 0.3s ease;
   cursor: pointer;
-  border: 1px solid ${(props) => props.theme.colors.text};
   display: flex;
   flex-direction: column;
   break-inside: avoid;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   position: relative;
 
   &:hover {
     transform: translateY(-5px);
+    h3 {
+      color: ${(props) => props.theme.colors.primary};
+    }
   }
 `;
 
@@ -46,7 +47,6 @@ const ProjectImage = styled.div`
 `;
 
 const ProjectInfo = styled.div`
-  padding: 20px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ const SelectedTag = styled.span`
 const MetaTag = styled.span`
   color: ${(props) => props.theme.colors.hashText};
   border: 1px solid ${(props) => props.theme.colors.hashText};
-  padding: 3px 9px;
+  padding: 2px 8px;
   font-size: 0.65rem;
   font-weight: 500;
   border-radius: 999px;
@@ -102,16 +102,16 @@ const MetaTag = styled.span`
 
 const ProjectTitle = styled.h3`
   font-size: 1.3rem;
-  margin-bottom: 8px;
-  color: ${(props) => props.theme.colors.primary};
+  margin: 15px 0 7px 0;
+  color: ${(props) => props.theme.colors.black};
 `;
 
 const ProjectSubtitle = styled.h4`
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: ${(props) => props.theme.colors.subText};
   font-weight: normal;
   opacity: 0.8;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   line-height: 1.3;
 `;
 
