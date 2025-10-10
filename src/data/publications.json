@@ -6,7 +6,6 @@
     "where": "IEEE International Conference on Information Reuse and Integration (IRI)",
     "thumbnail": "/img/publications/Prompirit1.png",
     "date": "07-09 August 2024",
-    "keyInsights": "Recently, text-to-image generative Artificial Intelligence (AI) models have demonstrated their ability to generate high-quality art with text prompts. However, generative AI is still incapable of creating images that precisely reflect emotion. We propose Prompirit, an automatic prompt engineering assistance for improving AI-generated art in terms of expressiveness of emotion and aesthetics. We explored various approaches to refine users’ free-form text input by incorporating user emotion and style modifiers. Statistical analysis and user evaluation with 100 respondents showed that Prompirit significantly improved the alignment of image-emotion and the aesthetics of the generated image while precisely conveying the content of the original input text. Based on the results, we provide implications for creating affective images.",
     "indexTerms": [
       "Prompt Engineering",
       "Text-to-Image Generative AI",
@@ -18,74 +17,76 @@
       "Emotion Labels",
       "LMER"
     ],
-    "category": [
-      "Prompt Engineering",
-      "Text-to-Image Generative AI",
-      "Emotional and Art Technology"
-    ],
-    "credits": ["Sunyu Pang", "Hyun Lee", "Uran Oh*"],
     "tools": ["Python", "PyTorch", "Hugging Face"],
-    "links": [
-      {
-        "type": "document",
-        "value": "https://ieeexplore.ieee.org/document/10703854"
-      }
-    ],
-    "overview": [
-      {
-        "type": "image",
-        "value": "/img/publications/Prompirit1.png"
-      },
+    "credits": ["Sunyu Pang", "Hyun Lee", "Uran Oh*"],
+    "abstract": [
       {
         "type": "text",
-        "value": "We proposed an automatic prompt engineering assistance that enhances AI-generated images with an emphasis on emotion and matching styles."
+        "value": "Recently, text-to-image generative Artificial Intelligence (AI) models have demonstrated their ability to generate high-quality art with text prompts. However, generative AI is still incapable of creating images that precisely reflect emotion. We propose Prompirit, an automatic prompt engineering assistance for improving AI-generated art in terms of expressiveness of emotion and aesthetics. We explored various approaches to refine users’ free-form text input by incorporating user emotion and style modifiers. Statistical analysis and user evaluation with 100 respondents showed that Prompirit significantly improved the alignment of image-emotion and the aesthetics of the generated image while precisely conveying the content of the original input text. Based on the results, we provide implications for creating affective images."
       },
       {
         "type": "image",
         "value": "/img/publications/Prompirit2.jpg"
-      },
-      {
-        "type": "text",
-        "value": "We evaluated Prompirit empirically in comparisons to other prompt engineering methods in terms of both objective and subjective metrics."
       }
     ],
-    "selected": true
+    "contributions": [
+      "The proposal of an automatic prompt engineering assistance that enhances AI-generated images with an emphasis on emotion and the matching style.",
+      "The empirical evaluation of Prompirit in comparisons to other prompt engineering methods in terms of both objective and subjective metrics."
+    ],
+    "video": "https://www.youtube.com/embed/fpPVkb83wpY",
+    "links": [
+      {
+        "type": "document",
+        "value": "https://ieeexplore.ieee.org/document/10703854"
+      },
+      {
+        "type": "github",
+        "value": "https://github.com/AnT-Prompirit"
+      }
+    ],
+    "selected": true,
+    "pinned": true
   },
   {
     "id": "loveinthebigcity",
-    "title": "Three Voices Narrating ‘Love in the Big City’",
+    "title": "Three Voices Narrating “Love in the Big City”",
     "subtitle": "A Comparative Study of Narrative Transformation and Character Reconstruction across Novel, Film, and Drama Series – Focusing on episode ‘Jaehee/Miae’",
     "where": "Bachelor’s Thesis, Ewha Womans University, 2025",
     "thumbnail": "/img/publications/LoveintheBigCity.svg",
-    "date": "19 May 2025",
-    "keyInsights": "요약",
+    "date": "20 May 2025",
     "indexTerms": [
-      "Narrative Transformation",
-      "Character Reconstruction",
-      "Novel",
-      "Film",
-      "Drama Series"
+      "Narrative Analysis",
+      "Adaptation",
+      "Queer Representation",
+      "Korean Media"
     ],
     "myRole": ["Author"],
-    "category": [
-      "Narrative Transformation",
-      "Character Reconstruction",
-      "Novel",
-      "Film",
-      "Drama Series"
-    ],
+    "framework": ["Adaptation Theory", "Intertextual Dialoguism"],
     "credits": ["Hyungsook Lee*"],
-    "startDate": "2024-01",
-    "endDate": "2024-06",
-    "link": "",
-    "content": [
-      {
-        "type": "image",
-        "value": "/img/publications/LoveintheBigCity.svg"
-      },
+    "abstract": [
       {
         "type": "text",
-        "value": "요약"
+        "value": "Adapting a contemporary Korean novel across different media is more than a shift in form — it reveals transformations in meaning shaped by socio-cultural context. This thesis comparatively analyzes how Sang Young Park’s “Love in the Big City (2019)”, particularly its first episode ‘Jaehee’ (or ‘Miae’ in the drama), is reinterpreted through three media in contemporary contexts: the original novel, film (2024), and drama series (2024). Moving beyond traditional fidelity discourse, the study employs adaptation theory to analyze how each version constructs its own emotional and narrative logic within distinct socio-cultural frameworks.  Through close analysis of narrative structures, character portrayals, thematic shifts, and directorial approaches, the research investigates how queer identity and the core message are mediated, transformed, and re-signified across media."
+      },
+      {
+        "type": "image",
+        "value": "/img/publications/LoveintheBigCity1.png"
+      },
+      {
+        "type": "image",
+        "value": "/img/publications/LoveintheBigCity2.png"
+      }
+    ],
+    "contributions": [
+      "Positioned adaptation as a creative act of re-contextualization and re-signification by highlighting each medium’s distinct representational and expressive strategies.",
+      "Revealed how contemporary culture receives and redefines queer stories through detailed cross-media comparison, identifying whether such transformations are driven by medium-specific conventions, audience receptions, or broader contemporary contexts.",
+      "Demonstrated how medium affordances and audience contexts reshape both emotional resonance and narrative meaning.",
+      "Expanded the critical discourse on queer representation in Korean media by situating adaptation within evolving cultural and generational dynamics."
+    ],
+    "links": [
+      {
+        "type": "document",
+        "value": "https://drive.google.com/file/d/1q4JF3iEXjw0r2mCIh1WuEnoDzT6Dzd-s/view"
       }
     ],
     "more": true
