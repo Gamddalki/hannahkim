@@ -143,7 +143,7 @@ const OutcomesSection = styled(Section)`
 
 const ReflectionSection = styled(Section)`
   align-items: flex-start;
-  padding-bottom: 200px;
+  padding-bottom: 70px;
 
   h2 {
     font-size: 2rem;
@@ -153,6 +153,16 @@ const ReflectionSection = styled(Section)`
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
+  }
+`;
+
+const RelatedProjectsSection = styled(Section)`
+  align-items: flex-start;
+  padding-top: 70px;
+  padding-bottom: 150px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 150px;
   }
 `;
 
@@ -496,6 +506,7 @@ const LinkIcon = styled.div`
 
 const Details = () => {
   const { category, id } = useParams();
+  const navigate = useNavigate();
   const insightTitleRefs = useRef([]);
 
   const data = useMemo(() => {
@@ -892,6 +903,17 @@ const Details = () => {
           </ContentWrapper>
         </ReflectionSection>
       )}
+
+      <RelatedProjectsSection>
+        <ContentWrapper>
+          <RelatedProjects
+            currentItem={item}
+            allData={data}
+            category={category}
+            maxItems={3}
+          />
+        </ContentWrapper>
+      </RelatedProjectsSection>
     </div>
   );
 };
