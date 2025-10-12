@@ -13,6 +13,8 @@ import {
   GithubIcon,
   YoutubeIcon,
   File02Icon,
+  SoundcloudIcon,
+  FileMusicIcon,
 } from "@hugeicons/core-free-icons";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,7 +24,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0px 100px 100px 100px;
+  padding: 0px 70px 70px 70px;
   box-sizing: border-box;
   position: relative;
   background-color: ${(props) => props.theme.colors.background};
@@ -35,7 +37,7 @@ const Section = styled.section`
 
 const InformationSection = styled(Section)`
   box-sizing: border-box;
-  padding-top: 180px;
+  padding-top: 200px;
   background-color: ${(props) => props.theme.colors.background};
   align-items: flex-start;
 
@@ -51,7 +53,6 @@ const ThumbnailContainer = styled.div`
   height: 35vh;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  border: 1px solid ${(props) => props.theme.colors.black};
 
   @media (max-width: 768px) {
     margin-bottom: 20px;
@@ -69,14 +70,55 @@ const ThumbnailImage = styled.img`
 
 const KeyInsightsSection = styled(Section)`
   align-items: flex-start;
+  padding-top: 10px;
 `;
 
-const OverviewSection = styled(Section)`
+const InsightContainer = styled.div`
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+`;
+
+const InsightImageContainer = styled.div`
+  flex: 0 0 500px;
+  max-width: 500px;
+
+  @media (max-width: 1024px) {
+    flex: 1;
+    width: 100%;
+  }
+`;
+
+const InsightTextContainer = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const MotivationSection = styled(Section)`
   align-items: flex-start;
 
   h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    color: ${(props) => props.theme.colors.text};
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+`;
+
+const ApproachSection = styled(Section)`
+  align-items: flex-start;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
     color: ${(props) => props.theme.colors.text};
     @media (max-width: 768px) {
       font-size: 1.5rem;
@@ -90,7 +132,7 @@ const OutcomesSection = styled(Section)`
 
   h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: ${(props) => props.theme.colors.text};
     @media (max-width: 768px) {
       font-size: 1.5rem;
@@ -126,7 +168,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin: 0 0 8px 0;
   color: ${(props) => props.theme.colors.text};
   line-height: 1.2;
@@ -139,11 +181,11 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 300;
   line-height: 1.2;
   margin: 0 0 30px 0;
   color: ${(props) => props.theme.colors.text};
-  font-weight: 400;
   text-align: center;
   opacity: 0.8;
 
@@ -234,14 +276,13 @@ const InfoBlock = styled.div`
   }
 
   li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 0.9rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
 
     @media (max-width: 768px) {
       font-size: 0.8rem;
-      margin-bottom: 5px;
     }
   }
 `;
@@ -251,7 +292,6 @@ const InsightImage = styled.img`
   width: 100%;
   height: auto;
   margin: 20px 0;
-  border: 1px solid ${(props) => props.theme.colors.black};
   display: block;
 `;
 
@@ -279,44 +319,20 @@ const InsightTitle = styled.h1`
   }
 `;
 
-const InsightText = styled.h3`
-  text-align: left;
-  font-size: 1.8rem;
-  color: ${(props) => props.theme.colors.text};
-  font-weight: 400;
-
-  @media (max-width: 1024px) {
-    font-size: 1.5rem;
-  }
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  strong {
-    font-weight: 700;
-    font-family: inherit;
-  }
-`;
-
 const StyledParagraph = styled.p`
   margin: 0;
   color: ${(props) => props.theme.colors.text};
 
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.6rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
   text-align: left;
   white-space: pre-line;
   margin-bottom: 10px;
 
-  @media (max-width: 1024px) {
-    font-size: 0.9rem;
-  }
   @media (max-width: 768px) {
-    font-size: 0.8rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
   }
 
   strong {
@@ -341,11 +357,17 @@ const StyledParagraph = styled.p`
   }
 `;
 
+const InsightText = styled(StyledParagraph)`
+  margin-top: 20px;
+  @media (max-width: 1024px) {
+    margin-top: 0px;
+  }
+`;
+
 const OverviewImage = styled.img`
   max-width: 100%;
   height: auto;
   margin: 20px 0;
-  border: 1px solid ${(props) => props.theme.colors.black};
   display: block;
 `;
 
@@ -397,7 +419,6 @@ const PDFSection = styled.div`
 const PDFViewer = styled.iframe`
   width: 100%;
   height: 50vh;
-  border: 1px solid ${(props) => props.theme.colors.black};
   margin-bottom: 20px;
 
   @media (max-width: 1024px) {
@@ -424,7 +445,6 @@ const VideoSection = styled.div`
 const VideoViewer = styled.iframe`
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 1px solid ${(props) => props.theme.colors.black};
   margin-bottom: 20px;
 
   @media (max-width: 1024px) {
@@ -438,10 +458,6 @@ const LinkSection = styled.div`
   gap: 15px;
   margin-bottom: 20px;
   justify-content: flex-start;
-
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
 `;
 
 const LinkItem = styled.a`
@@ -464,7 +480,6 @@ const LinkItem = styled.a`
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
-    padding: 3px 6px;
     gap: 3px;
   }
 `;
@@ -533,10 +548,39 @@ const Details = () => {
       github: GithubIcon,
       video: YoutubeIcon,
       document: File02Icon,
+      score: FileMusicIcon,
+      soundcloud: SoundcloudIcon,
     };
     const Icon = iconMap[type];
     return Icon ? <HugeiconsIcon icon={Icon} /> : null;
   }, []);
+
+  const renderSectionContent = useCallback(
+    (content, altText) => {
+      if (Array.isArray(content)) {
+        return content.map((item, index) => {
+          if (typeof item === "string") {
+            return <div key={index}>{renderMarkdownWithParagraph(item)}</div>;
+          } else if (item.type === "text") {
+            return (
+              <div key={index}>{renderMarkdownWithParagraph(item.value)}</div>
+            );
+          } else if (item.type === "image") {
+            return (
+              <OverviewImage
+                key={index}
+                src={`${process.env.PUBLIC_URL}${item.value}`}
+                alt={altText}
+              />
+            );
+          }
+          return null;
+        });
+      }
+      return renderMarkdownWithParagraph(content);
+    },
+    [renderMarkdownWithParagraph]
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -548,12 +592,13 @@ const Details = () => {
 
           strongElements.forEach((strong) => {
             gsap.set(strong, {
-              color: item?.accentColor || "#FF2020",
-              clipPath: "inset(0 100% 0 0)",
+              color: "transparent",
+              WebkitTextStroke: `1px ${item?.accentColor || "#FF2020"}`,
+              textStroke: `1px ${item?.accentColor || "#FF2020"}`,
             });
 
             gsap.to(strong, {
-              clipPath: "inset(0 0% 0 0)",
+              color: item?.accentColor || "#FF2020",
               duration: 1,
               ease: "power2.out",
               scrollTrigger: {
@@ -591,6 +636,9 @@ const Details = () => {
       });
     };
 
+    createHighlightAnimation(".keyinsights-section strong");
+    createHighlightAnimation(".motivation-section strong");
+    createHighlightAnimation(".approach-section strong");
     createHighlightAnimation(".overview-section strong");
     createHighlightAnimation(".outcomes-section strong");
     createHighlightAnimation(".reflection-section strong");
@@ -625,69 +673,90 @@ const Details = () => {
           <MetaInfo>
             <Where>{item.where}</Where>
             <Date>
-              {category === "projects"
-                ? `${item.startDate} ~ ${item.endDate}`
-                : `${item.date}`}
+              {item.date
+                ? `${item.date}`
+                : `${item.startDate} ~ ${item.endDate}`}
             </Date>
           </MetaInfo>
 
           <InfoGrid>
-            {renderInfoList("Category", item.category)}
-            {renderInfoList("Role", item.myRole)}
-            {category === "projects"
+            {category === "publications"
+              ? renderInfoList("Index Terms", item.indexTerms)
+              : renderInfoList("Category", item.category)}
+            {renderInfoList("Roles", item.myRole)}
+            {item.tools
               ? renderInfoList("Tools", item.tools)
-              : renderInfoList("Index Terms", item.indexTerms)}
+              : renderInfoList("Framework", item.framework)}
             {renderInfoList("Credits", item.credits)}
           </InfoGrid>
         </ContentWrapper>
       </InformationSection>
 
-      <KeyInsightsSection>
+      <KeyInsightsSection className="keyinsights-section">
         <ContentWrapper>
           {Array.isArray(item.keyInsights) ? (
             item.keyInsights.map((insight, index) => {
-              switch (insight.type) {
-                case "title":
-                  return (
-                    <div
-                      key={index}
-                      ref={(el) => {
-                        if (el) {
-                          insightTitleRefs.current[index] = el;
-                        }
-                      }}
-                    >
-                      <ReactMarkdown
-                        components={{
-                          h1: InsightTitle,
-                        }}
-                      >
-                        {insight.value}
-                      </ReactMarkdown>
-                    </div>
-                  );
-                case "text":
-                  return (
+              if (insight.type === "title") {
+                return (
+                  <div
+                    key={index}
+                    ref={(el) => {
+                      if (el) {
+                        insightTitleRefs.current[index] = el;
+                      }
+                    }}
+                  >
                     <ReactMarkdown
-                      key={index}
                       components={{
-                        p: InsightText,
+                        h1: InsightTitle,
                       }}
                     >
                       {insight.value}
                     </ReactMarkdown>
-                  );
-                case "image":
+                  </div>
+                );
+              } else if (insight.type === "image") {
+                // 다음 인덱스의 text와 함께 그룹으로 렌더링
+                const nextInsight = item.keyInsights[index + 1];
+                if (nextInsight && nextInsight.type === "text") {
                   return (
-                    <InsightImage
-                      key={index}
-                      src={`${process.env.PUBLIC_URL}${insight.value}`}
-                      alt="Key insight"
-                    />
+                    <InsightContainer key={`group-${index}`}>
+                      <InsightImageContainer>
+                        <InsightImage
+                          src={`${process.env.PUBLIC_URL}${insight.value}`}
+                          alt="Key insight"
+                        />
+                      </InsightImageContainer>
+                      <InsightTextContainer>
+                        <ReactMarkdown
+                          components={{
+                            p: (props) => (
+                              <InsightText
+                                {...props}
+                                accentColor={accentColor}
+                              />
+                            ),
+                          }}
+                        >
+                          {nextInsight.value}
+                        </ReactMarkdown>
+                      </InsightTextContainer>
+                    </InsightContainer>
                   );
-                default:
-                  return null;
+                }
+                // text가 없으면 이미지만 렌더링
+                return (
+                  <InsightImage
+                    key={index}
+                    src={`${process.env.PUBLIC_URL}${insight.value}`}
+                    alt="Key insight"
+                  />
+                );
+              } else if (insight.type === "text") {
+                // 이미지 다음에 오는 text는 이미 위에서 처리됨
+                return null;
               }
+              return null;
             })
           ) : (
             <ReactMarkdown
@@ -701,97 +770,119 @@ const Details = () => {
         </ContentWrapper>
       </KeyInsightsSection>
 
-      <OverviewSection className="overview-section">
-        <ContentWrapper>
-          <h2>Overview</h2>
-          {Array.isArray(item.overview)
-            ? item.overview.map((overviewItem, index) => {
-                if (typeof overviewItem === "string") {
-                  // for past data
-                  return (
-                    <div key={index}>
-                      {renderMarkdownWithParagraph(overviewItem)}
-                    </div>
-                  );
-                } else if (overviewItem.type === "text") {
-                  return (
-                    <div key={index}>
-                      {renderMarkdownWithParagraph(overviewItem.value)}
-                    </div>
-                  );
-                } else if (overviewItem.type === "image") {
-                  return (
-                    <OverviewImage
-                      key={index}
-                      src={`${process.env.PUBLIC_URL}${overviewItem.value}`}
-                      alt="Overview image"
-                    />
-                  );
-                }
-                return null;
-              })
-            : renderMarkdownWithParagraph(item.overview)}
-        </ContentWrapper>
-      </OverviewSection>
-
-      <OutcomesSection className="outcomes-section">
-        <ContentWrapper>
-          <h2>Outcomes</h2>
-
-          <OutcomesContainer>
-            {item.presentation && (
-              <PDFSection>
-                <PDFViewer src={`${item.presentation}`} title="PDF Document" />
-              </PDFSection>
+      {(item.motivation || item.abstract) && (
+        <MotivationSection className="motivation-section">
+          <ContentWrapper>
+            <h2>{category === "publications" ? "Abstract" : "Motivation"}</h2>
+            {renderSectionContent(
+              item.motivation || item.abstract,
+              category === "publications"
+                ? "Abstract image"
+                : "Motivation image"
             )}
+          </ContentWrapper>
+        </MotivationSection>
+      )}
 
-            {item.video && (
-              <VideoSection>
-                <VideoViewer
-                  src={`${item.video}?autoplay=1&mute=1`}
-                  title="Video"
-                  frameBorder="0"
-                  allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </VideoSection>
-            )}
+      {item.approach && (
+        <ApproachSection className="approach-section">
+          <ContentWrapper>
+            <h2>Approach</h2>
+            {renderSectionContent(item.approach, "Approach image")}
+          </ContentWrapper>
+        </ApproachSection>
+      )}
 
-            {Array.isArray(item.outcomes) && item.outcomes.length > 0 && (
-              <OutcomesList>
-                {item.links &&
-                  Array.isArray(item.links) &&
-                  item.links.length > 0 && (
-                    <LinkSection>
-                      {item.links.map((link, index) => (
-                        <LinkItem
-                          key={index}
-                          href={link.value}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          accentColor={item?.accentColor}
-                          data-no-hover
-                        >
-                          <LinkIcon>{getLinkIcon(link.type)}</LinkIcon>
-                          {link.type}
-                        </LinkItem>
-                      ))}
-                    </LinkSection>
-                  )}
+      {/* 기존 overview 필드가 있는 경우를 위한 fallback */}
+      {!item.motivation && !item.approach && item.overview && (
+        <MotivationSection className="overview-section">
+          <ContentWrapper>
+            <h2>Overview</h2>
+            {renderSectionContent(item.overview, "Overview image")}
+          </ContentWrapper>
+        </MotivationSection>
+      )}
 
-                {item.outcomes.map((outcome, index) => (
-                  <OutcomeItem key={index}>
-                    <OutcomeBullet>•</OutcomeBullet>
-                    <OutcomeContent>
-                      {renderMarkdownWithParagraph(outcome)}
-                    </OutcomeContent>
-                  </OutcomeItem>
-                ))}
-              </OutcomesList>
-            )}
-          </OutcomesContainer>
-        </ContentWrapper>
-      </OutcomesSection>
+      {((item.outcomes &&
+        Array.isArray(item.outcomes) &&
+        item.outcomes.length > 0) ||
+        (item.contributions && Array.isArray(item.contributions)) ||
+        item.presentation ||
+        item.video ||
+        (item.links && Array.isArray(item.links) && item.links.length > 0)) && (
+        <OutcomesSection className="outcomes-section">
+          <ContentWrapper>
+            <h2>
+              {category === "publications" ? "Contributions" : "Outcomes"}
+            </h2>
+
+            <OutcomesContainer>
+              {item.presentation && (
+                <PDFSection>
+                  <PDFViewer
+                    src={`${item.presentation}`}
+                    title="PDF Document"
+                  />
+                </PDFSection>
+              )}
+
+              {item.video && (
+                <VideoSection>
+                  <VideoViewer
+                    src={`${item.video}?autoplay=1&mute=1`}
+                    title="Video"
+                    frameBorder="0"
+                    allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </VideoSection>
+              )}
+
+              {((item.outcomes &&
+                Array.isArray(item.outcomes) &&
+                item.outcomes.length > 0) ||
+                (item.contributions && Array.isArray(item.contributions))) && (
+                <OutcomesList>
+                  {item.links &&
+                    Array.isArray(item.links) &&
+                    item.links.length > 0 && (
+                      <LinkSection>
+                        {item.links.map((link, index) => (
+                          <LinkItem
+                            key={index}
+                            href={link.value}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            accentColor={item?.accentColor}
+                            data-no-hover
+                          >
+                            <LinkIcon>{getLinkIcon(link.type)}</LinkIcon>
+                            {category === "publications" &&
+                            link.type === "document"
+                              ? "full paper"
+                              : link.type}
+                          </LinkItem>
+                        ))}
+                      </LinkSection>
+                    )}
+
+                  {(category === "publications"
+                    ? item.contributions
+                    : item.outcomes
+                  )?.map((content, index) => (
+                    <OutcomeItem key={index}>
+                      <OutcomeBullet>•</OutcomeBullet>
+                      <OutcomeContent>
+                        {renderMarkdownWithParagraph(content)}
+                      </OutcomeContent>
+                    </OutcomeItem>
+                  ))}
+                </OutcomesList>
+              )}
+            </OutcomesContainer>
+          </ContentWrapper>
+        </OutcomesSection>
+      )}
 
       {item.reflection && (
         <ReflectionSection className="reflection-section">
