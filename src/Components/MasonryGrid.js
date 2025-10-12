@@ -5,6 +5,39 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { PinIcon } from "@hugeicons/core-free-icons";
 import OptimizedThumbnail from "./OptimizedThumbnail";
 
+const HashtagFilterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    gap: 5px;
+    margin-bottom: 30px;
+  }
+`;
+
+const HashtagFilterTag = styled.span`
+  color: ${(props) =>
+    props.$isActive ? props.theme.colors.primary : props.theme.colors.hashText};
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+`;
+
 const ProjectsGrid = styled.div`
   column-count: 3;
   column-gap: 40px;
@@ -58,32 +91,6 @@ const ProjectMetaTags = styled.div`
   gap: 6px;
 `;
 
-const SelectedTagContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-`;
-
-const SelectedTag = styled.span`
-  color: ${(props) => props.theme.colors.primary};
-  border: 1px solid ${(props) => props.theme.colors.primary};
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: ${(props) => props.theme.colors.primary};
-    color: white;
-  }
-`;
-
 const MetaTag = styled.span`
   color: ${(props) => props.theme.colors.hashText};
   border: 1px solid ${(props) => props.theme.colors.hashText};
@@ -120,11 +127,11 @@ const PinIconWrapper = styled.div`
   top: 10px;
   right: 10px;
   z-index: 10;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.white};
   transition: color 0.3s ease;
 
   ${ProjectCard}:hover & {
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 
@@ -142,6 +149,23 @@ const MasonryGrid = ({
   const navigate = useNavigate();
   const [selectedTags, setSelectedTags] = useState([]);
 
+  // Calculate tag counts and sort by frequency
+  const allTags = useMemo(() => {
+    const tagCounts = {};
+    items.forEach((item) => {
+      const itemTags = getMetaTags ? getMetaTags(item) : item[tagField];
+      if (itemTags && Array.isArray(itemTags)) {
+        itemTags.forEach((tag) => {
+          tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+        });
+      }
+    });
+
+    return Object.entries(tagCounts)
+      .sort((a, b) => b[1] - a[1]) // Sort by count (descending)
+      .map(([tag]) => tag);
+  }, [items, getMetaTags, tagField]);
+
   const handleCardClick = (item) => {
     if (onItemClick) {
       onItemClick(item);
@@ -152,16 +176,22 @@ const MasonryGrid = ({
     }
   };
 
-  const handleMetaTagClick = (tag) => {
-    if (selectedTags.includes(tag)) {
+  const handleHashtagFilterClick = (tag) => {
+    if (tag === "All") {
+      setSelectedTags([]);
+    } else if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t !== tag));
     } else {
       setSelectedTags([...selectedTags, tag]);
     }
   };
 
-  const handleRemoveTag = (tagToRemove) => {
-    setSelectedTags(selectedTags.filter((tag) => tag !== tagToRemove));
+  const handleMetaTagClick = (tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter((t) => t !== tag));
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+    }
   };
 
   const filteredItems = useMemo(() => {
@@ -186,15 +216,24 @@ const MasonryGrid = ({
 
   return (
     <>
-      {selectedTags.length > 0 && (
-        <SelectedTagContainer data-no-hover>
-          {selectedTags.map((tag, index) => (
-            <SelectedTag key={index} onClick={() => handleRemoveTag(tag)}>
-              #{tag}
-            </SelectedTag>
-          ))}
-        </SelectedTagContainer>
-      )}
+      {/* Hashtag Filter */}
+      <HashtagFilterContainer data-no-hover>
+        <HashtagFilterTag
+          $isActive={selectedTags.length === 0}
+          onClick={() => handleHashtagFilterClick("All")}
+        >
+          All
+        </HashtagFilterTag>
+        {allTags.map((tag, index) => (
+          <HashtagFilterTag
+            key={index}
+            $isActive={selectedTags.includes(tag)}
+            onClick={() => handleHashtagFilterClick(tag)}
+          >
+            #{tag}
+          </HashtagFilterTag>
+        ))}
+      </HashtagFilterContainer>
 
       <ProjectsGrid>
         {filteredItems.map((item, index) => (
