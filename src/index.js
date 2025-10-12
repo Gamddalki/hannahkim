@@ -75,7 +75,7 @@ button {
 h1{
   font-family: 'BricolageGrotesque', -apple-system, sans-serif;
   color:#222222;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 55px;
   font-size: 90px;
   display: block;
@@ -83,7 +83,7 @@ h1{
 h2{
   font-family: 'BricolageGrotesque', -apple-system, sans-serif;
   color: #FF2020;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 45px;
   font-size: 10px;
   display: block;

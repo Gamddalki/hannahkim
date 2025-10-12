@@ -93,8 +93,8 @@ const IconLink = styled.a`
     color: ${(props) => props.theme.colors.primary};
   }
 
-  @media (max-width: 1024px) {
-    font-size: 1.2rem;
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
