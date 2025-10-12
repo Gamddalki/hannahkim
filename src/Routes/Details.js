@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useMemo, useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,7 +15,9 @@ import {
   File02Icon,
   SoundcloudIcon,
   FileMusicIcon,
+  ArrowLeft01Icon,
 } from "@hugeicons/core-free-icons";
+import RelatedProjects from "../Components/RelatedProjects";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,6 +165,30 @@ const RelatedProjectsSection = styled(Section)`
 
   @media (max-width: 768px) {
     padding-bottom: 150px;
+  }
+`;
+
+const BackButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: ${(props) => props.theme.colors.text};
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  width: fit-content;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -912,6 +938,10 @@ const Details = () => {
             category={category}
             maxItems={3}
           />
+          <BackButton onClick={() => navigate(-1)} data-no-hover>
+            <HugeiconsIcon icon={ArrowLeft01Icon} size={20} />
+            Back
+          </BackButton>
         </ContentWrapper>
       </RelatedProjectsSection>
     </div>
