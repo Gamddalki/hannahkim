@@ -120,8 +120,8 @@ const CustomCursor = () => {
       style={{
         left: position.x,
         top: position.y,
-        width: isHovering ? "60px" : "15px",
-        height: isHovering ? "60px" : "15px",
+        width: isHovering ? "65px" : "15px",
+        height: isHovering ? "65px" : "15px",
       }}
     >
       {isHovering && <CursorText>MORE</CursorText>}
