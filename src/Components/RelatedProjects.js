@@ -58,13 +58,23 @@ const ProjectCard = styled.div`
   will-change: transform;
   transform: translateZ(0);
 
+  img {
+    filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
+  }
+
   &:hover {
     transform: scale(1.02) translateZ(0);
+    img {
+      filter: none;
+    }
   }
 
   @media (max-width: 768px) {
     width: 100%;
     height: 200px;
+    img {
+      filter: none;
+    }
   }
 `;
 
