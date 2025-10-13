@@ -60,13 +60,12 @@ const LeftText = styled.h1`
   align-self: flex-start;
 
   @media (max-width: 1024px) {
-    font-size: 3.5rem;
-    line-height: 0.7rem;
+    font-size: 4.3rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     font-size: 2rem;
-    line-height: 0.5rem;
+    line-height: 0.6rem;
   }
 `;
 
@@ -76,11 +75,12 @@ const RightText = styled.h1`
   align-self: flex-end;
 
   @media (max-width: 1024px) {
-    font-size: 3.5rem;
+    font-size: 4.3rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     font-size: 2rem;
+    line-height: 0.6rem;
   }
 `;
 
