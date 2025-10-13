@@ -12,6 +12,9 @@ const processData = () => {
     ...publicationsData
       .filter((publication) => publication.selected)
       .map((publication) => ({ ...publication, category: "publications" })),
+    ...artsData
+      .filter((art) => art.selected)
+      .map((art) => ({ ...art, category: "arts" })),
   ];
 
   // More works - 미리 정의된 매핑 사용
