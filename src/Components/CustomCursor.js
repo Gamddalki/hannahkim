@@ -113,7 +113,7 @@ const CustomCursor = () => {
   }, [isMobile]);
 
   // if mobile, do not render anything
-  if (isMobile || !isVisible) return null;
+  if (isMobile || !isVisible || !isHovering) return null;
 
   return (
     <Cursor
