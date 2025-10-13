@@ -347,11 +347,10 @@ const InsightTitle = styled.h1`
   }
 
   strong {
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.accentColor || props.theme.colors.primary};
     font-family: inherit;
     font-weight: inherit;
     line-height: inherit;
-    position: relative;
   }
 `;
 
@@ -374,21 +373,6 @@ const StyledParagraph = styled.p`
   strong {
     font-weight: 700;
     color: ${(props) => props.theme.colors.text};
-    position: relative;
-    display: inline;
-    padding: 0.1em 0.2em;
-    margin: 0 -0.2em;
-    background-image: linear-gradient(
-      to right,
-      ${(props) => (props.accentColor || props.theme.colors.primary) + "66"} 0%,
-      ${(props) => (props.accentColor || props.theme.colors.primary) + "66"}
-        100%
-    );
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-size: var(--highlight-width, 0%) 40%;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
   }
 `;
 
@@ -620,69 +604,7 @@ const Details = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    if (insightTitleRefs.current.length > 0) {
-      insightTitleRefs.current.forEach((ref, index) => {
-        if (ref) {
-          const strongElements = ref.querySelectorAll("strong");
-
-          strongElements.forEach((strong) => {
-            gsap.set(strong, {
-              color: "transparent",
-              WebkitTextStroke: `1px ${item?.accentColor || "#FF2020"}`,
-              textStroke: `1px ${item?.accentColor || "#FF2020"}`,
-            });
-
-            gsap.to(strong, {
-              color: item?.accentColor || "#FF2020",
-              duration: 1,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: ref,
-                start: "top 80%",
-                end: "bottom 30%",
-                scrub: 1,
-                toggleActions: "play none none reverse",
-              },
-            });
-          });
-        }
-      });
-    }
-
-    const createHighlightAnimation = (selector) => {
-      const elements = document.querySelectorAll(selector);
-      elements.forEach((strong) => {
-        gsap.set(strong, {
-          "--highlight-width": "0%",
-        });
-
-        gsap.to(strong, {
-          "--highlight-width": "100%",
-          duration: 2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: strong,
-            start: "top 70%",
-            end: "bottom 20%",
-            scrub: 1.5,
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
-    };
-
-    createHighlightAnimation(".keyinsights-section strong");
-    createHighlightAnimation(".motivation-section strong");
-    createHighlightAnimation(".approach-section strong");
-    createHighlightAnimation(".overview-section strong");
-    createHighlightAnimation(".outcomes-section strong");
-    createHighlightAnimation(".reflection-section strong");
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, [category, id, item?.accentColor]);
+  }, [category, id]);
 
   if (!item) {
     return (
@@ -744,7 +666,9 @@ const Details = () => {
                   >
                     <ReactMarkdown
                       components={{
-                        h1: InsightTitle,
+                        h1: (props) => (
+                          <InsightTitle {...props} accentColor={accentColor} />
+                        ),
                       }}
                     >
                       {insight.value}

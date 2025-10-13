@@ -1,17 +1,5 @@
 import React, { memo } from "react";
-import styled, { keyframes } from "styled-components";
-
-const bounce = keyframes`
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-`;
+import styled from "styled-components";
 
 const Indicator = styled.div`
   position: absolute;
@@ -20,7 +8,6 @@ const Indicator = styled.div`
   transform: translateX(-50%);
   color: ${(props) => props.theme.colors.text};
   opacity: 0.5;
-  animation: ${bounce} 2s infinite;
   z-index: 10;
   align-items: center;
   display: flex;
