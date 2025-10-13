@@ -376,20 +376,19 @@ const StyledParagraph = styled.p`
     color: ${(props) => props.theme.colors.text};
     position: relative;
     display: inline;
-    padding: 0 2px;
-    margin: 0 -2px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 0.5em;
-      width: var(--highlight-width, 0%);
-      background: ${(props) => props.accentColor || props.theme.colors.primary};
-      z-index: -1;
-      opacity: 0.4;
-    }
+    padding: 0.1em 0.2em;
+    margin: 0 -0.2em;
+    background-image: linear-gradient(
+      to right,
+      ${(props) => (props.accentColor || props.theme.colors.primary) + "66"} 0%,
+      ${(props) => (props.accentColor || props.theme.colors.primary) + "66"}
+        100%
+    );
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: var(--highlight-width, 0%) 40%;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 `;
 
