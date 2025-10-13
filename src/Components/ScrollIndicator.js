@@ -19,8 +19,6 @@ const Indicator = styled.div`
   left: 50%;
   transform: translateX(-50%);
   color: ${(props) => props.theme.colors.text};
-  font-size: 0.9rem;
-  font-weight: 500;
   opacity: 0.5;
   animation: ${bounce} 2s infinite;
   z-index: 10;
@@ -30,7 +28,13 @@ const Indicator = styled.div`
 
   @media (max-width: 768px) {
     bottom: 30px;
-    font-size: 0.8rem;
+  }
+
+  span {
+    font-size: 1rem;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
   }
 `;
 
