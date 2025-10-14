@@ -200,11 +200,11 @@ function Header() {
 
         <Nav data-no-hover>
           <NavLink
-            to="/hannah"
-            className={isActive("/hannah") ? "active" : ""}
+            to="/about"
+            className={isActive("/about") ? "active" : ""}
             data-no-hover
           >
-            HANNAH
+            ABOUT
           </NavLink>
           <NavLink
             to="/projects"
@@ -242,12 +242,12 @@ function Header() {
       <MobileMenu isOpen={isMenuOpen}>
         <MobileNav>
           <MobileNavLink
-            to="/hannah"
+            to="/about"
             onClick={handleNavClick}
-            className={isActive("/hannah") ? "active" : ""}
+            className={isActive("/about") ? "active" : ""}
             data-no-hover
           >
-            HANNAH
+            ABOUT
           </MobileNavLink>
           <MobileNavLink
             to="/projects"

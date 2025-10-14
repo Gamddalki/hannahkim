@@ -293,7 +293,7 @@ const MoreButton = styled.button`
   }
 `;
 
-function Hannah() {
+function About() {
   const [showAll, setShowAll] = React.useState(false);
 
   const { journeyData: journeyItems, icons } = journeyData;
@@ -353,7 +353,7 @@ function Hannah() {
                 <HugeiconsIcon icon={SoundcloudIcon} />
               </IconLink>
               <IconLink
-                href="https://drive.google.com/file/d/1AE1wXTG0kT37ymQAC8_eZoldSjfxnBHb/view"
+                href="https://drive.google.com/drive/u/0/home"
                 target="_blank"
                 rel="noreferrer"
                 title="CV"
@@ -467,4 +467,4 @@ function Hannah() {
   );
 }
 
-export default Hannah;
+export default About;

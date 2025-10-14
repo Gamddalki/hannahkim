@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Routes/Home";
-import Hannah from "./Routes/Hannah";
+import About from "./Routes/About";
 import Projects from "./Routes/Projects";
 import Publications from "./Routes/Publications";
 import Arts from "./Routes/Arts";
@@ -22,7 +22,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/hannah" element={<Hannah />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/arts" element={<Arts />} />
