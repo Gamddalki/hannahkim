@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { PinIcon } from "@hugeicons/core-free-icons";
+import { PinIcon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const HashtagFilterContainer = styled.div`
@@ -44,7 +44,7 @@ const ProjectsGrid = styled.div`
   margin-top: 40px;
 
   @media (max-width: 1200px) {
-    column-count: 2;
+    column-count: ${(props) => (props.$skipTwoColumn ? "3" : "2")};
   }
 
   @media (max-width: 768px) {
@@ -74,6 +74,7 @@ const ProjectCard = styled.div`
 const ProjectImage = styled.div`
   width: 100%;
   overflow: hidden;
+  ${(props) => (props.$aspect ? `aspect-ratio: ${props.$aspect};` : "")}
   ${ProjectCard}:hover & img {
     filter: none;
   }
@@ -122,6 +123,25 @@ const ProjectSubtitle = styled.h4`
   line-height: 1.3;
 `;
 
+const SeeAllButton = styled.button`
+  align-self: flex-end;
+  background: transparent;
+  color: ${(props) => props.theme.colors.hashText};
+  border-bottom: 1px solid ${(props) => props.theme.colors.hashText};
+  padding: 2px 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  }
+`;
+
 const PinIconWrapper = styled.div`
   position: absolute;
   top: 10px;
@@ -145,6 +165,12 @@ const MasonryGrid = ({
   getKey,
   tagField = "techStack",
   sortField = "startDate",
+  showFilter = true,
+  showSeeAllUnderCard = false,
+  showPins = true,
+  showOverlay = true,
+  skipTwoColumn = false,
+  uniformAspect = null,
 }) => {
   const navigate = useNavigate();
   const [selectedTags, setSelectedTags] = useState([]);
@@ -217,41 +243,44 @@ const MasonryGrid = ({
   return (
     <>
       {/* Hashtag Filter */}
-      <HashtagFilterContainer data-no-hover>
-        <HashtagFilterTag
-          $isActive={selectedTags.length === 0}
-          onClick={() => handleHashtagFilterClick("All")}
-        >
-          All
-        </HashtagFilterTag>
-        {allTags.map((tag, index) => (
+      {showFilter && (
+        <HashtagFilterContainer data-no-hover>
           <HashtagFilterTag
-            key={index}
-            $isActive={selectedTags.includes(tag)}
-            onClick={() => handleHashtagFilterClick(tag)}
+            $isActive={selectedTags.length === 0}
+            onClick={() => handleHashtagFilterClick("All")}
           >
-            #{tag}
+            All
           </HashtagFilterTag>
-        ))}
-      </HashtagFilterContainer>
+          {allTags.map((tag, index) => (
+            <HashtagFilterTag
+              key={index}
+              $isActive={selectedTags.includes(tag)}
+              onClick={() => handleHashtagFilterClick(tag)}
+            >
+              #{tag}
+            </HashtagFilterTag>
+          ))}
+        </HashtagFilterContainer>
+      )}
 
-      <ProjectsGrid>
+      <ProjectsGrid $skipTwoColumn={skipTwoColumn}>
         {filteredItems.map((item, index) => (
           <ProjectCard
             key={getKey ? getKey(item) : index}
             onClick={() => handleCardClick(item)}
             data-more-hover
           >
-            {item.pinned && (
+            {item.pinned && showPins && (
               <PinIconWrapper>
                 <HugeiconsIcon icon={PinIcon} size={20} />
               </PinIconWrapper>
             )}
-            <ProjectImage>
+            <ProjectImage $aspect={uniformAspect}>
               <OptimizedThumbnail
                 src={getImageSrc ? getImageSrc(item) : item.thumbnail}
                 alt={getTitle ? getTitle(item) : item.title}
-                layout="auto"
+                layout={uniformAspect ? "cover" : "auto"}
+                showOverlay={showOverlay}
                 priority={false}
               />
             </ProjectImage>
@@ -279,6 +308,23 @@ const MasonryGrid = ({
                   ))}
               </ProjectMetaTags>
             </ProjectInfo>
+            {showSeeAllUnderCard && (
+              <SeeAllButton
+                data-no-hover
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const category = item.category || "projects";
+                  navigate(`/${category}`);
+                }}
+              >
+                See all{" "}
+                {item.category
+                  ? item.category.charAt(0).toUpperCase() +
+                    item.category.slice(1)
+                  : "Projects"}
+                <HugeiconsIcon icon={ArrowUpRight01Icon} size={14} />
+              </SeeAllButton>
+            )}
           </ProjectCard>
         ))}
       </ProjectsGrid>

@@ -30,6 +30,7 @@ const ThumbnailContainer = styled.div`
 
   ${(props) =>
     props.layout === "cover" &&
+    props.showOverlay !== false &&
     `
     &::before {
       content: "";
@@ -67,10 +68,10 @@ const OptimizedThumbnail = memo(
     className = "",
     priority = false,
     layout = "cover",
+    showOverlay = true,
     ...props
   }) => {
     const [loaded, setLoaded] = useState(false);
-    const [error, setError] = useState(false);
     const imgRef = useRef(null);
 
     useEffect(() => {
@@ -93,7 +94,6 @@ const OptimizedThumbnail = memo(
     };
 
     const handleError = () => {
-      setError(true);
       setLoaded(true);
     };
 
@@ -102,6 +102,7 @@ const OptimizedThumbnail = memo(
         className={className}
         loaded={loaded}
         layout={layout}
+        showOverlay={showOverlay}
         {...props}
       >
         <Placeholder loaded={loaded} />
