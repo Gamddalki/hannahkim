@@ -1,17 +1,19 @@
 export const theme = {
   colors: {
-    background: "#FFFDFD",
+    background: "#FFFFFF",
     primary: "#FF2020",
     secondary: "DF5F5F",
     hover: "black",
-    header: "#FFFDFD",
+    header: "#FFFFFF",
     headerText: "#444444",
-    footer: "#FFFDFD",
+    footer: "#FFFFFF",
     footerText: "#999999",
     content: "#222222",
     text: "#222222",
     subText: "#444444",
     cardBackground: "#FFFFFF",
-    hashText: "#888888",
+    hashText: "#BBBBBB",
+    black: "#222222",
+    white: "#FFFFFF",
   },
 };
