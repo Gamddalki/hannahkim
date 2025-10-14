@@ -26,18 +26,34 @@ const HeaderDiv = styled.header`
 
 const Logo = styled.div`
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 3px;
 
   &:hover {
-    transform: scale(1.1);
+    img {
+      transform: scale(1.1);
+    }
   }
 
   img {
     height: 40px;
     width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
 
     @media (max-width: 768px) {
       height: 25px;
+    }
+  }
+
+  span {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.black};
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 `;
@@ -196,6 +212,10 @@ function Header() {
       <HeaderDiv data-no-hover>
         <Logo onClick={handleLogoClick} data-no-hover>
           <img src={`${process.env.PUBLIC_URL}/Heart.svg`} alt="HANNAH" />
+          <span>
+            HANNAH <br />
+            KIM
+          </span>
         </Logo>
 
         <Nav data-no-hover>
