@@ -33,6 +33,7 @@ const CursorText = styled.div`
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isInMoreHover, setIsInMoreHover] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -61,7 +62,7 @@ const CustomCursor = () => {
     const handleMouseLeave = () => setIsVisible(false);
 
     const shouldShowMore = (target) => {
-      // if data-no-hover is present, do not show MORE
+      // if data-no-hover is present, do not show MORE text
       if (target.closest("[data-no-hover]")) {
         return false;
       }
@@ -90,11 +91,15 @@ const CustomCursor = () => {
 
     const handleMouseOver = (e) => {
       const shouldShow = shouldShowMore(e.target);
+      const isInMore = e.target.closest("[data-more-hover]");
+
       setIsHovering(shouldShow);
+      setIsInMoreHover(!!isInMore);
     };
 
     const handleMouseOut = () => {
       setIsHovering(false);
+      setIsInMoreHover(false);
     };
 
     document.addEventListener("mousemove", updateCursorPosition);
@@ -113,15 +118,21 @@ const CustomCursor = () => {
   }, [isMobile]);
 
   // if mobile, do not render anything
-  if (isMobile || !isVisible || !isHovering) return null;
+  if (isMobile || !isVisible || (!isHovering && !isInMoreHover)) return null;
+
+  // Determine cursor size: large if showing MORE, medium if in more-hover area, small otherwise
+  const getCursorSize = () => {
+    if (isHovering) return "65px"; // Show MORE text
+    return "15px"; // Default small
+  };
 
   return (
     <Cursor
       style={{
         left: position.x,
         top: position.y,
-        width: isHovering ? "65px" : "15px",
-        height: isHovering ? "65px" : "15px",
+        width: getCursorSize(),
+        height: getCursorSize(),
       }}
     >
       {isHovering && <CursorText>MORE</CursorText>}

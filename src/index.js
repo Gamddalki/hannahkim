@@ -119,11 +119,8 @@ html, body {
   overflow-x: hidden;
 }
 
-  /* force cursor to be none for all elements */
-html, body, * {
-  cursor: none !important;
-}
-a, button, input, select, textarea, [role="button"], [onclick], .clickable, .hoverable {
+/* Hide default cursor when hovering over interactive elements */
+[data-more-hover] * {
   cursor: none !important;
 }
 `;
