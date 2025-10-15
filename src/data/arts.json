@@ -1,109 +1,320 @@
 [
   {
+    "id": "toroger",
+    "title": "To Roger",
+    "subtitle": "Independent Fiction Publication",
+    "where": "personal project",
+    "thumbnail": "/img/arts/ToRoger.png",
+    "startDate": "2020-02",
+    "endDate": "2020-08",
+    "category": ["Creative Writing", "Editorial Design"],
+    "myRole": ["Writer", "Designer"],
+    "tools": ["Adobe Photoshop"],
+    "credits": ["bookcns"],
+    "overview": [
+      {
+        "type": "text",
+        "value": "To Roger (A5, 154p) is an independently written and self-published fiction set in a post-apocalyptic world — a zombie apocalypse where survival and emotional connection intertwine."
+      },
+      {
+        "type": "text",
+        "value": " I wrote and designed the entire book, from narrative development and character arcs to layout, typography, and visual tone. Rather than portraying the apocalypse as chaos, the story focuses on quiet moments of humanity, exploring how tenderness persists in desolation. Through iterative editing, visual prototyping, and self-publication, I shaped a cohesive narrative and aesthetic that reflects both the fragility and strength of love."
+      }
+    ],
+    "outcomes": [
+      "Authored a complete fiction",
+      "Designed full layout, typography, and cover art for print",
+      "Integrated text and visual composition to enhance thematic immersion",
+      "Self-published and distributed 70 copies through personal channels"
+    ]
+  },
+  {
     "id": "bugeffect",
     "title": "BugEffect",
     "subtitle": "Scenario writing for short film",
     "where": "2023 screenwriting and visualization course work",
-    "thumbnail": "/img/art/BugEffect.png",
+    "thumbnail": "/img/arts/BugEffect.gif",
     "startDate": "2023-03",
     "endDate": "2023-06",
-    "keyInsights": "Scenario writing for short film",
     "indexTerms": ["Screenwriting"],
     "myRole": ["Screenwriter"],
     "category": ["Screenwriting", "Short Film"],
     "credits": ["Soojin Lee*"],
     "tools": ["Premiere Pro"],
-    "links": [
-      {
-        "type": "document",
-        "value": "https://ieeexplore.ieee.org/document/10703854"
-      }
-    ],
     "overview": [
       {
         "type": "text",
-        "value": "Scenario writing for short film"
+        "value": "“Bug Effect” is a short film scenario set in a **near-future dystopia**. The story explores the impact of **“Remember 3,”** a service offered by the company **“Inertial,”** which provides an **AI humanoid robot** designed to replace a deceased loved one and erase painful memories of their loss. This service, using the deceased's DNA, creates a robot with an identical appearance and memory. In a society that values emotional control and convenience, people willingly accept this as **a new form of a funeral** or mourning process."
+      },
+      {
+        "type": "text",
+        "value": "The story follows Ji-gu, whose husband, Yuseong, has passed away. Initially, Ji-gu embraces “Remember 3,” believing it protects her from grief. However, a series of unsettling discoveries forces her to confront a painful truth: her beloved husband is dead. The story culminates in her conscious choice to reject the service's ‘maintenance’ procedures and fully embrace the grief she was meant to forget. In doing so, she **rejects societal norms** and reclaims her authentic self, finding happiness by accepting that life includes both sorrow and joy."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/BugEffect1.png"
+      },
+      {
+        "type": "text",
+        "value": "The narrative uses the **science-fiction genre** to explore deeper themes of **memory, grief, and what it means to be human**. The core conflict is not just between a person and a technology, but between the comfort of a fabricated reality and the difficult truth of authentic emotion. The title, “Bug Effect,” refers not only to the technical glitches in AI but also to the emotional ‘bugs’ that disrupt artificial peace and ultimately lead to **growth and self-acceptance**."
       }
     ],
-    "selected": true
+    "video": "https://youtube.com/embed/IBN5mN6GGBw",
+    "links": [
+      {
+        "type": "scenario",
+        "value": "https://drive.google.com/file/d/1LWIIV2_I4GwAqsrmVZKl5-5_RSmeh47Q/view"
+      },
+      {
+        "type": "storyboard",
+        "value": "https://drive.google.com/file/d/1Ye0Afs9FHHu6Cm5C5Kb95e99iyvMiy8w/view"
+      }
+    ],
+    "outcomes": [
+      "**Earned full marks** across all evaluated stages (scenario, structure board, storyboard, and virtual trailer), and was selected as a Best Work by the professor.",
+      "Demonstrated proficiency in all stages of short film pre-production, including conceptualization, narrative structure, visual storytelling, and trailer creation.",
+      "Crafted a cohesive SF-romance mystery that explores deep ethical and philosophical themes through an emotionally compelling narrative."
+    ],
+    "selected": true,
+    "pinned": true
   },
   {
     "id": "0505",
-    "title": "0505 M/V",
+    "title": "0505",
     "subtitle": "Original Song Composition and M/V Production",
     "where": "RGBN band",
     "thumbnail": "/img/arts/0505.png",
     "date": "5 May 2023",
-    "keyInsights": "요약",
-    "indexTerms": [
-      "Narrative Transformation",
-      "Character Reconstruction",
-      "Novel",
-      "Film",
-      "Drama Series"
+    "startDate": "2023-05",
+    "category": ["Music Production", "Song Writing", "M/V Production", "Band"],
+    "myRole": [
+      "Music Producer",
+      "Song Writer",
+      "M/V Director",
+      "Lead Guitarist"
     ],
-    "myRole": ["Author"],
-    "category": [
-      "Narrative Transformation",
-      "Character Reconstruction",
-      "Novel",
-      "Film",
-      "Drama Series"
+    "tools": ["Logic Pro X", "Musescore", "Adobe Premiere Pro"],
+    "credits": [
+      "RGBN band",
+      "Yeji Seo",
+      "Juyeop Kim",
+      "Puzzle Recording Studio"
     ],
-    "credits": ["RGBN band", "Juyeop Kim", "Yeji Seo"],
-    "links": [
+    "accentColor": "#7ACF50",
+    "overview": [
       {
-        "type": "video",
-        "value": "https://www.youtube.com/watch?v=Sjir0rqZ4yE"
+        "type": "text",
+        "value": "“0505” is a song born from the desire to forever remember the initial flutter of chasing clouds that seemed just within reach. It is **our lifelong contract** left not on paper, but **in music** — a promise to be together until the day spring flowers bloom in winter."
       },
-      { "type": "soundcloud", "value": "https://soundcloud.com/rgbn/0505rgbn" }
-    ],
-    "content": [
       {
         "type": "image",
-        "value": "/img/researches/LoveintheBigCity.svg"
+        "value": "/img/arts/05051.png"
       },
       {
         "type": "text",
-        "value": "요약"
+        "value": "As the **main composer and director**, I led the creation of “0505,” my band's first original song. I wrote the lyrics, composed the melody, and arranged the full band score for all instruments (drums, bass, two guitars, keyboard, and vocals). While collaborating with my bandmates to refine ideas, I oversaw the entire recording process and performed as the lead guitarist."
+      },
+      {
+        "type": "text",
+        "value": "Beyond the music, this project extended into a **self-produced music video** that I also directed from start to finish. The video's narrative reflects the song's theme, following a protagonist who finds a camera on the street and, through its viewfinder, **relives cherished memories with friends** throughout Hongdae. I led the entire video production, from directing the filming and editing to ensuring the final product captured our collective vision."
       }
-    ]
+    ],
+    "outcomes": [
+      "Composed and released the first original song on SoundCloud.",
+      "Directed and produced a music video for YouTube, translating the song's narrative into a visual story.",
+      "Received high praise from a renowned Korean poet, Professor Jeong Kkeut-byeol, for the song's lyrics and introductory text, which were also submitted as a creative writing course assignment."
+    ],
+    "video": "https://youtube.com/embed/Sjir0rqZ4yE",
+    "links": [
+      { "type": "soundcloud", "value": "https://soundcloud.com/rgbn/0505rgbn" },
+      {
+        "type": "score",
+        "value": "https://drive.google.com/file/d/1eBx60dLtS-nFkZviodEgJpTzwEPoE-bc/view"
+      }
+    ],
+    "pinned": true
   },
   {
     "id": "runtimeerror",
-    "title": "RuntimeError",
-    "subtitle": "Original Song Composition and M/V Production",
+    "title": "Runtime Error",
+    "subtitle": "Original Song Composition",
     "where": "RGBN band",
     "thumbnail": "/img/arts/RuntimeError.png",
     "date": "3 March 2024",
-    "keyInsights": "요약",
-    "indexTerms": [
-      "Narrative Transformation",
-      "Character Reconstruction",
-      "Novel",
-      "Film",
-      "Drama Series"
-    ],
-    "myRole": ["Author"],
-    "category": [
-      "Narrative Transformation",
-      "Character Reconstruction",
-      "Novel",
-      "Film",
-      "Drama Series"
-    ],
-    "credits": ["RGBN band", "Juyeop Kim", "Yeji Seo"],
-    "links": "https://www.youtube.com/watch?v=Sjir0rqZ4yE",
-    "content": [
-      {
-        "type": "image",
-        "value": "/img/researches/LoveintheBigCity.svg"
-      },
+    "startDate": "2024-03",
+    "category": ["Music Production", "Song Writing", "Band"],
+    "myRole": ["Music Producer", "Song Writer", "Lead Guitarist"],
+    "tools": ["Logic Pro X", "Musescore"],
+    "credits": ["RGBN band", "Yeji Seo"],
+    "accentColor": "#6306BE",
+    "overview": [
       {
         "type": "text",
-        "value": "요약"
+        "value": "A runtime error refers to an error that occurs while a program is running — often caused by an infinite loop that causes a program to run forever. Likewise, stepping out of the comfort zone of everyday life and facing new challenges can make you nervous. “Runtime Error” is a song written to **encourage people to keep moving forward toward tomorrow, despite uncertainty**."
+      }
+    ],
+    "outcomes": [
+      "Completed the original composition from songwriting and arrangement to live performance.",
+      "Premiered the piece as the headliner of a joint concert, receiving positive audience feedback for its concept and emotional delivery.",
+      "Recorded and mixed a live version from the concert and released it on SoundCloud."
+    ],
+    "video": "https://www.youtube.com/embed/LY1R1AoS0W0?si=GaX9vUt2fAykYur0",
+    "links": [
+      {
+        "type": "soundcloud",
+        "value": "https://soundcloud.com/rgbn/runtime-error"
+      },
+      {
+        "type": "score",
+        "value": "https://drive.google.com/file/d/1Co3-LKg3Fu9sTjU-IHiJqJKkB6RqTDLB/view"
       }
     ],
     "more": true
+  },
+  {
+    "id": "springofyouth",
+    "title": "Spring of Youth",
+    "subtitle": "Joint Performance in Studio Monghyang",
+    "where": "2024 RGBN/Band HOYA/ABC joint performance",
+    "thumbnail": "/img/arts/SpringofYouth.png",
+    "date": "3 March 2024",
+    "startDate": "2024-03",
+    "category": ["Band", "Performance"],
+    "myRole": ["Director", "Arranger", "Lead Guitarist"],
+    "tools": ["Logic Pro X", "Musescore"],
+    "credits": ["RGBN band", "Band HOYA", "ABC", "Studio Monghyang"],
+    "accentColor": "#6FD467",
+    "overview": [
+      {
+        "type": "text",
+        "value": "Our band co-organized a three-band joint concert, taking full charge of the overall concept and external communication including contacting the venue. We performed last, closing the night with our original song “Runtime Error,” which debuted at this event."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SpringofYouth1.png"
+      },
+      {
+        "type": "text",
+        "value": "I served as the performance and creative director, shaping the show’s flow and audience engagement to ensure an **immersive live experience**. From stage design to crowd management for nearly 200 attendees, we independently handled every detail. The venue’s staff commended our smooth coordination and professionalism throughout the event."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SpringofYouth2.png"
+      }
+    ],
+    "video": "https://youtube.com/embed/91-yma3ZyL8",
+    "outcomes": [
+      "Successfully planned and executed a full-scale live concert featuring three bands from end to end.",
+      "Delivered an engaging headliner performance that premiered our original composition “Runtime Error.”",
+      "Received positive feedback from both the audience and venue staff for strong direction and event management."
+    ]
+  },
+  {
+    "id": "RGBNslogan",
+    "title": "RGBN Slogan",
+    "subtitle": "Logo and Slogan Design",
+    "where": "2024 RGBN performance",
+    "thumbnail": "/img/arts/RGBNslogan.png",
+    "date": "May 2024",
+    "startDate": "2024-05",
+    "category": ["Branding", "Graphic Design", "Visual Design"],
+    "myRole": ["Creative Director", "Graphic Designer"],
+    "tools": ["Adobe Photoshop", "Adobe Illustrator", "Figma"],
+    "credits": ["Jaeseo Kim", "RGBN band"],
+    "accentColor": "#008CF5",
+    "overview": [
+      {
+        "type": "text",
+        "value": "I led the brand renewal for our band RGBN, redefining its core visual identity to reflect the essence of our music — summer, youth, dreams, hope, and love. Drawing inspiration from the **freshness of summer lemonade**, we developed a mood board that emphasized the contrast and harmony of blue and yellow as our main colors, representing **coolness and warmth**, **energy and nostalgia**."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/RGBNslogan1.png"
+      },
+      {
+        "type": "text",
+        "value": "We redesigned the band logo and created a custom towel slogan, weaving these colors and concepts into a cohesive visual identity. The renewed identity reimagines “RGBN (알고보니밴드)” (meaning “Turns Out to be a Band” in Korean) not just as musicians but as **storytellers of fleeting moments** — a reminder to recognize the beauty of the present before it becomes a memory. Just as our songs capture fleeting moments of youth, the new design embodies our hope to make every stage a space where both the band and the audience can smile together, **knowing we are living our most radiant moments**."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/RGBNslogan2.jpg"
+      }
+    ],
+    "outcomes": [
+      "Enhanced the band’s brand storytelling, allowing visual design and performance atmosphere to reinforce one another in conveying warmth, nostalgia, and vitality.",
+      "Established a cohesive visual identity that embodied the band’s emotional and thematic essence.",
+      "Created a renewed logo and towel slogan design that strengthened audience recognition and connection during live performances."
+    ]
+  },
+  {
+    "id": "sinchonbusking",
+    "title": "RGBN band Sinchon Busking",
+    "subtitle": "Directing and Performing",
+    "where": "2025 RGBN performance",
+    "thumbnail": "/img/arts/SinchonBusking.png",
+    "date": "1 June 2025",
+    "startDate": "2025-06",
+    "category": ["Band", "Performance"],
+    "myRole": ["Director", "Graphic Designer", "Lead Guitarist"],
+    "tools": ["Adobe Photoshop"],
+    "credits": ["RGBN band", "SEODAEMUN-GU Office"],
+    "accentColor": "#7DAB3A",
+    "overview": [
+      {
+        "type": "text",
+        "value": "As the director and lead guitarist of my band RGBN, I led our live busking performance in Sinchon, one of Seoul’s most vibrant youth districts. I oversaw the entire performance process from sound design, stage arrangement, and live direction to creating the visual identity and promotional poster for the event. This 90-minute performance combined dynamic genres of music with stage storytelling, aiming to create an immersive street concert experience that connects directly with the audience."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SinchonBusking1.jpg"
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SinchonBusking2.png"
+      }
+    ],
+    "video": "https://youtube.com/embed/_rr4DhjFNcg",
+    "outcomes": [
+      "Designed a promotional poster that effectively conveyed the performance’s tone and energy, contributing to audience engagement.",
+      "Delivered a cohesive performance integrating live sound, stage presence, and visual branding.",
+      "Attracted hundreds of spontaneous spectators, creating one of the largest audience gatherings in the area that afternoon."
+    ]
+  },
+  {
+    "id": "dear",
+    "title": "Dear",
+    "subtitle": "Original Song Composition",
+    "where": "RGBN band",
+    "thumbnail": "/img/arts/Dear.jpg",
+    "startDate": "2025-10",
+    "endDate": "present",
+    "category": ["Music Production", "Song Writing", "Band"],
+    "myRole": ["Music Producer", "Song Writer", "Lead Guitarist"],
+    "tools": ["Logic Pro X", "Musescore"],
+    "credits": ["RGBN band", "Yeji Seo"],
+    "accentColor": "#008CF5",
+    "overview": [
+      {
+        "type": "text",
+        "value": "Someday, we’ll look back on this moment — our blue spring. “Dear” is a love letter we dedicate to us, who have become each other’s entire blue spring without noticing it."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/Dear1.png"
+      },
+      {
+        "type": "text",
+        "value": "This is an ongoing project for its recording and music video."
+      }
+    ],
+    "outcomes": ["Composed and performed original song"],
+    "video": "https://youtube.com/embed/Gpcpr-hnivU",
+    "links": [
+      { "type": "soundcloud", "value": "https://soundcloud.com/rgbn/" },
+      {
+        "type": "score",
+        "value": "https://drive.google.com/file/d/11OAY3KfmrAEFHM0b9oQIEgcFL9HvdHQe/view"
+      }
+    ]
   }
 ]
