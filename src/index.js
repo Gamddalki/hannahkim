@@ -55,7 +55,7 @@ table {
   font-weight: 300;
   line-height: 1.2;
   ::selection {
-  background-color: #FF2020;
+  background-color: #FF7575;
   color: white;
 }
 }
