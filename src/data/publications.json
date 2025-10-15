@@ -63,6 +63,7 @@
     "myRole": ["Author"],
     "framework": ["Adaptation Theory", "Intertextual Dialoguism"],
     "credits": ["Hyungsook Lee*"],
+    "accentColor": "#8A66A8",
     "abstract": [
       {
         "type": "text",
