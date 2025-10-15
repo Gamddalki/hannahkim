@@ -16,6 +16,7 @@ import {
   SoundcloudIcon,
   FileMusicIcon,
   ArrowLeft01Icon,
+  Video01Icon,
 } from "@hugeicons/core-free-icons";
 import RelatedProjects from "../Components/RelatedProjects";
 
@@ -570,6 +571,8 @@ const Details = () => {
       document: File02Icon,
       score: FileMusicIcon,
       soundcloud: SoundcloudIcon,
+      scenario: File02Icon,
+      storyboard: Video01Icon,
     };
     const Icon = iconMap[type];
     return Icon ? <HugeiconsIcon icon={Icon} /> : null;
