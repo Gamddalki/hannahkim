@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import projectData from "../data/projects.json";
 import PageContainer from "../Components/PageContainer";
-import MasonryGrid from "../Components/MasonryGrid";
+import Grid from "../Components/Grid";
 
 function Projects() {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ function Projects() {
 
   return (
     <PageContainer title="PROJECTS">
-      <MasonryGrid
+      <Grid
         items={projectData}
         onItemClick={handleCardClick}
         getImageSrc={getImageSrc}

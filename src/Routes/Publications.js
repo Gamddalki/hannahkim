@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import publicationData from "../data/publications.json";
 import PageContainer from "../Components/PageContainer";
-import MasonryGrid from "../Components/MasonryGrid";
+import Grid from "../Components/Grid";
 
 function Publications() {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ function Publications() {
     navigate(`/publications/${publication.id}`);
   };
 
-  // Helper functions for MasonryGrid
+  // Helper functions for Grid
   const getImageSrc = (publication) =>
     `${process.env.PUBLIC_URL}/${publication.thumbnail}`;
   const getTitle = (publication) => publication.title;
@@ -21,7 +21,7 @@ function Publications() {
 
   return (
     <PageContainer title="PUBLICATIONS">
-      <MasonryGrid
+      <Grid
         items={publicationData}
         onItemClick={handleCardClick}
         getImageSrc={getImageSrc}

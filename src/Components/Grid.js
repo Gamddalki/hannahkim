@@ -23,7 +23,6 @@ const HashtagFilterTag = styled.span`
   background: transparent;
   font-size: 1rem;
   font-weight: 500;
-  border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -39,17 +38,22 @@ const HashtagFilterTag = styled.span`
 `;
 
 const ProjectsGrid = styled.div`
-  column-count: 3;
-  column-gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   margin-top: 40px;
 
   @media (max-width: 1200px) {
-    column-count: ${(props) => (props.$skipTwoColumn ? "3" : "2")};
+    grid-template-columns: repeat(
+      ${(props) => (props.$skipTwoColumn ? "3" : "2")},
+      1fr
+    );
+    gap: 30px;
   }
 
   @media (max-width: 768px) {
-    column-count: 1;
-    column-gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 `;
 
@@ -59,8 +63,6 @@ const ProjectCard = styled.div`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  break-inside: avoid;
-  margin-bottom: 50px;
   position: relative;
 
   &:hover {
@@ -75,6 +77,7 @@ const ProjectImage = styled.div`
   width: 100%;
   overflow: hidden;
   ${(props) => (props.$aspect ? `aspect-ratio: ${props.$aspect};` : "")}
+
   ${ProjectCard}:hover & img {
     filter: none;
   }
@@ -155,7 +158,7 @@ const PinIconWrapper = styled.div`
   }
 `;
 
-const MasonryGrid = ({
+const Grid = ({
   items,
   onItemClick,
   getImageSrc,
@@ -168,9 +171,7 @@ const MasonryGrid = ({
   showFilter = true,
   showSeeAllUnderCard = false,
   showPins = true,
-  showOverlay = true,
   skipTwoColumn = false,
-  uniformAspect = null,
 }) => {
   const navigate = useNavigate();
   const [selectedTags, setSelectedTags] = useState([]);
@@ -187,9 +188,11 @@ const MasonryGrid = ({
       }
     });
 
-    return Object.entries(tagCounts)
+    const tags = Object.entries(tagCounts)
       .sort((a, b) => b[1] - a[1]) // Sort by count (descending)
       .map(([tag]) => tag);
+
+    return tags;
   }, [items, getMetaTags, tagField]);
 
   const handleCardClick = (item) => {
@@ -202,7 +205,12 @@ const MasonryGrid = ({
     }
   };
 
-  const handleHashtagFilterClick = (tag) => {
+  // Helper functions to reduce repetition
+  const getItemValue = (item, getter, fallback) => {
+    return getter ? getter(item) : item[fallback];
+  };
+
+  const handleTagClick = (tag) => {
     if (tag === "All") {
       setSelectedTags([]);
     } else if (selectedTags.includes(tag)) {
@@ -212,30 +220,20 @@ const MasonryGrid = ({
     }
   };
 
-  const handleMetaTagClick = (tag) => {
-    if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter((t) => t !== tag));
-    } else {
-      setSelectedTags([...selectedTags, tag]);
-    }
-  };
-
   const filteredItems = useMemo(() => {
-    let filtered = items;
-
-    if (selectedTags.length > 0) {
-      filtered = items.filter((item) => {
-        const itemTags = getMetaTags ? getMetaTags(item) : item[tagField];
-        return itemTags && selectedTags.every((tag) => itemTags.includes(tag));
-      });
-    }
+    const filtered =
+      selectedTags.length > 0
+        ? items.filter((item) => {
+            const itemTags = getMetaTags ? getMetaTags(item) : item[tagField];
+            return (
+              itemTags && selectedTags.every((tag) => itemTags.includes(tag))
+            );
+          })
+        : items;
 
     return filtered.sort((a, b) => {
-      // First, prioritize pinned items
-      if (a.pinned && !b.pinned) return -1;
-      if (!a.pinned && b.pinned) return 1;
-
-      // Then sort by date
+      // Prioritize pinned items, then sort by date
+      if (a.pinned !== b.pinned) return b.pinned - a.pinned;
       return new Date(b[sortField]) - new Date(a[sortField]);
     });
   }, [selectedTags, items, getMetaTags, tagField, sortField]);
@@ -244,10 +242,10 @@ const MasonryGrid = ({
     <>
       {/* Hashtag Filter */}
       {showFilter && (
-        <HashtagFilterContainer data-no-hover>
+        <HashtagFilterContainer>
           <HashtagFilterTag
             $isActive={selectedTags.length === 0}
-            onClick={() => handleHashtagFilterClick("All")}
+            onClick={() => handleTagClick("All")}
           >
             All
           </HashtagFilterTag>
@@ -255,7 +253,7 @@ const MasonryGrid = ({
             <HashtagFilterTag
               key={index}
               $isActive={selectedTags.includes(tag)}
-              onClick={() => handleHashtagFilterClick(tag)}
+              onClick={() => handleTagClick(tag)}
             >
               #{tag}
             </HashtagFilterTag>
@@ -264,72 +262,69 @@ const MasonryGrid = ({
       )}
 
       <ProjectsGrid $skipTwoColumn={skipTwoColumn}>
-        {filteredItems.map((item, index) => (
-          <ProjectCard
-            key={getKey ? getKey(item) : index}
-            onClick={() => handleCardClick(item)}
-            data-more-hover
-          >
-            {item.pinned && showPins && (
-              <PinIconWrapper>
-                <HugeiconsIcon icon={PinIcon} size={20} />
-              </PinIconWrapper>
-            )}
-            <ProjectImage $aspect={uniformAspect}>
-              <OptimizedThumbnail
-                src={getImageSrc ? getImageSrc(item) : item.thumbnail}
-                alt={getTitle ? getTitle(item) : item.title}
-                layout={uniformAspect ? "cover" : "auto"}
-                showOverlay={showOverlay}
-                priority={false}
-              />
-            </ProjectImage>
-            <ProjectInfo>
-              <ProjectTitle>
-                {getTitle ? getTitle(item) : item.title}
-              </ProjectTitle>
-              {getSubtitle && (
-                <ProjectSubtitle>{getSubtitle(item)}</ProjectSubtitle>
+        {filteredItems.map((item) => {
+          const itemKey = getItemValue(item, getKey, "id");
+          const itemTitle = getItemValue(item, getTitle, "title");
+          const itemImageSrc = getItemValue(item, getImageSrc, "thumbnail");
+          const itemMetaTags = getItemValue(item, getMetaTags, tagField);
+
+          return (
+            <ProjectCard key={itemKey} onClick={() => handleCardClick(item)}>
+              {item.pinned && showPins && (
+                <PinIconWrapper>
+                  <HugeiconsIcon icon={PinIcon} size={20} />
+                </PinIconWrapper>
               )}
-              <ProjectMetaTags>
-                {getMetaTags &&
-                  getMetaTags(item) &&
-                  getMetaTags(item).map((tech, techIndex) => (
-                    <MetaTag
-                      key={techIndex}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleMetaTagClick(tech);
-                      }}
-                      data-no-hover
-                    >
-                      #{tech}
-                    </MetaTag>
-                  ))}
-              </ProjectMetaTags>
-            </ProjectInfo>
-            {showSeeAllUnderCard && (
-              <SeeAllButton
-                data-no-hover
-                onClick={(e) => {
-                  e.stopPropagation();
-                  const category = item.category || "projects";
-                  navigate(`/${category}`);
-                }}
-              >
-                See all{" "}
-                {item.category
-                  ? item.category.charAt(0).toUpperCase() +
-                    item.category.slice(1)
-                  : "Projects"}
-                <HugeiconsIcon icon={ArrowUpRight01Icon} size={14} />
-              </SeeAllButton>
-            )}
-          </ProjectCard>
-        ))}
+              <ProjectImage $aspect="16/9">
+                <OptimizedThumbnail
+                  src={itemImageSrc}
+                  alt={itemTitle}
+                  showOverlay={false}
+                  priority={false}
+                />
+              </ProjectImage>
+              <ProjectInfo>
+                <ProjectTitle>{itemTitle}</ProjectTitle>
+                {getSubtitle && (
+                  <ProjectSubtitle>{getSubtitle(item)}</ProjectSubtitle>
+                )}
+                <ProjectMetaTags>
+                  {itemMetaTags &&
+                    itemMetaTags.map((tech, techIndex) => (
+                      <MetaTag
+                        key={techIndex}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleTagClick(tech);
+                        }}
+                      >
+                        #{tech}
+                      </MetaTag>
+                    ))}
+                </ProjectMetaTags>
+              </ProjectInfo>
+              {showSeeAllUnderCard && (
+                <SeeAllButton
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const category = item.category || "projects";
+                    navigate(`/${category}`);
+                  }}
+                >
+                  See all{" "}
+                  {item.category
+                    ? item.category.charAt(0).toUpperCase() +
+                      item.category.slice(1)
+                    : "Projects"}
+                  <HugeiconsIcon icon={ArrowUpRight01Icon} size={14} />
+                </SeeAllButton>
+              )}
+            </ProjectCard>
+          );
+        })}
       </ProjectsGrid>
     </>
   );
 };
 
-export default MasonryGrid;
+export default Grid;

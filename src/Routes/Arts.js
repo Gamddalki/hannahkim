@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import artsData from "../data/arts.json";
 import PageContainer from "../Components/PageContainer";
-import MasonryGrid from "../Components/MasonryGrid";
+import Grid from "../Components/Grid";
 
 function Arts() {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function Arts() {
 
   return (
     <PageContainer title="ARTS">
-      <MasonryGrid
+      <Grid
         items={artsData}
         onItemClick={handleCardClick}
         getImageSrc={getImageSrc}

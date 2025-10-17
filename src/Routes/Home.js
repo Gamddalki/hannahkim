@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import styled from "styled-components";
-import MasonryGrid from "../Components/MasonryGrid";
+import Grid from "../Components/Grid";
 import { useDataProcessing } from "../hooks/useDataProcessing";
 
 const Main = styled.div`
@@ -83,7 +83,7 @@ const Home = memo(() => {
         </Hero>
 
         <SectionTitle>Selected Works</SectionTitle>
-        <MasonryGrid
+        <Grid
           items={selectedWorks}
           getImageSrc={(item) => `${process.env.PUBLIC_URL}${item.thumbnail}`}
           getTitle={(item) => item.title}
