@@ -1,39 +1,54 @@
-import React from "react";
+import React, { useCallback, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import publicationData from "../data/publications.json";
 import PageContainer from "../Components/PageContainer";
 import Grid from "../Components/Grid";
 
-function Publications() {
+const PAGE_TITLE = "PUBLICATIONS";
+const TAG_FIELD = "indexTerms";
+const SORT_FIELD = "date";
+
+const Publications = memo(() => {
   const navigate = useNavigate();
 
-  const handleCardClick = (publication) => {
-    navigate(`/publications/${publication.id}`);
-  };
+  const handleCardClick = useCallback(
+    (publication) => {
+      navigate(`/publications/${publication.id}`);
+    },
+    [navigate]
+  );
 
-  // Helper functions for Grid
-  const getImageSrc = (publication) =>
-    `${process.env.PUBLIC_URL}/${publication.thumbnail}`;
-  const getTitle = (publication) => publication.title;
-  const getSubtitle = (publication) => publication.subtitle;
-  const getMetaTags = (publication) => publication.indexTerms;
-  const getKey = (publication) => publication.id;
+  const getImageSrc = useCallback(
+    (publication) => `${process.env.PUBLIC_URL}/${publication.thumbnail}`,
+    []
+  );
+  const getTitle = useCallback((publication) => publication.title, []);
+  const getSubtitle = useCallback((publication) => publication.subtitle, []);
+  const getMetaTags = useCallback((publication) => publication.indexTerms, []);
+  const getKey = useCallback((publication) => publication.id, []);
+
+  const gridProps = useMemo(
+    () => ({
+      items: publicationData,
+      onItemClick: handleCardClick,
+      getImageSrc,
+      getTitle,
+      getSubtitle,
+      getMetaTags,
+      getKey,
+      tagField: TAG_FIELD,
+      sortField: SORT_FIELD,
+    }),
+    [handleCardClick, getImageSrc, getTitle, getSubtitle, getMetaTags, getKey]
+  );
 
   return (
-    <PageContainer title="PUBLICATIONS">
-      <Grid
-        items={publicationData}
-        onItemClick={handleCardClick}
-        getImageSrc={getImageSrc}
-        getTitle={getTitle}
-        getSubtitle={getSubtitle}
-        getMetaTags={getMetaTags}
-        getKey={getKey}
-        tagField="indexTerms"
-        sortField="date"
-      />
+    <PageContainer title={PAGE_TITLE}>
+      <Grid {...gridProps} />
     </PageContainer>
   );
-}
+});
+
+Publications.displayName = "Publications";
 
 export default Publications;
