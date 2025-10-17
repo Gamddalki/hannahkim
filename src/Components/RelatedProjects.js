@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useCallback, memo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import OptimizedThumbnail from "./OptimizedThumbnail";
@@ -59,11 +59,13 @@ const ProjectCard = styled.div`
   transform: translateZ(0);
 
   img {
-    filter: grayscale(95%) hue-rotate(-30deg) saturate(3);
+    filter: grayscale(90%);
+    transition: filter 0.3s ease;
   }
 
   &:hover {
     transform: scale(1.02) translateZ(0);
+    cursor: pointer;
     img {
       filter: none;
     }
@@ -133,118 +135,102 @@ const ProjectSubtitle = styled.p`
   }
 `;
 
-const RelatedProjects = ({ currentItem, allData, category, maxItems = 3 }) => {
-  const navigate = useNavigate();
+const RelatedProjects = memo(
+  ({ currentItem, allData, category, maxItems = 3 }) => {
+    const navigate = useNavigate();
 
-  const relatedProjects = useMemo(() => {
-    if (!currentItem || !allData) return [];
+    // Helper function to extract tags from an item
+    const extractTags = useCallback((item) => {
+      const tags = new Set();
+      const fields = ["category", "tools", "framework", "indexTerms"];
 
-    // Get all tags from current item
-    const currentTags = new Set();
-
-    // Collect tags from different fields
-    if (currentItem.category && Array.isArray(currentItem.category)) {
-      currentItem.category.forEach((tag) => currentTags.add(tag.toLowerCase()));
-    }
-    if (currentItem.tools && Array.isArray(currentItem.tools)) {
-      currentItem.tools.forEach((tag) => currentTags.add(tag.toLowerCase()));
-    }
-    if (currentItem.framework && Array.isArray(currentItem.framework)) {
-      currentItem.framework.forEach((tag) =>
-        currentTags.add(tag.toLowerCase())
-      );
-    }
-    if (currentItem.indexTerms && Array.isArray(currentItem.indexTerms)) {
-      currentItem.indexTerms.forEach((tag) =>
-        currentTags.add(tag.toLowerCase())
-      );
-    }
-
-    // Calculate similarity with other projects
-    const scoredProjects = allData
-      .filter((item) => item.id !== currentItem.id) // Exclude current project
-      .map((item) => {
-        const itemTags = new Set();
-
-        // Collect tags from the item
-        if (item.category && Array.isArray(item.category)) {
-          item.category.forEach((tag) => itemTags.add(tag.toLowerCase()));
+      fields.forEach((field) => {
+        if (item[field] && Array.isArray(item[field])) {
+          item[field].forEach((tag) => tags.add(tag.toLowerCase()));
         }
-        if (item.tools && Array.isArray(item.tools)) {
-          item.tools.forEach((tag) => itemTags.add(tag.toLowerCase()));
-        }
-        if (item.framework && Array.isArray(item.framework)) {
-          item.framework.forEach((tag) => itemTags.add(tag.toLowerCase()));
-        }
-        if (item.indexTerms && Array.isArray(item.indexTerms)) {
-          item.indexTerms.forEach((tag) => itemTags.add(tag.toLowerCase()));
-        }
+      });
 
-        // Count common tags
-        let commonCount = 0;
-        currentTags.forEach((tag) => {
-          if (itemTags.has(tag)) commonCount++;
-        });
+      return tags;
+    }, []);
 
-        return { item, score: commonCount };
-      })
-      .filter((scored) => scored.score > 0) // Only keep items with at least 1 common tag
-      .sort((a, b) => {
-        // First sort by score (descending)
-        if (b.score !== a.score) return b.score - a.score;
+    const relatedProjects = useMemo(() => {
+      if (!currentItem || !allData) return [];
 
-        // If same score, prioritize pinned
-        if (a.item.pinned && !b.item.pinned) return -1;
-        if (!a.item.pinned && b.item.pinned) return 1;
+      const currentTags = extractTags(currentItem);
 
-        // Then sort by date
-        const dateA = new Date(a.item.startDate || a.item.date);
-        const dateB = new Date(b.item.startDate || b.item.date);
-        return dateB - dateA;
-      })
-      .slice(0, maxItems)
-      .map((scored) => scored.item);
+      // Calculate similarity with other projects
+      const scoredProjects = allData
+        .filter((item) => item.id !== currentItem.id)
+        .map((item) => {
+          const itemTags = extractTags(item);
 
-    return scoredProjects;
-  }, [currentItem, allData, maxItems]);
+          // Count common tags
+          let commonCount = 0;
+          currentTags.forEach((tag) => {
+            if (itemTags.has(tag)) commonCount++;
+          });
 
-  const handleProjectClick = (item) => {
-    const itemCategory =
-      item.category && Array.isArray(item.category)
-        ? category // Use the same category page
-        : category;
-    navigate(`/${itemCategory}/${item.id}`);
-    window.scrollTo(0, 0);
-  };
+          return { item, score: commonCount };
+        })
+        .filter((scored) => scored.score > 0)
+        .sort((a, b) => {
+          // Sort by score (descending)
+          if (b.score !== a.score) return b.score - a.score;
 
-  if (relatedProjects.length === 0) {
-    return null; // Don't show section if no related projects
+          // Prioritize pinned items
+          if (a.item.pinned !== b.item.pinned)
+            return b.item.pinned - a.item.pinned;
+
+          // Sort by date
+          const dateA = new Date(a.item.startDate || a.item.date);
+          const dateB = new Date(b.item.startDate || b.item.date);
+          return dateB - dateA;
+        })
+        .slice(0, maxItems)
+        .map((scored) => scored.item);
+
+      return scoredProjects;
+    }, [currentItem, allData, maxItems, extractTags]);
+
+    const handleProjectClick = useCallback(
+      (item) => {
+        navigate(`/${category}/${item.id}`);
+        window.scrollTo(0, 0);
+      },
+      [navigate, category]
+    );
+
+    if (relatedProjects.length === 0) {
+      return null; // Don't show section if no related projects
+    }
+
+    return (
+      <RelatedProjectsContainer>
+        <Title>Related Projects</Title>
+        <ProjectsGrid>
+          {relatedProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              onClick={() => handleProjectClick(project)}
+            >
+              <OptimizedThumbnail
+                src={`${process.env.PUBLIC_URL}${project.thumbnail}`}
+                alt={project.title}
+                showOverlay={true}
+                priority={false}
+              />
+              <ProjectInfo>
+                <ProjectTitle>{project.title}</ProjectTitle>
+                <ProjectSubtitle>{project.subtitle}</ProjectSubtitle>
+              </ProjectInfo>
+            </ProjectCard>
+          ))}
+        </ProjectsGrid>
+      </RelatedProjectsContainer>
+    );
   }
+);
 
-  return (
-    <RelatedProjectsContainer>
-      <Title>Related Projects</Title>
-      <ProjectsGrid>
-        {relatedProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            onClick={() => handleProjectClick(project)}
-          >
-            <OptimizedThumbnail
-              src={`${process.env.PUBLIC_URL}${project.thumbnail}`}
-              alt={project.title}
-              showOverlay={true}
-              priority={false}
-            />
-            <ProjectInfo>
-              <ProjectTitle>{project.title}</ProjectTitle>
-              <ProjectSubtitle>{project.subtitle}</ProjectSubtitle>
-            </ProjectInfo>
-          </ProjectCard>
-        ))}
-      </ProjectsGrid>
-    </RelatedProjectsContainer>
-  );
-};
+RelatedProjects.displayName = "RelatedProjects";
 
 export default RelatedProjects;
