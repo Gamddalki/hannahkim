@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -99,8 +99,6 @@ const HamburgerIcon = styled.div`
   width: 20px;
   height: 14px;
   position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
   cursor: pointer;
 
   span {
@@ -109,15 +107,16 @@ const HamburgerIcon = styled.div`
     height: 2px;
     width: 100%;
     background: ${(props) => props.theme.colors.black};
-    opacity: 1;
     left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
 
     &:nth-child(1) {
-      top: ${(props) => (props.isOpen ? "6px" : "0px")};
+      top: 0px;
       transform: ${(props) =>
-        props.isOpen ? "rotate(45deg)" : "rotate(0deg)"};
+        props.isOpen
+          ? "translateY(6px) rotate(45deg)"
+          : "translateY(0) rotate(0deg)"};
     }
 
     &:nth-child(2) {
@@ -127,15 +126,11 @@ const HamburgerIcon = styled.div`
     }
 
     &:nth-child(3) {
-      top: ${(props) => (props.isOpen ? "6px" : "12px")};
+      top: 12px;
       transform: ${(props) =>
-        props.isOpen ? "rotate(-45deg)" : "rotate(0deg)"};
-    }
-
-    &:nth-child(4) {
-      top: 6px;
-      opacity: ${(props) => (props.isOpen ? "0" : "1")};
-      transform: ${(props) => (props.isOpen ? "scaleX(0)" : "scaleX(1)")};
+        props.isOpen
+          ? "translateY(-6px) rotate(-45deg)"
+          : "translateY(0) rotate(0deg)"};
     }
   }
 `;
@@ -187,25 +182,39 @@ function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
+  }, []);
 
-  const handleLogoClick = () => {
+  const handleLogoClick = useCallback(() => {
     navigate("/");
     setIsMenuOpen(false);
-  };
+  }, [navigate]);
 
-  const handleNavClick = () => {
+  const handleNavClick = useCallback(() => {
     setIsMenuOpen(false);
-  };
+  }, []);
 
-  const isActive = (path) => {
-    if (path === "/") {
-      return location.pathname === "/";
-    }
-    return location.pathname.includes(path.toLowerCase());
-  };
+  const isActive = useCallback(
+    (path) => {
+      if (path === "/") {
+        return location.pathname === "/";
+      }
+      return location.pathname.includes(path.toLowerCase());
+    },
+    [location.pathname]
+  );
+
+  // 네비게이션 링크 데이터를 메모이제이션
+  const navLinks = useMemo(
+    () => [
+      { to: "/about", label: "ABOUT" },
+      { to: "/projects", label: "PROJECTS" },
+      { to: "/publications", label: "PUBLICATIONS" },
+      { to: "/arts", label: "ARTS" },
+    ],
+    []
+  );
 
   return (
     <>
@@ -219,39 +228,20 @@ function Header() {
         </Logo>
 
         <Nav data-no-hover>
-          <NavLink
-            to="/about"
-            className={isActive("/about") ? "active" : ""}
-            data-no-hover
-          >
-            ABOUT
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={isActive("/projects") ? "active" : ""}
-            data-no-hover
-          >
-            PROJECTS
-          </NavLink>
-          <NavLink
-            to="/publications"
-            className={isActive("/publications") ? "active" : ""}
-            data-no-hover
-          >
-            PUBLICATIONS
-          </NavLink>
-          <NavLink
-            to="/arts"
-            className={isActive("/arts") ? "active" : ""}
-            data-no-hover
-          >
-            ARTS
-          </NavLink>
+          {navLinks.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={isActive(to) ? "active" : ""}
+              data-no-hover
+            >
+              {label}
+            </NavLink>
+          ))}
         </Nav>
 
         <MobileMenuButton onClick={toggleMenu} data-no-hover>
           <HamburgerIcon isOpen={isMenuOpen} data-no-hover>
-            <span></span>
             <span></span>
             <span></span>
             <span></span>
@@ -261,38 +251,17 @@ function Header() {
 
       <MobileMenu isOpen={isMenuOpen}>
         <MobileNav>
-          <MobileNavLink
-            to="/about"
-            onClick={handleNavClick}
-            className={isActive("/about") ? "active" : ""}
-            data-no-hover
-          >
-            ABOUT
-          </MobileNavLink>
-          <MobileNavLink
-            to="/projects"
-            onClick={handleNavClick}
-            className={isActive("/projects") ? "active" : ""}
-            data-no-hover
-          >
-            PROJECTS
-          </MobileNavLink>
-          <MobileNavLink
-            to="/publications"
-            onClick={handleNavClick}
-            className={isActive("/publications") ? "active" : ""}
-            data-no-hover
-          >
-            PUBLICATIONS
-          </MobileNavLink>
-          <MobileNavLink
-            to="/arts"
-            onClick={handleNavClick}
-            className={isActive("/arts") ? "active" : ""}
-            data-no-hover
-          >
-            ARTS
-          </MobileNavLink>
+          {navLinks.map(({ to, label }) => (
+            <MobileNavLink
+              key={to}
+              to={to}
+              onClick={handleNavClick}
+              className={isActive(to) ? "active" : ""}
+              data-no-hover
+            >
+              {label}
+            </MobileNavLink>
+          ))}
         </MobileNav>
       </MobileMenu>
     </>
