@@ -32,13 +32,13 @@ const CursorText = styled.div`
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
   const [isInMoreHover, setIsInMoreHover] = useState(false);
+  const [isInNoHover, setIsInNoHover] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // check mobile device and activate custom cursor only on desktop
+    // Check mobile device and activate custom cursor only on desktop
     const checkMobile = () => {
       const isMobileDevice =
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -61,45 +61,17 @@ const CustomCursor = () => {
     const handleMouseEnter = () => setIsVisible(true);
     const handleMouseLeave = () => setIsVisible(false);
 
-    const shouldShowMore = (target) => {
-      // if data-no-hover is present, do not show MORE text
-      if (target.closest("[data-no-hover]")) {
-        return false;
-      }
-
-      // if data-more-hover is present, show MORE
-      if (target.closest("[data-more-hover]")) {
-        return true;
-      }
-
-      const isClickable =
-        target.tagName === "A" ||
-        target.tagName === "BUTTON" ||
-        target.closest("a") ||
-        target.closest("button") ||
-        target.style.cursor === "pointer" ||
-        target.closest('[style*="cursor: pointer"]') ||
-        target.onclick ||
-        target.closest("[onclick]") ||
-        target.getAttribute("role") === "button" ||
-        target.closest('[role="button"]') ||
-        target.classList.contains("clickable") ||
-        target.classList.contains("hoverable");
-
-      return isClickable;
-    };
-
     const handleMouseOver = (e) => {
-      const shouldShow = shouldShowMore(e.target);
       const isInMore = e.target.closest("[data-more-hover]");
+      const isInNo = e.target.closest("[data-no-hover]");
 
-      setIsHovering(shouldShow);
       setIsInMoreHover(!!isInMore);
+      setIsInNoHover(!!isInNo);
     };
 
     const handleMouseOut = () => {
-      setIsHovering(false);
       setIsInMoreHover(false);
+      setIsInNoHover(false);
     };
 
     document.addEventListener("mousemove", updateCursorPosition);
@@ -117,13 +89,17 @@ const CustomCursor = () => {
     };
   }, [isMobile]);
 
-  // if mobile, do not render anything
-  if (isMobile || !isVisible || (!isHovering && !isInMoreHover)) return null;
+  // Only show custom cursor in data-more-hover areas
+  if (isMobile || !isVisible || !isInMoreHover) return null;
 
-  // Determine cursor size: large if showing MORE, medium if in more-hover area, small otherwise
+  // Determine cursor size and text
   const getCursorSize = () => {
-    if (isHovering) return "65px"; // Show MORE text
-    return "15px"; // Default small
+    if (isInNoHover) return "15px"; // Small circle for data-no-hover within data-more-hover
+    return "65px"; // Large circle for data-more-hover
+  };
+
+  const shouldShowText = () => {
+    return !isInNoHover; // Show "MORE" text only when not in data-no-hover
   };
 
   return (
@@ -135,7 +111,7 @@ const CustomCursor = () => {
         height: getCursorSize(),
       }}
     >
-      {isHovering && <CursorText>MORE</CursorText>}
+      {shouldShowText() && <CursorText>MORE</CursorText>}
     </Cursor>
   );
 };
