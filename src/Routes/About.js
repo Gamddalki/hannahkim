@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, memo } from "react";
 import styled from "styled-components";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -10,6 +10,9 @@ import {
 } from "@hugeicons/core-free-icons";
 import PageContainer from "../Components/PageContainer";
 import journeyData from "../data/journey.json";
+
+// 상수 정의
+const INITIAL_ITEMS_COUNT = 5;
 
 const CVIcon = () => (
   <svg
@@ -42,8 +45,12 @@ const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 35px;
   flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 `;
 
 const ProfileImage = styled.div`
@@ -80,14 +87,23 @@ const SocialIcons = styled.div`
 const IconContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 `;
 
 const IconLink = styled.a`
   color: ${(props) => props.theme.colors.text};
   font-size: 1.5rem;
   transition: color 0.2s ease;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
@@ -293,12 +309,18 @@ const MoreButton = styled.button`
   }
 `;
 
-function About() {
+const About = memo(() => {
   const [showAll, setShowAll] = React.useState(false);
 
   const { journeyData: journeyItems, icons } = journeyData;
 
-  const visibleItems = showAll ? journeyItems : journeyItems.slice(0, 5);
+  const visibleItems = showAll
+    ? journeyItems
+    : journeyItems.slice(0, INITIAL_ITEMS_COUNT);
+
+  const handleToggleShowAll = useCallback(() => {
+    setShowAll((prev) => !prev);
+  }, []);
 
   return (
     <PageContainer>
@@ -449,14 +471,16 @@ function About() {
             </JourneyItem>
           ))}
         </JourneyList>
-        {journeyItems.length > 5 && (
-          <MoreButton onClick={() => setShowAll(!showAll)}>
+        {journeyItems.length > INITIAL_ITEMS_COUNT && (
+          <MoreButton onClick={handleToggleShowAll}>
             {showAll ? "Hide" : "More"}
           </MoreButton>
         )}
       </JourneySection>
     </PageContainer>
   );
-}
+});
+
+About.displayName = "About";
 
 export default About;
