@@ -353,7 +353,7 @@ function About() {
                 <HugeiconsIcon icon={SoundcloudIcon} />
               </IconLink>
               <IconLink
-                href="https://drive.google.com/drive/u/0/home"
+                href="https://drive.google.com/file/d/1AN7czPQ9Luthc7XB2-_fs5AvhHvxp1rV/view"
                 target="_blank"
                 rel="noreferrer"
                 title="CV"
