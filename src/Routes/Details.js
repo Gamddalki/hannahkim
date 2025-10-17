@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useMemo, useCallback } from "react";
+import React, { useEffect, useMemo, useCallback, memo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import projectData from "../data/projects.json";
 import publicationData from "../data/publications.json";
 import artsData from "../data/arts.json";
@@ -20,7 +18,22 @@ import {
 } from "@hugeicons/core-free-icons";
 import RelatedProjects from "../Components/RelatedProjects";
 
-gsap.registerPlugin(ScrollTrigger);
+const DATA_MAP = {
+  projects: projectData,
+  publications: publicationData,
+  arts: artsData,
+};
+
+const ICON_MAP = {
+  reflection: Notebook02Icon,
+  github: GithubIcon,
+  video: YoutubeIcon,
+  document: File02Icon,
+  score: FileMusicIcon,
+  soundcloud: SoundcloudIcon,
+  scenario: File02Icon,
+  storyboard: Video01Icon,
+};
 
 const Section = styled.section`
   display: flex;
@@ -184,12 +197,23 @@ const BackButton = styled.button`
   font-weight: 500;
   width: fit-content;
 
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
+    gap: 5px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
 `;
 
@@ -445,7 +469,7 @@ const PDFViewer = styled.iframe`
   }
   @media (max-width: 768px) {
     width: 100%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
   }
 `;
 
@@ -466,6 +490,9 @@ const VideoViewer = styled.iframe`
 
   @media (max-width: 1024px) {
     margin: 0 auto 20px auto;
+  }
+  @media (max-width: 768px) {
+    margin: 0 auto 10px auto;
   }
 `;
 
@@ -506,23 +533,27 @@ const LinkIcon = styled.div`
   align-items: center;
   height: 1.5rem;
 
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
   @media (max-width: 768px) {
     height: 1.2rem;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
 `;
 
-const Details = () => {
+const Details = memo(() => {
   const { category, id } = useParams();
   const navigate = useNavigate();
-  const insightTitleRefs = useRef([]);
 
   const data = useMemo(() => {
-    const dataMap = {
-      projects: projectData,
-      publications: publicationData,
-      arts: artsData,
-    };
-    return dataMap[category] || null;
+    return DATA_MAP[category] || null;
   }, [category]);
 
   const item = useMemo(() => {
@@ -531,19 +562,19 @@ const Details = () => {
 
   const accentColor = item?.accentColor;
 
+  // ReactMarkdown 컴포넌트를 메모이제이션
+  const markdownComponents = useMemo(
+    () => ({
+      p: (props) => <StyledParagraph {...props} accentColor={accentColor} />,
+    }),
+    [accentColor]
+  );
+
   const renderMarkdownWithParagraph = useCallback(
     (content) => (
-      <ReactMarkdown
-        components={{
-          p: (props) => (
-            <StyledParagraph {...props} accentColor={accentColor} />
-          ),
-        }}
-      >
-        {content}
-      </ReactMarkdown>
+      <ReactMarkdown components={markdownComponents}>{content}</ReactMarkdown>
     ),
-    [accentColor]
+    [markdownComponents]
   );
 
   const renderInfoList = useCallback(
@@ -561,19 +592,45 @@ const Details = () => {
   );
 
   const getLinkIcon = useCallback((type) => {
-    const iconMap = {
-      reflection: Notebook02Icon,
-      github: GithubIcon,
-      video: YoutubeIcon,
-      document: File02Icon,
-      score: FileMusicIcon,
-      soundcloud: SoundcloudIcon,
-      scenario: File02Icon,
-      storyboard: Video01Icon,
-    };
-    const Icon = iconMap[type];
+    const Icon = ICON_MAP[type];
     return Icon ? <HugeiconsIcon icon={Icon} /> : null;
   }, []);
+
+  // ReactMarkdown 컴포넌트들을 메모이제이션
+  const insightTitleComponents = useMemo(
+    () => ({
+      h1: (props) => <InsightTitle {...props} accentColor={accentColor} />,
+    }),
+    [accentColor]
+  );
+
+  const insightTextComponents = useMemo(
+    () => ({
+      p: (props) => <InsightText {...props} accentColor={accentColor} />,
+    }),
+    [accentColor]
+  );
+
+  const fallbackMarkdownComponents = useMemo(
+    () => ({
+      p: StyledParagraph,
+    }),
+    []
+  );
+
+  // keyInsights를 메모이제이션으로 최적화
+  const processedKeyInsights = useMemo(() => {
+    if (!Array.isArray(item.keyInsights))
+      return { title: null, image: null, text: null };
+
+    const result = { title: null, image: null, text: null };
+    item.keyInsights.forEach((insight) => {
+      if (insight.type === "title") result.title = insight.value;
+      else if (insight.type === "image") result.image = insight.value;
+      else if (insight.type === "text") result.text = insight.value;
+    });
+    return result;
+  }, [item.keyInsights]);
 
   const renderSectionContent = useCallback(
     (content, altText) => {
@@ -653,82 +710,49 @@ const Details = () => {
       <KeyInsightsSection className="keyinsights-section">
         <ContentWrapper>
           {Array.isArray(item.keyInsights) ? (
-            item.keyInsights.map((insight, index) => {
-              if (insight.type === "title") {
-                return (
-                  <div
-                    key={index}
-                    ref={(el) => {
-                      if (el) {
-                        insightTitleRefs.current[index] = el;
-                      }
-                    }}
-                  >
-                    <ReactMarkdown
-                      components={{
-                        h1: (props) => (
-                          <InsightTitle {...props} accentColor={accentColor} />
-                        ),
-                      }}
-                    >
-                      {insight.value}
-                    </ReactMarkdown>
-                  </div>
-                );
-              } else if (insight.type === "image") {
-                // 다음 인덱스의 text와 함께 그룹으로 렌더링
-                const nextInsight = item.keyInsights[index + 1];
-                if (nextInsight && nextInsight.type === "text") {
-                  return (
-                    <InsightContainer key={`group-${index}`}>
-                      <InsightImageContainer>
-                        <InsightImage
-                          src={`${process.env.PUBLIC_URL}${insight.value}`}
-                          alt="Key insight"
-                        />
-                      </InsightImageContainer>
-                      <InsightTextContainer>
-                        <ReactMarkdown
-                          components={{
-                            p: (props) => (
-                              <InsightText
-                                {...props}
-                                accentColor={accentColor}
-                              />
-                            ),
-                          }}
-                        >
-                          {nextInsight.value}
-                        </ReactMarkdown>
-                      </InsightTextContainer>
-                    </InsightContainer>
-                  );
-                }
-                // text가 없으면 이미지만 렌더링
-                return (
-                  <InsightImage
-                    key={index}
-                    src={`${process.env.PUBLIC_URL}${insight.value}`}
-                    alt="Key insight"
-                  />
-                );
-              } else if (insight.type === "text") {
-                // 이미지 다음에 오는 text는 이미 위에서 처리됨
-                return null;
-              }
-              return null;
-            })
+            <>
+              {processedKeyInsights.title && (
+                <div>
+                  <ReactMarkdown components={insightTitleComponents}>
+                    {processedKeyInsights.title}
+                  </ReactMarkdown>
+                </div>
+              )}
+
+              {processedKeyInsights.image && (
+                <InsightContainer>
+                  <InsightImageContainer>
+                    <InsightImage
+                      src={`${process.env.PUBLIC_URL}${processedKeyInsights.image}`}
+                      alt="Key insight"
+                    />
+                  </InsightImageContainer>
+                  {processedKeyInsights.text && (
+                    <InsightTextContainer>
+                      <ReactMarkdown components={insightTextComponents}>
+                        {processedKeyInsights.text}
+                      </ReactMarkdown>
+                    </InsightTextContainer>
+                  )}
+                </InsightContainer>
+              )}
+            </>
           ) : (
-            <ReactMarkdown
-              components={{
-                p: StyledParagraph,
-              }}
-            >
+            <ReactMarkdown components={fallbackMarkdownComponents}>
               {item.keyInsights}
             </ReactMarkdown>
           )}
         </ContentWrapper>
       </KeyInsightsSection>
+
+      {item.overview && (
+        <MotivationSection className="overview-section">
+          <ContentWrapper>
+            <h2>Overview</h2>
+            {renderSectionContent(item.overview, "Overview image")}
+          </ContentWrapper>
+        </MotivationSection>
+      )}
 
       {(item.motivation || item.abstract) && (
         <MotivationSection className="motivation-section">
@@ -751,16 +775,6 @@ const Details = () => {
             {renderSectionContent(item.approach, "Approach image")}
           </ContentWrapper>
         </ApproachSection>
-      )}
-
-      {/* 기존 overview 필드가 있는 경우를 위한 fallback */}
-      {!item.motivation && !item.approach && item.overview && (
-        <MotivationSection className="overview-section">
-          <ContentWrapper>
-            <h2>Overview</h2>
-            {renderSectionContent(item.overview, "Overview image")}
-          </ContentWrapper>
-        </MotivationSection>
       )}
 
       {((item.outcomes &&
@@ -861,13 +875,15 @@ const Details = () => {
             maxItems={3}
           />
           <BackButton onClick={() => navigate(-1)}>
-            <HugeiconsIcon icon={ArrowLeft01Icon} size={20} />
+            <HugeiconsIcon icon={ArrowLeft01Icon} />
             Back
           </BackButton>
         </ContentWrapper>
       </RelatedProjectsSection>
     </div>
   );
-};
+});
+
+Details.displayName = "Details";
 
 export default Details;
