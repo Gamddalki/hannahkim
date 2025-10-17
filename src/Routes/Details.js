@@ -335,13 +335,10 @@ const InsightImage = styled.img`
 const InsightTitle = styled.h1`
   color: ${(props) => props.theme.colors.text};
   text-align: left;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1;
   white-space: pre-line;
 
-  @media (max-width: 1024px) {
-    font-size: 3rem;
-  }
   @media (max-width: 768px) {
     font-size: 2rem;
     line-height: 2.3rem;
