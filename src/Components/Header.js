@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo, memo } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -39,7 +39,7 @@ const Logo = styled.div`
   img {
     height: 40px;
     width: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease;
 
     @media (max-width: 768px) {
       height: 25px;
@@ -177,7 +177,7 @@ const MobileNavLink = styled(Link)`
   }
 `;
 
-function Header() {
+const Header = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -260,6 +260,8 @@ function Header() {
       </MobileMenu>
     </>
   );
-}
+});
+
+Header.displayName = "Header";
 
 export default Header;
