@@ -31,7 +31,7 @@ function Footer() {
   return (
     <FooterDiv>
       <span>&copy; 2025 Hannah Kim</span>
-      <span>Last Updated: 2025.08</span>
+      <span>Last Updated: 2025.10</span>
     </FooterDiv>
   );
 }
