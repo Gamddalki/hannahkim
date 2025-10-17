@@ -10,26 +10,15 @@ const ThumbnailContainer = styled.div`
 
   img {
     width: 100%;
-    height: ${(props) => (props.layout === "auto" ? "auto" : "100%")};
-    object-fit: ${(props) => (props.layout === "auto" ? "auto" : "cover")};
-    display: ${(props) => (props.layout === "auto" ? "block" : "initial")};
-    filter: ${(props) =>
-      props.layout === "cover"
-        ? "none"
-        : "grayscale(95%) hue-rotate(-30deg) saturate(3)"};
-    transition: filter 0.15s ease, opacity 0.15s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
     opacity: ${(props) => (props.loaded ? 1 : 0)};
-    will-change: ${(props) =>
-      props.layout === "cover" ? "transform, opacity" : "filter, opacity"};
+    will-change: opacity;
     transform: translateZ(0); /* Activate GPU acceleration */
-
-    @media (max-width: 768px) {
-      filter: none;
-    }
   }
 
   ${(props) =>
-    props.layout === "cover" &&
     props.showOverlay !== false &&
     `
     &::before {
@@ -67,27 +56,52 @@ const OptimizedThumbnail = memo(
     alt,
     className = "",
     priority = false,
-    layout = "cover",
     showOverlay = true,
+    useFilter = false,
     ...props
   }) => {
     const [loaded, setLoaded] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
     const imgRef = useRef(null);
+
+    // 필터된 이미지 URL 생성
+    const getFilteredSrc = (originalSrc) => {
+      if (!useFilter) return originalSrc;
+
+      const lastDotIndex = originalSrc.lastIndexOf(".");
+      if (lastDotIndex === -1) return originalSrc;
+
+      const nameWithoutExt = originalSrc.substring(0, lastDotIndex);
+      const extension = originalSrc.substring(lastDotIndex);
+
+      return `${nameWithoutExt}_filtered${extension}`;
+    };
+
+    const filteredSrc = getFilteredSrc(src);
 
     useEffect(() => {
       if (priority) {
-        // Preload critical images
-        const link = document.createElement("link");
-        link.rel = "preload";
-        link.as = "image";
-        link.href = src;
-        document.head.appendChild(link);
+        // Preload critical images (both original and filtered)
+        const preloadImage = (imageSrc) => {
+          const link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "image";
+          link.href = imageSrc;
+          document.head.appendChild(link);
+          return link;
+        };
+
+        const originalLink = preloadImage(src);
+        const filteredLink = useFilter ? preloadImage(filteredSrc) : null;
 
         return () => {
-          document.head.removeChild(link);
+          document.head.removeChild(originalLink);
+          if (filteredLink) {
+            document.head.removeChild(filteredLink);
+          }
         };
       }
-    }, [src, priority]);
+    }, [src, filteredSrc, priority, useFilter]);
 
     const handleLoad = () => {
       setLoaded(true);
@@ -97,25 +111,39 @@ const OptimizedThumbnail = memo(
       setLoaded(true);
     };
 
+    const handleMouseEnter = () => {
+      if (useFilter) {
+        setIsHovered(true);
+      }
+    };
+
+    const handleMouseLeave = () => {
+      if (useFilter) {
+        setIsHovered(false);
+      }
+    };
+
     return (
       <ThumbnailContainer
         className={className}
         loaded={loaded}
-        layout={layout}
         showOverlay={showOverlay}
+        useFilter={useFilter}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         {...props}
       >
         <Placeholder loaded={loaded} />
         <img
           ref={imgRef}
-          src={src}
+          src={isHovered && useFilter ? filteredSrc : src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onLoad={handleLoad}
           onError={handleError}
           style={{
             opacity: loaded ? 1 : 0,
-            transition: "opacity 0.15s ease",
+            transition: "opacity 0.3s ease",
           }}
         />
       </ThumbnailContainer>

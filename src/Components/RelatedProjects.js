@@ -229,12 +229,11 @@ const RelatedProjects = ({ currentItem, allData, category, maxItems = 3 }) => {
           <ProjectCard
             key={project.id}
             onClick={() => handleProjectClick(project)}
-            data-more-hover
           >
             <OptimizedThumbnail
               src={`${process.env.PUBLIC_URL}${project.thumbnail}`}
               alt={project.title}
-              layout="cover"
+              showOverlay={true}
               priority={false}
             />
             <ProjectInfo>

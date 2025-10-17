@@ -119,10 +119,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Hide default cursor when hovering over interactive elements */
-[data-more-hover] * {
-  cursor: none !important;
-}
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

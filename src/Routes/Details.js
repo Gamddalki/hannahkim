@@ -814,7 +814,6 @@ const Details = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             accentColor={item?.accentColor}
-                            data-no-hover
                           >
                             <LinkIcon>{getLinkIcon(link.type)}</LinkIcon>
                             {category === "publications" &&
@@ -861,7 +860,7 @@ const Details = () => {
             category={category}
             maxItems={3}
           />
-          <BackButton onClick={() => navigate(-1)} data-no-hover>
+          <BackButton onClick={() => navigate(-1)}>
             <HugeiconsIcon icon={ArrowLeft01Icon} size={20} />
             Back
           </BackButton>

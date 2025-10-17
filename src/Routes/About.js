@@ -310,13 +310,12 @@ function About() {
               alt="Hannah Kim"
             />
           </ProfileImage>
-          <SocialIcons data-no-hover>
-            <IconContainer data-no-hover>
+          <SocialIcons>
+            <IconContainer>
               <IconLink
                 href="mailto:hannahk01@ewha.ac.kr"
                 target="_blank"
                 rel="noreferrer"
-                data-no-hover
               >
                 <HugeiconsIcon icon={Mail01Icon} />
               </IconLink>
@@ -324,7 +323,6 @@ function About() {
                 href="https://www.linkedin.com/in/hannahk01/"
                 target="_blank"
                 rel="noreferrer"
-                data-no-hover
               >
                 <HugeiconsIcon icon={Linkedin02Icon} />
               </IconLink>
@@ -332,7 +330,6 @@ function About() {
                 href="https://github.com/Gamddalki/"
                 target="_blank"
                 rel="noreferrer"
-                data-no-hover
               >
                 <HugeiconsIcon icon={GithubIcon} />
               </IconLink>
@@ -340,7 +337,6 @@ function About() {
                 href="https://www.youtube.com/@dahae01"
                 target="_blank"
                 rel="noreferrer"
-                data-no-hover
               >
                 <HugeiconsIcon icon={YoutubeIcon} />
               </IconLink>
@@ -348,7 +344,6 @@ function About() {
                 href="https://soundcloud.com/llorjjrk"
                 target="_blank"
                 rel="noreferrer"
-                data-no-hover
               >
                 <HugeiconsIcon icon={SoundcloudIcon} />
               </IconLink>
@@ -357,14 +352,13 @@ function About() {
                 target="_blank"
                 rel="noreferrer"
                 title="CV"
-                data-no-hover
               >
                 <CVIcon />
               </IconLink>
             </IconContainer>
           </SocialIcons>
         </LeftColumn>
-        <ProfileInfo data-no-hover>
+        <ProfileInfo>
           <h2>Hello, I'm Hannah Kim</h2>
           <span>
             I am a <i>Creative Technologist</i> crafting narrative-driven user
@@ -423,19 +417,17 @@ function About() {
             human stories.
           </span>
 
-          <InterestsSection data-no-hover>
+          <InterestsSection>
             <InterestsTitle>Interests</InterestsTitle>
             <InterestsTags>
-              <InterestTag data-no-hover>#Creative Technology</InterestTag>
-              <InterestTag data-no-hover>#User Experience</InterestTag>
-              <InterestTag data-no-hover>#Interactive Design</InterestTag>
-              <InterestTag data-no-hover>#XR</InterestTag>
-              <InterestTag data-no-hover>#Storytelling</InterestTag>
-              <InterestTag data-no-hover>#Music Production</InterestTag>
-              <InterestTag data-no-hover>#Live Performance</InterestTag>
-              <InterestTag data-no-hover>
-                #Human-Computer Interaction
-              </InterestTag>
+              <InterestTag>#Creative Technology</InterestTag>
+              <InterestTag>#User Experience</InterestTag>
+              <InterestTag>#Interactive Design</InterestTag>
+              <InterestTag>#XR</InterestTag>
+              <InterestTag>#Storytelling</InterestTag>
+              <InterestTag>#Music Production</InterestTag>
+              <InterestTag>#Live Performance</InterestTag>
+              <InterestTag>#Human-Computer Interaction</InterestTag>
             </InterestsTags>
           </InterestsSection>
         </ProfileInfo>
@@ -458,7 +450,7 @@ function About() {
           ))}
         </JourneyList>
         {journeyItems.length > 5 && (
-          <MoreButton onClick={() => setShowAll(!showAll)} data-no-hover>
+          <MoreButton onClick={() => setShowAll(!showAll)}>
             {showAll ? "Hide" : "More"}
           </MoreButton>
         )}

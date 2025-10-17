@@ -218,8 +218,8 @@ function Header() {
 
   return (
     <>
-      <HeaderDiv data-no-hover>
-        <Logo onClick={handleLogoClick} data-no-hover>
+      <HeaderDiv>
+        <Logo onClick={handleLogoClick}>
           <img src={`${process.env.PUBLIC_URL}/Heart.svg`} alt="HANNAH" />
           <span>
             HANNAH <br />
@@ -227,21 +227,16 @@ function Header() {
           </span>
         </Logo>
 
-        <Nav data-no-hover>
+        <Nav>
           {navLinks.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={isActive(to) ? "active" : ""}
-              data-no-hover
-            >
+            <NavLink key={to} to={to} className={isActive(to) ? "active" : ""}>
               {label}
             </NavLink>
           ))}
         </Nav>
 
-        <MobileMenuButton onClick={toggleMenu} data-no-hover>
-          <HamburgerIcon isOpen={isMenuOpen} data-no-hover>
+        <MobileMenuButton onClick={toggleMenu}>
+          <HamburgerIcon isOpen={isMenuOpen}>
             <span></span>
             <span></span>
             <span></span>
@@ -257,7 +252,6 @@ function Header() {
               to={to}
               onClick={handleNavClick}
               className={isActive(to) ? "active" : ""}
-              data-no-hover
             >
               {label}
             </MobileNavLink>
