@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -24,9 +24,6 @@ const Content = styled.div`
   @media (min-width: 769px) and (max-width: 1024px) {
     padding: 70px 50px;
   }
-  @media (max-width: 768px) {
-    padding: 70px 30px;
-  }
 `;
 
 const Title = styled.h1`
@@ -45,7 +42,7 @@ const Title = styled.h1`
   }
 `;
 
-function PageContainer({ children, title }) {
+const PageContainer = memo(({ children, title }) => {
   return (
     <Container>
       <Content>
@@ -54,6 +51,8 @@ function PageContainer({ children, title }) {
       </Content>
     </Container>
   );
-}
+});
+
+PageContainer.displayName = "PageContainer";
 
 export default PageContainer;
