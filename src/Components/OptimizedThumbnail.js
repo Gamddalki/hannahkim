@@ -1,4 +1,4 @@
-import React, { memo, useState, useRef, useEffect } from "react";
+import React, { memo, useState, useRef, useEffect, useCallback } from "react";
 import styled from "styled-components";
 
 const ThumbnailContainer = styled.div`
@@ -60,7 +60,6 @@ const OptimizedThumbnail = memo(
     ...props
   }) => {
     const [loaded, setLoaded] = useState(false);
-    const imgRef = useRef(null);
 
     useEffect(() => {
       if (priority) {
@@ -77,13 +76,13 @@ const OptimizedThumbnail = memo(
       }
     }, [src, priority]);
 
-    const handleLoad = () => {
+    const handleLoad = useCallback(() => {
       setLoaded(true);
-    };
+    }, []);
 
-    const handleError = () => {
+    const handleError = useCallback(() => {
       setLoaded(true);
-    };
+    }, []);
 
     return (
       <ThumbnailContainer
@@ -94,16 +93,11 @@ const OptimizedThumbnail = memo(
       >
         <Placeholder loaded={loaded} />
         <img
-          ref={imgRef}
           src={src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onLoad={handleLoad}
           onError={handleError}
-          style={{
-            opacity: loaded ? 1 : 0,
-            transition: "opacity 0.15s ease",
-          }}
         />
       </ThumbnailContainer>
     );
