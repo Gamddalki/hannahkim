@@ -1,39 +1,99 @@
 [
   {
-    "id": 1,
+    "id": "anneoftheblackhair",
     "title": "Anne of the Black Hair",
     "subtitle": "Mobile Running Game",
     "where": "2021 Summer Project at KING",
     "thumbnail": "/img/projects/AnneoftheBlackHair.jpg",
-    "myRole": ["Project Manager", "Script Writer", "Character Designer"],
-    "category": ["Mobile Game"],
+    "myRole": [
+      "Team Lead",
+      "UI/UX Designer",
+      "Game Designer",
+      "Graphic Designer",
+      "Sound Designer"
+    ],
+    "category": ["Game"],
     "credits": ["Minjung Jung", "Ayeon Kim", "Heejin Park", "Jiwon Seo"],
     "tools": ["Unity", "C#", "Aesprite"],
-    "startDate": "2021-05",
+    "startDate": "2021-06",
     "endDate": "2021-09",
-    "keyInsights": "Did you know that Anne was actually **black-haired**? Maybe you did, but **no one in the village should**.",
-    "link": "https://github.com/Gamddalki/Anne-of-BlackHair",
-    "content": [
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From a **single concept** to a **fully functional mobile game**"
+      },
       {
         "type": "image",
-        "value": "/img/projects/AnneoftheBlackHair2.png"
+        "value": "/img/projects/AnneoftheBlackHair1.png"
       },
       {
         "type": "text",
-        "value": "In this running game, no one in the village should know that she is black haired. Change your route to avoid the villagers' eyes and safely deliver the fruit as Marilla asked. Be especially careful not to be seen by children — they spread rumors the fastest! If you lose all the fruit or the news of Anne’s black hair spreads throughout the village, the game is over."
+        "value": "— twisting a well-known novel with a **playful ‘what-if’**; Did you know that Anne was **actually black haired**? Maybe you did, but no one in the village should."
       }
-    ]
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "The project originated from a club ideation session, where we each had to develop a game concept inspired by the color red. I proposed a unique 'what-if' that inverted the classic story of “Anne of Green Gables”: what if Anne wasn't born with red hair, but **secretly dyed it to maintain her iconic look**? After my presentation, several teammates reached out to collaborate, and what began as a concept presentation grew into my first-ever development project."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/AnneoftheBlackHair2.png"
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "As a team leader and a game designer, I developed the storyline and **narrative mechanics**, designed the UI flow, created screen layouts and items."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/AnneoftheBlackHair3.png"
+      },
+      {
+        "type": "text",
+        "value": "I also created **frame-by-frame sprite animations** using Aseprite to achieve fluid running motion. In sound design, I tried to ensure that the game’s atmosphere aligned with its playful narrative."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/AnneoftheBlackHair4.png"
+      },
+      {
+        "type": "text",
+        "value": "Our team collaboratively refined the **rumor gauge system** and continuously tested installations across devices to ensure a stable, fully functional APK. Each iteration improved gameplay balance and performance, transforming an imaginative pitch into a complete mobile experience."
+      }
+    ],
+    "outcomes": [
+      "Delivered a fully functional mobile game (playable on Android devices via APK installation) built from original concept to completion.",
+      "Designed and implemented UI, character animations, items, and in-game sound",
+      "Developed in collaboration through iterative testing and balancing",
+      "**Awarded 2nd Place** for creativity and a high level of polish within the club"
+    ],
+    "links": [
+      {
+        "type": "github",
+        "value": "https://github.com/KingEwha/Anne-of-BlackHair"
+      },
+      { "type": "reflection", "value": "https://gamddalki.tistory.com/6" }
+    ],
+    "reflection": "This project marked my first full development cycle, transforming an idea into a finished, functioning mobile game. Because I was unfamiliar with the technical requirements of Unity and the process of game design, I had to repeatedly revise the design — especially in map structure and feature specifications. This experience taught me the importance of technically grounded design, motivating me to strengthen my computer science foundation."
   },
   {
-    "id": 2,
+    "id": "reicecle",
     "title": "reICEcle",
     "subtitle": "Point-Based Ice Pack Recycling Mobile Application",
-    "where": "2021 Software Engineering and Creative Design Course Work (Best Project)",
-    "thumbnail": "/img/projects/reICEcle.svg",
-    "myRole": ["Team Lead", "System Analyst & Designer", "UX/UI Designer"],
-    "category": ["Mobile Application", "Prototyping", "Software Design", "UML"],
-    "credits": ["Sunyu Pang", "Jiyeon Kim", "Yongyeon Kim"],
+    "where": "2021 Software-based Convergence System Design Coursework (Best Project)",
+    "thumbnail": "/img/projects/reICEcle.png",
+    "category": [
+      "Application",
+      "User Research",
+      "Software Design",
+      "UML",
+      "Prototyping"
+    ],
+    "myRole": ["Team Lead", "System Analyst & Designer", "UI/UX Designer"],
     "tools": ["Visual Paradigm", "Proto.io"],
+    "credits": ["Sunyu Pang", "Jiyeon Kim", "Yongyeon Kim"],
     "startDate": "2021-03",
     "endDate": "2021-06",
     "accentColor": "#65AAF8",
@@ -51,14 +111,10 @@
         "value": "— incentivizing **ice pack recycling** through a user-friendly mobile application connected to real-world collection bins."
       }
     ],
-    "overview": [
+    "motivation": [
       {
         "type": "text",
-        "value": "**ReICEcle** is a prototype mobile application designed to encourage households to **recycle used ice packs** through a point-based reward system. The system integrates a physical collection bin equipped with weight measurement, enabling users to deposit ice packs, track their contributions, and redeem points at local businesses affected by COVID-19."
-      },
-      {
-        "type": "text",
-        "value": "As **team leader**, I led the project from problem definition to final prototype delivery, overseeing both the design process and system integration."
+        "value": "With the surge in home deliveries **during the COVID-19 pandemic**, the use of ice packs for refrigerated and frozen goods increased dramatically, leading to a buildup of unused packs in households. Due to their superabsorbent polymer content, which is a form of microplastic, ice packs are difficult to recycle and often end up as environmentally harmful waste. Existing collection efforts such as temporary municipal events proved too limited in scale and continuity."
       },
       {
         "type": "image",
@@ -66,7 +122,29 @@
       },
       {
         "type": "text",
-        "value": "We designed and conducted a **user survey (N=42)** to capture household recycling behaviors. Insights guided reward system design and interface priorities. Our approach combined **software engineering methodologies** (e.g. UML modeling) and prototyping to meet user requirements."
+        "value": "Recognizing this gap using the **5 Whys framework**, our team aimed to design a sustainable, reward-based recycling system that motivates households to return used ice packs while supporting local small businesses affected by the pandemic."
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "We conducted a **user survey (N=42)** to capture household recycling behaviors. Insights guided reward system design and interface priorities."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/reICEcle3.png"
+      },
+      {
+        "type": "text",
+        "value": "Based on the user study, we designed ReICEcle, a prototype mobile application that encourages households to **recycle used ice packs** through a point-based reward system. The system integrates a physical collection bin equipped with weight measurement, enabling users to deposit ice packs, track their contributions, and redeem points at local businesses affected by COVID-19."
+      },
+      {
+        "type": "text",
+        "value": "Our approach combined **software engineering methodologies** (e.g. UML modeling) and prototyping to meet user requirements. As **team leader**, I led the project from problem definition to final prototype delivery, overseeing both the design process and system integration."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/reICEcle4.png"
       }
     ],
     "outcomes": [
@@ -79,15 +157,14 @@
       { "type": "reflection", "value": "https://gamddalki.tistory.com/7" },
       { "type": "document", "value": "https://gamddalki.tistory.com/7" }
     ],
-    "reflection": "This project marked my first experience conducting user research, which enabled us to design a product that met real user requirements. It also strengthened my ability to **translate social issues into actionable, design-driven solutions** — a skill I continue to apply in interactive media and human-centered design.",
-    "selected": true
+    "reflection": "This project marked my first experience conducting user research, which enabled us to design a product that met real user requirements. It also strengthened my ability to **translate social issues into actionable, design-driven solutions** — a skill I continue to apply in interactive media and human-centered design."
   },
   {
-    "id": 3,
+    "id": "sunthelight",
     "title": "Sun the Light",
     "subtitle": "Classic PC Shooting Game",
     "where": "3rd MaKINGJam first-place winning work",
-    "thumbnail": "/img/projects/SunTheLight3.gif",
+    "thumbnail": "/img/projects/SunTheLight.gif",
     "myRole": [
       "Project Manager",
       "Script Writer",
@@ -96,95 +173,147 @@
       "Map Designer",
       "Logo Designer"
     ],
-    "category": ["PC Game"],
+    "category": ["Game"],
     "credits": ["Gabin Lee", "Dohee Kim", "Jooie Hwang", "Yoojin Jeon"],
     "tools": ["Unity", "C#", "Aesprite"],
     "startDate": "2022-11",
-    "endDate": "2023-01",
-    "keyInsights": "Helios, the God of the Sun has lost his Sun one day. Let’s go find out what happened to his Sun, with the Golden Chariot.",
-    "link": "https://github.com/22MaKINGJam/Sun-the-Light",
-    "content": [
+    "endDate": "2022-12",
+    "accentColor": "#FE6E0E",
+    "keyInsights": [
       {
-        "type": "image",
-        "value": "/img/projects/SunTheLight.jpg"
-      },
-      {
-        "type": "text",
-        "value": "This classic PC shooting game captures the mythological journey of Helios and the tension surrounding his struggle to maintain control over the Sun, blending ancient myth with an action-packed adventure."
+        "type": "title",
+        "value": "# From **Mythological Themes** to **Interactive Conflicts**"
       },
       {
         "type": "image",
-        "value": "/img/projects/SunTheLight1.gif"
+        "value": "/img/projects/SunTheLight1.jpg"
       },
       {
         "type": "text",
-        "value": "Helios, the First God of the Sun, rises from the eastern palace and sinks into the land of the Hesperides in the west each day. However, the Sun mysteriously vanishes one day, while he was dozing off for a while. So, unfortunately, Helios must embark on a quest to recover it, risking his fame and his fragile position in Olympus. This scenario is given through the animation at the beginning of the game."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/SunTheLight2.gif"
-      },
-      {
-        "type": "text",
-        "value": "The player controls the golden chariot, avoiding or attacking light winds, strong winds, and dark clouds. Bumping onto the winds and clouds causes immediate damage, while successfully attacking them results in points. Additionally, if the chariot is driven too low, villages will burn, and if driven too high, the screams of constellations will be heard. In both cases, the player will take damage. The player can use a skill that shoots fire in all directions at regular intervals."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/SunTheLight3.gif"
-      },
-      {
-        "type": "text",
-        "value": "At level 3, Helios gets to meet the Boss mob, Dionysos. Or maybe... another one later on. Guess who's coming next with the thunder light striking out after a danger sign."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/SunTheLight4.gif"
-      },
-      {
-        "type": "text",
-        "value": "Player gets to find out what happened to Helios, Dyonisos, and Zeus with Game Over / Clear Animation."
+        "value": "— **Reframing** the power struggle between Helios and Zeus through classic arcade game mechanics."
       }
     ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "The project began with a fascination for how ancient myths could be reimagined through gameplay rather than just text. Inspired by the phonetic link between **Sun the Light (Helios)** and **Thunderlight (Zeus)**, I built the concept around the conflict between the fading Titan Helios and the Olympian gods, exploring the mythic **shift of power from the Titans to Zeus**. Within the constraints of a **3-day game jam**, I aimed to craft a fast-paced arcade game that still carried narrative weight and symbolic tension — reflecting themes of divine pride, loss, and rebellion directly through game mechanics."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight2.png"
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "Under a limited development period, our team adopted rapid prototyping to iterate quickly on narrative-driven gameplay. As the game designer, I developed the myth-based storyline and integrated Helios's journey directly into the level progression. I designed **mechanics that mirrored the mythic stakes**: flying too low burns villages, while flying too high provokes the constellations to cry."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight3.png"
+      },
+      {
+        "type": "text",
+        "value": "To deepen player immersion, I also created the cutscene start-animation and **composed an original soundtrack**. The sub-boss **Apollo** and the final confrontation with **Zeus** clearly visualized the struggle between the fading Titans and rising Olympians, a theme capped by a unique ending animation determined by the stage the player reached before game over."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/SunTheLight4.png"
+      }
+    ],
+    "outcomes": [
+      "Developed a cohesive **myth-meets-arcade experience**, successfully integrating a strong, myth-based narrative with classic game mechanics.",
+      "Composed and produced an **original soundtrack** that enhanced immersion with its retro game music-inspired style.",
+      "Received **First Place** recognition at the 3rd MaKINGJam (Ewha Womans University) for the project's originality, completeness, and thematic depth."
+    ],
+    "video": "https://www.youtube.com/embed/L7jEg6B22gY",
+    "links": [
+      {
+        "type": "github",
+        "value": "https://github.com/22MaKINGJam/Sun-the-Light"
+      },
+      {
+        "type": "soundcloud",
+        "value": "https://soundcloud.com/llorjjrk/sets/sun-the-light"
+      }
+    ],
+    "reflection": "Unlike a previous game project (“Black-haired Anne”) where a lack of familiarity with Unity and initial game planning led to a prolonged development period, my improved technical understanding and robust planning enabled me to deliver a high-quality game within the 3-day constraint. This taught me the **immense power of technically grounded planning** in creative execution, cementing my commitment to strengthening my foundational knowledge in computer science and design.",
     "selected": true
   },
   {
-    "id": 4,
+    "id": "canticumchoir",
     "title": "Canticum Choir",
     "subtitle": "Webpage",
     "where": "Freelance Web Development Project",
-    "thumbnail": "/img/projects/Canticum.svg",
-    "myRole": ["Developer", "UX/UI Designer"],
+    "thumbnail": "/img/projects/Canticum.png",
+    "myRole": ["UI/UX Designer", "Developer"],
     "category": ["Webpage"],
     "credits": ["Canticum Choir"],
-    "tools": ["TypeScript", "React", "Node.js", "MySQL"],
-    "startDate": "2023-02",
+    "tools": ["TypeScript", "JavaScript", "React", "Node.js", "MySQL"],
+    "startDate": "2023-01",
     "endDate": "2024-07",
-    "keyInsights": "Designed UX/UI and Developed the whole webpage of Canticum Choir – A choir that heals the soul with inspirational music from medieval mass music to oratorio and contemporary church music.",
-    "link": "http://canticum.co.kr/",
-    "content": [
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From **Artistic harmony** to **Digital harmony**"
+      },
       {
         "type": "image",
         "value": "/img/projects/Canticum1.png"
       },
       {
         "type": "text",
-        "value": "Designed UX/UI and developed the whole webpage including the Admin page where the choir manager can change wallpaper and upload concert information, newsletters, and notices."
+        "value": "— transforming choir identity into a **full-featured, client-centered** web experience."
       }
-    ]
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "Canticum Choir requested a webpage that reflected both its artistic spirit and practical needs. The challenge was to design a platform that resonated with the choir’s aesthetic values while **allowing non-technical members to independently manage content** such as concert updates and newsletters through the admin menu."
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "As a freelance full-stack developer and UI/UX designer, I led the project end-to-end, from **initial client consultation** to **deployment** and **long-term maintenance**. I crafted a responsive UI/UX inspired by the choir’s visual identity and implemented an admin dashboard connected to a SQL database. This system allowed real-time content updates, encompassing both the public-facing site and a secure admin interface."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Canticum2.png"
+      },
+      {
+        "type": "text",
+        "value": "Throughout development, I focused on balancing visual elegance with functional scalability, ensuring the platform could grow alongside the choir’s activities. After launch, I continued to support the client through iterative updates, improving usability and expanding features based on real feedback. This sustained collaboration ensured that the platform remained reliable and adaptive to the choir’s evolving needs."
+      }
+    ],
+    "outcomes": [
+      "Delivered and maintained a fully functional website for long-term client use.",
+      "Implemented SQL-based content management system, enabling independent content uploads and edits.",
+      "Designed a responsive, minimalist interface aligning with the choir’s artistic tone and accessibility needs.",
+      "Iteratively refined performance and content workflows through user feedback and data-driven improvements.",
+      "Demonstrated commitment to long-term quality and client satisfaction, sustaining a successful working relationship."
+    ],
+    "links": [
+      {
+        "type": "github",
+        "value": "https://github.com/Gamddalki/canticum"
+      }
+    ],
+    "reflection": "This project strengthened my ability to deliver end-to-end web solutions tailored to client needs, highlighting my skills in both **user-centered design** and **full-stack development**. The extended maintenance period reinforced my ability to manage projects **beyond delivery** — ensuring scalability, client trust, and technical stability over time."
   },
   {
-    "id": 5,
+    "id": "etoe",
     "title": "ETOE Solutions Co., Ltd.",
     "subtitle": "Webpage",
     "where": "Freelance Web Development Project",
-    "thumbnail": "/img/projects/EtoE.svg",
-    "myRole": ["Developer", "UX/UI Designer"],
+    "thumbnail": "/img/projects/EtoE.png",
+    "myRole": ["Developer", "UI/UX Designer"],
     "category": ["Webpage"],
     "credits": ["ETOE Solutions Co., Ltd."],
     "tools": ["pug", "SCSS", "Node.js"],
     "startDate": "2022-02",
-    "endDate": "2022-08",
-    "keyInsights": "Designed UX/UI and Developed the whole webpage of ETOE Solutions Co., Ltd. – An Oracle DMP (Directly Managed Partner) Company.",
+    "endDate": "present",
+    "keyInsights": "Ongoing maintenance and upgrading of the webpage of ETOE Solutions Co., Ltd. – An Oracle MP (Managed Partner) Company.",
     "link": "http://www.etoe.co.kr/",
     "content": [
       {
@@ -193,119 +322,233 @@
       },
       {
         "type": "text",
-        "value": "Designed UX/UI and developed the whole webpage."
+        "value": "Designed UI/UX and developed the whole webpage."
       }
     ]
   },
   {
-    "id": 6,
+    "id": "halmaeyakson",
     "title": "HalmaeYakson",
     "subtitle": "Household Medicine Delivery Service Application",
     "where": "EWHA Abeek Design-Thinking Prototype Development Education Award-winning work",
     "thumbnail": "/img/projects/HalmaeYakson.png",
-    "myRole": ["Project Manager", "UX/UI Designer"],
-    "category": ["Mobile Application"],
-    "credits": ["Serin Park", "Minji Park"],
+    "myRole": ["Project Manager", "UI/UX Designer"],
+    "category": ["Application", "Prototyping"],
+    "credits": ["Selynn Park", "Minji Park"],
     "tools": ["Figma"],
+    "date": "2021-08",
     "startDate": "2021-08",
-    "endDate": "2021-08",
-    "keyInsights": "Prototype of s Delivery Service Application for Household Medicines and Other Supplies.",
-    "link": "https://gamddalki.tistory.com/4",
-    "content": [
+    "accentColor": "#FD896D",
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From **delivery service** to a **comforting experience**"
+      },
       {
         "type": "image",
         "value": "/img/projects/HalmaeYakson1.png"
       },
       {
         "type": "text",
-        "value": "'HalmaeYakson' is an award-winning application aimed at addressing a critical issue for single-person households. Our design process began by defining our primary user persona, Se-eun Lee, and identifying the challenges she faced. We focused on safely delivering medicines and other medical supplies to individuals living alone, particularly women, who need assistance when they are unwell. To provide a solution, we developed an application named 'HalmaeYakson (Grandma's Healing Hands)', inspired by the traditional Korean children's song, 'Grandma's Hands are Healing Hands.' Following the ideation stage, we proceeded with screen design and prototype development, ultimately presenting our completed concept. Our work was recognized for its innovation and user-centered approach."
+        "value": "— reimagining a medicine delivery service with the warmth of **Grandma’s healing hands** (‘HalmaeYakson’)."
       }
-    ]
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "With the rapid rise of **single-person households** in Korea, many individuals face difficulty obtaining basic medicines when sick and alone. We wanted to reimagine a delivery service not as a logistics platform, but as a **human-centered act of care**. From this need emerged “HalmaeYakson” (meaning ‘Grandma’s Healing Hands’ in Korean) — a service that connects warmth, reliability, and accessibility through design and tone."
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "“HalmaeYakson” was designed to provide safe, empathetic delivery of over-the-counter medicines and related supplies. Our team followed the **Design Thinking framework**, establishing a user persona (Se-eun, 29, living alone) to pinpoint emotional and practical pain points. We iterated on problem definition, screen flows, and service features using collaborative tools."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/HalmaeYakson2.png"
+      },
+      {
+        "type": "text",
+        "value": "I led the concept development, naming, UX writing, and UI direction for this project. To define a **brand identity** centered on a grandmother’s gentle care, I designed a warm peach color scheme, rounded typography, and authored microcopy to reduce anxiety during the ordering process."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/HalmaeYakson3.png"
+      },
+      {
+        "type": "text",
+        "value": "The final clickable prototype showcased features such as gender-matching delivery, contactless verification, and a ‘Neighbor Chat’ function, embedding empathy into practical functionality."
+      }
+    ],
+    "outcomes": [
+      "Crafted a brand voice and UI system aligned with the metaphor of touch and care, integrating emotionally resonant microcopy with visual warmth.",
+      "Implemented user-centric features like gender-matching delivery and contactless verification that prioritized safety and comfort.",
+      "Built an **award-winning** prototype that was presented at the Ewha Engineering Education Innovation Center and recognized for its empathetic design and concept."
+    ],
+    "links": [
+      {
+        "type": "reflection",
+        "value": "https://gamddalki.tistory.com/4"
+      }
+    ],
+    "reflection": "This project revealed how UX writing and visual language can humanize digital services, transforming utility into emotional connection. It deepened my understanding of **how design can communicate empathy**, not just function, reinforcing my passion for creating interactive experiences that bridge technology and human warmth."
   },
   {
-    "id": 7,
+    "id": "eatwha",
     "title": "Eat:WHA",
-    "subtitle": "Ewha Campus Restaurant Guide Web Application",
-    "where": "2022 Open SW Platform Project",
+    "subtitle": "Ewha Campus restaurant recommendation web application",
+    "where": "2022 Open Software Platform Coursework",
     "thumbnail": "/img/projects/EatWHA.gif",
-    "myRole": ["Backend Developer", "UX/UI Designer"],
-    "category": ["Web Application"],
+    "myRole": ["Backend Developer", "UI/UX Designer"],
+    "category": ["Webpage"],
     "credits": ["Gabin Lee", "Jinyoung Oh", "Yelynn Oh", "Yunsun Jung"],
-    "tools": ["HTML", "CSS", "JS", "Python", "Python Flask", "Firebase"],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python Flask",
+      "django",
+      "Firebase"
+    ],
     "startDate": "2022-09",
     "endDate": "2022-12",
-    "keyInsights": "Eat:WHA, the future we crEATe! – A Web Application for Busy Ewha Students to Find the Best Restaurants around campus.",
-    "link": "https://github.com/Gamddalki/EatWHA",
-    "content": [
+    "accentColor": "#FB7172",
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From **Textual Clutter** to **Visual Clarity**"
+      },
       {
         "type": "image",
         "value": "/img/projects/EatWHA1.png"
       },
       {
         "type": "text",
-        "value": "Eat:WHA is an intuitive web application that allows users to check a list of restaurants around Ewha Campus based on location, using a cute map feature."
+        "value": "— Transforming overwhelming restaurant information into an **intuitive, hand-drawn dining map**, enabling restaurant searching to be natural and effortless."
+      }
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "The project originated from a coursework request for a simple, reliable way to explore restaurants near Ewha Womans University. Recognizing that students often have limited time between classes and prefer to eat close to campus, our team set out to design a more intuitive and efficient solution. Rather than relying solely on a typical text-based list, we created a **visually-led experience** with the map, enabling students to quickly select a dining zone based on their location."
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "To **reduce cognitive load**, we designed a hand-drawn campus map as the main navigation hub, allowing for direct spatial interaction. The minimal interface, generous spacing, and consistent CSS styling were all tailored to support this intuitive approach."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/EatWHA2.png"
       },
       {
         "type": "text",
-        "value": "I was responsible for the UI design and backend development of the whole web page, which includes features such as sign-up, login, logout, and account deletion, as well as restaurant search, menu browsing, themed lists, liking functionality, vegan badges, writing and viewing reviews."
+        "value": "As the only member with prior web development experience, I took the lead in both UI design and development, **bridging the gap between design vision and technical implementation**. We built a fully functional system using Python Flask and Firebase, implementing RESTful APIs for authentication, review management, and personalized pages. My dual role as both a designer and developer allowed me to **seamlessly translate user flow logic into backend functionality**. Throughout the process, I conducted iterative testing with the frontend team to ensure every feature was fully operational and worked as intended."
       }
-    ]
+    ],
+    "outcomes": [
+      "Designed and implemented a hand-illustrated map-based navigation",
+      "Earned praise from the supervising professor for its **intuitive and cohesive user experience**, highlighting the value of design-informed development.",
+      "Developed robust backend architecture using Flask and Firebase to handle authentication, CRUD operations, and user data.",
+      "Delivered a fully functional web application with core features including user login, review, vegan-friendly badges, my page, and location-based recommendations."
+    ],
+    "links": [
+      {
+        "type": "github",
+        "value": "https://github.com/OpenSWPlatform-TeamProject/openSWplatform"
+      },
+      {
+        "type": "reflection",
+        "value": "https://gamddalki.tistory.com/8"
+      }
+    ],
+    "reflection": "This project reaffirmed my passion for crafting **intuitive, human-centered digital experiences**. By designing the interface and building the backend myself, I learned firsthand how a **deep understanding of UI logic** can directly enhance and streamline **technical development**, proving the value of a holistic approach to building functional systems."
   },
   {
-    "id": 8,
+    "id": "vividnightmare",
     "title": "Vivid Nightmare",
     "subtitle": "VR escape game",
     "where": "2023 EPITA Summer Program Project",
-    "thumbnail": "/img/projects/VividNightmare.png",
+    "thumbnail": "/img/projects/VividNightmare.gif",
     "myRole": ["Script Writer", "Designer", "Developer"],
-    "category": ["VR Game"],
+    "category": ["VR", "Game"],
     "credits": ["Minchae Kang", "Soyoung Park"],
     "tools": ["Unity", "C#", "Oculus Quest 2"],
+    "accentColor": "#A63A4D",
+    "date": "2023-07",
     "startDate": "2023-07",
-    "endDate": "2023-07",
-    "keyInsights": "You are in a nightmare! Avoid obstacles and find a right key within the given time. Pick up the key and press A at the door to escape from your dream. Otherwise, you'll never get out of the White Christmas's nightmare forever. Check the remaining time on your left wrist, and Good Luck!",
-    "link": "https://github.com/Gamddalki/VividNightmare",
-    "content": [
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From **Abstract Imagination** to **Tangible Nightmare**"
+      },
       {
         "type": "image",
-        "value": "/img/projects/VividNightmare.png"
+        "value": "/img/projects/VividNightmare1.png"
       },
       {
         "type": "text",
-        "value": "Level 1 ☃️ Find the key and open the door to go out. Beware of candy canes!"
-      },
-      {
-        "type": "text",
-        "value": "Level 2 🌵 Find one real key out of three keys and open the door to go out. Beware of rocks! (*The real key is randomly changed every time)"
-      },
-      {
-        "type": "text",
-        "value": "Level 3 ♟️ Find one real key out of six keys and open the door to go out. Beware of chess pieces and teddy bears dropping down from above! (*The real key is randomly changed every time)"
-      },
-      {
-        "type": "text",
-        "value": "Game Clear ⏰ Congratulations! You're awake!"
+        "value": "— Realizing the psychological horror of a nightmare through specific **VR mechanics** such as integrating time-based tension and repetitive background music."
       }
-    ]
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "Developed during the 2023 EPITA Summer IT Program, the core motivation was to explore the nuances of **VR-based interaction** and **spatial puzzle design**. The project, “Vivid Nightmare”, aimed to build more than just a typical escape room; it sought to immerse players in a surreal dream world where escalating time pressure and bizarre obstacles would dramatically intensify the emotional stakes of the escape."
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "I took the lead on game design, level structure, and interaction mechanics. We designed three levels, each with a **progressively complex key-finding mechanic** and environmental hazards. The narrative progression culminated in an ending scene, where the alarm rings, that was designed for the successful accomplishment of all stages."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/VividNightmare2.png"
+      },
+      {
+        "type": "text",
+        "value": "To ensure replayability, keys were randomized at runtime, and the wrist-based timer was used to provide intuitive gameplay feedback."
+      },
+      {
+        "type": "text",
+        "value": "Through iterative playtesting, we refined obstacle pacing, visibility, and spatial awareness within the VR environment to deliver a truly engaging and immersive experience."
+      }
+    ],
+    "video": "https://www.youtube.com/embed/b8e6YhJz7h4",
+    "outcomes": [
+      "Delivered a fully developed VR game with a strong narrative.",
+      "Showcased the project as a highlight of the 2023 EPITA Summer IT Program, receiving praise from players and professors for the **balance of tension, challenge, and immersive design**."
+    ],
+    "links": [
+      { "type": "github", "value": "https://github.com/comgongdaeng/NipByook" }
+    ],
+    "reflection": "This project significantly strengthened my skills in VR interaction design and immersive storytelling. It taught me that **small interface details**, like the wrist-mounted timer, can profoundly affect player engagement and tension. The experience strongly reinforced my interest in combining narrative design and interactive technology to create impactful experiences."
   },
   {
-    "id": 9,
+    "id": "jeogiyo",
     "title": "Jeogiyo",
-    "subtitle": "VUI Application for Assisting Contactless Ordering Services in Stores",
-    "where": "2023 Human Computer Interaction Project",
+    "subtitle": "VUI Application for Accessible Contactless Ordering Services in Stores",
+    "where": "2023-2 Human-Computer Interaction Coursework",
     "thumbnail": "/img/projects/Jeogiyo.png",
-    "myRole": ["Designer", "Developer"],
-    "category": ["Prototyping", "Software Design", "UML"],
+    "myRole": ["System Analyst & Designer", "UI/UX Designer"],
+    "category": [
+      "Application",
+      "User Research",
+      "Software Design",
+      "Prototyping"
+    ],
     "credits": ["Sunyu Pang", "Minjung Jung", "Gabin Lee", "Jimin Song"],
     "tools": ["Figma"],
     "startDate": "2023-09",
     "endDate": "2023-12",
-    "keyInsights": "Virtual Assistant Application that helps middle-aged and older adults to easily use contactless ordering services at stores by VUI (Voice User Interface).",
-    "link": "https://gamddalki.tistory.com",
-    "content": [
+    "accentColor": "#43c466",
+    "keyInsights": [
       {
-        "type": "text",
-        "value": "'Jeogiyo' is a personal virtual assistant application designed to help middle-aged and older adults use contactless services with ease. We made a goal to eliminate barriers in digital interactions by improving accessibility and simplifying complex user interfaces."
+        "type": "title",
+        "value": "# From **Digital Exclusion** to **Inclusive Connection**"
       },
       {
         "type": "image",
@@ -313,25 +556,268 @@
       },
       {
         "type": "text",
-        "value": "To validate the need for our service, we conducted a survey, which revealed that individuals over the age of 40 find current contactless systems (e.g. kiosk) difficult to use due to complex operations, poor readability, and insufficient guidance."
-      },
+        "value": "— transforming the **stressful experience** of the digital ordering kiosk into an **accessible, intuitive voice-guided journey** that fosters digital inclusion for middle-aged and older adults, empowering them to break through digital barriers with their voice."
+      }
+    ],
+    "motivation": [
       {
-        "type": "image",
-        "value": "/img/projects/Jeogiyo.png"
+        "type": "text",
+        "value": "As **contactless kiosks** become ubiquitous, many middle-aged and older adults struggle with their **complex interfaces, low readability, and lack of guidance**. To address these accessibility barriers, our team designed “Jeogiyo” — a voice-enabled assistant application that streamlines digital ordering through conversational **Voice User Interface (VUI)**."
       },
 
       {
+        "type": "image",
+        "value": "/img/projects/Jeogiyo2.png"
+      }
+    ],
+    "approach": [
+      {
         "type": "text",
-        "value": "To address these challenges, we developed 'Jeogiyo', a virtual assistant application that enhances the user experience through conversational interactions. 'Jeogiyo' activates through voice commands and provides real-time responses, ensuring seamless transactions with minimal effort. The system supports multiple interface types, including voice interaction and typing, for greater accessibility."
+        "value": "We conducted a survey (N=28), which confirmed that **users over the age of 50 struggled significantly** with current contactless systems (e.g. kiosk). Based on these insights, we conceptualized and prototyped a VUI system where ordering could be initiated and guided entirely through natural voice commands."
       },
       {
         "type": "image",
-        "value": "/img/projects/Jeogiyo2.png"
+        "value": "/img/projects/Jeogiyo3.png"
       },
       {
         "type": "text",
-        "value": "Key functional and non-functional requirements were determined to ensure effortless use with minimal device operation."
+        "value": "We designed the interaction model and implemented **fallback mechanisms** (simplified navigation and optional typing) to maximize inclusivity. My contributions spanned concept development, user research, and interaction design. I formulated the conversational architecture, integrated accessibility principles into the interface, and defined system requirements to ensure smooth, low-effort operation across devices."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Jeogiyo4.png"
       }
-    ]
+    ],
+    "outcomes": [
+      "**Validated accessibility needs through survey-driven insights**.",
+      "Designed simple and intuitive UI/UX elements to lower digital barriers, demonstrating how voice interaction can reduce friction and anxiety in digital ordering for middle-aged and older adults.",
+      "Delivered a prototype of a mobile application with VUI.",
+      "Received positive peer feedback for bridging generational gaps in digital usability."
+    ],
+    "video": "https://www.youtube.com/embed/3sPF0Vknulw",
+    "reflection": "This project deepened my understanding of accessible interaction design and the importance of multimodal interfaces that cater to diverse user groups. It reinforced my **interest in developing human-centered technologies** that reduce digital inequality and empower broader participation."
+  },
+  {
+    "id": "prompirit-wizardofoz",
+    "title": "Prompirit - User Interview",
+    "subtitle": "User Interview using Wizard of Oz Technique",
+    "where": "Continued from the paper",
+    "thumbnail": "/img/projects/PrompiritWizardofOz.gif",
+    "myRole": [
+      "Experiment Designer",
+      "Full-stack Developer",
+      "UI/UX Designer",
+      "Interviewer",
+      "Result Analyst"
+    ],
+    "category": ["User Research"],
+    "credits": ["Sunyu Pang", "Hyun Lee", "Uran Oh*"],
+    "tools": ["React", "JavaScript", "Firebase", "Figma"],
+    "startDate": "2024-03",
+    "endDate": "2024-05",
+    "accentColor": "#FF4B86",
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From **Technical Pipeline** to **User-centric Application**"
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/PrompiritWizardofOz1.png"
+      },
+      {
+        "type": "text",
+        "value": "— Validating the emotional efficacy of our prompt engineering pipeline “Prompirit (IEEE IRI 2024)” through **ethical user research**."
+      }
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "The project was driven by the need to validate the improvement in user experience offered by the **“Prompirit” prompt engineering pipeline**. While statistical analysis and a prior user survey confirmed the pipeline’s strength, we conducted this follow-up interview study to gain deeper insights into user perceptions. Designed to overcome the common **shortcomings of existing models** (poor emotional fidelity, weak context comprehension), our primary objective was to measure the pipeline's effectiveness through authentic user interaction and feedback."
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "We conducted an **IRB-approved user study (N=18)** utilizing the **Wizard of Oz (WoZ) prototyping technique** to simulate the 'Prompirit' pipeline in a real-life application scenario."
+      },
+      {
+        "type": "text",
+        "value": "The interview structure was meticulously designed for comprehensive data collection:"
+      },
+      {
+        "type": "text",
+        "value": "**1. Baseline & Task**: Participants interacted with three tools (**DALL·E, Stable Diffusion, and the Prompirit prototype**) using pre-defined prompts. A **think-aloud protocol** was used to capture real-time thoughts on overall user experience."
+      },
+      {
+        "type": "text",
+        "value": "**2. Comparative Analysis**: The core task consisted of **three sessions** (covering both positive and negative emotions), where participants compared images from all three systems based on **alignment with text, aesthetic appeal, and emotional fidelity**. Each session was concluded by choosing the best tool."
+      },
+      {
+        "type": "text",
+        "value": "**3. Final Assessment**: The interview concluded with a structured interview gauging perceived problem-solving efficacy, intent for future use, necessary improvements, and potential application fields."
+      },
+      {
+        "type": "text",
+        "value": "As the main interviewer for 9 sessions, I could gain direct qualitative insight. I also designed and built the **Firebase-hosted prototype website** used for the interviews, ensuring a seamless and bias-free experience."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/PrompiritWizardofOz2.png"
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/PrompiritWizardofOz3.png"
+      },
+      {
+        "type": "text",
+        "value": "The study provided robust validation for the 'Prompirit' pipeline, confirming its superior user experience. Although not included in the published IEEE paper, this follow-up study provided meaningful insights into user-centered evaluation of generative AI and demonstrated the feasibility of prototype-based fair user testing."
+      }
+    ],
+    "outcomes": [
+      "Established a clear user preference, with 'Prompirit' **winning 34 of the 54 comparative sessions** (DALL·E: 20, Stable Diffusion: 0).",
+      "Validated the pipeline's problem-solving efficacy, confirmed by **66.7% of participants** (12 out of 18) who attested that 'Prompirit' successfully solved key shortcomings in existing image generation tools.",
+      "Demonstrated high market viability, achieving **100% user adoption intent** (10 Agree, 8 Strongly Agree) for daily life use.",
+      "Identified qualitative strengths through **thematic analysis** that highlighted superior emotional expressiveness, stylistic consistency, and contextual comprehension as primary drivers for user preference."
+    ],
+    "reflection": "This project provided invaluable experience in executing ethical, technically complex user research within the constraints of an IRB-approved protocol. It reinforced my belief that technological innovation must be validated through empathetic, user-centered methodologies. The success of the WoZ prototyping method, which I designed and deployed, cemented my skill in designing research tools that bridge the gap between the concept and authentic human interaction, significantly strengthening my ability to build human-centered AI systems in future research.",
+    "pinned": true
+  },
+  {
+    "id": "ihearyourstars",
+    "title": "I Hear Your Stars",
+    "subtitle": "Music Box Generation Web Application with Constellation",
+    "where": "Personal Project",
+    "thumbnail": "/img/projects/IHearYourStars.png",
+    "myRole": ["Frontend Developer"],
+    "category": ["Webpage"],
+    "credits": ["Seohyun Lee", "Gabin Lee", "Subeen Kim"],
+    "tools": ["React", "Node.js", "JavaScript", "Figma"],
+    "startDate": "2025-02",
+    "endDate": "2025-06",
+    "accentColor": "#8865E2",
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From **Personal User Input** to **Sharable Melodies**"
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/IHearYourStars1.png"
+      },
+      {
+        "type": "text",
+        "value": "— A web-based **generative music box** that transforms a user’s name, constellation, and favorite star into personalized melodies, simulating the tactile experience of a real music box."
+      }
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "This project set out to explore how algorithmic composition can be combined with playful interaction to create and share personalized musical experiences. Inspired by the **pin cylinder** in music box which resembles starry sky, we aimed to transform user’s name, constellation, and favorite star into music — bridging data and emotion through a web-based music box."
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "The goal was to make web-based interaction feel **tactile and intimate**, evoking the nostalgic act of winding a real music box. To achieve this, we conducted reference research to understand how the sensory experience of a physical music box could be reinterpreted in a web environment. Based on these insights, we focused on designing the music playback interface as the core of the project."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/IHearYourStars2.png"
+      },
+      {
+        "type": "text",
+        "value": "We also developed our **own rule-based algorithm for melody generation**, ensuring that each composition was uniquely created from user inputs rather than relying on AI. In addition, we built the data input page and the final sharing interface, allowing users to create, experience, and distribute their personalized music box seamlessly."
+      },
+      {
+        "type": "text",
+        "value": "As the frontend developer, I engineered the interactive **playback mechanics** and developed the **rotating crank feature** that replicated the physical winding motion of a music box. The crank’s rotation speed directly influences the melody’s tempo, while I optimized visual–audio synchronization for a smooth, immersive experience."
+      }
+    ],
+    "video": "https://www.youtube.com/embed/hsz2qGvZGaE",
+    "outcomes": [
+      "Generated a personalized melody composition algorithm using user input data.",
+      "Implemented a crank-based music box interaction with real-time speed-sensitive playback, showcasing frontend engineering that merged physical metaphors with digital interactivity.",
+      "Developed a tokenized sharing system via unique URLs."
+    ],
+    "links": [
+      {
+        "type": "github",
+        "value": "https://github.com/fourtunestar/ihearyourstars-FE"
+      }
+    ],
+    "reflection": "This project deepened my understanding of how **tangible metaphors** can enrich digital interactions. Designing the speed-sensitive playback challenged me to combine creative ideation with technical precision, ultimately strengthening my ability to build emotionally engaging, human-centered systems."
+  },
+  {
+    "id": "seniorssuspiciousdiary",
+    "title": "Senior’s Suspicious Diary",
+    "subtitle": "Freshman Guidance AR Mystery Game with Tips on Using Student ID Card",
+    "where": "2025-1 Virtual Reality Coursework",
+    "thumbnail": "/img/projects/Senior'sSus.png",
+    "myRole": [
+      "Game Designer",
+      "UI/UX Designer",
+      "Developer",
+      "Sound Designer"
+    ],
+    "category": ["Game", "AR"],
+    "credits": ["Jinyoung Oh", "Minkyung Ahn", "Eunchae Jung", "Hannah Lee"],
+    "tools": ["Unity", "C#", "Figma"],
+    "startDate": "2025-03",
+    "endDate": "2025-06",
+    "keyInsights": [
+      {
+        "type": "title",
+        "value": "# From **Plain Text Information** to **Immersive AR Experience**"
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Senior'sSus1.png"
+      },
+      {
+        "type": "text",
+        "value": "— transforming **bland, forgettable benefits** of the student ID card into an **engaging, story-driven AR game**, helping freshmen discover and remember the hidden campus life tips."
+      }
+    ],
+    "motivation": [
+      {
+        "type": "text",
+        "value": "While student ID cards are often seen as simple access tools, they actually unlock a wide range of campus services — from device rental services to various discounts. However, this information is often delivered as **plain text** during orientation, making it **forgettable and underutilized**."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Senior'sSus2.png"
+      }
+    ],
+    "approach": [
+      {
+        "type": "text",
+        "value": "To address this, our team developed “Senior’s Suspicious Diary”, a mobile AR mystery game that redesigns how campus information is delivered to freshmen. We **translated each tip directly into a physical campus location** through AR-based interactive exploration. As players follow the traces of a senior’s diary across key campus landmarks such as the ECC Art House, Central Library, Chapel, and Engineering Building, they uncover both **narrative clues** and **practical student ID card tips** through puzzles and AR recognition."
+      },
+      {
+        "type": "image",
+        "value": "/img/projects/Senior'sSus3.png"
+      },
+      {
+        "type": "text",
+        "value": "While contributing equally to development, I conceptualized and orchestrated the overall narrative and gameplay flow, designed intuitive mission interfaces inspired by familiar student apps, and crafted immersive sound design to enhance the eerie tone. Our collaborative team iterated, tested, and refined the gameplay together, ensuring a fully functional and engaging experience."
+      }
+    ],
+    "outcomes": [
+      "Designed and implemented core UI/UX elements to optimize user flow and maintain consistent visual identity",
+      "Delivered a fully functional mobile AR application that integrates storytelling, location-based tasks, and interactive puzzles",
+      "Enhanced immersion through sound design and collaborative debugging during field testing",
+      "Received positive feedback from faculty particularly with the narrative structure and the concept of immersive storytelling"
+    ],
+    "video": "https://www.youtube.com/embed/xo5HAvqzGxY",
+    "links": [
+      {
+        "type": "github",
+        "value": "https://github.com/Gamddalki/Team_RealizationMarket"
+      }
+    ],
+    "reflection": "This project bridged UI/UX design, narrative development, and AR technology — allowing me to experiment with **storytelling as a tool for abstract educational needs**. It reinforced my ability to translate plain text information into interactive, human-centered experiences. The positive feedback from both faculty and classmates, especially regarding the narrative and tone, reaffirmed the potential of storytelling as a design tool, **not just for entertainment but for engagement and retention**.",
+    "more": true,
+    "pinned": true
   }
 ]
