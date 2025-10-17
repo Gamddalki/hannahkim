@@ -1,39 +1,54 @@
-import React from "react";
+import React, { useCallback, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import projectData from "../data/projects.json";
 import PageContainer from "../Components/PageContainer";
 import Grid from "../Components/Grid";
 
-function Projects() {
+const PAGE_TITLE = "PROJECTS";
+const TAG_FIELD = "category";
+const SORT_FIELD = "startDate";
+
+const Projects = memo(() => {
   const navigate = useNavigate();
 
-  const handleCardClick = (project) => {
-    navigate(`/projects/${project.id}`);
-  };
+  const handleCardClick = useCallback(
+    (project) => {
+      navigate(`/projects/${project.id}`);
+    },
+    [navigate]
+  );
 
-  // Helper functions for MasonryGrid
-  const getImageSrc = (project) =>
-    `${process.env.PUBLIC_URL}/${project.thumbnail}`;
-  const getTitle = (project) => project.title;
-  const getSubtitle = (project) => project.subtitle;
-  const getMetaTags = (project) => project.category;
-  const getKey = (project) => project.id;
+  const getImageSrc = useCallback(
+    (project) => `${process.env.PUBLIC_URL}/${project.thumbnail}`,
+    []
+  );
+  const getTitle = useCallback((project) => project.title, []);
+  const getSubtitle = useCallback((project) => project.subtitle, []);
+  const getMetaTags = useCallback((project) => project.category, []);
+  const getKey = useCallback((project) => project.id, []);
+
+  const gridProps = useMemo(
+    () => ({
+      items: projectData,
+      onItemClick: handleCardClick,
+      getImageSrc,
+      getTitle,
+      getSubtitle,
+      getMetaTags,
+      getKey,
+      tagField: TAG_FIELD,
+      sortField: SORT_FIELD,
+    }),
+    [handleCardClick, getImageSrc, getTitle, getSubtitle, getMetaTags, getKey]
+  );
 
   return (
-    <PageContainer title="PROJECTS">
-      <Grid
-        items={projectData}
-        onItemClick={handleCardClick}
-        getImageSrc={getImageSrc}
-        getTitle={getTitle}
-        getSubtitle={getSubtitle}
-        getMetaTags={getMetaTags}
-        getKey={getKey}
-        tagField="category"
-        sortField="startDate"
-      />
+    <PageContainer title={PAGE_TITLE}>
+      <Grid {...gridProps} />
     </PageContainer>
   );
-}
+});
+
+Projects.displayName = "Projects";
 
 export default Projects;
