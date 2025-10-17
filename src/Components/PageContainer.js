@@ -33,7 +33,7 @@ const Title = styled.h1`
   font-size: 2.5rem;
   text-align: left;
   margin-bottom: 60px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.black};
 
   @media (min-width: 769px) and (max-width: 1024px) {
     font-size: 2rem;

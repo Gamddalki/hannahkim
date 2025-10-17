@@ -57,51 +57,25 @@ const OptimizedThumbnail = memo(
     className = "",
     priority = false,
     showOverlay = true,
-    useFilter = false,
     ...props
   }) => {
     const [loaded, setLoaded] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
     const imgRef = useRef(null);
-
-    // 필터된 이미지 URL 생성
-    const getFilteredSrc = (originalSrc) => {
-      if (!useFilter) return originalSrc;
-
-      const lastDotIndex = originalSrc.lastIndexOf(".");
-      if (lastDotIndex === -1) return originalSrc;
-
-      const nameWithoutExt = originalSrc.substring(0, lastDotIndex);
-      const extension = originalSrc.substring(lastDotIndex);
-
-      return `${nameWithoutExt}_filtered${extension}`;
-    };
-
-    const filteredSrc = getFilteredSrc(src);
 
     useEffect(() => {
       if (priority) {
-        // Preload critical images (both original and filtered)
-        const preloadImage = (imageSrc) => {
-          const link = document.createElement("link");
-          link.rel = "preload";
-          link.as = "image";
-          link.href = imageSrc;
-          document.head.appendChild(link);
-          return link;
-        };
-
-        const originalLink = preloadImage(src);
-        const filteredLink = useFilter ? preloadImage(filteredSrc) : null;
+        // Preload critical images
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = src;
+        document.head.appendChild(link);
 
         return () => {
-          document.head.removeChild(originalLink);
-          if (filteredLink) {
-            document.head.removeChild(filteredLink);
-          }
+          document.head.removeChild(link);
         };
       }
-    }, [src, filteredSrc, priority, useFilter]);
+    }, [src, priority]);
 
     const handleLoad = () => {
       setLoaded(true);
@@ -111,39 +85,24 @@ const OptimizedThumbnail = memo(
       setLoaded(true);
     };
 
-    const handleMouseEnter = () => {
-      if (useFilter) {
-        setIsHovered(true);
-      }
-    };
-
-    const handleMouseLeave = () => {
-      if (useFilter) {
-        setIsHovered(false);
-      }
-    };
-
     return (
       <ThumbnailContainer
         className={className}
         loaded={loaded}
         showOverlay={showOverlay}
-        useFilter={useFilter}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         {...props}
       >
         <Placeholder loaded={loaded} />
         <img
           ref={imgRef}
-          src={isHovered && useFilter ? filteredSrc : src}
+          src={src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           onLoad={handleLoad}
           onError={handleError}
           style={{
             opacity: loaded ? 1 : 0,
-            transition: "opacity 0.3s ease",
+            transition: "opacity 0.15s ease",
           }}
         />
       </ThumbnailContainer>
