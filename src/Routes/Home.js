@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useCallback, useMemo } from "react";
 import styled from "styled-components";
 import Grid from "../Components/Grid";
 import { useDataProcessing } from "../hooks/useDataProcessing";
@@ -66,36 +66,49 @@ const SectionTitle = styled.h3`
   }
 `;
 
+const HERO_HEADLINE = `Crafting experiential narrative architecture\nthrough affective + user-centered systems`;
+const HERO_SUBTITLE =
+  "Hannah is a creative technologist who leverages her\ninterdisciplinary background to expand narrative experiences.";
+const SECTION_TITLE = "Selected Works";
+
 const Home = memo(() => {
   const { selectedWorks } = useDataProcessing();
+
+  const getImageSrc = useCallback(
+    (item) => `${process.env.PUBLIC_URL}${item.thumbnail}`,
+    []
+  );
+  const getTitle = useCallback((item) => item.title, []);
+  const getSubtitle = useCallback((item) => item.subtitle, []);
+  const getKey = useCallback((item) => item.id, []);
+
+  const gridProps = useMemo(
+    () => ({
+      items: selectedWorks,
+      getImageSrc,
+      getTitle,
+      getSubtitle,
+      getKey,
+      showFilter: false,
+      showSeeAllUnderCard: true,
+      showPins: false,
+      showOverlay: false,
+      skipTwoColumn: true,
+      uniformAspect: "4/3",
+    }),
+    [selectedWorks, getImageSrc, getTitle, getSubtitle, getKey]
+  );
 
   return (
     <>
       <Main>
         <Hero>
-          <RightHeadline>
-            {`Crafting experiential narrative architecture\nthrough affective + user-centered systems`}
-          </RightHeadline>
-          <RightSub>
-            Hannah is a creative technologist who leverages her
-            interdisciplinary background to expand narrative experiences.
-          </RightSub>
+          <RightHeadline>{HERO_HEADLINE}</RightHeadline>
+          <RightSub>{HERO_SUBTITLE}</RightSub>
         </Hero>
 
-        <SectionTitle>Selected Works</SectionTitle>
-        <Grid
-          items={selectedWorks}
-          getImageSrc={(item) => `${process.env.PUBLIC_URL}${item.thumbnail}`}
-          getTitle={(item) => item.title}
-          getSubtitle={(item) => item.subtitle}
-          getKey={(item) => item.id}
-          showFilter={false}
-          showSeeAllUnderCard={true}
-          showPins={false}
-          showOverlay={false}
-          skipTwoColumn={true}
-          uniformAspect="4/3"
-        />
+        <SectionTitle>{SECTION_TITLE}</SectionTitle>
+        <Grid {...gridProps} />
       </Main>
     </>
   );
