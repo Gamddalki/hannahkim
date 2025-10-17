@@ -74,7 +74,7 @@ const Home = memo(() => {
       <Main>
         <Hero>
           <RightHeadline>
-            {`Crafting experiential narrative architecture\nthrough interactive + user-centered systems`}
+            {`Crafting experiential narrative architecture\nthrough affective + user-centered systems`}
           </RightHeadline>
           <RightSub>
             Hannah is a creative technologist who leverages her
