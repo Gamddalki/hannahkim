@@ -233,7 +233,8 @@ const Grid = ({
 
     return filtered.sort((a, b) => {
       // Prioritize pinned items, then sort by date
-      if (a.pinned !== b.pinned) return b.pinned - a.pinned;
+      if (a.pinned && !b.pinned) return -1;
+      if (!a.pinned && b.pinned) return 1;
       return new Date(b[sortField]) - new Date(a[sortField]);
     });
   }, [selectedTags, items, getMetaTags, tagField, sortField]);
