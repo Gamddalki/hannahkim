@@ -1,4 +1,4 @@
-import React, { memo, useState, useRef, useEffect, useCallback } from "react";
+import React, { memo, useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 
 const ThumbnailContainer = styled.div`
