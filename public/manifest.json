@@ -3,13 +3,13 @@
   "name": "Hannah Kim",
   "icons": [
     {
-      "src": "Heart.svg",
+      "src": "Heart.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "Heart.svg",
-      "type": "image/svg",
+      "src": "Heart.png",
+      "type": "image/png",
       "sizes": "192x192"
     }
   ],
