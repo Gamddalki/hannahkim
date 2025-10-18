@@ -1,10 +1,10 @@
 [
   {
-    "id": "anneoftheblackhair",
-    "title": "Anne of the Black Hair",
+    "id": "blackhairedanne",
+    "title": "Black-haired Anne",
     "subtitle": "Mobile Running Game",
     "where": "2021 Summer Project at KING",
-    "thumbnail": "/img/projects/AnneoftheBlackHair.jpg",
+    "thumbnail": "/img/projects/BlackHairedAnne.gif",
     "myRole": [
       "Team Lead",
       "UI/UX Designer",
@@ -24,7 +24,7 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/AnneoftheBlackHair1.png"
+        "value": "/img/projects/BlackHairedAnne1.png"
       },
       {
         "type": "text",
@@ -38,7 +38,7 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/AnneoftheBlackHair2.png"
+        "value": "/img/projects/BlackHairedAnne2.png"
       }
     ],
     "approach": [
@@ -48,7 +48,7 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/AnneoftheBlackHair3.png"
+        "value": "/img/projects/BlackHairedAnne3.png"
       },
       {
         "type": "text",
@@ -56,13 +56,14 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/AnneoftheBlackHair4.png"
+        "value": "/img/projects/BlackHairedAnne4.png"
       },
       {
         "type": "text",
         "value": "Our team collaboratively refined the **rumor gauge system** and continuously tested installations across devices to ensure a stable, fully functional APK. Each iteration improved gameplay balance and performance, transforming an imaginative pitch into a complete mobile experience."
       }
     ],
+    "video": "https://www.youtube.com/embed/XfFSbAXwLJk",
     "outcomes": [
       "Delivered a fully functional mobile game (playable on Android devices via APK installation) built from original concept to completion.",
       "Designed and implemented UI, character animations, items, and in-game sound",
