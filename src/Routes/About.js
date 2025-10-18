@@ -444,7 +444,9 @@ const About = memo(() => {
         <ProfileInfo>
           <h2>Hannah Kim</h2>
           <span>
-            Hannah is a Creative Technologist and Narrative Architect exploring
+            Hannah is a{" "}
+            <i style={{ fontWeight: "400" }}>Creative Technologist</i> and&nbsp;
+            <i style={{ fontWeight: "400" }}>Narrative Architect</i> exploring
             how technology can shape interactive storytelling and evoke
             collective emotion. Technically fluent and conceptually driven, she
             bridges artistic vision with engineering feasibility to craft
