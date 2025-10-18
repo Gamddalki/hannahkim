@@ -181,8 +181,8 @@ const InterestTag = styled.span`
   opacity: 0.8;
 
   @media (max-width: 768px) {
-    font-size: 0.7rem;
-    padding: 2px 7px;
+    font-size: 0.8rem !important;
+    padding: 2px 6px;
   }
 `;
 
@@ -197,6 +197,9 @@ const JourneyTitle = styled.h2`
   margin-bottom: 20px;
   color: ${(props) => props.theme.colors.black};
   text-align: left;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const JourneyList = styled.div`
@@ -352,16 +355,16 @@ const JourneyTitleWithLink = memo(({ title, link }) => {
   const parsed = useMemo(() => parseJourneyTitle(title, link), [title, link]);
 
   if (!parsed.hasLink) {
-    return <span style={{ display: "inline" }}>{title}</span>;
+    return <ItemTitle>{title}</ItemTitle>;
   }
 
   return (
-    <span style={{ display: "inline" }}>
+    <ItemTitle>
       {parsed.beforeAt}
       <JourneyLink href={link} target="_blank" rel="noreferrer">
         @{parsed.afterAt}
       </JourneyLink>
-    </span>
+    </ItemTitle>
   );
 });
 
