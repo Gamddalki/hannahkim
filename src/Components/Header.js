@@ -30,6 +30,10 @@ const Logo = styled.div`
   align-items: center;
   gap: 3px;
 
+  @media (max-width: 768px) {
+    gap: 2px;
+  }
+
   &:hover {
     img {
       transform: scale(1.1);
@@ -42,7 +46,7 @@ const Logo = styled.div`
     transition: transform 0.3s ease;
 
     @media (max-width: 768px) {
-      height: 25px;
+      height: 30px;
     }
   }
 
@@ -53,7 +57,9 @@ const Logo = styled.div`
     color: ${(props) => props.theme.colors.black};
 
     @media (max-width: 768px) {
-      display: none;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      font-weight: 500;
     }
   }
 `;
