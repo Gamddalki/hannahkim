@@ -1,4 +1,4 @@
-import React, { useCallback, memo } from "react";
+import React, { useCallback, memo, useMemo } from "react";
 import styled from "styled-components";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -74,7 +74,6 @@ const ProfileImage = styled.div`
 
   @media (max-width: 1024px) {
     width: 100%;
-    height: calc(100vw * 3 / 4);
   }
 `;
 
@@ -119,12 +118,14 @@ const ProfileInfo = styled.div`
   flex: 1;
 
   h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
     color: ${(props) => props.theme.colors.primary};
-    line-height: 1;
+    margin-bottom: 10px;
+    @media (max-width: 1024px) {
+      font-size: 2rem;
+    }
     @media (max-width: 768px) {
-      font-size: 2.5rem;
+      font-size: 1.7rem;
     }
   }
 
@@ -158,7 +159,7 @@ const InterestsSection = styled.div`
 const InterestsTitle = styled.h3`
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.black};
   text-align: left;
 `;
 
@@ -194,7 +195,7 @@ const JourneySection = styled.div`
 const JourneyTitle = styled.h2`
   font-size: 1.7rem;
   margin-bottom: 20px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.black};
   text-align: left;
 `;
 
@@ -266,6 +267,7 @@ const ItemType = styled.span`
   font-weight: normal;
   line-height: 1.2;
   opacity: 0.7;
+  display: block;
 
   @media (max-width: 768px) {
     font-size: 0.7rem;
@@ -280,9 +282,22 @@ const ItemTitle = styled.span`
   margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  display: inline;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
+  }
+`;
+
+const JourneyLink = styled.a`
+  font-weight: 600;
+  color: ${(props) => props.theme.colors.text};
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    cursor: pointer;
   }
 `;
 
@@ -308,6 +323,43 @@ const MoreButton = styled.button`
     padding: 6px 12px;
   }
 `;
+
+// Utility function to parse @ symbols and create link text
+const parseJourneyTitle = (title, link) => {
+  if (!link) return title;
+
+  const atIndex = title.indexOf("@");
+  if (atIndex === -1) return title;
+
+  const beforeAt = title.substring(0, atIndex);
+  const afterAt = title.substring(atIndex + 1);
+
+  return {
+    beforeAt,
+    afterAt,
+    hasLink: true,
+  };
+};
+
+// Memoized component for rendering journey title with links
+const JourneyTitleWithLink = memo(({ title, link }) => {
+  const parsed = useMemo(() => parseJourneyTitle(title, link), [title, link]);
+
+  if (!parsed.hasLink) {
+    return <span style={{ display: "inline" }}>{title}</span>;
+  }
+
+  return (
+    <span style={{ display: "inline" }}>
+      {parsed.beforeAt}
+      <JourneyLink href={link} target="_blank" rel="noreferrer">
+        @{parsed.afterAt}
+      </JourneyLink>
+    </span>
+  );
+});
+
+JourneyTitleWithLink.displayName = "JourneyTitleWithLink";
 
 const About = memo(() => {
   const [showAll, setShowAll] = React.useState(false);
@@ -381,19 +433,16 @@ const About = memo(() => {
           </SocialIcons>
         </LeftColumn>
         <ProfileInfo>
-          <h2>Hello, I'm Hannah Kim</h2>
+          <h2>Hannah Kim</h2>
           <span>
-            I am a <i>Creative Technologist</i> crafting narrative-driven user
-            experiences.
+            Hannah is a Creative Technologist and Narrative Architect exploring
+            how technology can shape interactive storytelling and evoke
+            collective emotion. Technically fluent and conceptually driven, she
+            bridges artistic vision with engineering feasibility to craft
+            robust, user-centered experiences.
           </span>
           <span>
-            I thrive at the intersection of technology and art, designing{" "}
-            <i>interactive systems</i> that merge <i>story and emotion</i>. From
-            emotion-driven prompt engineering research to XR games, my work
-            brings abstract ideas into tangible, interactive realities.
-          </span>
-          <span>
-            With a &nbsp;
+            With an interdisciplinary background, including &nbsp;
             <HighlightLink
               href="https://cse.ewha.ac.kr/"
               target="_blank"
@@ -409,46 +458,49 @@ const About = memo(() => {
             >
               B.A. in Humanities, Art and Media
             </HighlightLink>
-            &nbsp;from Ewha Womans University, Seoul, Korea, I take a
-            multidisciplinary approach that integrates design and development.
-            My experiences span from supporting VR accessibility user studies as
-            a research intern at&nbsp;
+            , she designs systems where stories are not just told, but felt —
+            from immersive games to affective computing interfaces. Her
+            experience spans both academic research, including work at the{" "}
             <HighlightLink
               href="https://hcil-ewha.github.io/homepage/"
               target="_blank"
               rel="noreferrer"
             >
-              Human-Computer Interaction Lab at Ewha
+              HCIL EWHA
             </HighlightLink>
-            , to shaping first-time user experiences and implementing
-            data-driven improvements for the Korean edu-tech startup{" "}
+            &nbsp;and&nbsp;
+            <HighlightLink
+              href="http://home.ewha.ac.kr/woony/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              AIM Lab
+            </HighlightLink>
+            &nbsp;(with an accepted paper at IEEE IRI'24), and practical
+            application in industry at&nbsp;
             <HighlightLink
               href="https://mildang.kr/"
               target="_blank"
               rel="noreferrer"
             >
               Mildang PT
-            </HighlightLink>{" "}
-            as an intern. Beyond that, I love to perform as a guitarist in a
-            band, composing original songs, and exploring live performances as a
-            medium for storytelling.
+            </HighlightLink>
+            .
           </span>
           <span>
-            My goal is to create experiences that are not only interactive but
-            also emotionally resonant — where technology becomes a stage for
-            human stories.
+            Outside of work, she plays guitar, composes music, and directs
+            performances, edits videos, treating visual, sound and space as
+            extensions of storytelling.
           </span>
 
           <InterestsSection>
             <InterestsTitle>Interests</InterestsTitle>
             <InterestsTags>
-              <InterestTag>#Creative Technology</InterestTag>
-              <InterestTag>#User Experience</InterestTag>
-              <InterestTag>#Interactive Design</InterestTag>
-              <InterestTag>#XR</InterestTag>
-              <InterestTag>#Storytelling</InterestTag>
-              <InterestTag>#Music Production</InterestTag>
-              <InterestTag>#Live Performance</InterestTag>
+              <InterestTag>#Experiential Narrative</InterestTag>
+              <InterestTag>#User-Centered Systems</InterestTag>
+              <InterestTag>#Affective Computing</InterestTag>
+              <InterestTag>#Spatial Computing</InterestTag>
+              <InterestTag>#Collective Immersion</InterestTag>
               <InterestTag>#Human-Computer Interaction</InterestTag>
             </InterestsTags>
           </InterestsSection>
@@ -456,7 +508,7 @@ const About = memo(() => {
       </ProfileSection>
 
       <JourneySection>
-        <JourneyTitle>My Journey</JourneyTitle>
+        <JourneyTitle>Past Experiences</JourneyTitle>
 
         <JourneyList>
           {visibleItems.map((item, index) => (
@@ -465,7 +517,8 @@ const About = memo(() => {
               <Content>
                 <ItemType>{item.type}</ItemType>
                 <ItemTitle>
-                  {icons[item.type] || item.icon || "📋"} {item.title}
+                  {icons[item.type] || item.icon || "📋"}{" "}
+                  <JourneyTitleWithLink title={item.title} link={item.link} />
                 </ItemTitle>
               </Content>
             </JourneyItem>
