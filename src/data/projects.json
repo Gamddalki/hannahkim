@@ -688,7 +688,7 @@
     "title": "I Hear Your Stars",
     "subtitle": "Music Box Generation Web Application with Constellation",
     "where": "Personal Project",
-    "thumbnail": "/img/projects/IHearYourStars.png",
+    "thumbnail": "/img/projects/IHearYourStarsv1.png",
     "myRole": ["Frontend Developer"],
     "category": ["Webpage"],
     "credits": ["Seohyun Lee", "Gabin Lee", "Subeen Kim"],
@@ -703,7 +703,7 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/IHearYourStars1.png"
+        "value": "/img/projects/IHearYourStars1v1.png"
       },
       {
         "type": "text",
@@ -723,7 +723,7 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/IHearYourStars2.png"
+        "value": "/img/projects/IHearYourStars2v1.png"
       },
       {
         "type": "text",
