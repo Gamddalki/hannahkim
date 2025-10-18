@@ -141,7 +141,7 @@ const ProfileInfo = styled.div`
 `;
 
 const HighlightLink = styled.a`
-  font-weight: 700;
+  font-weight: 600;
   color: ${(props) => props.theme.colors.text};
   text-decoration: none;
   transition: color 0.2s ease;
@@ -173,7 +173,7 @@ const InterestTag = styled.span`
   border: 1px solid ${(props) => props.theme.colors.hashText};
   padding: 4px 8px;
   font-size: 0.9rem !important;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 999px;
   transition: all 0.2s ease;
   margin: 0 !important;
@@ -291,7 +291,7 @@ const MoreButton = styled.button`
   border: 1px solid ${(props) => props.theme.colors.hashText};
   padding: 8px 16px;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 999px;
   transition: all 0.2s ease;
   background: none;

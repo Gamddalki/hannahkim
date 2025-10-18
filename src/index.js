@@ -98,6 +98,7 @@ h3{
 }
 span{
   font-family: 'PlusJakartaSans', -apple-system, sans-serif;
+  font-weight: 400;
   color: #444444;
   line-height: 22px;
   font-size: 16px;

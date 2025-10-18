@@ -194,7 +194,7 @@ const BackButton = styled.button`
   margin-top: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 400;
   width: fit-content;
 
   svg {
@@ -287,7 +287,7 @@ const Where = styled.span`
   }
 `;
 
-const Date = styled.div`
+const Date = styled.span`
   font-size: 0.9rem;
   color: ${(props) => props.theme.colors.text};
   text-align: right;
@@ -341,6 +341,7 @@ const InfoBlock = styled.div`
     font-size: 0.9rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    font-weight: 400;
 
     @media (max-width: 768px) {
       font-size: 0.8rem;
@@ -387,13 +388,14 @@ const StyledParagraph = styled.p`
   text-align: left;
   white-space: pre-line;
   margin-bottom: 10px;
+  font-weight: 400;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
     color: ${(props) => props.theme.colors.text};
   }
 `;
@@ -515,6 +517,7 @@ const LinkItem = styled.a`
   border: 1px solid ${(props) => props.theme.colors.text};
   border-radius: 999px;
   transition: all 0.3s ease;
+  font-weight: 400;
 
   &:hover {
     color: ${(props) => props.accentColor || props.theme.colors.primary};

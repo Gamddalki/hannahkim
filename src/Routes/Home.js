@@ -45,6 +45,7 @@ const RightSub = styled.p`
   font-size: 1rem;
   line-height: 1.4;
   text-align: right;
+  font-weight: 400;
   color: ${(props) => props.theme.colors.subText};
   max-width: 44ch;
   align-self: flex-end;

@@ -22,7 +22,8 @@ const HashtagFilterTag = styled.span`
     props.$isActive ? props.theme.colors.primary : props.theme.colors.hashText};
   background: transparent;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -100,7 +101,6 @@ const MetaTag = styled.span`
   border: 1px solid ${(props) => props.theme.colors.hashText};
   padding: 2px 8px;
   font-size: 0.65rem;
-  font-weight: 500;
   border-radius: 999px;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -138,6 +138,7 @@ const SeeAllButton = styled.button`
   display: flex;
   align-items: center;
   gap: 2px;
+  font-weight: 400;
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};

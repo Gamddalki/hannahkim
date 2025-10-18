@@ -9,9 +9,8 @@
 
 @font-face {
   font-family: "PlusJakartaSans";
-  src: url("../public/fonts/plus-jakarta-sans-v11-latin-regular.woff2")
-    format("woff2");
-  font-weight: 400;
+  src: url("../public/fonts/PlusJakartaSans[wght].woff2") format("woff2");
+  font-weight: 200 800;
   font-style: normal;
   font-display: swap;
 }

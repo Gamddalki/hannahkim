@@ -71,7 +71,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.headerText};
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   transition: color 0.3s ease;
 
   &:hover {
@@ -164,7 +164,7 @@ const MobileNavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.headerText};
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   padding: 8px 0;
   transition: color 0.3s ease;
 
