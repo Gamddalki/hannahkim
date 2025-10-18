@@ -18,10 +18,7 @@ const Publications = memo(() => {
     [navigate]
   );
 
-  const getImageSrc = useCallback(
-    (publication) => publication.thumbnail,
-    []
-  );
+  const getImageSrc = useCallback((publication) => publication.thumbnail, []);
   const getTitle = useCallback((publication) => publication.title, []);
   const getSubtitle = useCallback((publication) => publication.subtitle, []);
   const getMetaTags = useCallback((publication) => publication.indexTerms, []);

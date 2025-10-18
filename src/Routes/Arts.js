@@ -18,10 +18,7 @@ const Arts = memo(() => {
     [navigate]
   );
 
-  const getImageSrc = useCallback(
-    (art) => art.thumbnail,
-    []
-  );
+  const getImageSrc = useCallback((art) => art.thumbnail, []);
   const getTitle = useCallback((art) => art.title, []);
   const getSubtitle = useCallback((art) => art.subtitle, []);
   const getMetaTags = useCallback((art) => art.category, []);

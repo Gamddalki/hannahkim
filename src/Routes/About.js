@@ -290,6 +290,8 @@ const ItemTitle = styled.span`
 `;
 
 const JourneyLink = styled.a`
+  font-size: 1rem;
+  line-height: 1.5;
   font-weight: 600;
   color: ${(props) => props.theme.colors.text};
   text-decoration: none;
@@ -298,6 +300,10 @@ const JourneyLink = styled.a`
   &:hover {
     color: ${(props) => props.theme.colors.primary};
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `;
 

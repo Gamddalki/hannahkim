@@ -18,10 +18,7 @@ const Projects = memo(() => {
     [navigate]
   );
 
-  const getImageSrc = useCallback(
-    (project) => project.thumbnail,
-    []
-  );
+  const getImageSrc = useCallback((project) => project.thumbnail, []);
   const getTitle = useCallback((project) => project.title, []);
   const getSubtitle = useCallback((project) => project.subtitle, []);
   const getMetaTags = useCallback((project) => project.category, []);
