@@ -75,10 +75,7 @@ const SECTION_TITLE = "Selected Works";
 const Home = memo(() => {
   const { selectedWorks } = useDataProcessing();
 
-  const getImageSrc = useCallback(
-    (item) => `${process.env.PUBLIC_URL}${item.thumbnail}`,
-    []
-  );
+  const getImageSrc = useCallback((item) => item.thumbnail, []);
   const getTitle = useCallback((item) => item.title, []);
   const getSubtitle = useCallback((item) => item.subtitle, []);
   const getKey = useCallback((item) => item.id, []);

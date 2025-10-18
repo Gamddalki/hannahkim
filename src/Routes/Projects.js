@@ -19,7 +19,7 @@ const Projects = memo(() => {
   );
 
   const getImageSrc = useCallback(
-    (project) => `${process.env.PUBLIC_URL}/${project.thumbnail}`,
+    (project) => project.thumbnail,
     []
   );
   const getTitle = useCallback((project) => project.title, []);
