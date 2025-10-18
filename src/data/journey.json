@@ -1,36 +1,48 @@
 {
   "journeyData": [
     {
+      "year": "2025.10 - present",
+      "type": "Research",
+      "title": "Research Intern @ Audio & Interactive Media (AIM) Lab (Prof. Woon Seung Yeo)",
+      "link": "http://home.ewha.ac.kr/woony/"
+    },
+    {
       "year": "2025.07 - present",
       "type": "Activity",
       "icon": "🌎",
-      "title": "Language Exchange Cafe Leader @ Culcom"
+      "title": "Language Exchange Cafe Leader @ Culcom",
+      "link": "https://culcomedu3.com/"
     },
     {
       "year": "2025.06 - 2025.08",
       "type": "Volunteer",
-      "title": "2025 Incheon Pentaport Rock Festival \"Penta Rockers\" Information Team Lead"
+      "title": "“Penta Rockers” Information Team Lead @ 2025 Incheon Pentaport Rock Festival",
+      "link": "https://pentaport.co.kr/"
     },
     {
       "year": "2024.09 - 2025.02",
       "type": "Education",
-      "title": "Exchange Student @ KU Leuven (Faculty of Arts)"
+      "title": "Exchange Student @ KU Leuven (Faculty of Arts)",
+      "link": "https://www.kuleuven.be/english/kuleuven"
     },
     {
       "year": "2024.08",
       "type": "Research",
-      "title": "Presented an accepted paper @ IEEE IRI'24 in San Jose, USA"
+      "title": "Presented an accepted paper @ IEEE IRI'24 in San Jose, USA",
+      "link": "https://ieeexplore.ieee.org/document/10703854"
     },
     {
       "year": "2024.02 - 2024.07",
       "type": "Volunteer",
-      "title": "Museum Staff and Docent @ Ewha Womans University Museum"
+      "title": "Museum Staff and Docent @ Ewha Womans University Museum",
+      "link": "https://museum.ewha.ac.kr/"
     },
     {
       "year": "2023.07",
       "type": "Activity",
       "icon": "🎮",
-      "title": "EWHA-EPITA SUMMER IT PROGRAM — IT Trends in IoT & VR @ EPITA"
+      "title": "EWHA-EPITA SUMMER IT PROGRAM — IT Trends in IoT & VR @ EPITA",
+      "link": "https://www.epita.fr/en/"
     },
     {
       "year": "2023.02 - 2024.08",
@@ -41,50 +53,55 @@
       "year": "2022.09 - 2023.07",
       "type": "Club Activity",
       "icon": "🌍",
-      "title": "Ewha Womans University Korean Language Tutoring & Cultural Exchange Club \"Hangeulassi\""
+      "title": "Ewha Womans University Korean Language Tutoring & Cultural Exchange Club “Hangeulassi”"
     },
     {
       "year": "2022.05 - present",
       "type": "Activity",
       "icon": "🎸",
-      "title": "Band \"RGBN\""
+      "title": "Band “RGBN”"
     },
     {
       "year": "2021.11 - 2022.05",
       "type": "Work Experience",
-      "title": "Mildang Math Intern @ Mildang PT"
+      "title": "Mildang Math Intern @ Mildang PT",
+      "link": "https://mildang.kr/"
     },
     {
       "year": "2021.03 - 2024.02",
       "type": "Club Activity",
       "icon": "🎮",
-      "title": "Game Development Club \"KING\" @ Ewha Womans University"
+      "title": "Game Development Club “KING” @ Ewha Womans University"
     },
     {
       "year": "2020.07 - 2021.08",
       "type": "Research",
-      "title": "Undergraduate Research Intern @ HCIL EWHA (Prof. Uran Oh)"
+      "title": "Undergraduate Research Intern @ HCIL EWHA (Prof. Uran Oh)",
+      "link": "https://hcil-ewha.github.io/homepage/"
     },
     {
       "year": "2020.03 - 2026.02",
       "type": "Education",
-      "title": "B.E. in Computer Science and Engineering & B.A. in Humanities, Art and Media (Summa Cum Laude) @ Ewha Womans University"
+      "title": "B.E. in Computer Science and Engineering & B.A. in Humanities, Art and Media (Summa Cum Laude) @ Ewha Womans University",
+      "link": "https://www.ewha.ac.kr/"
     },
     {
       "year": "2018.03 - 2018.07",
       "type": "Education",
-      "title": "Drone manufacturing and flight training program @ Seoul Polytechnic School"
+      "title": "Drone manufacturing and flight training program @ Seoul Polytechnic School",
+      "link": "https://sis.sen.sc.kr/"
     },
     {
       "year": "2017.05 - 2019.07",
       "type": "Volunteer",
-      "title": "Teaching 'Scratch & micro:bit' to children from low-income families"
+      "title": "Teaching ‘Scratch & micro:bit’ to children from low-income families"
     },
     {
       "year": "2017.03 - 2020.02",
       "type": "Club Activity",
       "icon": "🎙️",
-      "title": "Broadcasting System \"JEBS\" 41st @ Jinseon Girl's High School"
+      "title": "Broadcasting System “JEBS” 41st @ Jinseon Girl's High School",
+      "link": "https://jinseon.sen.hs.kr/"
     }
   ],
   "icons": {
