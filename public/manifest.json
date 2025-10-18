@@ -1,14 +1,14 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Hannah Kim",
+  "name": "Hannah Kim",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "Heart.svg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "fabicon3.svg",
+      "src": "Heart.svg",
       "type": "image/svg",
       "sizes": "192x192"
     }

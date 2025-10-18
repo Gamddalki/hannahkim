@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "firebase": "^12.4.0",
     "gsap": "^3.13.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -44,7 +45,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://gamddalki.github.io/hannahkim/",
+  "homepage": "https://hannahkim.web.app",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }

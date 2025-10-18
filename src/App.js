@@ -14,7 +14,7 @@ import { theme } from "./theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <ScrollToTop />
         <Header />
         <Routes>
