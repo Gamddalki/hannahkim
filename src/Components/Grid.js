@@ -269,11 +269,12 @@ const Grid = ({
       )}
 
       <ProjectsGrid $skipTwoColumn={skipTwoColumn}>
-        {filteredItems.map((item) => {
+        {filteredItems.map((item, index) => {
           const itemKey = getItemValue(item, getKey, "id");
           const itemTitle = getItemValue(item, getTitle, "title");
           const itemImageSrc = getItemValue(item, getImageSrc, "thumbnail");
           const itemMetaTags = getItemValue(item, getMetaTags, tagField);
+          const isPriority = index < 3; // prioritize the first 3 items
 
           return (
             <ProjectCard key={itemKey} onClick={() => handleCardClick(item)}>
@@ -287,7 +288,7 @@ const Grid = ({
                   src={itemImageSrc}
                   alt={itemTitle}
                   showOverlay={false}
-                  priority={false}
+                  priority={isPriority}
                 />
               </ProjectImage>
               <ProjectInfo>
