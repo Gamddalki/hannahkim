@@ -388,10 +388,7 @@ const About = memo(() => {
       <ProfileSection>
         <LeftColumn>
           <ProfileImage>
-            <img
-              src={`${process.env.PUBLIC_URL}/img/hannah.jpg`}
-              alt="Hannah Kim"
-            />
+            <img src={`/img/hannah.jpg`} alt="Hannah Kim" />
           </ProfileImage>
           <SocialIcons>
             <IconContainer>

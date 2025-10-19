@@ -226,7 +226,7 @@ const Header = memo(() => {
     <>
       <HeaderDiv>
         <Logo onClick={handleLogoClick}>
-          <img src={`${process.env.PUBLIC_URL}/Heart.png`} alt="HANNAH" />
+          <img src={`/Heart.png`} alt="HANNAH" />
           <span>
             HANNAH <br />
             KIM

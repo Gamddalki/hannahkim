@@ -214,7 +214,7 @@ const RelatedProjects = memo(
               onClick={() => handleProjectClick(project)}
             >
               <OptimizedThumbnail
-                src={`${process.env.PUBLIC_URL}${project.thumbnail}`}
+                src={project.thumbnail}
                 alt={project.title}
                 showOverlay={true}
                 priority={false}

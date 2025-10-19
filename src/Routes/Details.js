@@ -17,6 +17,7 @@ import {
   Video01Icon,
 } from "@hugeicons/core-free-icons";
 import RelatedProjects from "../Components/RelatedProjects";
+import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 
 const DATA_MAP = {
   projects: projectData,
@@ -73,13 +74,6 @@ const ThumbnailContainer = styled.div`
   @media (max-width: 768px) {
     margin-bottom: 20px;
   }
-`;
-
-const ThumbnailImage = styled.img`
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 `;
 
 const KeyInsightsSection = styled(Section)`
@@ -347,7 +341,7 @@ const InfoBlock = styled.div`
   }
 `;
 
-const InsightImage = styled.img`
+const InsightImage = styled(OptimizedThumbnail)`
   max-width: 500px;
   width: 100%;
   height: auto;
@@ -405,7 +399,7 @@ const InsightText = styled(StyledParagraph)`
   }
 `;
 
-const OverviewImage = styled.img`
+const OverviewImage = styled(OptimizedThumbnail)`
   max-width: 100%;
   height: auto;
   margin: 20px 0;
@@ -647,8 +641,9 @@ const Details = memo(() => {
             return (
               <OverviewImage
                 key={index}
-                src={`${process.env.PUBLIC_URL}${item.value}`}
+                src={item.value}
                 alt={altText}
+                showOverlay={false}
               />
             );
           }
@@ -680,9 +675,11 @@ const Details = memo(() => {
           <Subtitle>{item.subtitle}</Subtitle>
 
           <ThumbnailContainer>
-            <ThumbnailImage
-              src={`${process.env.PUBLIC_URL}${item.thumbnail}`}
+            <OptimizedThumbnail
+              src={item.thumbnail}
               alt={item.title}
+              priority={true}
+              showOverlay={false}
             />
           </ThumbnailContainer>
 
@@ -724,8 +721,9 @@ const Details = memo(() => {
                 <InsightContainer>
                   <InsightImageContainer>
                     <InsightImage
-                      src={`${process.env.PUBLIC_URL}${processedKeyInsights.image}`}
+                      src={processedKeyInsights.image}
                       alt="Key insight"
+                      showOverlay={false}
                     />
                   </InsightImageContainer>
                   {processedKeyInsights.text && (
