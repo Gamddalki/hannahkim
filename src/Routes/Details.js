@@ -66,22 +66,20 @@ const InformationSection = styled(Section)`
 const ThumbnailContainer = styled.div`
   width: 100%;
   max-width: 800px;
-  height: 35vh;
   margin: 0 auto 30px auto;
   overflow: hidden;
+  aspect-ratio: 16/9;
 
   @media (max-width: 768px) {
     margin-bottom: 20px;
-    height: 20vh;
   }
 `;
 
 const ThumbnailImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
-  aspect-ratio: 16/9;
 `;
 
 const KeyInsightsSection = styled(Section)`
