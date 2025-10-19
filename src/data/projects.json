@@ -602,7 +602,7 @@
     "title": "Prompirit - User Interview",
     "subtitle": "User Interview using Wizard of Oz Technique",
     "where": "Continued from the paper",
-    "thumbnail": "/img/projects/PrompiritWizardofOz.gif",
+    "thumbnail": "/img/projects/PrompiritInterview.gif",
     "myRole": [
       "Experiment Designer",
       "Full-stack Developer",
@@ -623,7 +623,7 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/PrompiritWizardofOz1.png"
+        "value": "/img/projects/PrompiritInterview1.png"
       },
       {
         "type": "text",
@@ -663,11 +663,11 @@
       },
       {
         "type": "image",
-        "value": "/img/projects/PrompiritWizardofOz2.png"
+        "value": "/img/projects/PrompiritInterview2.png"
       },
       {
         "type": "image",
-        "value": "/img/projects/PrompiritWizardofOz3.png"
+        "value": "/img/projects/PrompiritInterview3.png"
       },
       {
         "type": "text",
