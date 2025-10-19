@@ -23,21 +23,14 @@ const Hero = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 `;
 
 const RightHeadline = styled.h1`
   margin: 0;
-  font-size: clamp(0.8rem, 4vw, 2rem);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   line-height: 1.2;
-  white-space: pre;
-  overflow-wrap: normal;
-  word-break: normal;
   color: ${(props) => props.theme.colors.primary};
-
-  @media (max-width: 480px) {
-    white-space: pre-line;
-  }
 `;
 
 const RightSub = styled.p`
@@ -49,6 +42,8 @@ const RightSub = styled.p`
   color: ${(props) => props.theme.colors.subText};
   max-width: 44ch;
   align-self: flex-end;
+  white-space: pre-line;
+  opacity: 0.8;
 
   @media (max-width: 768px) {
     margin: 8px 0 0 0;
@@ -58,7 +53,7 @@ const RightSub = styled.p`
 
 const SectionTitle = styled.h3`
   margin: 80px 0 20px 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: ${(props) => props.theme.colors.text};
 
   @media (max-width: 768px) {
@@ -67,9 +62,9 @@ const SectionTitle = styled.h3`
   }
 `;
 
-const HERO_HEADLINE = `Crafting experiential narrative architecture\nthrough affective + user-centered systems`;
+const HERO_HEADLINE = `Crafting experiential narrative architecture through affective + user‑centered systems`;
 const HERO_SUBTITLE =
-  "Hannah is a creative technologist who leverages her\ninterdisciplinary background to expand narrative experiences.";
+  "Hannah is a creative technologist who leverages her interdisciplinary background to expand narrative experiences.";
 const SECTION_TITLE = "Selected Works";
 
 const Home = memo(() => {

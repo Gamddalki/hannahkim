@@ -115,6 +115,11 @@ const ProjectTitle = styled.h3`
   font-size: 1.3rem;
   margin: 15px 0 7px 0;
   color: ${(props) => props.theme.colors.black};
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+  }
 `;
 
 const ProjectSubtitle = styled.h4`

@@ -11,7 +11,7 @@ const Container = styled.div`
     padding-top: 50px;
   }
   @media (max-width: 768px) {
-    padding-top: 20px;
+    padding-top: 30px;
   }
 `;
 
