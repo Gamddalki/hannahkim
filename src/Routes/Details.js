@@ -676,7 +676,7 @@ const Details = memo(() => {
 
           <ThumbnailContainer>
             <OptimizedThumbnail
-              src={item.thumbnail}
+              src={item.bignail}
               alt={item.title}
               priority={true}
               showOverlay={false}
