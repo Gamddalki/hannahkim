@@ -496,8 +496,8 @@ const About = memo(() => {
             .
           </span>
           <span>
-            Outside of work, she plays guitar, composes music, and directs
-            performances, edits videos, treating visual, sound and space as
+            Outside of work, she plays guitar, composes music, directs
+            performances, and edits videos, treating visual, sound and space as
             extensions of storytelling.
           </span>
 
