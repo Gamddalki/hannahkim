@@ -51,6 +51,23 @@ const RightSub = styled.p`
   }
 `;
 
+const DemoVideoWrapper = styled.div`
+  width: 100%;
+  aspect-ratio: 5 / 1;
+  overflow: hidden;
+  margin-bottom: 120px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 80px;
+  }
+`;
+
+const DemoVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 const SectionTitle = styled.h3`
   margin: 80px 0 20px 0;
   font-size: 1.4rem;
@@ -99,6 +116,10 @@ const Home = memo(() => {
           <RightHeadline>{HERO_HEADLINE}</RightHeadline>
           <RightSub>{HERO_SUBTITLE}</RightSub>
         </Hero>
+
+        <DemoVideoWrapper>
+          <DemoVideo src="/demo.mp4" autoPlay loop muted playsInline />
+        </DemoVideoWrapper>
 
         <SectionTitle>{SECTION_TITLE}</SectionTitle>
         <Grid {...gridProps} />
