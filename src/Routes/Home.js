@@ -79,7 +79,7 @@ const SectionTitle = styled.h3`
   }
 `;
 
-const HERO_HEADLINE = `Crafting experiential narrative architecture through affective + user‑centered systems`;
+const HERO_HEADLINE = `Crafting immersive narrative experiences through affective and user‑centered systems`;
 const HERO_SUBTITLE =
   "Hannah is a creative technologist who leverages her interdisciplinary background to expand narrative experiences.";
 const SECTION_TITLE = "Selected Works";
