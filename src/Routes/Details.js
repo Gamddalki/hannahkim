@@ -700,7 +700,9 @@ const Details = memo(() => {
             {item.tools
               ? renderInfoList("Tools", item.tools)
               : renderInfoList("Framework", item.framework)}
-            {renderInfoList("Credits", item.credits)}
+            {category === "publications"
+              ? renderInfoList("Authors", item.authors)
+              : renderInfoList("Credits", item.credits)}
           </InfoGrid>
         </ContentWrapper>
       </InformationSection>
