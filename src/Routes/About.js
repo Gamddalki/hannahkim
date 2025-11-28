@@ -439,24 +439,23 @@ const About = memo(() => {
           </SocialIcons>
         </LeftColumn>
         <ProfileInfo>
-          <h2>Hannah Kim</h2>
+          <h2>Hello, I'm Hannah Kim</h2>
           <span>
-            Hannah is a{" "}
-            <i style={{ fontWeight: "400" }}>Creative Technologist</i> and&nbsp;
-            <i style={{ fontWeight: "400" }}>Narrative Architect</i> exploring
-            how technology can shape interactive storytelling and evoke
-            collective emotion. Technically fluent and conceptually driven, she
-            bridges artistic vision with engineering feasibility to craft
-            robust, user-centered experiences.
+            I am a <i style={{ fontWeight: "400" }}>Creative Technologist</i>{" "}
+            and&nbsp;
+            <i style={{ fontWeight: "400" }}>Narrative Architect</i> crafting
+            spaces and systems where stories are not just told, but felt. To me,
+            art is the engineering of emotion and technology is its logical,
+            expressive medium.
           </span>
           <span>
-            With an interdisciplinary background, including &nbsp;
+            With an interdisciplinary background, including a&nbsp;
             <HighlightLink
               href="https://cse.ewha.ac.kr/"
               target="_blank"
               rel="noreferrer"
             >
-              B.E. in Computer Science &amp; Engineering
+              B.S. in Computer Science &amp; Engineering
             </HighlightLink>
             &nbsp;and a&nbsp;
             <HighlightLink
@@ -464,11 +463,11 @@ const About = memo(() => {
               target="_blank"
               rel="noreferrer"
             >
-              B.A. in Humanities, Art and Media
+              B.A. in Humanities, Cultural Arts, and Media
             </HighlightLink>
-            , she designs systems where stories are not just told, but felt —
-            from immersive games to affective computing interfaces. Her
-            experience spans both academic research, including work at the{" "}
+            , I bridge artistic vision with engineering feasibility. My practice
+            spans from immersive game development to affective computing
+            research at the{" "}
             <HighlightLink
               href="https://hcil-ewha.github.io/homepage/"
               target="_blank"
@@ -484,32 +483,47 @@ const About = memo(() => {
             >
               AIM Lab
             </HighlightLink>
-            &nbsp;(with an accepted paper at IEEE IRI'24), and practical
-            application in industry at&nbsp;
+            , highlighted by a publication at{" "}
+            <HighlightLink
+              href="https://ieeexplore.ieee.org/document/10703854/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              IEEE IRI'24
+            </HighlightLink>
+            . I have applied these insights to refine user-centered products in
+            the industry at&nbsp;
             <HighlightLink
               href="https://mildang.kr/"
               target="_blank"
               rel="noreferrer"
             >
-              Mildang PT
+              I Hate Flying Bugs Inc.
             </HighlightLink>
-            .
           </span>
           <span>
-            Outside of work, she plays guitar, composes music, directs
-            performances, and edits videos, treating visual, sound and space as
-            extensions of storytelling.
+            Beyond the code, I expand my storytelling practice through sound and
+            performance. As a composer, director, and lead guitarist for{" "}
+            <HighlightLink
+              href="https://www.youtube.com/@rgbnband"
+              target="_blank"
+              rel="noreferrer"
+            >
+              band RGBN
+            </HighlightLink>
+            , I view rhythm, visuals, and space as core elements of
+            storytelling.
           </span>
 
           <InterestsSection>
             <InterestsTitle>Interests</InterestsTitle>
             <InterestsTags>
-              <InterestTag>#Experiential Narrative</InterestTag>
-              <InterestTag>#User-Centered Systems</InterestTag>
               <InterestTag>#Affective Computing</InterestTag>
               <InterestTag>#Spatial Computing</InterestTag>
+              <InterestTag>#Experiential Narrative</InterestTag>
+              <InterestTag>#Intermedia</InterestTag>
+              <InterestTag>#Human-Centered AI</InterestTag>
               <InterestTag>#Collective Immersion</InterestTag>
-              <InterestTag>#Human-Computer Interaction</InterestTag>
             </InterestsTags>
           </InterestsSection>
         </ProfileInfo>
