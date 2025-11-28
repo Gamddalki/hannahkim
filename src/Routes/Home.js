@@ -105,6 +105,7 @@ const Home = memo(() => {
       showOverlay: false,
       skipTwoColumn: true,
       uniformAspect: "4/3",
+      disableSort: true,
     }),
     [selectedWorks, getImageSrc, getTitle, getSubtitle, getKey]
   );

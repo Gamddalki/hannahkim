@@ -27,8 +27,8 @@ const processMoreWorks = (data, categoryMapping) => {
 
 const processData = () => {
   const selectedWorks = [
-    ...processSelectedWorks(projectsData, "projects"),
     ...processSelectedWorks(publicationsData, "publications"),
+    ...processSelectedWorks(projectsData, "projects"),
     ...processSelectedWorks(artsData, "arts"),
   ];
 

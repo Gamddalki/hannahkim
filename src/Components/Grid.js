@@ -178,6 +178,7 @@ const Grid = ({
   showSeeAllUnderCard = false,
   showPins = true,
   skipTwoColumn = false,
+  disableSort = false,
 }) => {
   const navigate = useNavigate();
   const [selectedTags, setSelectedTags] = useState([]);
@@ -237,13 +238,17 @@ const Grid = ({
           })
         : items;
 
+    if (disableSort) {
+      return filtered;
+    }
+
     return filtered.sort((a, b) => {
       // Prioritize pinned items, then sort by date
       if (a.pinned && !b.pinned) return -1;
       if (!a.pinned && b.pinned) return 1;
       return new Date(b[sortField]) - new Date(a[sortField]);
     });
-  }, [selectedTags, items, getMetaTags, tagField, sortField]);
+  }, [selectedTags, items, getMetaTags, tagField, sortField, disableSort]);
 
   return (
     <>
