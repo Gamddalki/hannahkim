@@ -8,7 +8,6 @@
     "bignail": "/img/projects/BlackHairedAnne.gif",
     "myRole": [
       "Team Lead",
-      "UI/UX Designer",
       "Game Designer",
       "Graphic Designer",
       "Sound Designer"
@@ -164,23 +163,21 @@
   {
     "id": "sunthelight",
     "title": "Sun the Light",
-    "subtitle": "Classic PC Shooting Game",
+    "subtitle": "Greek Myth-inspired PC Shooting Game",
     "where": "3rd MaKINGJam first-place winning work",
     "thumbnail": "/img/projects/SunTheLight.gif",
     "bignail": "/img/projects/SunTheLight.gif",
     "myRole": [
-      "Project Manager",
-      "Script Writer",
+      "Project Lead",
+      "Game Designer",
       "Developer",
-      "Composer",
-      "Map Designer",
-      "Logo Designer"
+      "Composer & Sound Designer"
     ],
     "category": ["Game"],
     "credits": ["Gabin Lee", "Dohee Kim", "Jooie Hwang", "Yoojin Jeon"],
-    "tools": ["Unity", "C#", "Aesprite"],
+    "tools": ["Unity", "C#", "Aesprite", "Logic Pro"],
+    "date": "2022-11",
     "startDate": "2022-11",
-    "endDate": "2022-12",
     "accentColor": "#FE6E0E",
     "keyInsights": [
       {
@@ -193,13 +190,13 @@
       },
       {
         "type": "text",
-        "value": "— **Reframing** the power struggle between Helios and Zeus through classic arcade game mechanics."
+        "value": "— Reframing the power struggle between Helios and Zeus through classic arcade game mechanics."
       }
     ],
     "motivation": [
       {
         "type": "text",
-        "value": "The project began with a fascination for how ancient myths could be reimagined through gameplay rather than just text. Inspired by the phonetic link between **Sun the Light (Helios)** and **Thunderlight (Zeus)**, I built the concept around the conflict between the fading Titan Helios and the Olympian gods, exploring the mythic **shift of power from the Titans to Zeus**. Within the constraints of a **3-day game jam**, I aimed to craft a fast-paced arcade game that still carried narrative weight and symbolic tension — reflecting themes of divine pride, loss, and rebellion directly through game mechanics."
+        "value": "The project began with a fascination for how ancient myths could be reimagined through gameplay mechanics rather than just text. Inspired by the **phonetic link between Sun the Light (Helios) and Thunderlight (Zeus)**, I built the concept around the conflict between the fading Titan Helios and the Olympian gods, exploring the mythic **power shift from the Titans to Zeus**. Within the constraints of a 3-day hackathon, I aimed to craft a fast-paced arcade game that carried narrative weight — reflecting themes of divine pride, loss, and rebellion directly through game interactions."
       },
       {
         "type": "image",
@@ -209,7 +206,11 @@
     "approach": [
       {
         "type": "text",
-        "value": "Under a limited development period, our team adopted rapid prototyping to iterate quickly on narrative-driven gameplay. As the game designer, I developed the myth-based storyline and integrated Helios's journey directly into the level progression. I designed **mechanics that mirrored the mythic stakes**: flying too low burns villages, while flying too high provokes the constellations to cry."
+        "value": "Our team adopted rapid prototyping to iterate quickly on narrative-driven gameplay."
+      },
+      {
+        "type": "text",
+        "value": "**· Narrative-Mechanic Integration**: I developed the myth-based storyline and integrated Helios's journey directly into the level progression. I also designed mechanics that mirrored the mythic stakes. For instance, flying too low burns villages, while flying too high provokes the constellations to cry."
       },
       {
         "type": "image",
@@ -217,7 +218,7 @@
       },
       {
         "type": "text",
-        "value": "To deepen player immersion, I also created the cutscene start-animation and **composed an original soundtrack**. The sub-boss **Apollo** and the final confrontation with **Zeus** clearly visualized the struggle between the fading Titans and rising Olympians, a theme capped by a unique ending animation determined by the stage the player reached before game over."
+        "value": "**· Audiovisual Immersion**: I composed retro-style original soundtrack and created pixel-art cutscenes to visualize the mythic conflict. Key encounters, such as the sub-boss Apollo and the final confrontation with Zeus, vividly embodied the struggle between the fading Titans and rising Olympians. This theme was capped by unique ending animations dynamically determined by the player's survival stage, ensuring that the story and gameplay were inseparable."
       },
       {
         "type": "image",
@@ -225,9 +226,9 @@
       }
     ],
     "outcomes": [
-      "Developed a cohesive **myth-meets-arcade experience**, successfully integrating a strong, myth-based narrative with classic game mechanics.",
-      "Composed and produced an **original soundtrack** that enhanced immersion with its retro game music-inspired style.",
-      "Received **First Place** recognition at the 3rd MaKINGJam (Ewha Womans University) for the project's originality, completeness, and thematic depth."
+      "**1st Place Winner** at the 3rd MaKINGJam (Ewha Womans University) for outstanding originality and thematic completeness.",
+      "Successfully integrated a complex myth-based narrative into a cohesive arcade experience within a 3-day development cycle.",
+      "Produced an **original soundtrack and visual assets** that enhanced emotional immersion, demonstrating a multidisciplinary approach to game creation."
     ],
     "video": "https://www.youtube.com/embed/L7jEg6B22gY",
     "links": [
@@ -240,7 +241,7 @@
         "value": "https://soundcloud.com/llorjjrk/sets/sun-the-light"
       }
     ],
-    "reflection": "Unlike a previous game project (“Black-haired Anne”) where a lack of familiarity with Unity and initial game planning led to a prolonged development period, my improved technical understanding and robust planning enabled me to deliver a high-quality game within the 3-day constraint. This taught me the **immense power of technically grounded planning** in creative execution, cementing my commitment to strengthening my foundational knowledge in computer science and design.",
+    "reflection": "Unlike previous projects where a gap between vision and technical skill caused friction, my strengthened proficiency in Unity and C# allowed me to seamlessly translate a complex narrative vision into a cohesive gameplay experience. This project taught me that **technical rigor is the foundation of creative freedom**, empowering me to lead the team not just in management, but in creative and technical integration.",
     "selected": true
   },
   {

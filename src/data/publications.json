@@ -14,12 +14,12 @@
     ],
     "myRole": [
       "Team Lead",
-      "Text Emotion Recognition",
-      "Emotion Labels",
-      "LMER"
+      "Pipeline Development (Text Emotion Recognition)",
+      "Experiment Design (Emotion Labels)",
+      "Data Analysis (LMER)"
     ],
     "tools": ["Python", "PyTorch", "Hugging Face"],
-    "credits": ["Sunyu Pang", "Hyun Lee", "Uran Oh*"],
+    "authors": ["Hannah Kim", "Hyun Lee", "Sunyu Pang", "Uran Oh*"],
     "abstract": [
       {
         "type": "text",
@@ -31,8 +31,8 @@
       }
     ],
     "contributions": [
-      "The proposal of an automatic prompt engineering assistance that enhances AI-generated images with an emphasis on emotion and the matching style.",
-      "The empirical evaluation of Prompirit in comparisons to other prompt engineering methods in terms of both objective and subjective metrics."
+      "Proposed an automatic prompt engineering assistance that enhances AI-generated images with an emphasis on emotion and the matching style.",
+      "Empirically evaluated Prompirit in comparisons to other prompt engineering methods in terms of both objective and subjective metrics."
     ],
     "video": "https://www.youtube.com/embed/fpPVkb83wpY",
     "links": [
@@ -64,7 +64,7 @@
     ],
     "myRole": ["Author"],
     "framework": ["Adaptation Theory", "Intertextual Dialoguism"],
-    "credits": ["Hyungsook Lee*"],
+    "authors": ["Hannah Kim"],
     "accentColor": "#8A66A8",
     "abstract": [
       {
