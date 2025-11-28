@@ -40,7 +40,7 @@ const RightSub = styled.p`
   text-align: right;
   font-weight: 400;
   color: ${(props) => props.theme.colors.subText};
-  max-width: 44ch;
+  max-width: 46ch;
   align-self: flex-end;
   white-space: pre-line;
   opacity: 0.8;
@@ -81,7 +81,7 @@ const SectionTitle = styled.h3`
 
 const HERO_HEADLINE = `Crafting immersive narrative experiences through affective and user‑centered systems`;
 const HERO_SUBTITLE =
-  "Hannah is a creative technologist who leverages her interdisciplinary background to expand narrative experiences.";
+  "I am Hannah Kim, a creative technologist who blends computer science, arts and music to build emotionally resonant interactive worlds.";
 const SECTION_TITLE = "Selected Works";
 
 const Home = memo(() => {
