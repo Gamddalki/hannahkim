@@ -8,7 +8,7 @@
     "bignail": "/img/arts/ToRoger.png",
     "startDate": "2020-02",
     "endDate": "2020-08",
-    "category": ["Creative Writing", "Visual Design"],
+    "category": ["Narrative", "Visual Design"],
     "myRole": ["Writer", "Designer"],
     "tools": ["Adobe Photoshop"],
     "credits": ["bookcns"],
@@ -39,7 +39,7 @@
     "startDate": "2023-03",
     "endDate": "2023-06",
     "myRole": ["Screenwriter"],
-    "category": ["Creative Writing", "Film/Video"],
+    "category": ["Narrative", "Audiovisual"],
     "credits": ["Soojin Lee*"],
     "tools": ["Premiere Pro"],
     "overview": [
@@ -82,37 +82,24 @@
     "id": "0505",
     "title": "0505",
     "subtitle": "Original Song Composition and M/V Production",
-    "where": "RGBN band",
+    "where": "RGBN",
     "thumbnail": "/img/arts/0505_t.png",
     "bignail": "/img/arts/0505.png",
     "date": "5 May 2023",
     "startDate": "2023-05",
-    "category": [
-      "Music Production",
-      "Songwriting",
-      "Creative Writing",
-      "Film/Video",
-      "Band"
-    ],
-    "myRole": [
-      "Music Producer",
-      "Songwriter",
-      "Lyricist",
-      "M/V Director",
-      "Lead Guitarist"
-    ],
-    "tools": ["Logic Pro X", "Musescore", "Adobe Premiere Pro"],
-    "credits": [
-      "RGBN band",
-      "Yeji Seo",
-      "Juyeop Kim",
-      "Puzzle Recording Studio"
-    ],
+    "category": ["Music", "Narrative", "Audiovisual"],
+    "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
+    "credits": ["RGBN", "Yeji Seo", "Juyeop Kim", "Puzzle Recording Studio"],
     "accentColor": "#7ACF50",
     "overview": [
       {
         "type": "text",
-        "value": "“0505” is a song born from the desire to forever remember the initial flutter of chasing clouds that seemed just within reach. It is **our lifelong contract** left not on paper, but **in music** — a promise to be together until the day spring flowers bloom in winter."
+        "value": "“0505” is a song born from the desire to capture the fleeting flutter of youth. It is **our lifelong contract** left not on paper, but **in music** — a promise to stay together until spring flowers bloom in winter."
+      },
+      {
+        "type": "text",
+        "value": "As the **Creative Director and Composer** for RGBN, I led the entire production lifecycle, from composing the full band score to directing the music video. My goal was to systematically engineer an emotional nostalgia through sound and visuals."
       },
       {
         "type": "image",
@@ -120,17 +107,17 @@
       },
       {
         "type": "text",
-        "value": "As the **main composer and director**, I led the creation of “0505,” my band's first original song. I wrote the lyrics, composed the melody, and arranged the full band score for all instruments (drums, bass, two guitars, keyboard, and vocals). While collaborating with my bandmates to refine ideas, I oversaw the entire recording process and performed as the lead guitarist."
+        "value": "**· Musical Composition**: I wrote the lyrics and arranged the full score for all instruments (drums, bass, two guitars, keys, vocals). To evoke the “fleeting wonder of youth,” I deliberately designed the soundscape with retro synth textures, distortions, and rhythmic variations."
       },
       {
         "type": "text",
-        "value": "Beyond the music, this project extended into a **self-produced music video** that I also directed from start to finish. The video's narrative reflects the song's theme, following a protagonist who finds a camera on the street and, through its viewfinder, **relives cherished memories with friends** throughout Hongdae. I led the entire video production, from directing the filming and editing to ensuring the final product captured our collective vision."
+        "value": "**· Visual Narrative**: I directed, filmed, and edited the music video to extend the song’s story. Using two different aspect ratios and color grading, I visualized the protagonist’s perspective of finding a camera on the street and reliving cherished memories through its viewfinder. This created a seamless synchronization between the auditory build-up and the visual storytelling."
       }
     ],
     "outcomes": [
-      "Composed and released the first original song on SoundCloud.",
-      "Directed and produced a music video for YouTube, translating the song's narrative into a visual story.",
-      "Received high praise from a renowned Korean poet, Professor Jeong Kkeut-byeol, for the song's lyrics and introductory text, which were also submitted as a creative writing course assignment."
+      "Composed and released RGBN’s first original single on SoundCloud, managing the entire recording and production process.",
+      "Directed and produced a narrative music video for YouTube, successfully translating the song’s auditory themes into a visual narrative.",
+      "Received high praise from renowned poet **Prof. Jeong Kkeut-byeol** for the lyrical depth and narrative structure, recognizing the work as a successful fusion of literary sensibility and multimedia production."
     ],
     "video": "https://youtube.com/embed/Sjir0rqZ4yE",
     "links": [
@@ -140,22 +127,21 @@
         "value": "https://drive.google.com/file/d/1eBx60dLtS-nFkZviodEgJpTzwEPoE-bc/view"
       }
     ],
-    "selected": true,
-    "pinned": true
+    "selected": true
   },
   {
     "id": "runtimeerror",
     "title": "Runtime Error",
     "subtitle": "Original Song Composition",
-    "where": "RGBN band",
+    "where": "RGBN",
     "thumbnail": "/img/arts/RuntimeError_t.png",
     "bignail": "/img/arts/RuntimeError.png",
     "date": "3 March 2024",
     "startDate": "2024-03",
-    "category": ["Music Production", "Songwriting", "Creative Writing", "Band"],
+    "category": ["Music", "Narrative"],
     "myRole": ["Music Producer", "Songwriter", "Lyricist", "Lead Guitarist"],
-    "tools": ["Logic Pro X", "Musescore"],
-    "credits": ["RGBN band", "Yeji Seo"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Yeji Seo"],
     "accentColor": "#6306BE",
     "overview": [
       {
@@ -190,10 +176,10 @@
     "bignail": "/img/arts/SpringofYouth.png",
     "date": "3 March 2024",
     "startDate": "2024-03",
-    "category": ["Band", "Performance"],
+    "category": ["Performance"],
     "myRole": ["Director", "Arranger", "Lead Guitarist"],
-    "tools": ["Logic Pro X", "Musescore"],
-    "credits": ["RGBN band", "Band HOYA", "ABC", "Studio Monghyang"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Band HOYA", "ABC", "Studio Monghyang"],
     "accentColor": "#6FD467",
     "overview": [
       {
@@ -232,7 +218,7 @@
     "category": ["Visual Design"],
     "myRole": ["Creative Director", "Graphic Designer"],
     "tools": ["Adobe Photoshop", "Adobe Illustrator", "Figma"],
-    "credits": ["Jaeseo Kim", "RGBN band"],
+    "credits": ["Jaeseo Kim", "RGBN"],
     "accentColor": "#008CF5",
     "overview": [
       {
@@ -260,17 +246,17 @@
   },
   {
     "id": "sinchonbusking",
-    "title": "RGBN band Sinchon Busking",
+    "title": "RGBN Sinchon Busking",
     "subtitle": "Directing and Performing at Sinchon",
     "where": "2025 RGBN performance",
     "thumbnail": "/img/arts/SinchonBusking_t.png",
     "bignail": "/img/arts/SinchonBusking.png",
     "date": "1 June 2025",
     "startDate": "2025-06",
-    "category": ["Band", "Performance", "Visual Design"],
+    "category": ["Performance", "Visual Design"],
     "myRole": ["Director", "Graphic Designer", "Lead Guitarist"],
     "tools": ["Adobe Photoshop"],
-    "credits": ["RGBN band", "SEODAEMUN-GU Office"],
+    "credits": [" RGBN", "SEODAEMUN-GU Office"],
     "accentColor": "#7DAB3A",
     "overview": [
       {
@@ -297,15 +283,15 @@
     "id": "dear",
     "title": "Dear",
     "subtitle": "Original Song Composition",
-    "where": "RGBN band",
+    "where": "RGBN",
     "thumbnail": "/img/arts/Dear_t.png",
     "bignail": "/img/arts/Dear.jpg",
     "startDate": "2025-10",
     "endDate": "present",
-    "category": ["Music Production", "Songwriting", "Creative Writing", "Band"],
+    "category": ["Music", "Narrative"],
     "myRole": ["Music Producer", "Songwriter", "Lyricist", "Lead Guitarist"],
-    "tools": ["Logic Pro X", "Musescore"],
-    "credits": ["RGBN band", "Yeji Seo"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Yeji Seo"],
     "accentColor": "#008CF5",
     "overview": [
       {
