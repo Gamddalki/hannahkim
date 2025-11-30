@@ -5,7 +5,7 @@ import PageContainer from "../Components/PageContainer";
 import Grid from "../Components/Grid";
 
 const PAGE_TITLE = "PUBLICATIONS";
-const TAG_FIELD = "indexTerms";
+const TAG_FIELD = "type";
 const SORT_FIELD = "date";
 
 const Publications = memo(() => {
@@ -21,7 +21,7 @@ const Publications = memo(() => {
   const getImageSrc = useCallback((publication) => publication.thumbnail, []);
   const getTitle = useCallback((publication) => publication.title, []);
   const getSubtitle = useCallback((publication) => publication.subtitle, []);
-  const getMetaTags = useCallback((publication) => publication.indexTerms, []);
+  const getMetaTags = useCallback((publication) => publication.type, []);
   const getKey = useCallback((publication) => publication.id, []);
 
   const gridProps = useMemo(
