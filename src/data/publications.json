@@ -38,7 +38,7 @@
     "video": "https://www.youtube.com/embed/fpPVkb83wpY",
     "links": [
       {
-        "type": "document",
+        "type": "fullpaper",
         "value": "https://ieeexplore.ieee.org/document/10703854"
       },
       {
@@ -90,7 +90,7 @@
     ],
     "links": [
       {
-        "type": "document",
+        "type": "fullpaper",
         "value": "https://drive.google.com/file/d/1q4JF3iEXjw0r2mCIh1WuEnoDzT6Dzd-s/view"
       }
     ],

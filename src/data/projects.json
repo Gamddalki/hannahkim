@@ -75,7 +75,7 @@
         "type": "github",
         "value": "https://github.com/KingEwha/Anne-of-BlackHair"
       },
-      { "type": "reflection", "value": "https://gamddalki.tistory.com/6" }
+      { "type": "devlog", "value": "https://gamddalki.tistory.com/6" }
     ],
     "reflection": "This project marked my first full development cycle, transforming an idea into a finished, functioning mobile game. Because I was unfamiliar with the technical requirements of Unity and the process of game design, I had to repeatedly revise the design — especially in map structure and feature specifications. This experience taught me the importance of technically grounded design, motivating me to strengthen my computer science foundation."
   },
@@ -149,10 +149,7 @@
       "Recognized as **Best Project of the Course** by the professor."
     ],
     "presentation": "https://drive.google.com/file/d/17o8u7_fPe6iJCsUjke00HlAbPVtyByoK/preview",
-    "links": [
-      { "type": "reflection", "value": "https://gamddalki.tistory.com/7" },
-      { "type": "document", "value": "https://gamddalki.tistory.com/7" }
-    ],
+    "links": [{ "type": "devlog", "value": "https://gamddalki.tistory.com/7" }],
     "reflection": "This project marked my first experience conducting user research, which enabled us to design a product that met real user requirements. It also strengthened my ability to **translate social issues into actionable, design-driven solutions** — a skill I continue to apply in interactive media and human-centered design."
   },
   {
@@ -390,7 +387,7 @@
     ],
     "links": [
       {
-        "type": "reflection",
+        "type": "devlog",
         "value": "https://gamddalki.tistory.com/4"
       }
     ],
@@ -463,7 +460,7 @@
         "value": "https://github.com/OpenSWPlatform-TeamProject/openSWplatform"
       },
       {
-        "type": "reflection",
+        "type": "devlog",
         "value": "https://gamddalki.tistory.com/8"
       }
     ],

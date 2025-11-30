@@ -26,10 +26,10 @@ const DATA_MAP = {
 };
 
 const ICON_MAP = {
-  reflection: Notebook02Icon,
+  devlog: Notebook02Icon,
   github: GithubIcon,
   video: YoutubeIcon,
-  document: File02Icon,
+  fullpaper: File02Icon,
   score: FileMusicIcon,
   soundcloud: SoundcloudIcon,
   scenario: File02Icon,
@@ -831,8 +831,7 @@ const Details = memo(() => {
                             accentColor={item?.accentColor}
                           >
                             <LinkIcon>{getLinkIcon(link.type)}</LinkIcon>
-                            {category === "publications" &&
-                            link.type === "document"
+                            {link.type === "fullpaper"
                               ? "full paper"
                               : link.type}
                           </LinkItem>
