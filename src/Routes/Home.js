@@ -113,7 +113,7 @@ const Home = memo(() => {
       uniformAspect: "4/3",
       disableSort: true,
     }),
-    [selectedWorks, getImageSrc, getTitle, getSubtitle, getKey]
+    [selectedWorks, getImageSrc, getTitle, getSubtitle, getKey, getMetaTags]
   );
 
   return (

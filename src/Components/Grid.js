@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { PinIcon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
+import { PinIcon } from "@hugeicons/core-free-icons";
 import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const HashtagFilterContainer = styled.div`
