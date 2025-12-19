@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "portfolio-c1956"
+  },
+  "targets": {
+    "portfolio-c1956": {
+      "hosting": {
+        "main": [
+          "hannahkim"
+        ],
+        "min": [
+          "hannah-kim"
+        ]
+      }
+    }
   }
 }
