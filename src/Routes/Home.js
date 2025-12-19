@@ -91,6 +91,12 @@ const Home = memo(() => {
   const getTitle = useCallback((item) => item.title, []);
   const getSubtitle = useCallback((item) => item.subtitle, []);
   const getKey = useCallback((item) => item.id, []);
+  const getMetaTags = useCallback((item) => {
+    if (item.itemCategory === "publications") {
+      return item.type;
+    }
+    return item.category;
+  }, []);
 
   const gridProps = useMemo(
     () => ({
@@ -99,8 +105,8 @@ const Home = memo(() => {
       getTitle,
       getSubtitle,
       getKey,
-      showFilter: false,
-      showSeeAllUnderCard: true,
+      getMetaTags,
+      showFilter: true,
       showPins: false,
       showOverlay: false,
       skipTwoColumn: true,

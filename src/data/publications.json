@@ -7,7 +7,7 @@
     "thumbnail": "/img/publications/Prompirit_t.png",
     "bignail": "/img/publications/Prompirit1.png",
     "date": "07-09 August 2024",
-    "type": ["Conference Paper"],
+    "type": ["Conference Paper", "AI", "User Research"],
     "indexTerms": [
       "Prompt Engineering",
       "Text-to-Image GenAI",
@@ -48,52 +48,5 @@
     ],
     "selected": true,
     "pinned": true
-  },
-  {
-    "id": "loveinthebigcity",
-    "title": "Three Voices Narrating “Love in the Big City”",
-    "subtitle": "A Comparative Study of Narrative Transformation and Character Reconstruction across Novel, Film, and Drama Series – Focusing on episode ‘Jaehee/Miae’",
-    "where": "Bachelor’s Thesis, Ewha Womans University, 2025",
-    "thumbnail": "/img/publications/LoveintheBigCity_t.png",
-    "bignail": "/img/publications/LoveintheBigCity.png",
-    "date": "20 May 2025",
-    "type": ["Thesis"],
-    "indexTerms": [
-      "Narrative Analysis",
-      "Adaptation",
-      "Queer Representation",
-      "Korean Media"
-    ],
-    "myRole": ["Author"],
-    "framework": ["Adaptation Theory", "Intertextual Dialoguism"],
-    "authors": ["Hannah Kim"],
-    "accentColor": "#8A66A8",
-    "abstract": [
-      {
-        "type": "text",
-        "value": "Adapting a contemporary Korean novel across different media is more than a shift in form — it reveals transformations in meaning shaped by socio-cultural context. This thesis comparatively analyzes how Sang Young Park’s “Love in the Big City (2019)”, particularly its first episode ‘Jaehee’ (or ‘Miae’ in the drama), is reinterpreted through three media in contemporary contexts: the original novel, film (2024), and drama series (2024). Moving beyond traditional fidelity discourse, the study employs adaptation theory to analyze how each version constructs its own emotional and narrative logic within distinct socio-cultural frameworks.  Through close analysis of narrative structures, character portrayals, thematic shifts, and directorial approaches, the research investigates how queer identity and the core message are mediated, transformed, and re-signified across media."
-      },
-      {
-        "type": "image",
-        "value": "/img/publications/LoveintheBigCity1.png"
-      },
-      {
-        "type": "image",
-        "value": "/img/publications/LoveintheBigCity2.png"
-      }
-    ],
-    "contributions": [
-      "Positioned adaptation as a creative act of re-contextualization and re-signification by highlighting each medium’s distinct representational and expressive strategies.",
-      "Revealed how contemporary culture receives and redefines queer stories through detailed cross-media comparison, identifying whether such transformations are driven by medium-specific conventions, audience receptions, or broader contemporary contexts.",
-      "Demonstrated how medium affordances and audience contexts reshape both emotional resonance and narrative meaning.",
-      "Expanded the critical discourse on queer representation in Korean media by situating adaptation within evolving cultural and generational dynamics."
-    ],
-    "links": [
-      {
-        "type": "fullpaper",
-        "value": "https://drive.google.com/file/d/1q4JF3iEXjw0r2mCIh1WuEnoDzT6Dzd-s/view"
-      }
-    ],
-    "more": true
   }
 ]

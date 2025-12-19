@@ -215,9 +215,12 @@ const Header = memo(() => {
   const navLinks = useMemo(
     () => [
       { to: "/about", label: "ABOUT" },
-      { to: "/projects", label: "PROJECTS" },
-      { to: "/publications", label: "PUBLICATIONS" },
-      { to: "/arts", label: "ARTS" },
+      {
+        to: "https://drive.google.com/file/d/1AN7czPQ9Luthc7XB2-_fs5AvhHvxp1rV/view",
+        label: "CV",
+        target: "_blank",
+        rel: "noreferrer",
+      },
     ],
     []
   );
@@ -234,11 +237,28 @@ const Header = memo(() => {
         </Logo>
 
         <Nav>
-          {navLinks.map(({ to, label }) => (
-            <NavLink key={to} to={to} className={isActive(to) ? "active" : ""}>
-              {label}
-            </NavLink>
-          ))}
+          {navLinks.map(({ to, label, target, rel }) =>
+            target === "_blank" ? (
+              <NavLink
+                key={to}
+                as="a"
+                href={to}
+                target={target}
+                rel={rel}
+                className={isActive(to) ? "active" : ""}
+              >
+                {label}
+              </NavLink>
+            ) : (
+              <NavLink
+                key={to}
+                to={to}
+                className={isActive(to) ? "active" : ""}
+              >
+                {label}
+              </NavLink>
+            )
+          )}
         </Nav>
 
         <MobileMenuButton onClick={toggleMenu}>
@@ -252,16 +272,30 @@ const Header = memo(() => {
 
       <MobileMenu isOpen={isMenuOpen}>
         <MobileNav>
-          {navLinks.map(({ to, label }) => (
-            <MobileNavLink
-              key={to}
-              to={to}
-              onClick={handleNavClick}
-              className={isActive(to) ? "active" : ""}
-            >
-              {label}
-            </MobileNavLink>
-          ))}
+          {navLinks.map(({ to, label, target, rel }) =>
+            target === "_blank" ? (
+              <MobileNavLink
+                key={to}
+                as="a"
+                href={to}
+                target={target}
+                rel={rel}
+                onClick={handleNavClick}
+                className={isActive(to) ? "active" : ""}
+              >
+                {label}
+              </MobileNavLink>
+            ) : (
+              <MobileNavLink
+                key={to}
+                to={to}
+                onClick={handleNavClick}
+                className={isActive(to) ? "active" : ""}
+              >
+                {label}
+              </MobileNavLink>
+            )
+          )}
         </MobileNav>
       </MobileMenu>
     </>
