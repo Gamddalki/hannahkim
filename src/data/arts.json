@@ -58,6 +58,10 @@
       {
         "type": "text",
         "value": "The narrative uses the **science-fiction genre** to explore deeper themes of **memory, grief, and what it means to be human**. The core conflict is not just between a person and a technology, but between the comfort of a fabricated reality and the difficult truth of authentic emotion. The title, “Bug Effect,” refers not only to the technical glitches in AI but also to the emotional ‘bugs’ that disrupt artificial peace and ultimately lead to **growth and self-acceptance**."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/BugEffect2.png"
       }
     ],
     "video": "https://youtube.com/embed/IBN5mN6GGBw",
