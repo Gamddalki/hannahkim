@@ -7,14 +7,14 @@ const Main = styled.div`
   width: 100%;
   background: ${(props) => props.theme.colors.background};
   overflow: hidden;
-  padding: 160px 300px 100px 300px;
+  padding: 170px 300px 100px 300px;
 
   @media (max-width: 1200px) {
-    padding: 140px 60px 80px 60px;
+    padding: 150px 60px 80px 60px;
   }
 
   @media (max-width: 768px) {
-    padding: 120px 24px 60px 24px;
+    padding: 130px 24px 60px 24px;
   }
 `;
 
@@ -55,10 +55,10 @@ const DemoVideoWrapper = styled.div`
   width: 100%;
   aspect-ratio: 5 / 1;
   overflow: hidden;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
 
   @media (max-width: 768px) {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
 `;
 
@@ -70,12 +70,12 @@ const DemoVideo = styled.video`
 
 const SectionTitle = styled.h3`
   margin: 80px 0 20px 0;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: ${(props) => props.theme.colors.text};
 
   @media (max-width: 768px) {
     margin: 40px 0 20px 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 `;
 

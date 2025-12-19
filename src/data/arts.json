@@ -98,43 +98,5 @@
       }
     ],
     "selected": true
-  },
-  {
-    "id": "dear",
-    "title": "Dear",
-    "subtitle": "Original Song Composition",
-    "where": "RGBN",
-    "thumbnail": "/img/arts/Dear_t.png",
-    "bignail": "/img/arts/Dear.jpg",
-    "startDate": "2025-10",
-    "endDate": "present",
-    "category": ["Music", "Narrative"],
-    "myRole": ["Music Producer", "Songwriter", "Lyricist", "Lead Guitarist"],
-    "tools": ["Logic Pro", "MuseScore"],
-    "credits": ["RGBN", "Yeji Seo"],
-    "accentColor": "#008CF5",
-    "overview": [
-      {
-        "type": "text",
-        "value": "Someday, we’ll look back on this moment — our blue spring. “Dear” is a love letter we dedicate to us, who have become each other’s entire blue spring without noticing it."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/Dear1.png"
-      },
-      {
-        "type": "text",
-        "value": "This is an ongoing project for its recording and music video."
-      }
-    ],
-    "outcomes": ["Composed and performed original song"],
-    "video": "https://youtube.com/embed/Gpcpr-hnivU",
-    "links": [
-      { "type": "soundcloud", "value": "https://soundcloud.com/rgbn/" },
-      {
-        "type": "score",
-        "value": "https://drive.google.com/file/d/11OAY3KfmrAEFHM0b9oQIEgcFL9HvdHQe/view"
-      }
-    ]
   }
 ]
