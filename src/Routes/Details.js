@@ -66,7 +66,6 @@ const InformationSection = styled(Section)`
 
 const ThumbnailContainer = styled.div`
   width: 100%;
-  max-width: 800px;
   margin: 0 auto 30px auto;
   overflow: hidden;
   aspect-ratio: 16/9;
@@ -111,12 +110,11 @@ const MotivationSection = styled(Section)`
   align-items: flex-start;
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
     color: ${(props) => props.theme.colors.text};
     @media (max-width: 768px) {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
   }
 `;
@@ -125,12 +123,11 @@ const ApproachSection = styled(Section)`
   align-items: flex-start;
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
     color: ${(props) => props.theme.colors.text};
     @media (max-width: 768px) {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
   }
 `;
@@ -139,27 +136,25 @@ const OutcomesSection = styled(Section)`
   align-items: flex-start;
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
     color: ${(props) => props.theme.colors.text};
     @media (max-width: 768px) {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
   }
 `;
 
 const ReflectionSection = styled(Section)`
   align-items: flex-start;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
     color: ${(props) => props.theme.colors.text};
     @media (max-width: 768px) {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
   }
 `;
@@ -210,7 +205,7 @@ const BackButton = styled.button`
 `;
 
 const ContentWrapper = styled.div`
-  max-width: 1100px;
+  max-width: 800px;
   width: 100%;
   text-align: left;
   display: flex;
@@ -221,30 +216,14 @@ const ContentWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+  margin: 0 0 20px 0;
   color: ${(props) => props.theme.colors.text};
   line-height: 1.2;
-  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 2rem;
     margin: 0 0 6px 0;
-  }
-`;
-
-const Subtitle = styled.h2`
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0 0 30px 0;
-  color: ${(props) => props.theme.colors.text};
-  text-align: center;
-  opacity: 0.8;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    margin: 0 0 20px 0;
   }
 `;
 
@@ -253,7 +232,6 @@ const MetaInfo = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto 20px auto;
-  max-width: 800px;
   width: 100%;
 
   @media (max-width: 1024px) {
@@ -268,7 +246,7 @@ const MetaInfo = styled.div`
 `;
 
 const Where = styled.span`
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.text};
   text-align: left;
   opacity: 0.7;
@@ -280,7 +258,7 @@ const Where = styled.span`
 `;
 
 const Date = styled.span`
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.text};
   text-align: right;
   opacity: 0.7;
@@ -294,7 +272,6 @@ const Date = styled.span`
 
 const InfoGrid = styled.div`
   width: 100%;
-  max-width: 800px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(10px, 5vw, 100px);
@@ -313,8 +290,9 @@ const InfoBlock = styled.div`
 
   h4 {
     margin: 0 0 10px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
+    opacity: 0.7;
 
     @media (max-width: 768px) {
       font-size: 0.8rem;
@@ -330,10 +308,11 @@ const InfoBlock = styled.div`
 
   li {
     margin-bottom: 8px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-weight: 400;
+    opacity: 0.7;
 
     @media (max-width: 768px) {
       font-size: 0.8rem;
@@ -352,7 +331,7 @@ const InsightImage = styled(OptimizedThumbnail)`
 const InsightTitle = styled.h1`
   color: ${(props) => props.theme.colors.text};
   text-align: left;
-  font-size: 3rem;
+  font-size: 2.2rem;
   line-height: 1;
   white-space: pre-line;
 
@@ -374,7 +353,7 @@ const StyledParagraph = styled.p`
   color: ${(props) => props.theme.colors.text};
 
   font-size: 1rem;
-  line-height: 1.6rem;
+  line-height: 1.5rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
   text-align: left;
@@ -408,14 +387,11 @@ const OverviewImage = styled(OptimizedThumbnail)`
 
 const OutcomesContainer = styled.div`
   display: flex;
-  gap: 40px;
   align-items: flex-start;
   margin-bottom: 20px;
+  flex-direction: column;
+  gap: 10px;
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    gap: 10px;
-  }
   @media (max-width: 768px) {
     margin-bottom: 0px;
   }
@@ -442,13 +418,8 @@ const OutcomeContent = styled.div`
 `;
 
 const PDFSection = styled.div`
-  flex: 0 0 500px;
-  max-width: 500px;
-
-  @media (max-width: 1024px) {
-    flex: 1;
-    width: 100%;
-  }
+  flex: 1;
+  width: 100%;
 `;
 
 const PDFViewer = styled.iframe`
@@ -468,13 +439,8 @@ const PDFViewer = styled.iframe`
 `;
 
 const VideoSection = styled.div`
-  flex: 0 0 500px;
-  max-width: 500px;
-
-  @media (max-width: 1024px) {
-    flex: 1;
-    width: 100%;
-  }
+  flex: 1;
+  width: 100%;
 `;
 
 const VideoViewer = styled.iframe`
@@ -562,14 +528,14 @@ const Details = memo(() => {
     () => ({
       p: (props) => <StyledParagraph {...props} accentColor={accentColor} />,
     }),
-    [accentColor]
+    [accentColor],
   );
 
   const renderMarkdownWithParagraph = useCallback(
     (content) => (
       <ReactMarkdown components={markdownComponents}>{content}</ReactMarkdown>
     ),
-    [markdownComponents]
+    [markdownComponents],
   );
 
   const renderInfoList = useCallback(
@@ -583,7 +549,7 @@ const Details = memo(() => {
         </ul>
       </InfoBlock>
     ),
-    []
+    [],
   );
 
   const getLinkIcon = useCallback((type) => {
@@ -596,21 +562,21 @@ const Details = memo(() => {
     () => ({
       h1: (props) => <InsightTitle {...props} accentColor={accentColor} />,
     }),
-    [accentColor]
+    [accentColor],
   );
 
   const insightTextComponents = useMemo(
     () => ({
       p: (props) => <InsightText {...props} accentColor={accentColor} />,
     }),
-    [accentColor]
+    [accentColor],
   );
 
   const fallbackMarkdownComponents = useMemo(
     () => ({
       p: StyledParagraph,
     }),
-    []
+    [],
   );
 
   // keyInsights를 메모이제이션으로 최적화
@@ -652,7 +618,7 @@ const Details = memo(() => {
       }
       return renderMarkdownWithParagraph(content);
     },
-    [renderMarkdownWithParagraph]
+    [renderMarkdownWithParagraph],
   );
 
   useEffect(() => {
@@ -671,9 +637,6 @@ const Details = memo(() => {
     <div>
       <InformationSection>
         <ContentWrapper>
-          <Title>{item.title}</Title>
-          <Subtitle>{item.subtitle}</Subtitle>
-
           <ThumbnailContainer>
             <OptimizedThumbnail
               src={item.bignail}
@@ -691,6 +654,8 @@ const Details = memo(() => {
                 : `${item.startDate} ~ ${item.endDate}`}
             </Date>
           </MetaInfo>
+
+          <Title>{item.title}</Title>
 
           <InfoGrid>
             {category === "publications"
@@ -763,7 +728,7 @@ const Details = memo(() => {
               item.motivation || item.abstract,
               category === "publications"
                 ? "Abstract image"
-                : "Motivation image"
+                : "Motivation image",
             )}
           </ContentWrapper>
         </MotivationSection>

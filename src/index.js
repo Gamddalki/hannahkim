@@ -50,7 +50,7 @@ table {
 }
 *{
   box-sizing: border-box;
-  font-family: "PlusJakartaSans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   line-height: 1.2;
@@ -73,34 +73,34 @@ button {
     background: none;
   }
 h1{
-  font-family: 'BricolageGrotesque', -apple-system, sans-serif;
+  font-family: 'Figtree', -apple-system, sans-serif;
   color:#222222;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 55px;
   font-size: 90px;
   display: block;
 }
 h2{
-  font-family: 'BricolageGrotesque', -apple-system, sans-serif;
+  font-family: 'Figtree', -apple-system, sans-serif;
   color: #FF2020;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 45px;
   font-size: 10px;
   display: block;
 }
 h3{
-  font-family: 'BricolageGrotesque', -apple-system, sans-serif;
+  font-family: 'Figtree', -apple-system, sans-serif;
   color: #FF2020;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 25px;
   font-size: 12px;
   display: block;
 }
 span{
-  font-family: 'PlusJakartaSans', -apple-system, sans-serif;
+  font-family: 'Figtree', -apple-system, sans-serif;
   font-weight: 400;
   color: #444444;
-  line-height: 22px;
+  line-height: 1.5rem;
   font-size: 16px;
   display: block;
 }
@@ -127,5 +127,5 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

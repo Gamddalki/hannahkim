@@ -18,39 +18,6 @@ const Main = styled.div`
   }
 `;
 
-const Hero = styled.div`
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-bottom: 100px;
-`;
-
-const RightHeadline = styled.h1`
-  margin: 0;
-  font-size: clamp(1.2rem, 4vw, 2.5rem);
-  line-height: 1.2;
-  color: ${(props) => props.theme.colors.primary};
-`;
-
-const RightSub = styled.p`
-  margin: 16px 0 0 0;
-  font-size: 1rem;
-  line-height: 1.4;
-  text-align: right;
-  font-weight: 400;
-  color: ${(props) => props.theme.colors.subText};
-  max-width: 46ch;
-  align-self: flex-end;
-  white-space: pre-line;
-  opacity: 0.8;
-
-  @media (max-width: 768px) {
-    margin: 8px 0 0 0;
-    font-size: 0.9rem;
-  }
-`;
-
 const DemoVideoWrapper = styled.div`
   width: 100%;
   aspect-ratio: 5 / 1;
@@ -79,9 +46,6 @@ const SectionTitle = styled.h3`
   }
 `;
 
-const HERO_HEADLINE = `Crafting immersive narrative experiences through affective and user‑centered systems`;
-const HERO_SUBTITLE =
-  "I am Hannah Kim, a creative technologist who blends computer science, arts and music to build emotionally resonant interactive worlds.";
 const SECTION_TITLE = "Selected Works";
 
 const Home = memo(() => {
@@ -113,10 +77,6 @@ const Home = memo(() => {
   return (
     <>
       <Main>
-        <Hero>
-          <RightHeadline>{HERO_HEADLINE}</RightHeadline>
-          <RightSub>{HERO_SUBTITLE}</RightSub>
-        </Hero>
 
         <DemoVideoWrapper>
           <DemoVideo src="/demo.mp4" autoPlay loop muted playsInline />

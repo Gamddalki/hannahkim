@@ -1,23 +1,22 @@
 @font-face {
   font-family: "BricolageGrotesque";
-  src: url("../public/fonts/BricolageGrotesque[opsz,wdth,wght].woff2")
-    format("woff2");
+  src: url("../public/fonts/Figtree[wght].woff2") format("woff2");
   font-weight: 200 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PlusJakartaSans";
-  src: url("../public/fonts/PlusJakartaSans[wght].woff2") format("woff2");
+  font-family: "Figtree";
+  src: url("../public/fonts/Figtree[wght].woff2") format("woff2");
   font-weight: 200 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PlusJakartaSans";
-  src: url("../public/fonts/PlusJakartaSans-Italic[wght].woff") format("woff");
+  font-family: "Figtree";
+  src: url("../public/fonts/Figtree-Italic[wght].woff2") format("woff");
   font-weight: 200 800;
   font-style: italic;
   font-display: swap;

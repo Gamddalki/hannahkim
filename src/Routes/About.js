@@ -131,7 +131,6 @@ const ProfileInfo = styled.div`
 
   span {
     font-size: 1rem;
-    line-height: 1.7;
     margin-bottom: 15px;
     color: ${(props) => props.theme.colors.text};
     display: block;
