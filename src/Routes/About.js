@@ -392,7 +392,7 @@ const About = memo(() => {
           <SocialIcons>
             <IconContainer>
               <IconLink
-                href="mailto:hannahk01@ewha.ac.kr"
+                href="mailto:khn@stanford.edu"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -440,41 +440,35 @@ const About = memo(() => {
         <ProfileInfo>
           <h2>Hello, I'm Hannah Kim</h2>
           <span>
-            I am a <i style={{ fontWeight: "350" }}>Creative Technologist</i>{" "}
+            As a <i style={{ fontWeight: "350" }}>Creative Technologist</i>{" "}
             and&nbsp;
-            <i style={{ fontWeight: "350" }}>Narrative Architect</i> crafting
-            spaces and systems where stories are not just told, but felt. To me,
-            art is the engineering of emotion and technology is its logical,
-            expressive medium.
+            <i style={{ fontWeight: "350" }}>Narrative Architect</i>, I design
+            environments where narratives are experienced through sound, space,
+            and interactive media. I am currently pursuing an{" "}
+            <HighlightLink
+              href="https://ccrma.stanford.edu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              M.A./M.S.T. at Stanford CCRMA
+            </HighlightLink>
+            , where I explore audio and computation as expressive mediums for
+            shaping perception and emotion.
           </span>
           <span>
-            With an interdisciplinary background, including a&nbsp;
-            <HighlightLink
-              href="https://cse.ewha.ac.kr/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              B.S. in Computer Science &amp; Engineering
-            </HighlightLink>
-            &nbsp;and a&nbsp;
-            <HighlightLink
-              href="http://my.ewha.ac.kr/e600195/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              B.A. in Humanities, Cultural Arts, and Media
-            </HighlightLink>
-            , I bridge artistic vision with engineering feasibility. My practice
-            spans from immersive game development to affective computing
-            research at the{" "}
+            Grounded in my dual background in Computer Science and Media, my
+            work spans from user-centered product development in the tech
+            industry to affective computing research. Bridging artistic vision
+            with engineering feasibility, I have explored human-AI interaction
+            and user emotion at{" "}
             <HighlightLink
               href="https://hcil-ewha.github.io/homepage/"
               target="_blank"
               rel="noreferrer"
             >
               HCIL EWHA
-            </HighlightLink>
-            &nbsp;and&nbsp;
+            </HighlightLink>{" "}
+            and{" "}
             <HighlightLink
               href="http://home.ewha.ac.kr/woony/"
               target="_blank"
@@ -482,36 +476,20 @@ const About = memo(() => {
             >
               AIM Lab
             </HighlightLink>
-            , highlighted by a publication at{" "}
-            <HighlightLink
-              href="https://ieeexplore.ieee.org/document/10703854/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              IEEE IRI'24
-            </HighlightLink>
-            . I have applied these insights to refine user-centered products in
-            the industry at&nbsp;
-            <HighlightLink
-              href="https://mildang.kr/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              I Hate Flying Bugs Inc.
-            </HighlightLink>
+            .
           </span>
           <span>
-            Beyond the code, I expand my storytelling practice through sound and
-            performance. As a composer, director, and lead guitarist for{" "}
+            Beyond the code, you will often find me on stage as the lead
+            guitarist and composer for the{" "}
             <HighlightLink
               href="https://www.youtube.com/@rgbnband"
               target="_blank"
               rel="noreferrer"
             >
               band RGBN
-            </HighlightLink>
-            , I view rhythm, visuals, and space as core elements of
-            storytelling.
+            </HighlightLink>{" "}
+            or with a camera in hand, shooting visual films. I simply love
+            crafting experiences that move people!{" "}
           </span>
 
           <InterestsSection>
