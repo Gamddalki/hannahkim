@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 
 const FooterDiv = styled.div`
   width: 100%;
@@ -7,6 +9,8 @@ const FooterDiv = styled.div`
   padding: 30px;
   height: 150px;
   background-color: ${(props) => props.theme.colors.footer};
+  display: flex;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -27,11 +31,36 @@ const FooterDiv = styled.div`
   }
 `;
 
-function Footer() {
+const ThemeToggleButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: ${(props) => props.theme.colors.footerText};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: all 0.3s ease;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    transform: translateY(-2px);
+  }
+`;
+
+function Footer({ isDarkMode, toggleTheme }) {
   return (
     <FooterDiv>
-      <span>&copy; 2025 Hannah Kim</span>
-      <span>Last Updated: 2025.12</span>
+      <span>&copy; 2026 Hannah Kim</span>
+      <span>Last Updated: 2026.04</span>
+      <ThemeToggleButton onClick={toggleTheme} aria-label="Toggle Dark Mode">
+        <HugeiconsIcon icon={isDarkMode ? Sun03Icon : Moon02Icon} />
+      </ThemeToggleButton>
     </FooterDiv>
   );
 }

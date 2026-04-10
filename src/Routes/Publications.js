@@ -14,7 +14,7 @@ const ListContainer = styled.div`
 `;
 
 const PublicationItem = styled.div`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.footerText};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.hashText};
   padding: 2rem 0;
 
   &:last-child {
@@ -108,7 +108,6 @@ const Details = styled.div`
 const Abstract = styled.span`
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.text};
-  line-height: 1.6;
   margin: 0;
 `;
 
