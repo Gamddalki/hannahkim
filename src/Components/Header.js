@@ -3,24 +3,29 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderDiv = styled.header`
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
+  background: ${(props) => props.theme.colors.header};
+  z-index: 1000;
+`;
+
+const ContentsDiv = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 220px;
-  background: ${(props) => props.theme.colors.header};
-  z-index: 1000;
-  border-bottom: 1px solid ${(props) => props.theme.colors.black};
+  padding: 40px 30px;
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    padding: 20px 50px;
+    padding: 40px 50px;
   }
   @media (max-width: 768px) {
-    padding: 18px 18px;
+    padding: 20px;
   }
 `;
 
@@ -142,13 +147,13 @@ const HamburgerIcon = styled.div`
 `;
 
 const MobileMenu = styled.div`
-  position: fixed;
-  top: 60px;
+  position: absolute;
+  top: 70px;
   left: 0;
   right: 0;
   background: ${(props) => props.theme.colors.header};
   border-bottom: ${(props) =>
-    props.isOpen ? `1px solid ${props.theme.colors.headerText}` : "none"};
+    props.isOpen ? `1px solid ${props.theme.colors.footerText}` : "none"};
   transform: ${(props) =>
     props.isOpen ? "translateY(0)" : "translateY(-100%)"};
   transition: transform 0.3s ease-in-out;
@@ -208,46 +213,50 @@ const Header = memo(() => {
       }
       return location.pathname.includes(path.toLowerCase());
     },
-    [location.pathname],
+    [location.pathname]
   );
 
   // 네비게이션 링크 데이터를 메모이제이션
   const navLinks = useMemo(
     () => [
       { to: "/about", label: "ABOUT" },
-      { to: "/projects", label: "PROJECTS" },
+      { to: "/works", label: "WORKS" },
       { to: "/publications", label: "PUBLICATIONS" },
-      { to: "/arts", label: "ARTS" },
+      { to: "/studio", label: "STUDIO" },
     ],
-    [],
+    []
   );
 
   return (
     <>
       <HeaderDiv>
-        <Logo onClick={handleLogoClick}>
-          <img src={`/Heart.png`} alt="HANNAH" />
-          <span>
-            HANNAH <br />
-            KIM
-          </span>
-        </Logo>
-
-        <Nav>
-          {navLinks.map(({ to, label }) => (
-            <NavLink key={to} to={to} className={isActive(to) ? "active" : ""}>
-              {label}
-            </NavLink>
-          ))}
-        </Nav>
-
-        <MobileMenuButton onClick={toggleMenu}>
-          <HamburgerIcon isOpen={isMenuOpen}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </HamburgerIcon>
-        </MobileMenuButton>
+        <ContentsDiv>
+          <Logo onClick={handleLogoClick}>
+            <img src={`/Heart.png`} alt="HANNAH" />
+            <span>
+              HANNAH <br />
+              KIM
+            </span>
+          </Logo>
+          <Nav>
+            {navLinks.map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={isActive(to) ? "active" : ""}
+              >
+                {label}
+              </NavLink>
+            ))}
+          </Nav>
+          <MobileMenuButton onClick={toggleMenu}>
+            <HamburgerIcon isOpen={isMenuOpen}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </HamburgerIcon>
+          </MobileMenuButton>{" "}
+        </ContentsDiv>
       </HeaderDiv>
 
       <MobileMenu isOpen={isMenuOpen}>

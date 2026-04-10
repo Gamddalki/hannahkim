@@ -1,5 +1,91 @@
 [
   {
+    "id": "toroger",
+    "title": "To Roger",
+    "subtitle": "Independent Fiction Publication",
+    "where": "personal project",
+    "thumbnail": "/img/arts/ToRoger_t.png",
+    "bignail": "/img/arts/ToRoger.png",
+    "startDate": "2020-02",
+    "endDate": "2020-08",
+    "category": ["Narratives"],
+    "myRole": ["Writer", "Designer"],
+    "tools": ["Adobe Photoshop"],
+    "credits": ["bookcns"],
+    "keyInsights": [],
+    "overview": [
+      {
+        "type": "text",
+        "value": "To Roger (A5, 154p) is an independently written and self-published fiction set in a post-apocalyptic world — a zombie apocalypse where survival and emotional connection intertwine."
+      },
+      {
+        "type": "text",
+        "value": " I wrote and designed the entire book, from narrative development and character arcs to layout, typography, and visual tone. Rather than portraying the apocalypse as chaos, the story focuses on quiet moments of humanity, exploring how tenderness persists in desolation. Through iterative editing, visual prototyping, and self-publication, I shaped a cohesive narrative and aesthetic that reflects both the fragility and strength of love."
+      }
+    ],
+    "outcomes": [
+      "Authored a complete fiction",
+      "Designed full layout, typography, and cover art for print",
+      "Integrated text and visual composition to enhance thematic immersion",
+      "Self-published and distributed 70 copies through personal channels"
+    ]
+  },
+  {
+    "id": "bugeffect",
+    "title": "BugEffect",
+    "subtitle": "Scenario writing for short film",
+    "where": "2023 screenwriting and visualization course work",
+    "thumbnail": "/img/arts/BugEffect.gif",
+    "bignail": "/img/arts/BugEffect.gif",
+    "startDate": "2023-03",
+    "endDate": "2023-06",
+    "myRole": ["Screenwriter"],
+    "category": ["Narratives", "Audiovisual"],
+    "credits": ["Soojin Lee*"],
+    "tools": ["Premiere Pro"],
+    "keyInsights": [],
+    "overview": [
+      {
+        "type": "text",
+        "value": "“Bug Effect” is a short film scenario set in a **near-future dystopia**. The story explores the impact of **“Remember 3,”** a service offered by the company **“Inertial,”** which provides an **AI humanoid robot** designed to replace a deceased loved one and erase painful memories of their loss. This service, using the deceased's DNA, creates a robot with an identical appearance and memory. In a society that values emotional control and convenience, people willingly accept this as **a new form of a funeral** or mourning process."
+      },
+      {
+        "type": "text",
+        "value": "The story follows Ji-gu, whose husband, Yuseong, has passed away. Initially, Ji-gu embraces “Remember 3,” believing it protects her from grief. However, a series of unsettling discoveries forces her to confront a painful truth: her beloved husband is dead. The story culminates in her conscious choice to reject the service's ‘maintenance’ procedures and fully embrace the grief she was meant to forget. In doing so, she **rejects societal norms** and reclaims her authentic self, finding happiness by accepting that life includes both sorrow and joy."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/BugEffect1.png"
+      },
+      {
+        "type": "text",
+        "value": "The narrative uses the **science-fiction genre** to explore deeper themes of **memory, grief, and what it means to be human**. The core conflict is not just between a person and a technology, but between the comfort of a fabricated reality and the difficult truth of authentic emotion. The title, “Bug Effect,” refers not only to the technical glitches in AI but also to the emotional ‘bugs’ that disrupt artificial peace and ultimately lead to **growth and self-acceptance**."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/BugEffect2.png"
+      }
+    ],
+    "video": "https://youtube.com/embed/IBN5mN6GGBw",
+    "links": [
+      {
+        "type": "scenario",
+        "value": "https://drive.google.com/file/d/1LWIIV2_I4GwAqsrmVZKl5-5_RSmeh47Q/view"
+      },
+      {
+        "type": "storyboard",
+        "value": "https://drive.google.com/file/d/1Ye0Afs9FHHu6Cm5C5Kb95e99iyvMiy8w/view"
+      }
+    ],
+    "outcomes": [
+      "**Earned full marks** across all evaluated stages (scenario, structure board, storyboard, and virtual trailer), and was selected as a Best Work by the professor.",
+      "Demonstrated proficiency in all stages of short film pre-production, including conceptualization, narrative structure, visual storytelling, and trailer creation.",
+      "Crafted a cohesive SF-romance mystery that explores deep ethical and philosophical themes through an emotionally compelling narrative."
+    ],
+    "pinned": true,
+    "selected": true
+  },
+  {
     "id": "blackhairedanne",
     "title": "Black-haired Anne",
     "subtitle": "Mobile Running Game",
@@ -12,7 +98,7 @@
       "Graphic Designer",
       "Sound Designer"
     ],
-    "category": ["Game"],
+    "category": ["Interactive", "Narratives"],
     "credits": ["Minjung Jung", "Ayeon Kim", "Heejin Park", "Jiwon Seo"],
     "tools": ["Unity", "C#", "Aesprite"],
     "startDate": "2021-06",
@@ -86,7 +172,7 @@
     "where": "2021 Software-based Convergence System Design Coursework (Best Project)",
     "thumbnail": "/img/projects/reICEcle_t.png",
     "bignail": "/img/projects/reICEcle.png",
-    "category": ["Web & Mobile", "User Research"],
+    "category": ["Interactive"],
     "myRole": ["Team Lead", "System Analyst & Designer", "UI/UX Designer"],
     "tools": ["Visual Paradigm", "Proto.io"],
     "credits": ["Sunyu Pang", "Jiyeon Kim", "Yongyeon Kim"],
@@ -165,7 +251,7 @@
       "Developer",
       "Composer & Sound Designer"
     ],
-    "category": ["Game"],
+    "category": ["Interactive", "Narratives"],
     "credits": ["Gabin Lee", "Dohee Kim", "Jooie Hwang", "Yoojin Jeon"],
     "tools": ["Unity", "C#", "Aesprite", "Logic Pro"],
     "date": "2022-11",
@@ -237,148 +323,6 @@
     "selected": true
   },
   {
-    "id": "halmaeyakson",
-    "title": "HalmaeYakson",
-    "subtitle": "Household Medicine Delivery Service Application",
-    "where": "EWHA Abeek Design-Thinking Prototype Development Education Award-winning work",
-    "thumbnail": "/img/projects/HalmaeYakson_t.png",
-    "bignail": "/img/projects/HalmaeYakson.png",
-    "myRole": ["Project Manager", "UI/UX Designer"],
-    "category": ["Web & Mobile"],
-    "credits": ["Selynn Park", "Minji Park"],
-    "tools": ["Figma"],
-    "date": "2021-08",
-    "startDate": "2021-08",
-    "accentColor": "#FD896D",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **delivery service** to a **comforting experience**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/HalmaeYakson1.png"
-      },
-      {
-        "type": "text",
-        "value": "— reimagining a medicine delivery service with the warmth of **Grandma’s healing hands** (‘HalmaeYakson’)."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "With the rapid rise of **single-person households** in Korea, many individuals face difficulty obtaining basic medicines when sick and alone. We wanted to reimagine a delivery service not as a logistics platform, but as a **human-centered act of care**. From this need emerged “HalmaeYakson” (meaning ‘Grandma’s Healing Hands’ in Korean) — a service that connects warmth, reliability, and accessibility through design and tone."
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "“HalmaeYakson” was designed to provide safe, empathetic delivery of over-the-counter medicines and related supplies. Our team followed the **Design Thinking framework**, establishing a user persona (Se-eun, 29, living alone) to pinpoint emotional and practical pain points. We iterated on problem definition, screen flows, and service features using collaborative tools."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/HalmaeYakson2.png"
-      },
-      {
-        "type": "text",
-        "value": "I led the concept development, naming, UX writing, and UI direction for this project. To define a **brand identity** centered on a grandmother’s gentle care, I designed a warm peach color scheme, rounded typography, and authored microcopy to reduce anxiety during the ordering process."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/HalmaeYakson3.png"
-      },
-      {
-        "type": "text",
-        "value": "The final clickable prototype showcased features such as gender-matching delivery, contactless verification, and a ‘Neighbor Chat’ function, embedding empathy into practical functionality."
-      }
-    ],
-    "outcomes": [
-      "Crafted a brand voice and UI system aligned with the metaphor of touch and care, integrating emotionally resonant microcopy with visual warmth.",
-      "Implemented user-centric features like gender-matching delivery and contactless verification that prioritized safety and comfort.",
-      "Built an **award-winning** prototype that was presented at the Ewha Engineering Education Innovation Center and recognized for its empathetic design and concept."
-    ],
-    "links": [
-      {
-        "type": "devlog",
-        "value": "https://gamddalki.tistory.com/4"
-      }
-    ],
-    "reflection": "This project revealed how UX writing and visual language can humanize digital services, transforming utility into emotional connection. It deepened my understanding of **how design can communicate empathy**, not just function, reinforcing my passion for creating interactive experiences that bridge technology and human warmth."
-  },
-  {
-    "id": "eatwha",
-    "title": "Eat:WHA",
-    "subtitle": "Ewha Campus restaurant recommendation web application",
-    "where": "2022 Open Software Platform Coursework",
-    "thumbnail": "/img/projects/EatWHA.gif",
-    "bignail": "/img/projects/EatWHA.gif",
-    "myRole": ["Backend Developer", "UI/UX Designer"],
-    "category": ["Web & Mobile"],
-    "credits": ["Gabin Lee", "Jinyoung Oh", "Yelynn Oh", "Yunsun Jung"],
-    "tools": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Python Flask",
-      "django",
-      "Firebase"
-    ],
-    "startDate": "2022-09",
-    "endDate": "2022-12",
-    "accentColor": "#FB7172",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **Textual Clutter** to **Visual Clarity**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/EatWHA1.png"
-      },
-      {
-        "type": "text",
-        "value": "— Transforming overwhelming restaurant information into an **intuitive, hand-drawn dining map**, enabling restaurant searching to be natural and effortless."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "The project originated from a coursework request for a simple, reliable way to explore restaurants near Ewha Womans University. Recognizing that students often have limited time between classes and prefer to eat close to campus, our team set out to design a more intuitive and efficient solution. Rather than relying solely on a typical text-based list, we created a **visually-led experience** with the map, enabling students to quickly select a dining zone based on their location."
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "To **reduce cognitive load**, we designed a hand-drawn campus map as the main navigation hub, allowing for direct spatial interaction. The minimal interface, generous spacing, and consistent CSS styling were all tailored to support this intuitive approach."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/EatWHA2.png"
-      },
-      {
-        "type": "text",
-        "value": "As the only member with prior web development experience, I took the lead in both UI design and development, **bridging the gap between design vision and technical implementation**. We built a fully functional system using Python Flask and Firebase, implementing RESTful APIs for authentication, review management, and personalized pages. My dual role as both a designer and developer allowed me to **seamlessly translate user flow logic into backend functionality**. Throughout the process, I conducted iterative testing with the frontend team to ensure every feature was fully operational and worked as intended."
-      }
-    ],
-    "outcomes": [
-      "Designed and implemented a hand-illustrated map-based navigation",
-      "Earned praise from the supervising professor for its **intuitive and cohesive user experience**, highlighting the value of design-informed development.",
-      "Developed robust backend architecture using Flask and Firebase to handle authentication, CRUD operations, and user data.",
-      "Delivered a fully functional web application with core features including user login, review, vegan-friendly badges, my page, and location-based recommendations."
-    ],
-    "links": [
-      {
-        "type": "github",
-        "value": "https://github.com/OpenSWPlatform-TeamProject/openSWplatform"
-      },
-      {
-        "type": "devlog",
-        "value": "https://gamddalki.tistory.com/8"
-      }
-    ],
-    "reflection": "This project reaffirmed my passion for crafting **intuitive, human-centered digital experiences**. By designing the interface and building the backend myself, I learned firsthand how a **deep understanding of UI logic** can directly enhance and streamline **technical development**, proving the value of a holistic approach to building functional systems."
-  },
-  {
     "id": "vividnightmare",
     "title": "Vivid Nightmare",
     "subtitle": "VR escape game",
@@ -386,7 +330,7 @@
     "thumbnail": "/img/projects/VividNightmare.gif",
     "bignail": "/img/projects/VividNightmare.gif",
     "myRole": ["Script Writer", "Designer", "Developer"],
-    "category": ["VR/AR", "Game"],
+    "category": ["Interactive", "Spatial", "Narratives"],
     "credits": ["Minchae Kang", "Soyoung Park"],
     "tools": ["Unity", "C#", "Oculus Quest 2"],
     "accentColor": "#A63A4D",
@@ -438,7 +382,8 @@
     "links": [
       { "type": "github", "value": "https://github.com/comgongdaeng/NipByook" }
     ],
-    "reflection": "This project significantly strengthened my skills in VR interaction design and immersive storytelling. It taught me that **small interface details**, like the wrist-mounted timer, can profoundly affect player engagement and tension. The experience strongly reinforced my interest in combining narrative design and interactive technology to create impactful experiences."
+    "reflection": "This project significantly strengthened my skills in VR interaction design and immersive storytelling. It taught me that **small interface details**, like the wrist-mounted timer, can profoundly affect player engagement and tension. The experience strongly reinforced my interest in combining narrative design and interactive technology to create impactful experiences.",
+    "selected": "true"
   },
   {
     "id": "jeogiyo",
@@ -448,7 +393,7 @@
     "thumbnail": "/img/projects/Jeogiyo_t.png",
     "bignail": "/img/projects/Jeogiyo.png",
     "myRole": ["System Analyst & Designer", "UI/UX Designer"],
-    "category": ["Web & Mobile", "User Research"],
+    "category": ["Interactive"],
     "credits": ["Sunyu Pang", "Minjung Jung", "Gabin Lee", "Jimin Song"],
     "tools": ["Figma"],
     "startDate": "2023-09",
@@ -520,7 +465,7 @@
       "Interviewer",
       "Result Analyst"
     ],
-    "category": ["User Research"],
+    "category": ["Interactive"],
     "credits": ["Sunyu Pang", "Hyun Lee", "Uran Oh*"],
     "tools": ["React", "JavaScript", "Firebase", "Figma"],
     "startDate": "2024-03",
@@ -601,7 +546,7 @@
     "thumbnail": "/img/projects/IHearYourStarsv1_t.png",
     "bignail": "/img/projects/IHearYourStarsv1.png",
     "myRole": ["Frontend Developer"],
-    "category": ["Web & Mobile"],
+    "category": ["Interactive"],
     "credits": ["Seohyun Lee", "Gabin Lee", "Subeen Kim"],
     "tools": ["React", "Node.js", "JavaScript", "Figma"],
     "startDate": "2025-02",
@@ -672,7 +617,7 @@
       "Developer",
       "Sound Designer"
     ],
-    "category": ["Game", "VR/AR"],
+    "category": ["Interactive", "Spatial", "Narratives"],
     "credits": ["Jinyoung Oh", "Minkyung Ahn", "Eunchae Jung", "Hannah Lee"],
     "tools": ["Unity", "C#", "Figma"],
     "startDate": "2025-03",

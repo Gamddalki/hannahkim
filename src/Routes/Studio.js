@@ -1,32 +1,32 @@
 import React, { useCallback, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import artsData from "../data/arts.json";
+import studioData from "../data/studio.json";
 import PageContainer from "../Components/PageContainer";
 import Grid from "../Components/Grid";
 
-const PAGE_TITLE = "ARTS";
+const PAGE_TITLE = "STUDIO";
 const TAG_FIELD = "category";
 const SORT_FIELD = "startDate";
 
-const Arts = memo(() => {
+const Studio = memo(() => {
   const navigate = useNavigate();
 
   const handleCardClick = useCallback(
-    (art) => {
-      navigate(`/arts/${art.id}`);
+    (project) => {
+      navigate(`/studio/${project.id}`);
     },
     [navigate]
   );
 
-  const getImageSrc = useCallback((art) => art.thumbnail, []);
-  const getTitle = useCallback((art) => art.title, []);
-  const getSubtitle = useCallback((art) => art.subtitle, []);
-  const getMetaTags = useCallback((art) => art.category, []);
-  const getKey = useCallback((art) => art.id, []);
+  const getImageSrc = useCallback((project) => project.thumbnail, []);
+  const getTitle = useCallback((project) => project.title, []);
+  const getSubtitle = useCallback((project) => project.subtitle, []);
+  const getMetaTags = useCallback((project) => project.category, []);
+  const getKey = useCallback((project) => project.id, []);
 
   const gridProps = useMemo(
     () => ({
-      items: artsData,
+      items: studioData,
       onItemClick: handleCardClick,
       getImageSrc,
       getTitle,
@@ -46,6 +46,6 @@ const Arts = memo(() => {
   );
 });
 
-Arts.displayName = "Arts";
+Studio.displayName = "Studio";
 
-export default Arts;
+export default Studio;

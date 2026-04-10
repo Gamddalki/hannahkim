@@ -2,14 +2,14 @@ import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { PinIcon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
+import { PinIcon } from "@hugeicons/core-free-icons";
 import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const HashtagFilterContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   flex-wrap: wrap;
   @media (max-width: 768px) {
     gap: 5px;
@@ -131,26 +131,6 @@ const ProjectSubtitle = styled.h4`
   line-height: 1.3;
 `;
 
-const SeeAllButton = styled.button`
-  align-self: flex-end;
-  background: transparent;
-  color: ${(props) => props.theme.colors.hashText};
-  border-bottom: 1px solid ${(props) => props.theme.colors.hashText};
-  padding: 2px 0;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  font-weight: 350;
-
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    border-bottom: 1px solid ${(props) => props.theme.colors.primary};
-  }
-`;
-
 const PinIconWrapper = styled.div`
   position: absolute;
   top: 10px;
@@ -175,7 +155,6 @@ const Grid = ({
   tagField = "techStack",
   sortField = "startDate",
   showFilter = true,
-  showSeeAllUnderCard = false,
   showPins = true,
   skipTwoColumn = false,
   disableSort = false,
@@ -206,7 +185,7 @@ const Grid = ({
     if (onItemClick) {
       onItemClick(item);
     } else {
-      const category = item.category || "projects";
+      const category = item.category || "works";
       const id = getKey ? getKey(item) : item.id;
       navigate(`/${category}/${id}`);
     }
@@ -316,22 +295,6 @@ const Grid = ({
                     ))}
                 </ProjectMetaTags>
               </ProjectInfo>
-              {showSeeAllUnderCard && (
-                <SeeAllButton
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    const category = item.category || "projects";
-                    navigate(`/${category}`);
-                  }}
-                >
-                  See all{" "}
-                  {item.category
-                    ? item.category.charAt(0).toUpperCase() +
-                      item.category.slice(1)
-                    : "Projects"}
-                  <HugeiconsIcon icon={ArrowUpRight01Icon} size={14} />
-                </SeeAllButton>
-              )}
             </ProjectCard>
           );
         })}

@@ -4,9 +4,9 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Routes/Home";
 import About from "./Routes/About";
-import Projects from "./Routes/Projects";
+import Works from "./Routes/Works";
 import Publications from "./Routes/Publications";
-import Arts from "./Routes/Arts";
+import Studio from "./Routes/Studio";
 import Details from "./Routes/Details";
 import ScrollToTop from "./Components/ScrollToTop";
 import { ThemeProvider } from "styled-components";
@@ -42,9 +42,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/works" element={<Works />} />
           <Route path="/publications" element={<Publications />} />
-          <Route path="/arts" element={<Arts />} />
+          <Route path="/studio" element={<Studio />} />
           <Route path="/:category/:id" element={<Details />} />
         </Routes>
         <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />{" "}

@@ -1,9 +1,8 @@
 import React, { useEffect, useMemo, useCallback, memo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import projectData from "../data/projects.json";
+import workData from "../data/works.json";
 import publicationData from "../data/publications.json";
-import artsData from "../data/arts.json";
 import ReactMarkdown from "react-markdown";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowLeft01Icon } from "@hugeicons/core-free-icons";
@@ -12,9 +11,8 @@ import RelatedProjects from "../Components/RelatedProjects";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 
 const DATA_MAP = {
-  projects: projectData,
+  works: workData,
   publications: publicationData,
-  arts: artsData,
 };
 
 const Section = styled.section`
@@ -27,9 +25,19 @@ const Section = styled.section`
   position: relative;
   background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.text};
+  align-items: flex-start;
 
   @media (max-width: 768px) {
     padding: 0px 30px 30px 30px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: ${(props) => props.theme.colors.text};
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
   }
 `;
 
@@ -87,57 +95,9 @@ const InsightTextContainer = styled.div`
   min-width: 0;
 `;
 
-const MotivationSection = styled(Section)`
-  align-items: flex-start;
-
-  h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    color: ${(props) => props.theme.colors.text};
-    @media (max-width: 768px) {
-      font-size: 1.4rem;
-    }
-  }
-`;
-
-const ApproachSection = styled(Section)`
-  align-items: flex-start;
-
-  h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    color: ${(props) => props.theme.colors.text};
-    @media (max-width: 768px) {
-      font-size: 1.4rem;
-    }
-  }
-`;
-
-const OutcomesSection = styled(Section)`
-  align-items: flex-start;
-
-  h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    color: ${(props) => props.theme.colors.text};
-    @media (max-width: 768px) {
-      font-size: 1.4rem;
-    }
-  }
-`;
-
 const ReflectionSection = styled(Section)`
   align-items: flex-start;
   padding-bottom: 40px;
-
-  h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    color: ${(props) => props.theme.colors.text};
-    @media (max-width: 768px) {
-      font-size: 1.4rem;
-    }
-  }
 `;
 
 const RelatedProjectsSection = styled(Section)`
@@ -464,14 +424,14 @@ const Details = memo(() => {
     () => ({
       p: (props) => <StyledParagraph {...props} accentColor={accentColor} />,
     }),
-    [accentColor],
+    [accentColor]
   );
 
   const renderMarkdownWithParagraph = useCallback(
     (content) => (
       <ReactMarkdown components={markdownComponents}>{content}</ReactMarkdown>
     ),
-    [markdownComponents],
+    [markdownComponents]
   );
 
   const renderInfoList = useCallback(
@@ -485,7 +445,7 @@ const Details = memo(() => {
         </ul>
       </InfoBlock>
     ),
-    [],
+    []
   );
 
   // ReactMarkdown 컴포넌트들을 메모이제이션
@@ -493,21 +453,21 @@ const Details = memo(() => {
     () => ({
       h1: (props) => <InsightTitle {...props} accentColor={accentColor} />,
     }),
-    [accentColor],
+    [accentColor]
   );
 
   const insightTextComponents = useMemo(
     () => ({
       p: (props) => <InsightText {...props} accentColor={accentColor} />,
     }),
-    [accentColor],
+    [accentColor]
   );
 
   const fallbackMarkdownComponents = useMemo(
     () => ({
       p: StyledParagraph,
     }),
-    [],
+    []
   );
 
   // keyInsights를 메모이제이션으로 최적화
@@ -549,7 +509,7 @@ const Details = memo(() => {
       }
       return renderMarkdownWithParagraph(content);
     },
-    [renderMarkdownWithParagraph],
+    [renderMarkdownWithParagraph]
   );
 
   useEffect(() => {
@@ -643,35 +603,35 @@ const Details = memo(() => {
       </KeyInsightsSection>
 
       {item.overview && (
-        <MotivationSection className="overview-section">
+        <Section className="overview-section">
           <ContentWrapper>
             <h2>Overview</h2>
             {renderSectionContent(item.overview, "Overview image")}
           </ContentWrapper>
-        </MotivationSection>
+        </Section>
       )}
 
       {(item.motivation || item.abstract) && (
-        <MotivationSection className="motivation-section">
+        <Section className="motivation-section">
           <ContentWrapper>
             <h2>{category === "publications" ? "Abstract" : "Motivation"}</h2>
             {renderSectionContent(
               item.motivation || item.abstract,
               category === "publications"
                 ? "Abstract image"
-                : "Motivation image",
+                : "Motivation image"
             )}
           </ContentWrapper>
-        </MotivationSection>
+        </Section>
       )}
 
       {item.approach && (
-        <ApproachSection className="approach-section">
+        <Section className="approach-section">
           <ContentWrapper>
             <h2>Approach</h2>
             {renderSectionContent(item.approach, "Approach image")}
           </ContentWrapper>
-        </ApproachSection>
+        </Section>
       )}
 
       {((item.outcomes &&
@@ -681,7 +641,7 @@ const Details = memo(() => {
         item.presentation ||
         item.video ||
         (item.links && Array.isArray(item.links) && item.links.length > 0)) && (
-        <OutcomesSection className="outcomes-section">
+        <Section className="outcomes-section">
           <ContentWrapper>
             <h2>
               {category === "publications" ? "Contributions" : "Outcomes"}
@@ -740,7 +700,7 @@ const Details = memo(() => {
               )}
             </OutcomesContainer>
           </ContentWrapper>
-        </OutcomesSection>
+        </Section>
       )}
 
       {item.reflection && (

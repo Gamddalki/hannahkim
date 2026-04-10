@@ -1,7 +1,6 @@
 import { useMemo } from "react";
-import projectsData from "../data/projects.json";
+import worksData from "../data/works.json";
 import publicationsData from "../data/publications.json";
-import artsData from "../data/arts.json";
 
 const CATEGORY_MAPPING = {
   projects: { category: "projects", categoryDisplayName: "Projects" },
@@ -28,14 +27,12 @@ const processMoreWorks = (data, categoryMapping) => {
 const processData = () => {
   const selectedWorks = [
     ...processSelectedWorks(publicationsData, "publications"),
-    ...processSelectedWorks(projectsData, "projects"),
-    ...processSelectedWorks(artsData, "arts"),
+    ...processSelectedWorks(worksData, "works"),
   ];
 
   const moreWorks = [
-    ...processMoreWorks(projectsData, CATEGORY_MAPPING.projects),
+    ...processMoreWorks(worksData, CATEGORY_MAPPING.works),
     ...processMoreWorks(publicationsData, CATEGORY_MAPPING.publications),
-    ...processMoreWorks(artsData, CATEGORY_MAPPING.arts),
   ];
 
   return { selectedWorks, moreWorks };

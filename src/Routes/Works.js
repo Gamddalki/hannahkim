@@ -1,10 +1,10 @@
 import React, { useCallback, useMemo, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import projectData from "../data/projects.json";
+import projectData from "../data/works.json";
 import PageContainer from "../Components/PageContainer";
 import Grid from "../Components/Grid";
 
-const PAGE_TITLE = "PROJECTS";
+const PAGE_TITLE = "WORKS";
 const TAG_FIELD = "category";
 const SORT_FIELD = "startDate";
 
@@ -13,7 +13,7 @@ const Projects = memo(() => {
 
   const handleCardClick = useCallback(
     (project) => {
-      navigate(`/projects/${project.id}`);
+      navigate(`/works/${project.id}`);
     },
     [navigate]
   );

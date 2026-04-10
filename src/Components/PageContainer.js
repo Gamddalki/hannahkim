@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 const Container = styled.div`
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 170px;
   background: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.text};
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    padding-top: 50px;
+    padding-top: 40px;
   }
   @media (max-width: 768px) {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 `;
 
@@ -19,17 +19,17 @@ const Content = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 70px 30px;
+  padding: 0px 30px;
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    padding: 70px 50px;
+    padding: 0px 50px;
   }
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   text-align: left;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   color: ${(props) => props.theme.colors.black};
 
   @media (min-width: 769px) and (max-width: 1024px) {

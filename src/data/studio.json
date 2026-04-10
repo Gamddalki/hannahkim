@@ -1,88 +1,5 @@
 [
   {
-    "id": "toroger",
-    "title": "To Roger",
-    "subtitle": "Independent Fiction Publication",
-    "where": "personal project",
-    "thumbnail": "/img/arts/ToRoger_t.png",
-    "bignail": "/img/arts/ToRoger.png",
-    "startDate": "2020-02",
-    "endDate": "2020-08",
-    "category": ["Narrative", "Visual Design"],
-    "myRole": ["Writer", "Designer"],
-    "tools": ["Adobe Photoshop"],
-    "credits": ["bookcns"],
-    "overview": [
-      {
-        "type": "text",
-        "value": "To Roger (A5, 154p) is an independently written and self-published fiction set in a post-apocalyptic world — a zombie apocalypse where survival and emotional connection intertwine."
-      },
-      {
-        "type": "text",
-        "value": " I wrote and designed the entire book, from narrative development and character arcs to layout, typography, and visual tone. Rather than portraying the apocalypse as chaos, the story focuses on quiet moments of humanity, exploring how tenderness persists in desolation. Through iterative editing, visual prototyping, and self-publication, I shaped a cohesive narrative and aesthetic that reflects both the fragility and strength of love."
-      }
-    ],
-    "outcomes": [
-      "Authored a complete fiction",
-      "Designed full layout, typography, and cover art for print",
-      "Integrated text and visual composition to enhance thematic immersion",
-      "Self-published and distributed 70 copies through personal channels"
-    ]
-  },
-  {
-    "id": "bugeffect",
-    "title": "BugEffect",
-    "subtitle": "Scenario writing for short film",
-    "where": "2023 screenwriting and visualization course work",
-    "thumbnail": "/img/arts/BugEffect.gif",
-    "bignail": "/img/arts/BugEffect.gif",
-    "startDate": "2023-03",
-    "endDate": "2023-06",
-    "myRole": ["Screenwriter"],
-    "category": ["Narrative", "Audiovisual"],
-    "credits": ["Soojin Lee*"],
-    "tools": ["Premiere Pro"],
-    "overview": [
-      {
-        "type": "text",
-        "value": "“Bug Effect” is a short film scenario set in a **near-future dystopia**. The story explores the impact of **“Remember 3,”** a service offered by the company **“Inertial,”** which provides an **AI humanoid robot** designed to replace a deceased loved one and erase painful memories of their loss. This service, using the deceased's DNA, creates a robot with an identical appearance and memory. In a society that values emotional control and convenience, people willingly accept this as **a new form of a funeral** or mourning process."
-      },
-      {
-        "type": "text",
-        "value": "The story follows Ji-gu, whose husband, Yuseong, has passed away. Initially, Ji-gu embraces “Remember 3,” believing it protects her from grief. However, a series of unsettling discoveries forces her to confront a painful truth: her beloved husband is dead. The story culminates in her conscious choice to reject the service's ‘maintenance’ procedures and fully embrace the grief she was meant to forget. In doing so, she **rejects societal norms** and reclaims her authentic self, finding happiness by accepting that life includes both sorrow and joy."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/BugEffect1.png"
-      },
-      {
-        "type": "text",
-        "value": "The narrative uses the **science-fiction genre** to explore deeper themes of **memory, grief, and what it means to be human**. The core conflict is not just between a person and a technology, but between the comfort of a fabricated reality and the difficult truth of authentic emotion. The title, “Bug Effect,” refers not only to the technical glitches in AI but also to the emotional ‘bugs’ that disrupt artificial peace and ultimately lead to **growth and self-acceptance**."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/BugEffect2.png"
-      }
-    ],
-    "video": "https://youtube.com/embed/IBN5mN6GGBw",
-    "links": [
-      {
-        "type": "scenario",
-        "value": "https://drive.google.com/file/d/1LWIIV2_I4GwAqsrmVZKl5-5_RSmeh47Q/view"
-      },
-      {
-        "type": "storyboard",
-        "value": "https://drive.google.com/file/d/1Ye0Afs9FHHu6Cm5C5Kb95e99iyvMiy8w/view"
-      }
-    ],
-    "outcomes": [
-      "**Earned full marks** across all evaluated stages (scenario, structure board, storyboard, and virtual trailer), and was selected as a Best Work by the professor.",
-      "Demonstrated proficiency in all stages of short film pre-production, including conceptualization, narrative structure, visual storytelling, and trailer creation.",
-      "Crafted a cohesive SF-romance mystery that explores deep ethical and philosophical themes through an emotionally compelling narrative."
-    ],
-    "pinned": true
-  },
-  {
     "id": "0505",
     "title": "0505",
     "subtitle": "Original Song Composition and M/V Production",
@@ -133,6 +50,7 @@
     ],
     "selected": true
   },
+
   {
     "id": "runtimeerror",
     "title": "Runtime Error",
@@ -210,6 +128,7 @@
       "Received positive feedback from both the audience and venue staff for strong direction and event management."
     ]
   },
+
   {
     "id": "RGBNslogan",
     "title": "RGBN Slogan",
