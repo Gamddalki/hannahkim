@@ -5,7 +5,7 @@ import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const RelatedProjectsContainer = styled.div`
   width: 100%;
-  border-top: 1px solid ${(props) => props.theme.colors.black};
+  border-top: 1px solid ${(props) => props.theme.colors.footerText};
   padding-top: 70px;
 
   @media (max-width: 768px) {
@@ -197,7 +197,7 @@ const RelatedProjects = memo(
         navigate(`/${category}/${item.id}`);
         window.scrollTo(0, 0);
       },
-      [navigate, category],
+      [navigate, category]
     );
 
     if (relatedProjects.length === 0) {
@@ -228,7 +228,7 @@ const RelatedProjects = memo(
         </ProjectsGrid>
       </RelatedProjectsContainer>
     );
-  },
+  }
 );
 
 RelatedProjects.displayName = "RelatedProjects";
