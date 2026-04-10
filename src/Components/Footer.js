@@ -6,20 +6,16 @@ import { Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 const FooterDiv = styled.div`
   width: 100%;
   bottom: 0;
-  padding: 30px;
-  height: 150px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  height: auto;
+  min-height: 150px;
   background-color: ${(props) => props.theme.colors.footer};
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 768px) {
-    padding: 20px;
-    height: auto;
-    min-height: 120px;
-  }
 
   span {
     padding: 5px;
@@ -49,7 +45,6 @@ const ThemeToggleButton = styled.button`
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
-    transform: translateY(-2px);
   }
 `;
 
