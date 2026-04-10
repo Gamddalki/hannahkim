@@ -181,7 +181,7 @@ const BackButton = styled.button`
   margin-top: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 400;
+  font-weight: 350;
   width: fit-content;
 
   svg {
@@ -311,7 +311,7 @@ const InfoBlock = styled.div`
     font-size: 1rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-weight: 400;
+    font-weight: 350;
     opacity: 0.7;
 
     @media (max-width: 768px) {
@@ -359,7 +359,7 @@ const StyledParagraph = styled.p`
   text-align: left;
   white-space: pre-line;
   margin-bottom: 10px;
-  font-weight: 400;
+  font-weight: 350;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;

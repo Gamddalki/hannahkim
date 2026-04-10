@@ -77,7 +77,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.headerText};
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 350;
   transition: color 0.3s ease;
 
   &:hover {
@@ -170,7 +170,7 @@ const MobileNavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.headerText};
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 350;
   padding: 8px 0;
   transition: color 0.3s ease;
 
@@ -208,7 +208,7 @@ const Header = memo(() => {
       }
       return location.pathname.includes(path.toLowerCase());
     },
-    [location.pathname]
+    [location.pathname],
   );
 
   // 네비게이션 링크 데이터를 메모이제이션
@@ -219,7 +219,7 @@ const Header = memo(() => {
       { to: "/publications", label: "PUBLICATIONS" },
       { to: "/arts", label: "ARTS" },
     ],
-    []
+    [],
   );
 
   return (

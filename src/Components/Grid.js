@@ -22,7 +22,7 @@ const HashtagFilterTag = styled.span`
     props.$isActive ? props.theme.colors.primary : props.theme.colors.hashText};
   background: transparent;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 1;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -143,7 +143,7 @@ const SeeAllButton = styled.button`
   display: flex;
   align-items: center;
   gap: 2px;
-  font-weight: 400;
+  font-weight: 350;
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};

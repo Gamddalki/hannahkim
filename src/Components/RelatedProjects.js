@@ -101,7 +101,7 @@ const ProjectInfo = styled.div`
 `;
 
 const ProjectTitle = styled.h3`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   padding: 0 1rem;
   color: white;
@@ -197,7 +197,7 @@ const RelatedProjects = memo(
         navigate(`/${category}/${item.id}`);
         window.scrollTo(0, 0);
       },
-      [navigate, category]
+      [navigate, category],
     );
 
     if (relatedProjects.length === 0) {
@@ -228,7 +228,7 @@ const RelatedProjects = memo(
         </ProjectsGrid>
       </RelatedProjectsContainer>
     );
-  }
+  },
 );
 
 RelatedProjects.displayName = "RelatedProjects";

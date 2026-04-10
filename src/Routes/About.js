@@ -173,7 +173,7 @@ const InterestTag = styled.span`
   border: 1px solid ${(props) => props.theme.colors.hashText};
   padding: 4px 8px;
   font-size: 0.9rem !important;
-  font-weight: 400;
+  font-weight: 350;
   border-radius: 999px;
   transition: all 0.2s ease;
   margin: 0 !important;
@@ -314,7 +314,7 @@ const MoreButton = styled.button`
   border: 1px solid ${(props) => props.theme.colors.hashText};
   padding: 8px 16px;
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 350;
   border-radius: 999px;
   transition: all 0.2s ease;
   background: none;
@@ -440,9 +440,9 @@ const About = memo(() => {
         <ProfileInfo>
           <h2>Hello, I'm Hannah Kim</h2>
           <span>
-            I am a <i style={{ fontWeight: "400" }}>Creative Technologist</i>{" "}
+            I am a <i style={{ fontWeight: "350" }}>Creative Technologist</i>{" "}
             and&nbsp;
-            <i style={{ fontWeight: "400" }}>Narrative Architect</i> crafting
+            <i style={{ fontWeight: "350" }}>Narrative Architect</i> crafting
             spaces and systems where stories are not just told, but felt. To me,
             art is the engineering of emotion and technology is its logical,
             expressive medium.

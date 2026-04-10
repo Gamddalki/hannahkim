@@ -52,7 +52,7 @@ table {
   box-sizing: border-box;
   font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   line-height: 1.2;
   ::selection {
   background-color: #FF7575;
@@ -98,7 +98,7 @@ h3{
 }
 span{
   font-family: 'Figtree', -apple-system, sans-serif;
-  font-weight: 400;
+  font-weight: 350;
   color: #444444;
   line-height: 1.5rem;
   font-size: 16px;
