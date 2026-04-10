@@ -6,16 +6,8 @@ import publicationData from "../data/publications.json";
 import artsData from "../data/arts.json";
 import ReactMarkdown from "react-markdown";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Notebook02Icon,
-  GithubIcon,
-  YoutubeIcon,
-  File02Icon,
-  SoundcloudIcon,
-  FileMusicIcon,
-  ArrowLeft01Icon,
-  Video01Icon,
-} from "@hugeicons/core-free-icons";
+import { ArrowLeft01Icon } from "@hugeicons/core-free-icons";
+import LinkButtons from "../Components/LinkButtons";
 import RelatedProjects from "../Components/RelatedProjects";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 
@@ -23,17 +15,6 @@ const DATA_MAP = {
   projects: projectData,
   publications: publicationData,
   arts: artsData,
-};
-
-const ICON_MAP = {
-  devlog: Notebook02Icon,
-  github: GithubIcon,
-  video: YoutubeIcon,
-  fullpaper: File02Icon,
-  score: FileMusicIcon,
-  soundcloud: SoundcloudIcon,
-  scenario: File02Icon,
-  storyboard: Video01Icon,
 };
 
 const Section = styled.section`
@@ -464,51 +445,6 @@ const LinkSection = styled.div`
   justify-content: flex-start;
 `;
 
-const LinkItem = styled.a`
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: ${(props) => props.theme.colors.text};
-  text-decoration: none;
-  padding: 6px 12px;
-  gap: 6px;
-  border: 1px solid ${(props) => props.theme.colors.text};
-  border-radius: 999px;
-  transition: all 0.3s ease;
-  font-weight: 400;
-
-  &:hover {
-    color: ${(props) => props.accentColor || props.theme.colors.primary};
-    border: 1px solid
-      ${(props) => props.accentColor || props.theme.colors.primary};
-  }
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-    gap: 3px;
-  }
-`;
-
-const LinkIcon = styled.div`
-  display: flex;
-  align-items: center;
-  height: 1.5rem;
-
-  svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  @media (max-width: 768px) {
-    height: 1.2rem;
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
-`;
-
 const Details = memo(() => {
   const { category, id } = useParams();
   const navigate = useNavigate();
@@ -551,11 +487,6 @@ const Details = memo(() => {
     ),
     [],
   );
-
-  const getLinkIcon = useCallback((type) => {
-    const Icon = ICON_MAP[type];
-    return Icon ? <HugeiconsIcon icon={Icon} /> : null;
-  }, []);
 
   // ReactMarkdown 컴포넌트들을 메모이제이션
   const insightTitleComponents = useMemo(
@@ -787,20 +718,10 @@ const Details = memo(() => {
                     Array.isArray(item.links) &&
                     item.links.length > 0 && (
                       <LinkSection>
-                        {item.links.map((link, index) => (
-                          <LinkItem
-                            key={index}
-                            href={link.value}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            accentColor={item?.accentColor}
-                          >
-                            <LinkIcon>{getLinkIcon(link.type)}</LinkIcon>
-                            {link.type === "fullpaper"
-                              ? "full paper"
-                              : link.type}
-                          </LinkItem>
-                        ))}
+                        <LinkButtons
+                          links={item.links}
+                          accentColor={item?.accentColor}
+                        />
                       </LinkSection>
                     )}
 
