@@ -1,0 +1,150 @@
+[
+  {
+    "id": "0505",
+    "title": "0505",
+    "subtitle": "Original Song Composition and M/V Production",
+    "artist": "RGBN",
+    "thumbnail": "/img/arts/0505.png",
+    "date": "5 May 2023",
+    "startDate": "2023-05",
+    "category": ["Music", "Narrative", "Audiovisual"],
+    "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
+    "credits": ["RGBN", "Yeji Seo", "Juyeop Kim", "Puzzle Recording Studio"],
+    "accentColor": "#7ACF50",
+    "overview": [
+      {
+        "type": "text",
+        "value": "“0505” is a song born from the desire to capture the fleeting flutter of youth. It is **our lifelong contract** left not on paper, but **in music** — a promise to stay together until spring flowers bloom in winter."
+      },
+      {
+        "type": "text",
+        "value": "As the **Creative Director and Composer** for RGBN, I led the entire production lifecycle, from composing the full band score to directing the music video. My goal was to systematically engineer an emotional nostalgia through sound and visuals."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/05051.png"
+      },
+      {
+        "type": "text",
+        "value": "**· Musical Composition**: I wrote the lyrics and arranged the full score for all instruments (drums, bass, two guitars, keys, vocals). To evoke the “fleeting wonder of youth,” I deliberately designed the soundscape with retro synth textures, distortions, and rhythmic variations."
+      },
+      {
+        "type": "text",
+        "value": "**· Visual Narrative**: I directed, filmed, and edited the music video to extend the song’s story. Using two different aspect ratios and color grading, I visualized the protagonist’s perspective of finding a camera on the street and reliving cherished memories through its viewfinder. This created a seamless synchronization between the auditory build-up and the visual storytelling."
+      }
+    ],
+    "outcomes": [
+      "Composed and released RGBN’s first original single on SoundCloud, managing the entire recording and production process.",
+      "Directed and produced a narrative music video for YouTube, successfully translating the song’s auditory themes into a visual narrative.",
+      "Received high praise from renowned poet **Prof. Jeong Kkeut-byeol** for the lyrical depth and narrative structure, recognizing the work as a successful fusion of literary sensibility and multimedia production."
+    ],
+    "soundcloud": "https://soundcloud.com/rgbn/0505rgbn",
+    "video": "https://youtube.com/watch?v=Sjir0rqZ4yE",
+    "score": "https://drive.google.com/file/d/1eBx60dLtS-nFkZviodEgJpTzwEPoE-bc/view",
+    "selected": true
+  },
+
+  {
+    "id": "runtimeerror",
+    "title": "Runtime Error",
+    "subtitle": "Original Song Composition",
+    "artist": "RGBN",
+    "thumbnail": "/img/arts/RuntimeError.png",
+    "date": "3 March 2024",
+    "startDate": "2024-03",
+    "category": ["Music", "Narrative"],
+    "myRole": ["Music Producer", "Songwriter", "Lyricist", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Yeji Seo"],
+    "accentColor": "#6306BE",
+    "overview": [
+      {
+        "type": "text",
+        "value": "A runtime error refers to an error that occurs while a program is running — often caused by an infinite loop that causes a program to run forever. Likewise, stepping out of the comfort zone of everyday life and facing new challenges can make you nervous. “Runtime Error” is a song written to **encourage people to keep moving forward toward tomorrow, despite uncertainty**."
+      }
+    ],
+    "outcomes": [
+      "Completed the original composition from songwriting and arrangement to live performance.",
+      "Premiered the piece as the headliner of a joint concert, receiving positive audience feedback for its concept and emotional delivery.",
+      "Recorded and mixed a live version from the concert and released it on SoundCloud."
+    ],
+    "soundcloud": "https://soundcloud.com/rgbn/runtime-error",
+    "video": "https://www.youtube.com/watch?v=LY1R1AoS0W0?si=GaX9vUt2fAykYur0",
+    "score": "https://drive.google.com/file/d/1Co3-LKg3Fu9sTjU-IHiJqJKkB6RqTDLB/view",
+    "more": true
+  },
+  {
+    "id": "dear",
+    "title": "Dear",
+    "subtitle": "Original Song Composition",
+    "artist": "RGBN",
+    "thumbnail": "/img/arts/Dear.jpg",
+    "startDate": "2025-10",
+    "category": ["Music", "Narrative"],
+    "myRole": ["Music Producer", "Songwriter", "Lyricist", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Yeji Seo"],
+    "accentColor": "#008CF5",
+    "overview": [
+      {
+        "type": "text",
+        "value": "Someday, we’ll look back on this moment — our blue spring. “Dear” is a love letter we dedicate to us, who have become each other’s entire blue spring without noticing it."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/Dear1.png"
+      },
+      {
+        "type": "text",
+        "value": "This is an ongoing project for its recording and music video."
+      }
+    ],
+    "outcomes": ["Composed and performed original song"],
+    "soundcloud": "https://soundcloud.com/rgbn/",
+    "video": "https://youtube.com/watch?v=Gpcpr-hnivU",
+    "score": "https://drive.google.com/file/d/11OAY3KfmrAEFHM0b9oQIEgcFL9HvdHQe/view"
+  },
+  {
+    "id": "tbh",
+    "title": "TBH",
+    "subtitle": "Original Song Composition and M/V Production",
+    "artist": "RGBN",
+    "thumbnail": "/img/arts/tbh.png",
+    "date": "10 JAN 2026",
+    "startDate": "2026-01",
+    "category": ["Music", "Narrative", "Audiovisual"],
+    "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
+    "credits": ["RGBN"],
+    "video": "https://www.youtube.com/watch?v=ynvrt4IJaDg"
+  },
+  {
+    "id": "nonfiction",
+    "title": "Nonfiction",
+    "subtitle": "Original Song Composition and M/V Production",
+    "artist": "RGBN",
+    "thumbnail": "/img/arts/nonfiction.png",
+    "date": "10 JAN 2026",
+    "startDate": "2026-01",
+    "category": ["Music", "Narrative", "Audiovisual"],
+    "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
+    "credits": ["RGBN"],
+    "video": "https://www.youtube.com/watch?v=iWgw-ectSaY"
+  },
+  {
+    "id": "middleofthemovie",
+    "title": "Middle of the Movie",
+    "subtitle": "Original Song Composition and M/V Production",
+    "artist": "RGBN",
+    "thumbnail": "/img/arts/middleofthemovie.png",
+    "date": "10 JAN 2026",
+    "startDate": "2026-01",
+    "category": ["Music", "Narrative", "Audiovisual"],
+    "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
+    "credits": ["RGBN"],
+    "video": "https://www.youtube.com/watch?v=GxRb1G-qiCw"
+  }
+]

@@ -15,6 +15,7 @@ export const lightTheme = {
     hashText: "#BBBBBB",
     black: "#222222",
     white: "#FFFFFF",
+    overlay: "rgba(0, 0, 0, 0.5)",
   },
 };
 
@@ -35,5 +36,6 @@ export const darkTheme = {
     hashText: "#666666",
     black: "#FFFFFF",
     white: "#222222",
+    overlay: "rgba(0, 0, 0, 0.5)",
   },
 };

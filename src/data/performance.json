@@ -1,0 +1,100 @@
+[
+  {
+    "id": "springofyouth",
+    "title": "Spring of Youth",
+    "subtitle": "2024 RGBN/Band HOYA/ABC joint performance",
+    "where": "Studio Monghyang",
+    "thumbnail": "/img/arts/SpringofYouth.png",
+    "date": "3 MAR 2024",
+    "startDate": "2024-03",
+    "myRole": ["Director", "Arranger", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Band HOYA", "ABC", "Studio Monghyang"],
+    "accentColor": "#6FD467",
+    "overview": [
+      {
+        "type": "text",
+        "value": "Our band co-organized a three-band joint concert, taking full charge of the overall concept and external communication including contacting the venue. We performed last, closing the night with our original song “Runtime Error,” which debuted at this event."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SpringofYouth1.png"
+      },
+      {
+        "type": "text",
+        "value": "I served as the performance and creative director, shaping the show’s flow and audience engagement to ensure an **immersive live experience**. From stage design to crowd management for nearly 200 attendees, we independently handled every detail. The venue’s staff commended our smooth coordination and professionalism throughout the event."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SpringofYouth2.png"
+      }
+    ],
+    "video": "https://youtube.com/embed/91-yma3ZyL8",
+    "outcomes": [
+      "Successfully planned and executed a full-scale live concert featuring three bands from end to end.",
+      "Delivered an engaging headliner performance that premiered our original composition “Runtime Error.”",
+      "Received positive feedback from both the audience and venue staff for strong direction and event management."
+    ]
+  },
+  {
+    "id": "sinchonbusking",
+    "title": "RGBN Sinchon Busking",
+    "subtitle": "Directing and Performing at Sinchon",
+    "where": "Sinchon Myeongmul-gil",
+    "thumbnail": "/img/arts/SinchonBusking.png",
+    "bignail": "/img/arts/SinchonBusking.png",
+    "date": "1 JUN 2025",
+    "startDate": "2025-06",
+    "category": ["Performance", "Visual Design"],
+    "myRole": ["Director", "Graphic Designer", "Lead Guitarist"],
+    "tools": ["Adobe Photoshop"],
+    "credits": [" RGBN", "SEODAEMUN-GU Office"],
+    "accentColor": "#7DAB3A",
+    "overview": [
+      {
+        "type": "text",
+        "value": "As the director and lead guitarist of my band RGBN, I led our live busking performance in Sinchon, one of Seoul’s most vibrant youth districts. I oversaw the entire performance process from sound design, stage arrangement, and live direction to creating the visual identity and promotional poster for the event. This 90-minute performance combined dynamic genres of music with stage storytelling, aiming to create an immersive street concert experience that connects directly with the audience."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SinchonBusking1.jpg"
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/SinchonBusking2.png"
+      }
+    ],
+    "video": "https://youtube.com/embed/_rr4DhjFNcg",
+    "outcomes": [
+      "Designed a promotional poster that effectively conveyed the performance’s tone and energy, contributing to audience engagement.",
+      "Delivered a cohesive performance integrating live sound, stage presence, and visual branding.",
+      "Attracted hundreds of spontaneous spectators, creating one of the largest audience gatherings in the area that afternoon."
+    ]
+  },
+  {
+    "id": "aceofrock",
+    "title": "Ace Of Rock",
+    "subtitle": "2026 RGBN/s12n/?/? joint performance",
+    "where": "Club AOR",
+    "thumbnail": "/img/arts/AceOfRock.png",
+    "date": "1 MAR 2026",
+    "startDate": "2026-03",
+    "myRole": ["Director", "Composer", "Arranger", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Club AOR"],
+    "video": "https://youtube.com/embed/xpGBMBD9_iM"
+  },
+  {
+    "id": "nayneigh",
+    "title": "Nay? Neigh! Giddy-up to Your Heart",
+    "subtitle": "2026 RGBN/AprilFools/Monsan? joint performance",
+    "where": "Radio GAGA",
+    "thumbnail": "/img/arts/NayNeigh.png",
+    "date": "10 JAN 2026",
+    "startDate": "2026-01",
+    "myRole": ["Director", "Composer", "Arranger", "Lead Guitarist"],
+    "tools": ["Logic Pro", "MuseScore"],
+    "credits": ["RGBN", "Radio GAGA"],
+    "video": "https://youtube.com/embed/G7sKivtgyTs"
+  }
+]
