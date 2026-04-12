@@ -84,8 +84,8 @@ h2{
   font-family: 'Figtree', -apple-system, sans-serif;
   color: #FF2020;
   font-weight: 600;
-  line-height: 45px;
-  font-size: 10px;
+  line-height: 40px;
+  font-size: 20px;
   display: block;
 }
 h3{
@@ -127,5 +127,5 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

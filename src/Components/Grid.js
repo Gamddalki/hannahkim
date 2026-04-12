@@ -8,11 +8,11 @@ import OptimizedThumbnail from "./OptimizedThumbnail";
 const HashtagFilterContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 70px;
   flex-wrap: wrap;
   @media (max-width: 768px) {
-    gap: 5px;
+    gap: 7px;
     margin-bottom: 30px;
   }
 `;

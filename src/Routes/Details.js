@@ -20,7 +20,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0px 70px 70px 70px;
+  padding: 0px 70px 30px 70px;
   box-sizing: border-box;
   position: relative;
   background-color: ${(props) => props.theme.colors.background};
@@ -265,20 +265,19 @@ const InsightImage = styled(OptimizedThumbnail)`
   max-width: 500px;
   width: 100%;
   height: auto;
-  margin: 20px 0;
+  margin: 10px 0;
   display: block;
 `;
 
-const InsightTitle = styled.h1`
+const InsightTitle = styled.h2`
   color: ${(props) => props.theme.colors.text};
   text-align: left;
-  font-size: 2.2rem;
-  line-height: 1;
+  font-size: 1.7rem;
   white-space: pre-line;
+  margin-bottom: 10px;
 
   @media (max-width: 768px) {
-    font-size: 2rem;
-    line-height: 2.3rem;
+    font-size: 1.4rem;
   }
 
   strong {
@@ -424,14 +423,14 @@ const Details = memo(() => {
     () => ({
       p: (props) => <StyledParagraph {...props} accentColor={accentColor} />,
     }),
-    [accentColor]
+    [accentColor],
   );
 
   const renderMarkdownWithParagraph = useCallback(
     (content) => (
       <ReactMarkdown components={markdownComponents}>{content}</ReactMarkdown>
     ),
-    [markdownComponents]
+    [markdownComponents],
   );
 
   const renderInfoList = useCallback(
@@ -445,7 +444,7 @@ const Details = memo(() => {
         </ul>
       </InfoBlock>
     ),
-    []
+    [],
   );
 
   // ReactMarkdown 컴포넌트들을 메모이제이션
@@ -453,21 +452,21 @@ const Details = memo(() => {
     () => ({
       h1: (props) => <InsightTitle {...props} accentColor={accentColor} />,
     }),
-    [accentColor]
+    [accentColor],
   );
 
   const insightTextComponents = useMemo(
     () => ({
       p: (props) => <InsightText {...props} accentColor={accentColor} />,
     }),
-    [accentColor]
+    [accentColor],
   );
 
   const fallbackMarkdownComponents = useMemo(
     () => ({
       p: StyledParagraph,
     }),
-    []
+    [],
   );
 
   // keyInsights를 메모이제이션으로 최적화
@@ -509,7 +508,7 @@ const Details = memo(() => {
       }
       return renderMarkdownWithParagraph(content);
     },
-    [renderMarkdownWithParagraph]
+    [renderMarkdownWithParagraph],
   );
 
   useEffect(() => {
@@ -619,7 +618,7 @@ const Details = memo(() => {
               item.motivation || item.abstract,
               category === "publications"
                 ? "Abstract image"
-                : "Motivation image"
+                : "Motivation image",
             )}
           </ContentWrapper>
         </Section>
