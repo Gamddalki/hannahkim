@@ -131,7 +131,7 @@ const ProfileInfo = styled.div`
 
   span {
     font-size: 1rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: ${(props) => props.theme.colors.text};
     display: block;
     @media (max-width: 768px) {
@@ -444,6 +444,22 @@ const About = memo(() => {
             and&nbsp;
             <i style={{ fontWeight: "350" }}>Narrative Architect</i>, I design
             environments where narratives are experienced through sound, space,
+            and interactive media. Soon to begin my{" "}
+            <HighlightLink
+              href="https://ccrma.stanford.edu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              M.A./M.S.T. at Stanford CCRMA
+            </HighlightLink>
+            , I am focused on exploring audio and computation as expressive
+            mediums for shaping perception and emotion.
+          </span>
+          {/* <span>
+            As a <i style={{ fontWeight: "350" }}>Creative Technologist</i>{" "}
+            and&nbsp;
+            <i style={{ fontWeight: "350" }}>Narrative Architect</i>, I design
+            environments where narratives are experienced through sound, space,
             and interactive media. I am currently pursuing an{" "}
             <HighlightLink
               href="https://ccrma.stanford.edu/"
@@ -454,7 +470,7 @@ const About = memo(() => {
             </HighlightLink>
             , where I explore audio and computation as expressive mediums for
             shaping perception and emotion.
-          </span>
+          </span> */}
           <span>
             Grounded in my dual background in Computer Science and Media, my
             work spans from user-centered product development in the tech
