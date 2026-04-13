@@ -5,6 +5,7 @@ import PageContainer from "../Components/PageContainer";
 import MusicData from "../data/music.json";
 import PerformanceData from "../data/performance.json";
 import visualData from "../data/visual.json";
+import IconLink from "../Components/IconLink";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { SoundcloudIcon, YoutubeIcon } from "@hugeicons/core-free-icons";
@@ -253,20 +254,12 @@ const Studio = memo(() => {
                   />
                   <Overlay>
                     {track.soundcloud && (
-                      <IconLink
-                        href={track.soundcloud}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <IconLink href={track.soundcloud} iconColor="white">
                         <HugeiconsIcon icon={SoundcloudIcon} />
                       </IconLink>
                     )}
                     {track.video && (
-                      <IconLink
-                        href={track.video}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <IconLink href={track.video} iconColor="white">
                         <HugeiconsIcon icon={YoutubeIcon} />
                       </IconLink>
                     )}

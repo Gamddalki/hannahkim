@@ -9,6 +9,7 @@ import {
   SoundcloudIcon,
 } from "@hugeicons/core-free-icons";
 import PageContainer from "../Components/PageContainer";
+import IconLink from "../Components/IconLink";
 import journeyData from "../data/journey.json";
 
 // 상수 정의
@@ -91,25 +92,6 @@ const IconContainer = styled.div`
 
   @media (max-width: 768px) {
     gap: 20px;
-  }
-`;
-
-const IconLink = styled.a`
-  color: ${(props) => props.theme.colors.text};
-  font-size: 1.5rem;
-  transition: color 0.2s ease;
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
   }
 `;
 
