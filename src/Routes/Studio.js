@@ -5,6 +5,7 @@ import PageContainer from "../Components/PageContainer";
 import MusicData from "../data/music.json";
 import PerformanceData from "../data/performance.json";
 import visualData from "../data/visual.json";
+import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { SoundcloudIcon, YoutubeIcon } from "@hugeicons/core-free-icons";
 
@@ -117,6 +118,7 @@ const ItemDiv = styled.div`
     h3 {
       color: ${(props) => props.theme.colors.primary};
     }
+    cursor: pointer;
   }
 `;
 
@@ -133,6 +135,7 @@ const Overlay = styled.div`
   gap: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 1;
 `;
 
 const MusicItem = styled(ItemDiv)`
@@ -150,7 +153,6 @@ const MusicItem = styled(ItemDiv)`
     ${Overlay} {
       opacity: 1;
     }
-    cursor: pointer;
   }
 `;
 
@@ -159,20 +161,22 @@ const LiveItem = styled(ItemDiv)`
   flex-direction: row;
   align-items: center;
   gap: 10px;
+`;
 
+const Perfposter = styled.div`
   img {
     width: 70px;
     aspect-ratio: 3 / 4;
     object-fit: contain;
     flex-shrink: 0;
   }
+`;
 
-  div {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
-  }
+const PerfInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
 `;
 
 const VisualItem = styled(ItemDiv)`
@@ -183,12 +187,15 @@ const VisualItem = styled(ItemDiv)`
   @media (max-width: 768px) {
     width: 260px;
   }
+`;
+
+const ItemThumb = styled.div`
+  margin-bottom: 15px;
 
   img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    margin-bottom: 15px;
   }
 `;
 
@@ -210,38 +217,13 @@ const ItemSubtitle = styled.h4`
   opacity: 0.8;
 `;
 
-const AlbumCover = styled.div`
+const CoverWrapper = styled.div`
   width: 100%;
   aspect-ratio: 1;
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    margin-bottom: 10px;
-  }
-`;
-
-const IconLink = styled.a`
-  color: ${(props) => props.theme.colors.white};
-  font-size: 1.5rem;
-  transition: color 0.2s ease;
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  flex-shrink: 0;
 `;
 
 const sortByDateDesc = (a, b) => {
@@ -263,8 +245,12 @@ const Studio = memo(() => {
           <HorizontalScroll>
             {music.map((track) => (
               <MusicItem key={track.id}>
-                <AlbumCover>
-                  <img src={track.thumbnail} alt={track.title} />
+                <CoverWrapper>
+                  <OptimizedThumbnail
+                    src={track.thumbnail}
+                    alt={track.title}
+                    showOverlay={false}
+                  />
                   <Overlay>
                     {track.soundcloud && (
                       <IconLink
@@ -285,7 +271,7 @@ const Studio = memo(() => {
                       </IconLink>
                     )}
                   </Overlay>
-                </AlbumCover>
+                </CoverWrapper>
                 <ItemTitle>{track.title}</ItemTitle>
                 <ItemSubtitle>{track.artist}</ItemSubtitle>
               </MusicItem>
@@ -297,18 +283,19 @@ const Studio = memo(() => {
           <BlockHeader>Performance</BlockHeader>
           <VerticalScroll>
             {performances.map((perf) => (
-              <LiveItem key={perf.id}>
-                <Link
-                  to={`/studio/${perf.id}`}
-                  style={{ overflow: "hidden", flexShrink: 0 }}
-                >
-                  <img src={perf.thumbnail} alt={perf.title} />
-                </Link>
-                <div>
+              <LiveItem key={perf.id} onClick={() => setSelectedItem(perf)}>
+                <Perfposter>
+                  <OptimizedThumbnail
+                    src={perf.thumbnail}
+                    alt={perf.title}
+                    showOverlay={false}
+                  />
+                </Perfposter>
+                <PerfInfo>
                   <ItemTitle>{perf.title}</ItemTitle>
                   <ItemSubtitle>{perf.date || perf.startDate}</ItemSubtitle>
                   <ItemSubtitle>{perf.where}</ItemSubtitle>
-                </div>
+                </PerfInfo>
               </LiveItem>
             ))}
           </VerticalScroll>
@@ -318,8 +305,14 @@ const Studio = memo(() => {
           <BlockHeader>Visual</BlockHeader>
           <HorizontalScroll>
             {visuals.map((vis) => (
-              <VisualItem key={vis.id}>
-                <img src={vis.bignail || vis.thumbnail} alt={vis.title} />
+              <VisualItem key={vis.id} onClick={() => setSelectedItem(vis)}>
+                <ItemThumb>
+                  <OptimizedThumbnail
+                    src={vis.bignail}
+                    alt={vis.title}
+                    showOverlay={false}
+                  />
+                </ItemThumb>
                 <ItemTitle>{vis.title}</ItemTitle>
                 <ItemSubtitle>{vis.subtitle}</ItemSubtitle>
               </VisualItem>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import publicationData from "../data/publications.json";
 import PageContainer from "../Components/PageContainer";
 import LinkButtons from "../Components/LinkButtons";
+import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 
 const PAGE_TITLE = "PUBLICATIONS";
 
@@ -91,11 +92,12 @@ const ImageGrid = styled.div`
   align-items: start;
 `;
 
-const PublicationImage = styled.img`
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+const PublicationImage = styled(OptimizedThumbnail)`
   max-height: ${({ $isSingle }) => ($isSingle ? "300px" : "auto")};
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
 `;
 
 const Details = styled.div`
@@ -151,6 +153,7 @@ const Publications = memo(() => {
                               key={index}
                               src={imgSrc}
                               alt={`${pub.title} - image ${index + 1}`}
+                              showOverlay={false}
                               $isSingle={pub.images.length === 1}
                             />
                           ))}
