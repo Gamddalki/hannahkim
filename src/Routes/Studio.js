@@ -1,5 +1,4 @@
-import React, { memo } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, memo } from "react";
 import styled from "styled-components";
 import PageContainer from "../Components/PageContainer";
 import MusicData from "../data/music.json";
@@ -7,6 +6,7 @@ import PerformanceData from "../data/performance.json";
 import visualData from "../data/visual.json";
 import IconLink from "../Components/IconLink";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
+import DetailModal from "../Components/DetailModal";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { SoundcloudIcon, YoutubeIcon } from "@hugeicons/core-free-icons";
 
@@ -238,6 +238,8 @@ const Studio = memo(() => {
   const performances = [...PerformanceData].sort(sortByDateDesc);
   const visuals = [...visualData].sort(sortByDateDesc);
 
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
     <PageContainer title="STUDIO">
       <BentoGrid>
@@ -313,6 +315,8 @@ const Studio = memo(() => {
           </HorizontalScroll>
         </VisualBlock>
       </BentoGrid>
+
+      <DetailModal item={selectedItem} onClose={() => setSelectedItem(null)} />
     </PageContainer>
   );
 });

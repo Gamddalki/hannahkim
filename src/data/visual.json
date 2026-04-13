@@ -3,9 +3,10 @@
     "id": "toroger",
     "title": "To Roger",
     "subtitle": "Independent Fiction Publication",
-    "where": "personal project",
+    "where": "Personal project",
     "thumbnail": "/img/arts/ToRoger_t.png",
     "bignail": "/img/arts/ToRoger.png",
+    "date": "Feb 2020",
     "startDate": "2020-02",
     "endDate": "2020-08",
     "category": ["Narratives"],
@@ -16,11 +17,7 @@
     "overview": [
       {
         "type": "text",
-        "value": "To Roger (A5, 154p) is an independently written and self-published fiction set in a post-apocalyptic world — a zombie apocalypse where survival and emotional connection intertwine."
-      },
-      {
-        "type": "text",
-        "value": " I wrote and designed the entire book, from narrative development and character arcs to layout, typography, and visual tone. Rather than portraying the apocalypse as chaos, the story focuses on quiet moments of humanity, exploring how tenderness persists in desolation. Through iterative editing, visual prototyping, and self-publication, I shaped a cohesive narrative and aesthetic that reflects both the fragility and strength of love."
+        "value": "To Roger (A5, 154p) is an independently written and self-published fiction set in a zombie apocalypse, focusing on how humanity persists in desolation. Through iterative editing, visual prototyping, and self-publication, I shaped a cohesive narrative and aesthetic that reflects both the fragility and strength of love."
       }
     ],
     "outcomes": [
@@ -34,7 +31,7 @@
     "id": "RGBNslogan",
     "title": "RGBN Slogan",
     "subtitle": "Logo and Slogan Design",
-    "where": "2024 RGBN performance",
+    "where": "Rebranding of RGBN",
     "thumbnail": "/img/arts/RGBNslogan_t.png",
     "bignail": "/img/arts/RGBNslogan.png",
     "date": "May 2024",
@@ -47,15 +44,11 @@
     "overview": [
       {
         "type": "text",
-        "value": "I led the brand renewal for our band RGBN, redefining its core visual identity to reflect the essence of our music — summer, youth, dreams, hope, and love. Drawing inspiration from the **freshness of summer lemonade**, we developed a mood board that emphasized the contrast and harmony of blue and yellow as our main colors, representing **coolness and warmth**, **energy and nostalgia**."
+        "value": "Serving as Creative Director and Graphic Designer, I led RGBN's brand renewal by redesigning the logo and producing custom merchandise like a signature towel slogan. As a result, we established a cohesive visual identity that unified our storytelling and strengthened audience recognition."
       },
       {
         "type": "image",
         "value": "/img/arts/RGBNslogan1.png"
-      },
-      {
-        "type": "text",
-        "value": "We redesigned the band logo and created a custom towel slogan, weaving these colors and concepts into a cohesive visual identity. The renewed identity reimagines “RGBN (알고보니밴드)” (meaning “Turns Out to be a Band” in Korean) not just as musicians but as **storytellers of fleeting moments** — a reminder to recognize the beauty of the present before it becomes a memory. Just as our songs capture fleeting moments of youth, the new design embodies our hope to make every stage a space where both the band and the audience can smile together, **knowing we are living our most radiant moments**."
       },
       {
         "type": "image",
