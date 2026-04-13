@@ -1,8 +1,24 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import OptimizedThumbnail from "./OptimizedThumbnail";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Cancel01Icon } from "@hugeicons/core-free-icons";
+
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
+
+const scaleUp = keyframes`
+  from { 
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+`;
 
 const Backdrop = styled.div`
   position: fixed;
@@ -17,6 +33,8 @@ const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+
+  animation: ${fadeIn} 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 `;
 
 const ModalBox = styled.div`
@@ -28,6 +46,8 @@ const ModalBox = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+
+  animation: ${scaleUp} 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @media (max-width: 768px) {
     overflow-y: auto;
