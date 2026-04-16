@@ -9,7 +9,7 @@
     "startDate": "2023-03",
     "endDate": "2023-06",
     "myRole": ["Screenwriter"],
-    "category": ["Narratives", "Audiovisual"],
+    "category": ["Narrative"],
     "credits": ["Soojin Lee*"],
     "tools": ["Premiere Pro"],
     "keyInsights": [],
@@ -50,8 +50,7 @@
       "**Earned full marks** across all evaluated stages (scenario, structure board, storyboard, and virtual trailer), and was selected as a Best Work by the professor.",
       "Demonstrated proficiency in all stages of short film pre-production, including conceptualization, narrative structure, visual storytelling, and trailer creation.",
       "Crafted a cohesive SF-romance mystery that explores deep ethical and philosophical themes through an emotionally compelling narrative."
-    ],
-    "pinned": true
+    ]
   },
   {
     "id": "blackhairedanne",
@@ -66,7 +65,7 @@
       "Graphic Designer",
       "Sound Designer"
     ],
-    "category": ["Interactive", "Narratives"],
+    "category": ["Interactive", "Narrative"],
     "credits": ["Minjung Jung", "Ayeon Kim", "Heejin Park", "Jiwon Seo"],
     "tools": ["Unity", "C#", "Aesprite"],
     "startDate": "2021-06",
@@ -219,7 +218,7 @@
       "Developer",
       "Composer & Sound Designer"
     ],
-    "category": ["Interactive", "Narratives"],
+    "category": ["Interactive", "Narrative"],
     "credits": ["Gabin Lee", "Dohee Kim", "Jooie Hwang", "Yoojin Jeon"],
     "tools": ["Unity", "C#", "Aesprite", "Logic Pro"],
     "date": "2022-11",
@@ -298,7 +297,7 @@
     "thumbnail": "/img/projects/VividNightmare.gif",
     "bignail": "/img/projects/VividNightmare.gif",
     "myRole": ["Script Writer", "Designer", "Developer"],
-    "category": ["Interactive", "Spatial", "Narratives"],
+    "category": ["Interactive", "Spatial", "Narrative"],
     "credits": ["Minchae Kang", "Soyoung Park"],
     "tools": ["Unity", "C#", "Oculus Quest 2"],
     "accentColor": "#A63A4D",
@@ -586,7 +585,7 @@
       "Developer",
       "Sound Designer"
     ],
-    "category": ["Interactive", "Spatial", "Narratives"],
+    "category": ["Interactive", "Spatial", "Narrative"],
     "credits": ["Jinyoung Oh", "Minkyung Ahn", "Eunchae Jung", "Hannah Lee"],
     "tools": ["Unity", "C#", "Figma"],
     "startDate": "2025-03",
