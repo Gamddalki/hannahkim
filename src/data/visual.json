@@ -4,8 +4,7 @@
     "title": "To Roger",
     "subtitle": "Independent Fiction Publication",
     "where": "Personal project",
-    "thumbnail": "/img/arts/ToRoger_t.png",
-    "bignail": "/img/arts/ToRoger.png",
+    "thumbnail": "/img/arts/ToRoger.jpg",
     "date": "Feb 2020",
     "startDate": "2020-02",
     "endDate": "2020-08",
@@ -32,8 +31,7 @@
     "title": "RGBN Slogan",
     "subtitle": "Logo and Slogan Design",
     "where": "Rebranding of RGBN",
-    "thumbnail": "/img/arts/RGBNslogan_t.png",
-    "bignail": "/img/arts/RGBNslogan.png",
+    "thumbnail": "/img/arts/RGBNslogan.jpg",
     "date": "May 2024",
     "startDate": "2024-05",
     "category": ["Visual Design"],
@@ -48,7 +46,7 @@
       },
       {
         "type": "image",
-        "value": "/img/arts/RGBNslogan1.png"
+        "value": "/img/arts/RGBNslogan1.jpg"
       },
       {
         "type": "image",

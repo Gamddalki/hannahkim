@@ -4,8 +4,8 @@
     "title": "Spring of Youth",
     "subtitle": "2024 RGBN/Band HOYA/ABC joint performance",
     "where": "Studio Monghyang",
-    "thumbnail": "/img/arts/SpringofYouth.png",
-    "date": "3 MAR 2024",
+    "thumbnail": "/img/arts/SpringofYouth.jpg",
+    "date": "3 Mar 2024",
     "startDate": "2024-03",
     "myRole": ["Director", "Arranger", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore"],
@@ -21,21 +21,15 @@
         "value": "/img/arts/SpringofYouth1.png"
       }
     ],
-    "video": "https://youtube.com/embed/91-yma3ZyL8",
-    "outcomes": [
-      "Successfully planned and executed a full-scale live concert featuring three bands from end to end.",
-      "Delivered an engaging headliner performance that premiered our original composition “Runtime Error.”",
-      "Received positive feedback from both the audience and venue staff for strong direction and event management."
-    ]
+    "video": "https://youtube.com/embed/91-yma3ZyL8"
   },
   {
     "id": "sinchonbusking",
     "title": "RGBN Sinchon Busking",
     "subtitle": "Directing and Performing at Sinchon",
     "where": "Sinchon Myeongmul-gil",
-    "thumbnail": "/img/arts/SinchonBusking.png",
-    "bignail": "/img/arts/SinchonBusking.png",
-    "date": "1 JUN 2025",
+    "thumbnail": "/img/arts/SinchonBusking.jpg",
+    "date": "1 Jun 2025",
     "startDate": "2025-06",
     "category": ["Performance", "Visual Design"],
     "myRole": ["Director", "Graphic Designer", "Lead Guitarist"],
@@ -44,12 +38,12 @@
     "accentColor": "#7DAB3A",
     "overview": [
       {
-        "type": "image",
-        "value": "/img/arts/SinchonBusking1.jpg"
+        "type": "text",
+        "value": "A live performance in the Sinchon university district, the vibrant center of youth. We designed an interactive experience that guided the rhythm and energy of the stage, connecting deeply with the audience."
       },
       {
         "type": "image",
-        "value": "/img/arts/SinchonBusking2.png"
+        "value": "/img/arts/SinchonBusking1.png"
       }
     ],
     "video": "https://youtube.com/embed/_rr4DhjFNcg",
@@ -64,25 +58,45 @@
     "title": "Ace Of Rock",
     "subtitle": "2026 RGBN/s12n/?/? joint performance",
     "where": "Club AOR",
-    "thumbnail": "/img/arts/AceOfRock.png",
-    "date": "1 MAR 2026",
+    "thumbnail": "/img/arts/AceOfRock.jpg",
+    "date": "1 Mar 2026",
     "startDate": "2026-03",
     "myRole": ["Director", "Composer", "Arranger", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore"],
     "credits": ["RGBN", "Club AOR"],
-    "video": "https://youtube.com/embed/xpGBMBD9_iM"
+    "video": "https://youtube.com/embed/xpGBMBD9_iM",
+    "overview": [
+      {
+        "type": "text",
+        "value": "Directed a dynamic 45-minute live set for a 140-attendee joint concert featuring four bands at a Hongdae club, crafting an immersive stage experience."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/AceOfRock1.png"
+      }
+    ]
   },
   {
     "id": "nayneigh",
     "title": "Nay? Neigh! Giddy-up to Your Heart",
     "subtitle": "2026 RGBN/AprilFools/Monsan? joint performance",
     "where": "Radio GAGA",
-    "thumbnail": "/img/arts/NayNeigh.png",
-    "date": "10 JAN 2026",
+    "thumbnail": "/img/arts/NayNeigh.jpg",
+    "date": "10 Jan 2026",
     "startDate": "2026-01",
     "myRole": ["Director", "Composer", "Arranger", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore"],
     "credits": ["RGBN", "Radio GAGA"],
-    "video": "https://youtube.com/embed/G7sKivtgyTs"
+    "video": "https://youtube.com/embed/G7sKivtgyTs",
+    "overview": [
+      {
+        "type": "text",
+        "value": "Hosted and headlined a three-band joint concert, delivering a climactic 80-minute performance. By architecting both the overall event flow and our band's live set, we crafted an immersive musical experience for the audience."
+      },
+      {
+        "type": "image",
+        "value": "/img/arts/NayNeigh1.png"
+      }
+    ]
   }
 ]

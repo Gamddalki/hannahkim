@@ -225,7 +225,7 @@ const DetailModal = ({ item, onClose }) => {
               />
             ) : (
               <OptimizedThumbnail
-                src={item.bignail}
+                src={item.thumbnail}
                 alt={item.title}
                 showOverlay={false}
               />

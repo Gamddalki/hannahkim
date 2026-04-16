@@ -7,7 +7,7 @@
     "thumbnail": "/img/arts/BugEffect.gif",
     "bignail": "/img/arts/BugEffect.gif",
     "startDate": "2023-03",
-    "endDate": "2023-06",
+    "date": "Mar 2023 - Jun 2023",
     "myRole": ["Screenwriter"],
     "category": ["Narrative"],
     "credits": ["Soojin Lee*"],
@@ -69,7 +69,7 @@
     "credits": ["Minjung Jung", "Ayeon Kim", "Heejin Park", "Jiwon Seo"],
     "tools": ["Unity", "C#", "Aesprite"],
     "startDate": "2021-06",
-    "endDate": "2021-09",
+    "date": "Jun 2021 - Sep 2021",
     "keyInsights": [
       {
         "type": "title",
@@ -144,7 +144,7 @@
     "tools": ["Visual Paradigm", "Proto.io"],
     "credits": ["Sunyu Pang", "Jiyeon Kim", "Yongyeon Kim"],
     "startDate": "2021-03",
-    "endDate": "2021-06",
+    "date": " Mar 2021 - Jun 2021",
     "accentColor": "#65AAF8",
     "keyInsights": [
       {
@@ -221,8 +221,8 @@
     "category": ["Interactive", "Narrative"],
     "credits": ["Gabin Lee", "Dohee Kim", "Jooie Hwang", "Yoojin Jeon"],
     "tools": ["Unity", "C#", "Aesprite", "Logic Pro"],
-    "date": "2022-11",
     "startDate": "2022-11",
+    "date": "Nov 2022",
     "accentColor": "#FE6E0E",
     "keyInsights": [
       {
@@ -301,8 +301,8 @@
     "credits": ["Minchae Kang", "Soyoung Park"],
     "tools": ["Unity", "C#", "Oculus Quest 2"],
     "accentColor": "#A63A4D",
-    "date": "2023-07",
     "startDate": "2023-07",
+    "date": "Jul 2023",
     "keyInsights": [
       {
         "type": "title",
@@ -364,7 +364,7 @@
     "credits": ["Sunyu Pang", "Minjung Jung", "Gabin Lee", "Jimin Song"],
     "tools": ["Figma"],
     "startDate": "2023-09",
-    "endDate": "2023-12",
+    "date": "Sep 2023 - Dec 2023",
     "accentColor": "#43c466",
     "keyInsights": [
       {
@@ -436,7 +436,7 @@
     "credits": ["Sunyu Pang", "Hyun Lee", "Uran Oh*"],
     "tools": ["React", "JavaScript", "Firebase", "Figma"],
     "startDate": "2024-03",
-    "endDate": "2024-05",
+    "date": "Mar 2024 - May 2024",
     "accentColor": "#FF4B86",
     "keyInsights": [
       {
@@ -517,7 +517,7 @@
     "credits": ["Seohyun Lee", "Gabin Lee", "Subeen Kim"],
     "tools": ["React", "Node.js", "JavaScript", "Figma"],
     "startDate": "2025-02",
-    "endDate": "2025-06",
+    "date": "Seb 2025 - Jun 2025",
     "accentColor": "#8865E2",
     "keyInsights": [
       {
@@ -589,7 +589,7 @@
     "credits": ["Jinyoung Oh", "Minkyung Ahn", "Eunchae Jung", "Hannah Lee"],
     "tools": ["Unity", "C#", "Figma"],
     "startDate": "2025-03",
-    "endDate": "2025-06",
+    "date": "Mar 2025 - Jun 2025",
     "keyInsights": [
       {
         "type": "title",

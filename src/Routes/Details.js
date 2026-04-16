@@ -538,11 +538,7 @@ const Details = memo(() => {
 
           <MetaInfo>
             <Where>{item.where}</Where>
-            <Date>
-              {item.date
-                ? `${item.date}`
-                : `${item.startDate} ~ ${item.endDate}`}
-            </Date>
+            <Date>{item.date}</Date>
           </MetaInfo>
 
           <Title>{item.title}</Title>

@@ -303,7 +303,7 @@ const Studio = memo(() => {
               <VisualItem key={vis.id} onClick={() => setSelectedItem(vis)}>
                 <ItemThumb>
                   <OptimizedThumbnail
-                    src={vis.bignail}
+                    src={vis.thumbnail}
                     alt={vis.title}
                     showOverlay={false}
                   />
