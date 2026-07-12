@@ -1,15 +1,17 @@
 [
   {
     "id": "prompirit",
-    "title": "Prompirit: Automatic Prompt Engineering Assistance for Improving AI-Generated Art Reflecting User Emotion",
+    "title": "Prompirit",
+    "subtitle": ": Automatic Prompt Engineering Assistance for Improving AI-Generated Art Reflecting User Emotion",
     "where": "In Proceedings of the 2024 IEEE International Conference on Information Reuse and Integration for Data Science (IRI'24)",
+    "thumbnail": "/img/publications/Prompirit1.png",
     "images": [
       "/img/publications/Prompirit1.png",
       "/img/publications/Prompirit2.jpg"
     ],
-    "date": "07-09 August 2024",
-    "type": ["Conference Paper"],
-    "indexTerms": [
+    "date": "Aug 2024",
+    "category": "Publications",
+    "keywords": [
       "Prompt Engineering",
       "Text-to-Image GenAI",
       "Emotional and Art Technology"
@@ -36,16 +38,18 @@
         "type": "github",
         "value": "https://github.com/AnT-Prompirit"
       }
-    ]
+    ],
+    "selected": true
   },
   {
     "id": "loveinthebigcity",
     "title": "Three Voices Narrating “Love in the Big City”: A Comparative Study of Narrative Transformation and Character Reconstruction across Novel, Film, and Drama Series – Focusing on episode ‘Jaehee/Miae’",
     "where": "Bachelor’s Thesis, Ewha Womans University, 2025",
+    "thumbnail": "/img/publications/LoveintheBigCity.png",
     "images": ["/img/publications/LoveintheBigCity.png"],
-    "date": "20 May 2025",
-    "type": ["Thesis"],
-    "indexTerms": [
+    "date": "May 2025",
+    "category": "Publication",
+    "keywords": [
       "Narrative Analysis",
       "Adaptation",
       "Queer Representation",
