@@ -73,7 +73,7 @@ button {
     background: none;
   }
 h1{
-  font-family: 'Figtree', -apple-system, sans-serif;
+  font-family: 'PlayfairDisplay', -apple-system, sans-serif;
   color:#222222;
   font-weight: 600;
   line-height: 55px;
@@ -81,24 +81,16 @@ h1{
   display: block;
 }
 h2{
-  font-family: 'Figtree', -apple-system, sans-serif;
-  color: #FF2020;
-  font-weight: 600;
-  line-height: 40px;
-  font-size: 20px;
-  display: block;
-}
-h3{
-  font-family: 'Figtree', -apple-system, sans-serif;
-  color: #FF2020;
-  font-weight: 600;
+  font-family: 'PlayfairDisplay', -apple-system, sans-serif;
+  color: #222222;
+  font-weight: 300;
   line-height: 25px;
   font-size: 12px;
   display: block;
 }
 span, p{
   font-family: 'Figtree', -apple-system, sans-serif;
-  font-weight: 350;
+  font-weight: 300;
   color: #444444;
   line-height: 1.5rem;
   font-size: 16px;
