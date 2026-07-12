@@ -3,29 +3,77 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderDiv = styled.header`
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
-  background: ${(props) => props.theme.colors.header};
+  background: ${(props) => props.theme.colors.background};
   z-index: 1000;
+  border-bottom: 1px solid ${(props) => props.theme.colors.footerText};
+  height: 80px;
+  display: flex;
+  align-items: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+  @media (max-width: 768px) {
+    height: 70px;
+  }
 `;
 
-const ContentsDiv = styled.div`
-  max-width: 1200px;
+const ContentsGrid = styled.div`
   width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding: 40px 30px;
+  padding: 0 40px;
 
-  @media (min-width: 769px) and (max-width: 1024px) {
-    padding: 40px 50px;
-  }
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 0 20px;
+  }
+`;
+
+const GridItemLeft = styled.div`
+  justify-self: start;
+  display: flex;
+  align-items: center;
+`;
+
+const GridItemCenter = styled.div`
+  justify-self: center;
+  display: flex;
+  align-items: center;
+`;
+
+const GridItemRight = styled.div`
+  justify-self: end;
+  display: flex;
+  align-items: center;
+`;
+
+const HeaderButton = styled.span`
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  color: ${(props) => props.theme.colors.headerText};
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  padding: 10px 0;
+  transition: color 0.2s ease;
+  z-index: 1001;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
   }
 `;
 
@@ -33,142 +81,184 @@ const Logo = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 3px;
-
-  @media (max-width: 768px) {
-    gap: 2px;
-  }
-
-  &:hover {
-    img {
-      transform: scale(1.1);
-    }
-  }
-
-  img {
-    height: 40px;
-    width: auto;
-    transition: transform 0.3s ease;
-
-    @media (max-width: 768px) {
-      height: 30px;
-    }
-  }
-
-  span {
-    font-size: 1rem;
-    line-height: 1rem;
-    font-weight: 600;
-    color: ${(props) => props.theme.colors.black};
-
-    @media (max-width: 768px) {
-      font-size: 0.75rem;
-      line-height: 0.75rem;
-      font-weight: 500;
-    }
-  }
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  gap: 30px;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const NavLink = styled(Link)`
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.headerText};
-  cursor: pointer;
-  font-weight: 350;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`;
-
-const MobileMenuButton = styled.button`
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
-
   position: relative;
+  padding: 5px 0;
+  z-index: 1001;
 
+  h2 {
+    font-size: 1.6rem;
+    color: ${(props) => props.theme.colors.black};
+    margin: 0;
+    line-height: 1;
+    transition: color 0.2s ease;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 `;
 
-const MobileMenu = styled.div`
-  position: absolute;
-  top: 70px;
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
-  background: ${(props) => props.theme.colors.header};
-  border-bottom: ${(props) =>
-    props.isOpen ? `1px solid ${props.theme.colors.footerText}` : "none"};
-  transform: ${(props) =>
-    props.isOpen ? "translateY(0)" : "translateY(-100%)"};
-  transition: transform 0.3s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  background: ${(props) => props.theme.colors.background};
   z-index: 999;
-
-  @media (min-width: 769px) {
-    display: none;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: ${(props) => (props.$isOpen ? "1" : "0")};
+  pointer-events: ${(props) => (props.$isOpen ? "auto" : "none")};
+  transform: ${(props) =>
+    props.$isOpen ? "translateY(0)" : "translateY(-15px)"};
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.16, 1, 0.2, 1),
+    background 0.2s ease;
 `;
 
-const MobileNav = styled.nav`
+const MenuList = styled.nav`
   display: flex;
   flex-direction: column;
-  padding: 20px 40px;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    padding: 24px;
+  }
 `;
 
-const MobileNavLink = styled(Link)`
+const MenuItemContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+const MenuNumber = styled.span`
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: ${(props) => props.theme.colors.footerText};
+  margin-right: 25px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: color 0.2s ease;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+  }
+`;
+
+const MenuLinkText = styled(Link)`
+  font-family: "PlayfairDisplay", serif;
+  font-size: 3.8rem;
+  font-weight: 300;
+  color: ${(props) =>
+    props.$isActive ? props.theme.colors.primary : props.theme.colors.text};
   text-decoration: none;
-  color: ${(props) => props.theme.colors.headerText};
-  cursor: pointer;
-  font-weight: 350;
-  padding: 8px 0;
-  transition: color 0.3s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  position: relative;
+  display: inline-block;
 
   &:hover {
-    color: ${(props) => props.theme.colors.hover};
+    text-decoration: line-through;
+    text-decoration-color: ${(props) => props.theme.colors.primary};
+    text-decoration-thickness: 2px;
   }
 
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+`;
+
+const InfoContent = styled.div`
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 24px;
+    gap: 20px;
+  }
+`;
+
+const InfoLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+`;
+
+const InfoLinkItem = styled.a`
+  font-size: 0.9rem;
+  color: ${(props) => props.theme.colors.text};
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-flex;
+  gap: 10px;
+  transition: color 0.2s ease;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+    text-decoration-color: ${(props) => props.theme.colors.primary};
+    text-decoration-thickness: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
   }
 `;
 
 const Header = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+
   const navigate = useNavigate();
   const location = useLocation();
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
+    setIsInfoOpen(false);
+  }, []);
+
+  const toggleInfo = useCallback(() => {
+    setIsInfoOpen((prev) => !prev);
+    setIsMenuOpen(false);
   }, []);
 
   const handleLogoClick = useCallback(() => {
     navigate("/");
     setIsMenuOpen(false);
+    setIsInfoOpen(false);
   }, [navigate]);
 
   const handleNavClick = useCallback(() => {
     setIsMenuOpen(false);
+    setIsInfoOpen(false);
   }, []);
 
   const isActive = useCallback(
@@ -178,10 +268,9 @@ const Header = memo(() => {
       }
       return location.pathname.includes(path.toLowerCase());
     },
-    [location.pathname]
+    [location.pathname],
   );
 
-  // 네비게이션 링크 데이터를 메모이제이션
   const navLinks = useMemo(
     () => [
       { to: "/about", label: "ABOUT" },
@@ -189,47 +278,107 @@ const Header = memo(() => {
       { to: "/publications", label: "PUBLICATIONS" },
       { to: "/studio", label: "STUDIO" },
     ],
-    []
+    [],
   );
 
   return (
     <>
       <HeaderDiv>
-        <ContentsDiv>
-          <Logo onClick={handleLogoClick}>
-            <img src={`/Heart.png`} alt="HANNAH" />
-            <span>
-              HANNAH <br />
-              KIM
-            </span>
-          </Logo>
-          <Nav>
-            {navLinks.map(({ to, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                className={isActive(to) ? "active" : ""}
-              >
-                {label}
-              </NavLink>
-            ))}
-          </Nav>
+        <ContentsGrid>
+          <GridItemLeft>
+            <HeaderButton
+              onClick={toggleMenu}
+              aria-label="Toggle Navigation Menu"
+            >
+              {isMenuOpen ? "CLOSE" : "MENU"}
+            </HeaderButton>
+          </GridItemLeft>
+
+          <GridItemCenter>
+            <Logo onClick={handleLogoClick}>
+              <h2>Hannah Kim</h2>
+            </Logo>
+          </GridItemCenter>
+
+          <GridItemRight>
+            <HeaderButton
+              onClick={toggleInfo}
+              aria-label="Toggle Contact Information"
+            >
+              {isInfoOpen ? "CLOSE" : "INFO"}
+            </HeaderButton>
+          </GridItemRight>
+        </ContentsGrid>
       </HeaderDiv>
 
-      <MobileMenu isOpen={isMenuOpen}>
-        <MobileNav>
-          {navLinks.map(({ to, label }) => (
-            <MobileNavLink
-              key={to}
-              to={to}
-              onClick={handleNavClick}
-              className={isActive(to) ? "active" : ""}
+      {/* Navigation Overlay */}
+      <Overlay $isOpen={isMenuOpen}>
+        <MenuList>
+          {navLinks.map(({ to, label }, index) => {
+            const currentActive = isActive(to);
+            const formattedNum = `0${index + 1}.`;
+
+            return (
+              <MenuItemContainer key={to}>
+                <MenuNumber>{formattedNum}</MenuNumber>
+                <MenuLinkText
+                  to={to}
+                  $isActive={currentActive}
+                  onClick={handleNavClick}
+                >
+                  {label}
+                </MenuLinkText>
+              </MenuItemContainer>
+            );
+          })}
+        </MenuList>
+      </Overlay>
+
+      {/* Info Overlay */}
+      <Overlay $isOpen={isInfoOpen}>
+        <InfoContent>
+          <InfoLinks>
+            <InfoLinkItem href="mailto:khn@stanford.edu">
+              khn@stanford.edu
+            </InfoLinkItem>
+            <InfoLinkItem
+              href="https://www.linkedin.com/in/hannahk01/"
+              target="_blank"
+              rel="noreferrer"
             >
-              {label}
-            </MobileNavLink>
-          ))}
-        </MobileNav>
-      </MobileMenu>
+              LinkedIn
+            </InfoLinkItem>
+            <InfoLinkItem
+              href="https://github.com/Gamddalki/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </InfoLinkItem>
+            <InfoLinkItem
+              href="https://www.youtube.com/@rgbnband"
+              target="_blank"
+              rel="noreferrer"
+            >
+              YouTube
+            </InfoLinkItem>
+            <InfoLinkItem
+              href="https://soundcloud.com/llorjjrk"
+              target="_blank"
+              rel="noreferrer"
+            >
+              SoundCloud
+            </InfoLinkItem>
+            <InfoLinkItem
+              href="https://drive.google.com/file/d/1AN7czPQ9Luthc7XB2-_fs5AvhHvxp1rV/view"
+              target="_blank"
+              rel="noreferrer"
+            >
+              CV
+            </InfoLinkItem>
+          </InfoLinks>
+        </InfoContent>
+      </Overlay>
     </>
   );
 });

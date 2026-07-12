@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   min-height: 100vh;
-  padding-top: 170px;
+  padding-top: 140px;
   background: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.text};
 

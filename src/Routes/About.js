@@ -366,40 +366,6 @@ const About = memo(() => {
           <SocialIcons>
             <IconContainer>
               <IconLink
-                href="mailto:khn@stanford.edu"
-                target="_blank"
-                rel="noreferrer"
-              >
-                MAIL              </IconLink>
-              <IconLink
-                href="https://www.linkedin.com/in/hannahk01/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LINKEDIN
-              </IconLink>
-              <IconLink
-                href="https://github.com/Gamddalki/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GITHUB
-              </IconLink>
-              <IconLink
-                href="https://www.youtube.com/@dahae01"
-                target="_blank"
-                rel="noreferrer"
-              >
-                YOUTUBE
-              </IconLink>
-              <IconLink
-                href="https://soundcloud.com/llorjjrk"
-                target="_blank"
-                rel="noreferrer"
-              >
-                SOUNDCLOUD
-              </IconLink>
-              <IconLink
                 href="https://drive.google.com/file/d/1AN7czPQ9Luthc7XB2-_fs5AvhHvxp1rV/view"
                 target="_blank"
                 rel="noreferrer"
