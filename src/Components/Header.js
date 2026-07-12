@@ -68,7 +68,9 @@ const HeaderButton = styled.span`
   z-index: 1001;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    text-decoration: line-through;
+    text-decoration-color: ${(props) => props.theme.colors.primary};
+    text-decoration-thickness: 2px;
   }
 
   @media (max-width: 768px) {
@@ -95,6 +97,31 @@ const Logo = styled.div`
     @media (max-width: 768px) {
       font-size: 1.2rem;
     }
+  }
+`;
+
+const HeartIcon = styled.img`
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 15px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.6) rotate(-10deg);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+
+  ${Logo}:hover & {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  @media (max-width: 768px) {
+    top: -10px;
+    right: -18px;
+    width: 16px;
   }
 `;
 
@@ -297,6 +324,7 @@ const Header = memo(() => {
           <GridItemCenter>
             <Logo onClick={handleLogoClick}>
               <h2>Hannah Kim</h2>
+              <HeartIcon src="/Heart.png" alt="Heart ornament" />
             </Logo>
           </GridItemCenter>
 
