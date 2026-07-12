@@ -1,20 +1,33 @@
-import React, { memo, useCallback, useMemo } from "react";
+import React, { memo, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Grid from "../Components/Grid";
 import { useDataProcessing } from "../hooks/useDataProcessing";
+import About from "./About";
+const HomeContainer = styled.div`
+  width: 100%;
+  background: ${(props) => props.theme.colors.background};
+`;
+
+const AnchorDiv = styled.div`
+  scroll-margin-top: 80px;
+  @media (max-width: 768px) {
+    scroll-margin-top: 70px;
+  }
+`;
 
 const Main = styled.div`
   width: 100%;
   background: ${(props) => props.theme.colors.background};
   overflow: hidden;
-  padding: 140px 300px 100px 300px;
+  padding: 60px 300px 100px 300px;
 
   @media (max-width: 1200px) {
-    padding: 120px 60px 80px 60px;
+    padding: 50px 60px 80px 60px;
   }
 
   @media (max-width: 768px) {
-    padding: 100px 24px 60px 24px;
+    padding: 40px 24px 60px 24px;
   }
 `;
 
@@ -56,6 +69,18 @@ const Home = memo(() => {
     }),
     [selectedWorks, getImageSrc, getTitle, getSubtitle, getKey],
   );
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        const timer = setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 150);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -64,6 +89,18 @@ const Home = memo(() => {
         <Grid {...gridProps} />
       </Main>
     </>
+    <HomeContainer>
+      <AnchorDiv id="about">
+        <About />
+      </AnchorDiv>
+
+      <AnchorDiv id="news">
+        <Main>
+          <SectionTitle>News</SectionTitle>
+          <News />
+        </Main>
+      </AnchorDiv>
+    </HomeContainer>
   );
 });
 
