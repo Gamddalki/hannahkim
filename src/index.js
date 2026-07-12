@@ -55,7 +55,7 @@ table {
   font-weight: 350;
   line-height: 1.2;
   ::selection {
-  background-color: #FF7575;
+  background-color: #FF2020;
   color: white;
 }
 }
@@ -73,7 +73,7 @@ button {
     background: none;
   }
 h1{
-  font-family: 'PlayfairDisplay', -apple-system, sans-serif;
+  font-family: 'PlayfairDisplay', serif;
   color:#222222;
   font-weight: 600;
   line-height: 55px;
@@ -81,7 +81,7 @@ h1{
   display: block;
 }
 h2{
-  font-family: 'PlayfairDisplay', -apple-system, sans-serif;
+  font-family: 'PlayfairDisplay', serif;
   color: #222222;
   font-weight: 300;
   line-height: 25px;
@@ -93,12 +93,8 @@ span, p{
   font-weight: 300;
   color: #444444;
   line-height: 1.5rem;
-  font-size: 16px;
+  font-size: 14px;
   display: block;
-}
-
-body {
-  background-color: #eeeeee;
 }
 
 /* Prevent horizontal scroll */
