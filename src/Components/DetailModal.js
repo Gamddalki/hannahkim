@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import OptimizedThumbnail from "./OptimizedThumbnail";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Cancel01Icon } from "@hugeicons/core-free-icons";
 
 const fadeIn = keyframes`
   from { opacity: 0; }
@@ -56,15 +54,8 @@ const ModalBox = styled.div`
 
 const CloseButton = styled.div`
   align-self: flex-end;
-  width: 24px;
-  height: 24px;
   font-size: 1.5rem;
   transition: color 0.3s ease;
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
 
   &:hover {
     cursor: pointer;
@@ -210,10 +201,7 @@ const DetailModal = ({ item, onClose }) => {
   return (
     <Backdrop onClick={onClose}>
       <ModalBox onClick={(e) => e.stopPropagation()}>
-        <CloseButton onClick={onClose}>
-          <HugeiconsIcon icon={Cancel01Icon} />
-        </CloseButton>
-
+        <CloseButton onClick={onClose}>CLOSE </CloseButton>
         <ModalContents>
           {/* [왼쪽] 메인 미디어 (비디오 or 포스터) */}
           <LeftMedia>

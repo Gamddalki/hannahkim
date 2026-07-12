@@ -7,8 +7,6 @@ import visualData from "../data/visual.json";
 import IconLink from "../Components/IconLink";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 import DetailModal from "../Components/DetailModal";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { SoundcloudIcon, YoutubeIcon } from "@hugeicons/core-free-icons";
 
 const BentoGrid = styled.div`
   display: grid;
@@ -257,12 +255,12 @@ const Studio = memo(() => {
                   <Overlay>
                     {track.soundcloud && (
                       <IconLink href={track.soundcloud} iconColor="white">
-                        <HugeiconsIcon icon={SoundcloudIcon} />
+                        S{" "}
                       </IconLink>
                     )}
                     {track.video && (
                       <IconLink href={track.video} iconColor="white">
-                        <HugeiconsIcon icon={YoutubeIcon} />
+                        Y
                       </IconLink>
                     )}
                   </Overlay>

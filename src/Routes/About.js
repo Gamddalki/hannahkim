@@ -1,13 +1,5 @@
 import React, { useCallback, memo, useMemo } from "react";
 import styled from "styled-components";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  GithubIcon,
-  Linkedin02Icon,
-  Mail01Icon,
-  YoutubeIcon,
-  SoundcloudIcon,
-} from "@hugeicons/core-free-icons";
 import PageContainer from "../Components/PageContainer";
 import IconLink from "../Components/IconLink";
 import journeyData from "../data/journey.json";
@@ -378,35 +370,34 @@ const About = memo(() => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <HugeiconsIcon icon={Mail01Icon} />
-              </IconLink>
+                MAIL              </IconLink>
               <IconLink
                 href="https://www.linkedin.com/in/hannahk01/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <HugeiconsIcon icon={Linkedin02Icon} />
+                LINKEDIN
               </IconLink>
               <IconLink
                 href="https://github.com/Gamddalki/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <HugeiconsIcon icon={GithubIcon} />
+                GITHUB
               </IconLink>
               <IconLink
                 href="https://www.youtube.com/@dahae01"
                 target="_blank"
                 rel="noreferrer"
               >
-                <HugeiconsIcon icon={YoutubeIcon} />
+                YOUTUBE
               </IconLink>
               <IconLink
                 href="https://soundcloud.com/llorjjrk"
                 target="_blank"
                 rel="noreferrer"
               >
-                <HugeiconsIcon icon={SoundcloudIcon} />
+                SOUNDCLOUD
               </IconLink>
               <IconLink
                 href="https://drive.google.com/file/d/1AN7czPQ9Luthc7XB2-_fs5AvhHvxp1rV/view"

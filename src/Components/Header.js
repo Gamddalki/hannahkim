@@ -106,43 +106,8 @@ const MobileMenuButton = styled.button`
   }
 `;
 
-const HamburgerIcon = styled.div`
-  width: 20px;
-  height: 14px;
   position: relative;
-  cursor: pointer;
 
-  span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: ${(props) => props.theme.colors.black};
-    left: 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-
-    &:nth-child(1) {
-      top: 0px;
-      transform: ${(props) =>
-        props.isOpen
-          ? "translateY(6px) rotate(45deg)"
-          : "translateY(0) rotate(0deg)"};
-    }
-
-    &:nth-child(2) {
-      top: 6px;
-      opacity: ${(props) => (props.isOpen ? "0" : "1")};
-      transform: ${(props) => (props.isOpen ? "scaleX(0)" : "scaleX(1)")};
-    }
-
-    &:nth-child(3) {
-      top: 12px;
-      transform: ${(props) =>
-        props.isOpen
-          ? "translateY(-6px) rotate(-45deg)"
-          : "translateY(0) rotate(0deg)"};
-    }
   }
 `;
 
@@ -249,14 +214,6 @@ const Header = memo(() => {
               </NavLink>
             ))}
           </Nav>
-          <MobileMenuButton onClick={toggleMenu}>
-            <HamburgerIcon isOpen={isMenuOpen}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </HamburgerIcon>
-          </MobileMenuButton>{" "}
-        </ContentsDiv>
       </HeaderDiv>
 
       <MobileMenu isOpen={isMenuOpen}>

@@ -4,8 +4,6 @@ import styled from "styled-components";
 import workData from "../data/works.json";
 import publicationData from "../data/publications.json";
 import ReactMarkdown from "react-markdown";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowLeft01Icon } from "@hugeicons/core-free-icons";
 import LinkButtons from "../Components/LinkButtons";
 import RelatedProjects from "../Components/RelatedProjects";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
@@ -124,11 +122,6 @@ const BackButton = styled.button`
   transition: all 0.3s ease;
   font-weight: 350;
   width: fit-content;
-
-  svg {
-    width: 20px;
-    height: 20px;
-  }
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
@@ -636,67 +629,67 @@ const Details = memo(() => {
         item.presentation ||
         item.video ||
         (item.links && Array.isArray(item.links) && item.links.length > 0)) && (
-        <Section className="outcomes-section">
-          <ContentWrapper>
-            <h2>
-              {category === "publications" ? "Contributions" : "Outcomes"}
-            </h2>
+          <Section className="outcomes-section">
+            <ContentWrapper>
+              <h2>
+                {category === "publications" ? "Contributions" : "Outcomes"}
+              </h2>
 
-            <OutcomesContainer>
-              {item.presentation && (
-                <PDFSection>
-                  <PDFViewer
-                    src={`${item.presentation}`}
-                    title="PDF Document"
-                  />
-                </PDFSection>
-              )}
+              <OutcomesContainer>
+                {item.presentation && (
+                  <PDFSection>
+                    <PDFViewer
+                      src={`${item.presentation}`}
+                      title="PDF Document"
+                    />
+                  </PDFSection>
+                )}
 
-              {item.video && (
-                <VideoSection>
-                  <VideoViewer
-                    src={`${item.video}?autoplay=1&mute=1`}
-                    title="Video"
-                    frameBorder="0"
-                    allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </VideoSection>
-              )}
+                {item.video && (
+                  <VideoSection>
+                    <VideoViewer
+                      src={`${item.video}?autoplay=1&mute=1`}
+                      title="Video"
+                      frameBorder="0"
+                      allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </VideoSection>
+                )}
 
-              {((item.outcomes &&
-                Array.isArray(item.outcomes) &&
-                item.outcomes.length > 0) ||
-                (item.contributions && Array.isArray(item.contributions))) && (
-                <OutcomesList>
-                  {item.links &&
-                    Array.isArray(item.links) &&
-                    item.links.length > 0 && (
-                      <LinkSection>
-                        <LinkButtons
-                          links={item.links}
-                          accentColor={item?.accentColor}
-                        />
-                      </LinkSection>
-                    )}
+                {((item.outcomes &&
+                  Array.isArray(item.outcomes) &&
+                  item.outcomes.length > 0) ||
+                  (item.contributions && Array.isArray(item.contributions))) && (
+                    <OutcomesList>
+                      {item.links &&
+                        Array.isArray(item.links) &&
+                        item.links.length > 0 && (
+                          <LinkSection>
+                            <LinkButtons
+                              links={item.links}
+                              accentColor={item?.accentColor}
+                            />
+                          </LinkSection>
+                        )}
 
-                  {(category === "publications"
-                    ? item.contributions
-                    : item.outcomes
-                  )?.map((content, index) => (
-                    <OutcomeItem key={index}>
-                      <OutcomeBullet>•</OutcomeBullet>
-                      <OutcomeContent>
-                        {renderMarkdownWithParagraph(content)}
-                      </OutcomeContent>
-                    </OutcomeItem>
-                  ))}
-                </OutcomesList>
-              )}
-            </OutcomesContainer>
-          </ContentWrapper>
-        </Section>
-      )}
+                      {(category === "publications"
+                        ? item.contributions
+                        : item.outcomes
+                      )?.map((content, index) => (
+                        <OutcomeItem key={index}>
+                          <OutcomeBullet>•</OutcomeBullet>
+                          <OutcomeContent>
+                            {renderMarkdownWithParagraph(content)}
+                          </OutcomeContent>
+                        </OutcomeItem>
+                      ))}
+                    </OutcomesList>
+                  )}
+              </OutcomesContainer>
+            </ContentWrapper>
+          </Section>
+        )}
 
       {item.reflection && (
         <ReflectionSection className="reflection-section">
@@ -716,7 +709,6 @@ const Details = memo(() => {
             maxItems={3}
           />
           <BackButton onClick={() => navigate(-1)}>
-            <HugeiconsIcon icon={ArrowLeft01Icon} />
             Back
           </BackButton>
         </ContentWrapper>

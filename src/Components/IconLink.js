@@ -7,11 +7,6 @@ const Icon = styled.a`
   font-size: 1.5rem;
   transition: color 0.3s ease;
 
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }

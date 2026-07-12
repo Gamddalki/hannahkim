@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 
 const FooterDiv = styled.div`
   width: 100%;
@@ -38,11 +36,6 @@ const ThemeToggleButton = styled.button`
   padding: 5px;
   transition: all 0.3s ease;
 
-  svg {
-    width: 15px;
-    height: 15px;
-  }
-
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
@@ -54,7 +47,7 @@ function Footer({ isDarkMode, toggleTheme }) {
       <span>&copy; 2026 Hannah Kim</span>
       <span>Last Updated: 2026.04</span>
       <ThemeToggleButton onClick={toggleTheme} aria-label="Toggle Dark Mode">
-        <HugeiconsIcon icon={isDarkMode ? Sun03Icon : Moon02Icon} />
+        DARK{" "}
       </ThemeToggleButton>
     </FooterDiv>
   );

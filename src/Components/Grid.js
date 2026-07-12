@@ -1,8 +1,6 @@
 import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { PinIcon } from "@hugeicons/core-free-icons";
 import OptimizedThumbnail from "./OptimizedThumbnail";
 
 const HashtagFilterContainer = styled.div`
@@ -131,19 +129,6 @@ const ProjectSubtitle = styled.h4`
   line-height: 1.3;
 `;
 
-const PinIconWrapper = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-  color: ${(props) => props.theme.colors.white};
-  transition: color 0.3s ease;
-
-  ${ProjectCard}:hover & {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`;
-
 const Grid = ({
   items,
   onItemClick,
@@ -155,7 +140,6 @@ const Grid = ({
   tagField = "techStack",
   sortField = "startDate",
   showFilter = true,
-  showPins = true,
   skipTwoColumn = false,
   disableSort = false,
 }) => {
@@ -222,9 +206,6 @@ const Grid = ({
     }
 
     return filtered.sort((a, b) => {
-      // Prioritize pinned items, then sort by date
-      if (a.pinned && !b.pinned) return -1;
-      if (!a.pinned && b.pinned) return 1;
       return new Date(b[sortField]) - new Date(a[sortField]);
     });
   }, [selectedTags, items, getMetaTags, tagField, sortField, disableSort]);
@@ -262,11 +243,6 @@ const Grid = ({
 
           return (
             <ProjectCard key={itemKey} onClick={() => handleCardClick(item)}>
-              {item.pinned && showPins && (
-                <PinIconWrapper>
-                  <HugeiconsIcon icon={PinIcon} size={20} />
-                </PinIconWrapper>
-              )}
               <ProjectImage $aspect="16/9">
                 <OptimizedThumbnail
                   src={itemImageSrc}
