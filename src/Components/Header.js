@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo, memo } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderDiv = styled.header`
@@ -10,7 +10,7 @@ const HeaderDiv = styled.header`
   right: 0;
   background: ${(props) => props.theme.colors.background};
   z-index: 1000;
-  border-bottom: 1px solid ${(props) => props.theme.colors.footerText};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   height: 80px;
   display: flex;
   align-items: center;
@@ -186,7 +186,7 @@ const MenuNumber = styled.span`
   }
 `;
 
-const MenuLinkText = styled(Link)`
+const MenuLinkText = styled.span`
   font-family: "PlayfairDisplay", serif;
   font-size: 3.8rem;
   font-weight: 300;
@@ -283,27 +283,28 @@ const Header = memo(() => {
     setIsInfoOpen(false);
   }, [navigate]);
 
-  const handleNavClick = useCallback(() => {
-    setIsMenuOpen(false);
-    setIsInfoOpen(false);
-  }, []);
-
-  const isActive = useCallback(
-    (path) => {
-      if (path === "/") {
-        return location.pathname === "/";
+  const handleLinkClick = useCallback(
+    (id) => {
+      setIsMenuOpen(false);
+      setIsInfoOpen(false);
+      if (location.pathname === "/") {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        navigate(`/#${id}`);
       }
-      return location.pathname.includes(path.toLowerCase());
     },
-    [location.pathname],
+    [location.pathname, navigate],
   );
 
   const navLinks = useMemo(
     () => [
-      { to: "/about", label: "ABOUT" },
-      { to: "/works", label: "WORKS" },
-      { to: "/publications", label: "PUBLICATIONS" },
-      { to: "/studio", label: "STUDIO" },
+      { id: "about", label: "ABOUT" },
+      { id: "featured", label: "FEATURED" },
+      { id: "archive", label: "ARCHIVE" },
+      { id: "news", label: "NEWS" },
     ],
     [],
   );
@@ -342,17 +343,20 @@ const Header = memo(() => {
       {/* Navigation Overlay */}
       <Overlay $isOpen={isMenuOpen}>
         <MenuList>
-          {navLinks.map(({ to, label }, index) => {
-            const currentActive = isActive(to);
+          {navLinks.map(({ id, label }, index) => {
+            const currentActive =
+              location.pathname === "/" &&
+              (location.hash === `#${id}` ||
+                (id === "about" && !location.hash));
             const formattedNum = `0${index + 1}.`;
 
             return (
-              <MenuItemContainer key={to}>
+              <MenuItemContainer key={id}>
                 <MenuNumber>{formattedNum}</MenuNumber>
                 <MenuLinkText
-                  to={to}
                   $isActive={currentActive}
-                  onClick={handleNavClick}
+                  onClick={() => handleLinkClick(id)}
+                  style={{ cursor: "pointer" }}
                 >
                   {label}
                 </MenuLinkText>
