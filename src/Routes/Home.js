@@ -20,27 +20,25 @@ const AnchorDiv = styled.div`
 `;
 
 const Main = styled.div`
+  max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
   background: ${(props) => props.theme.colors.background};
   overflow: hidden;
-  padding: 60px 300px 100px 300px;
-
-  @media (max-width: 1200px) {
-    padding: 50px 60px 80px 60px;
-  }
 
   @media (max-width: 768px) {
-    padding: 40px 24px 60px 24px;
+    padding: 0 20px;
   }
 `;
 
 const SectionTitle = styled.h2`
-  margin: 40px 0 20px 0;
+  margin: 80px 0 40px 0;
   font-size: 2.5rem;
   color: ${(props) => props.theme.colors.black};
 
   @media (max-width: 768px) {
-    margin: 20px 0 10px 0;
+    margin: 50px 0 20px 0;
     font-size: 2rem;
   }
 `;

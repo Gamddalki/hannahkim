@@ -3,14 +3,11 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const FeaturedContainer = styled.div`
-  max-width: 1200px;
   width: 100%;
-  margin: 80px auto;
-  padding: 0 30px;
+  margin-bottom: 80px;
 
   @media (max-width: 768px) {
-    padding: 0 20px;
-    margin: 50px auto;
+    margin-bottom: 50px;
   }
 `;
 
