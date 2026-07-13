@@ -24,7 +24,6 @@
     ],
     "tools": ["Python", "PyTorch", "Hugging Face"],
     "authors": ["Hannah Kim, Hyun Lee, Sunyu Pang, Uran Oh*"],
-    "abstract": "Recently, text-to-image generative Artificial Intelligence (AI) models have demonstrated their ability to generate high-quality art with text prompts. However, generative AI is still incapable of creating images that precisely reflect emotion. We propose Prompirit, an automatic prompt engineering assistance for improving AI-generated art in terms of expressiveness of emotion and aesthetics. We explored various approaches to refine users’ free-form text input by incorporating user emotion and style modifiers. Statistical analysis and user evaluation with 100 respondents showed that Prompirit significantly improved the alignment of image-emotion and the aesthetics of the generated image while precisely conveying the content of the original input text. Based on the results, we provide implications for creating affective images.",
     "links": [
       {
         "type": "fullpaper",
@@ -43,7 +42,8 @@
   },
   {
     "id": "loveinthebigcity",
-    "title": "Three Voices Narrating “Love in the Big City”: A Comparative Study of Narrative Transformation and Character Reconstruction across Novel, Film, and Drama Series – Focusing on episode ‘Jaehee/Miae’",
+    "title": "Three Voices Narrating “Love in the Big City”",
+    "subtitle": ": A Comparative Study of Narrative Transformation and Character Reconstruction across Novel, Film, and Drama Series – Focusing on episode ‘Jaehee/Miae’",
     "where": "Bachelor’s Thesis, Ewha Womans University, 2025",
     "thumbnail": "/img/publications/LoveintheBigCity.png",
     "images": ["/img/publications/LoveintheBigCity.png"],
@@ -58,7 +58,6 @@
     "myRole": ["Author"],
     "framework": ["Adaptation Theory", "Intertextual Dialoguism"],
     "authors": ["Hannah Kim"],
-    "abstract": "Adapting a contemporary Korean novel across different media is more than a shift in form — it reveals transformations in meaning shaped by socio-cultural context. This thesis comparatively analyzes how Sang Young Park’s “Love in the Big City (2019)”, particularly its first episode ‘Jaehee’ (or ‘Miae’ in the drama), is reinterpreted through three media in contemporary contexts: the original novel, film (2024), and drama series (2024). Moving beyond traditional fidelity discourse, the study employs adaptation theory to analyze how each version constructs its own emotional and narrative logic within distinct socio-cultural frameworks.  Through close analysis of narrative structures, character portrayals, thematic shifts, and directorial approaches, the research investigates how queer identity and the core message are mediated, transformed, and re-signified across media.",
     "links": [
       {
         "type": "fullpaper",

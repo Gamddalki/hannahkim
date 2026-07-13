@@ -13,29 +13,6 @@
     "keywords": ["Narrative", "Short Film"],
     "credits": ["Soojin Lee*"],
     "tools": ["Premiere Pro"],
-    "keyInsights": [],
-    "overview": [
-      {
-        "type": "text",
-        "value": "“Bug Effect” is a short film scenario set in a **near-future dystopia**. The story explores the impact of **“Remember 3,”** a service offered by the company **“Inertial,”** which provides an **AI humanoid robot** designed to replace a deceased loved one and erase painful memories of their loss. This service, using the deceased's DNA, creates a robot with an identical appearance and memory. In a society that values emotional control and convenience, people willingly accept this as **a new form of a funeral** or mourning process."
-      },
-      {
-        "type": "text",
-        "value": "The story follows Ji-gu, whose husband, Yuseong, has passed away. Initially, Ji-gu embraces “Remember 3,” believing it protects her from grief. However, a series of unsettling discoveries forces her to confront a painful truth: her beloved husband is dead. The story culminates in her conscious choice to reject the service's ‘maintenance’ procedures and fully embrace the grief she was meant to forget. In doing so, she **rejects societal norms** and reclaims her authentic self, finding happiness by accepting that life includes both sorrow and joy."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/BugEffect1.png"
-      },
-      {
-        "type": "text",
-        "value": "The narrative uses the **science-fiction genre** to explore deeper themes of **memory, grief, and what it means to be human**. The core conflict is not just between a person and a technology, but between the comfort of a fabricated reality and the difficult truth of authentic emotion. The title, “Bug Effect,” refers not only to the technical glitches in AI but also to the emotional ‘bugs’ that disrupt artificial peace and ultimately lead to **growth and self-acceptance**."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/BugEffect2.png"
-      }
-    ],
     "video": "https://youtube.com/embed/IBN5mN6GGBw",
     "links": [
       {
@@ -46,11 +23,6 @@
         "type": "storyboard",
         "value": "https://drive.google.com/file/d/1Ye0Afs9FHHu6Cm5C5Kb95e99iyvMiy8w/view"
       }
-    ],
-    "outcomes": [
-      "**Earned full marks** across all evaluated stages (scenario, structure board, storyboard, and virtual trailer), and was selected as a Best Work by the professor.",
-      "Demonstrated proficiency in all stages of short film pre-production, including conceptualization, narrative structure, visual storytelling, and trailer creation.",
-      "Crafted a cohesive SF-romance mystery that explores deep ethical and philosophical themes through an emotionally compelling narrative."
     ]
   },
   {
@@ -72,67 +44,14 @@
     "tools": ["Unity", "C#", "Aesprite"],
     "startDate": "2021-06",
     "date": "Jun 2021 - Sep 2021",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From a **single concept** to a **fully functional mobile game**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/BlackHairedAnne1.png"
-      },
-      {
-        "type": "text",
-        "value": "— twisting a well-known novel with a **playful ‘what-if’**; Did you know that Anne was **actually black haired**? Maybe you did, but no one in the village should."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "The project originated from a club ideation session, where we each had to develop a game concept inspired by the color red. I proposed a unique 'what-if' that inverted the classic story of “Anne of Green Gables”: what if Anne wasn't born with red hair, but **secretly dyed it to maintain her iconic look**? After my presentation, several teammates reached out to collaborate, and what began as a concept presentation grew into my first-ever development project."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/BlackHairedAnne2.png"
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "As a team leader and a game designer, I developed the storyline and **narrative mechanics**, designed the UI flow, created screen layouts and items."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/BlackHairedAnne3.png"
-      },
-      {
-        "type": "text",
-        "value": "I also created **frame-by-frame sprite animations** using Aseprite to achieve fluid running motion. In sound design, I tried to ensure that the game’s atmosphere aligned with its playful narrative."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/BlackHairedAnne4.png"
-      },
-      {
-        "type": "text",
-        "value": "Our team collaboratively refined the **rumor gauge system** and continuously tested installations across devices to ensure a stable, fully functional APK. Each iteration improved gameplay balance and performance, transforming an imaginative pitch into a complete mobile experience."
-      }
-    ],
     "video": "https://www.youtube.com/embed/XfFSbAXwLJk",
-    "outcomes": [
-      "Delivered a fully functional mobile game (playable on Android devices via APK installation) built from original concept to completion.",
-      "Designed and implemented UI, character animations, items, and in-game sound",
-      "Developed in collaboration through iterative testing and balancing",
-      "**Awarded 2nd Place** for creativity and a high level of polish within the club"
-    ],
     "links": [
       {
         "type": "github",
         "value": "https://github.com/KingEwha/Anne-of-BlackHair"
       },
       { "type": "devlog", "value": "https://gamddalki.tistory.com/6" }
-    ],
-    "reflection": "This project marked my first full development cycle, transforming an idea into a finished, functioning mobile game. Because I was unfamiliar with the technical requirements of Unity and the process of game design, I had to repeatedly revise the design — especially in map structure and feature specifications. This experience taught me the importance of technically grounded design, motivating me to strengthen my computer science foundation."
+    ]
   },
   {
     "id": "reicecle",
@@ -149,64 +68,8 @@
     "startDate": "2021-03",
     "date": " Mar 2021 - Jun 2021",
     "accentColor": "#65AAF8",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# Transforming **Household Waste** \n # into **Community Value**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/reICEcle1.png"
-      },
-      {
-        "type": "text",
-        "value": "— incentivizing **ice pack recycling** through a user-friendly mobile application connected to real-world collection bins."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "With the surge in home deliveries **during the COVID-19 pandemic**, the use of ice packs for refrigerated and frozen goods increased dramatically, leading to a buildup of unused packs in households. Due to their superabsorbent polymer content, which is a form of microplastic, ice packs are difficult to recycle and often end up as environmentally harmful waste. Existing collection efforts such as temporary municipal events proved too limited in scale and continuity."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/reICEcle2.png"
-      },
-      {
-        "type": "text",
-        "value": "Recognizing this gap using the **5 Whys framework**, our team aimed to design a sustainable, reward-based recycling system that motivates households to return used ice packs while supporting local small businesses affected by the pandemic."
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "We conducted a **user survey (N=42)** to capture household recycling behaviors. Insights guided reward system design and interface priorities."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/reICEcle3.png"
-      },
-      {
-        "type": "text",
-        "value": "Based on the user study, we designed ReICEcle, a prototype mobile application that encourages households to **recycle used ice packs** through a point-based reward system. The system integrates a physical collection bin equipped with weight measurement, enabling users to deposit ice packs, track their contributions, and redeem points at local businesses affected by COVID-19."
-      },
-      {
-        "type": "text",
-        "value": "Our approach combined **software engineering methodologies** (e.g. UML modeling) and prototyping to meet user requirements. As **team leader**, I led the project from problem definition to final prototype delivery, overseeing both the design process and system integration."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/reICEcle4.png"
-      }
-    ],
-    "outcomes": [
-      "Demonstrated how digital incentives can connect environmental responsibility with local economic recovery.",
-      "Delivered a fully designed app prototype and system concept through software engineering methodologies.",
-      "Recognized as **Best Project of the Course** by the professor."
-    ],
     "presentation": "https://drive.google.com/file/d/17o8u7_fPe6iJCsUjke00HlAbPVtyByoK/preview",
-    "links": [{ "type": "devlog", "value": "https://gamddalki.tistory.com/7" }],
-    "reflection": "This project marked my first experience conducting user research, which enabled us to design a product that met real user requirements. It also strengthened my ability to **translate social issues into actionable, design-driven solutions** — a skill I continue to apply in interactive media and human-centered design."
+    "links": [{ "type": "devlog", "value": "https://gamddalki.tistory.com/7" }]
   },
   {
     "id": "sunthelight",
@@ -228,57 +91,6 @@
     "startDate": "2022-11",
     "date": "Nov 2022",
     "accentColor": "#FE6E0E",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **Mythological Themes** to **Interactive Conflicts**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/SunTheLight1.jpg"
-      },
-      {
-        "type": "text",
-        "value": "— Reframing the power struggle between Helios and Zeus through classic arcade game mechanics."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "The project began with a fascination for how ancient myths could be reimagined through gameplay mechanics rather than just text. Inspired by the **phonetic link between Sun the Light (Helios) and Thunderlight (Zeus)**, I built the concept around the conflict between the fading Titan Helios and the Olympian gods, exploring the mythic **power shift from the Titans to Zeus**. Within the constraints of a 3-day hackathon, I aimed to craft a fast-paced arcade game that carried narrative weight — reflecting themes of divine pride, loss, and rebellion directly through game interactions."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/SunTheLight2.png"
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "Our team adopted rapid prototyping to iterate quickly on narrative-driven gameplay."
-      },
-      {
-        "type": "text",
-        "value": "**· Narrative-Mechanic Integration**: I developed the myth-based storyline and integrated Helios's journey directly into the level progression. I also designed mechanics that mirrored the mythic stakes. For instance, flying too low burns villages, while flying too high provokes the constellations to cry."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/SunTheLight3.png"
-      },
-      {
-        "type": "text",
-        "value": "**· Audiovisual Immersion**: I composed retro-style original soundtrack and created pixel-art cutscenes to visualize the mythic conflict. Key encounters, such as the sub-boss Apollo and the final confrontation with Zeus, vividly embodied the struggle between the fading Titans and rising Olympians. This theme was capped by unique ending animations dynamically determined by the player's survival stage, ensuring that the story and gameplay were inseparable."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/SunTheLight4.png"
-      }
-    ],
-    "outcomes": [
-      "**1st Place Winner** at the 3rd MaKINGJam (Ewha Womans University) for outstanding originality and thematic completeness.",
-      "Successfully integrated a complex myth-based narrative into a cohesive arcade experience within a 3-day development cycle.",
-      "Produced an **original soundtrack and visual assets** that enhanced emotional immersion, demonstrating a multidisciplinary approach to game creation."
-    ],
     "video": "https://www.youtube.com/embed/L7jEg6B22gY",
     "links": [
       {
@@ -290,7 +102,6 @@
         "value": "https://soundcloud.com/llorjjrk/sets/sun-the-light"
       }
     ],
-    "reflection": "Unlike previous projects where a gap between vision and technical skill caused friction, my strengthened proficiency in Unity and C# allowed me to seamlessly translate a complex narrative vision into a cohesive gameplay experience. This project taught me that **technical rigor is the foundation of creative freedom**, empowering me to lead the team not just in management, but in creative and technical integration.",
     "selected": true
   },
   {
@@ -308,53 +119,10 @@
     "accentColor": "#A63A4D",
     "startDate": "2023-07",
     "date": "Jul 2023",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **Abstract Imagination** to **Tangible Nightmare**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/VividNightmare1.png"
-      },
-      {
-        "type": "text",
-        "value": "— Realizing the psychological horror of a nightmare through specific **VR mechanics** such as integrating time-based tension and repetitive background music."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "Developed during the 2023 EPITA Summer IT Program, the core motivation was to explore the nuances of **VR-based interaction** and **spatial puzzle design**. The project, “Vivid Nightmare”, aimed to build more than just a typical escape room; it sought to immerse players in a surreal dream world where escalating time pressure and bizarre obstacles would dramatically intensify the emotional stakes of the escape."
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "I took the lead on game design, level structure, and interaction mechanics. We designed three levels, each with a **progressively complex key-finding mechanic** and environmental hazards. The narrative progression culminated in an ending scene, where the alarm rings, that was designed for the successful accomplishment of all stages."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/VividNightmare2.png"
-      },
-      {
-        "type": "text",
-        "value": "To ensure replayability, keys were randomized at runtime, and the wrist-based timer was used to provide intuitive gameplay feedback."
-      },
-      {
-        "type": "text",
-        "value": "Through iterative playtesting, we refined obstacle pacing, visibility, and spatial awareness within the VR environment to deliver a truly engaging and immersive experience."
-      }
-    ],
     "video": "https://www.youtube.com/embed/b8e6YhJz7h4",
-    "outcomes": [
-      "Delivered a fully developed VR game with a strong narrative.",
-      "Showcased the project as a highlight of the 2023 EPITA Summer IT Program, receiving praise from players and professors for the **balance of tension, challenge, and immersive design**."
-    ],
     "links": [
       { "type": "github", "value": "https://github.com/comgongdaeng/NipByook" }
     ],
-    "reflection": "This project significantly strengthened my skills in VR interaction design and immersive storytelling. It taught me that **small interface details**, like the wrist-mounted timer, can profoundly affect player engagement and tension. The experience strongly reinforced my interest in combining narrative design and interactive technology to create impactful experiences.",
     "selected": "true"
   },
   {
@@ -372,57 +140,7 @@
     "startDate": "2023-09",
     "date": "Sep 2023 - Dec 2023",
     "accentColor": "#43c466",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **Digital Exclusion** to **Inclusive Connection**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/Jeogiyo1.png"
-      },
-      {
-        "type": "text",
-        "value": "— transforming the **stressful experience** of the digital ordering kiosk into an **accessible, intuitive voice-guided journey** that fosters digital inclusion for middle-aged and older adults, empowering them to break through digital barriers with their voice."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "As **contactless kiosks** become ubiquitous, many middle-aged and older adults struggle with their **complex interfaces, low readability, and lack of guidance**. To address these accessibility barriers, our team designed “Jeogiyo” — a voice-enabled assistant application that streamlines digital ordering through conversational **Voice User Interface (VUI)**."
-      },
-
-      {
-        "type": "image",
-        "value": "/img/projects/Jeogiyo2.png"
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "We conducted a survey (N=28), which confirmed that **users over the age of 50 struggled significantly** with current contactless systems (e.g. kiosk). Based on these insights, we conceptualized and prototyped a VUI system where ordering could be initiated and guided entirely through natural voice commands."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/Jeogiyo3.png"
-      },
-      {
-        "type": "text",
-        "value": "We designed the interaction model and implemented **fallback mechanisms** (simplified navigation and optional typing) to maximize inclusivity. My contributions spanned concept development, user research, and interaction design. I formulated the conversational architecture, integrated accessibility principles into the interface, and defined system requirements to ensure smooth, low-effort operation across devices."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/Jeogiyo4.png"
-      }
-    ],
-    "outcomes": [
-      "**Validated accessibility needs through survey-driven insights**.",
-      "Designed simple and intuitive UI/UX elements to lower digital barriers, demonstrating how voice interaction can reduce friction and anxiety in digital ordering for middle-aged and older adults.",
-      "Delivered a prototype of a mobile application with VUI.",
-      "Received positive peer feedback for bridging generational gaps in digital usability."
-    ],
-    "video": "https://www.youtube.com/embed/3sPF0Vknulw",
-    "reflection": "This project deepened my understanding of accessible interaction design and the importance of multimodal interfaces that cater to diverse user groups. It reinforced my **interest in developing human-centered technologies** that reduce digital inequality and empower broader participation."
+    "video": "https://www.youtube.com/embed/3sPF0Vknulw"
   },
   {
     "id": "prompirit-wizardofoz",
@@ -445,71 +163,6 @@
     "startDate": "2024-03",
     "date": "Mar 2024 - May 2024",
     "accentColor": "#FF4B86",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **Technical Pipeline** to **User-centric Application**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/PrompiritInterview1.png"
-      },
-      {
-        "type": "text",
-        "value": "— Validating the emotional efficacy of our prompt engineering pipeline “Prompirit (IEEE IRI 2024)” through **ethical user research**."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "The project was driven by the need to validate the improvement in user experience offered by the **“Prompirit” prompt engineering pipeline**. While statistical analysis and a prior user survey confirmed the pipeline’s strength, we conducted this follow-up interview study to gain deeper insights into user perceptions. Designed to overcome the common **shortcomings of existing models** (poor emotional fidelity, weak context comprehension), our primary objective was to measure the pipeline's effectiveness through authentic user interaction and feedback."
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "We conducted an **IRB-approved user study (N=18)** utilizing the **Wizard of Oz (WoZ) prototyping technique** to simulate the 'Prompirit' pipeline in a real-life application scenario."
-      },
-      {
-        "type": "text",
-        "value": "The interview structure was meticulously designed for comprehensive data collection:"
-      },
-      {
-        "type": "text",
-        "value": "**1. Baseline & Task**: Participants interacted with three tools (**DALL·E, Stable Diffusion, and the Prompirit prototype**) using pre-defined prompts. A **think-aloud protocol** was used to capture real-time thoughts on overall user experience."
-      },
-      {
-        "type": "text",
-        "value": "**2. Comparative Analysis**: The core task consisted of **three sessions** (covering both positive and negative emotions), where participants compared images from all three systems based on **alignment with text, aesthetic appeal, and emotional fidelity**. Each session was concluded by choosing the best tool."
-      },
-      {
-        "type": "text",
-        "value": "**3. Final Assessment**: The interview concluded with a structured interview gauging perceived problem-solving efficacy, intent for future use, necessary improvements, and potential application fields."
-      },
-      {
-        "type": "text",
-        "value": "As the main interviewer for 9 sessions, I could gain direct qualitative insight. I also designed and built the **Firebase-hosted prototype website** used for the interviews, ensuring a seamless and bias-free experience."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/PrompiritInterview2.png"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/PrompiritInterview3.png"
-      },
-      {
-        "type": "text",
-        "value": "The study provided robust validation for the 'Prompirit' pipeline, confirming its superior user experience. Although not included in the published IEEE paper, this follow-up study provided meaningful insights into user-centered evaluation of generative AI and demonstrated the feasibility of prototype-based fair user testing."
-      }
-    ],
-    "outcomes": [
-      "Established a clear user preference, with 'Prompirit' **winning 34 of the 54 comparative sessions** (DALL·E: 20, Stable Diffusion: 0).",
-      "Validated the pipeline's problem-solving efficacy, confirmed by **66.7% of participants** (12 out of 18) who attested that 'Prompirit' successfully solved key shortcomings in existing image generation tools.",
-      "Demonstrated high market viability, achieving **100% user adoption intent** (10 Agree, 8 Strongly Agree) for daily life use.",
-      "Identified qualitative strengths through **thematic analysis** that highlighted superior emotional expressiveness, stylistic consistency, and contextual comprehension as primary drivers for user preference."
-    ],
-    "reflection": "This project provided invaluable experience in executing ethical, technically complex user research within the constraints of an IRB-approved protocol. It reinforced my belief that technological innovation must be validated through empathetic, user-centered methodologies. The success of the WoZ prototyping method, which I designed and deployed, cemented my skill in designing research tools that bridge the gap between the concept and authentic human interaction, significantly strengthening my ability to build human-centered AI systems in future research.",
     "pinned": true
   },
   {
@@ -527,57 +180,13 @@
     "startDate": "2025-02",
     "date": "Seb 2025 - Jun 2025",
     "accentColor": "#8865E2",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **Personal User Input** to **Sharable Melodies**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/IHearYourStars1v1.png"
-      },
-      {
-        "type": "text",
-        "value": "— A web-based **generative music box** that transforms a user’s name, constellation, and favorite star into personalized melodies, simulating the tactile experience of a real music box."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "This project set out to explore how algorithmic composition can be combined with playful interaction to create and share personalized musical experiences. Inspired by the **pin cylinder** in music box which resembles starry sky, we aimed to transform user’s name, constellation, and favorite star into music — bridging data and emotion through a web-based music box."
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "The goal was to make web-based interaction feel **tactile and intimate**, evoking the nostalgic act of winding a real music box. To achieve this, we conducted reference research to understand how the sensory experience of a physical music box could be reinterpreted in a web environment. Based on these insights, we focused on designing the music playback interface as the core of the project."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/IHearYourStars2v1.png"
-      },
-      {
-        "type": "text",
-        "value": "We also developed our **own rule-based algorithm for melody generation**, ensuring that each composition was uniquely created from user inputs rather than relying on AI. In addition, we built the data input page and the final sharing interface, allowing users to create, experience, and distribute their personalized music box seamlessly."
-      },
-      {
-        "type": "text",
-        "value": "As the frontend developer, I engineered the interactive **playback mechanics** and developed the **rotating crank feature** that replicated the physical winding motion of a music box. The crank’s rotation speed directly influences the melody’s tempo, while I optimized visual–audio synchronization for a smooth, immersive experience."
-      }
-    ],
     "video": "https://www.youtube.com/embed/hsz2qGvZGaE",
-    "outcomes": [
-      "Generated a personalized melody composition algorithm using user input data.",
-      "Implemented a crank-based music box interaction with real-time speed-sensitive playback, showcasing frontend engineering that merged physical metaphors with digital interactivity.",
-      "Developed a tokenized sharing system via unique URLs."
-    ],
     "links": [
       {
         "type": "github",
         "value": "https://github.com/fourtunestar/ihearyourstars-FE"
       }
-    ],
-    "reflection": "This project deepened my understanding of how **tangible metaphors** can enrich digital interactions. Designing the speed-sensitive playback challenged me to combine creative ideation with technical precision, ultimately strengthening my ability to build emotionally engaging, human-centered systems."
+    ]
   },
   {
     "id": "seniorssuspiciousdiary",
@@ -598,50 +207,6 @@
     "tools": ["Unity", "C#", "Figma"],
     "startDate": "2025-03",
     "date": "Mar 2025 - Jun 2025",
-    "keyInsights": [
-      {
-        "type": "title",
-        "value": "# From **Plain Text Information** to **Immersive AR Experience**"
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/Senior'sSus1.png"
-      },
-      {
-        "type": "text",
-        "value": "— transforming **bland, forgettable benefits** of the student ID card into an **engaging, story-driven AR game**, helping freshmen discover and remember the hidden campus life tips."
-      }
-    ],
-    "motivation": [
-      {
-        "type": "text",
-        "value": "While student ID cards are often seen as simple access tools, they actually unlock a wide range of campus services — from device rental services to various discounts. However, this information is often delivered as **plain text** during orientation, making it **forgettable and underutilized**."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/Senior'sSus2.png"
-      }
-    ],
-    "approach": [
-      {
-        "type": "text",
-        "value": "To address this, our team developed “Senior’s Suspicious Diary”, a mobile AR mystery game that redesigns how campus information is delivered to freshmen. We **translated each tip directly into a physical campus location** through AR-based interactive exploration. As players follow the traces of a senior’s diary across key campus landmarks such as the ECC Art House, Central Library, Chapel, and Engineering Building, they uncover both **narrative clues** and **practical student ID card tips** through puzzles and AR recognition."
-      },
-      {
-        "type": "image",
-        "value": "/img/projects/Senior'sSus3.png"
-      },
-      {
-        "type": "text",
-        "value": "While contributing equally to development, I conceptualized and orchestrated the overall narrative and gameplay flow, designed intuitive mission interfaces inspired by familiar student apps, and crafted immersive sound design to enhance the eerie tone. Our collaborative team iterated, tested, and refined the gameplay together, ensuring a fully functional and engaging experience."
-      }
-    ],
-    "outcomes": [
-      "Designed and implemented core UI/UX elements to optimize user flow and maintain consistent visual identity",
-      "Delivered a fully functional mobile AR application that integrates storytelling, location-based tasks, and interactive puzzles",
-      "Enhanced immersion through sound design and collaborative debugging during field testing",
-      "Received positive feedback from faculty particularly with the narrative structure and the concept of immersive storytelling"
-    ],
     "video": "https://www.youtube.com/embed/xo5HAvqzGxY",
     "links": [
       {
@@ -649,8 +214,6 @@
         "value": "https://github.com/Gamddalki/Team_RealizationMarket"
       }
     ],
-    "reflection": "This project bridged UI/UX design, narrative development, and AR technology — allowing me to experiment with **storytelling as a tool for abstract educational needs**. It reinforced my ability to translate plain text information into interactive, human-centered experiences. The positive feedback from both faculty and classmates, especially regarding the narrative and tone, reaffirmed the potential of storytelling as a design tool, **not just for entertainment but for engagement and retention**.",
-    "more": true,
     "pinned": true
   }
 ]

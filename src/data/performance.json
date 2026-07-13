@@ -13,16 +13,6 @@
     "keywords": ["Live Performance"],
     "credits": ["RGBN", "Band HOYA", "ABC", "Studio Monghyang"],
     "accentColor": "#6FD467",
-    "overview": [
-      {
-        "type": "text",
-        "value": "As RGBN's performance director, I co-organized this 200-attendee joint concert, overseeing stage design and audience engagement. The event culminated in our headlining set and the live debut of our original composition, “Runtime Error.”"
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/SpringofYouth1.png"
-      }
-    ],
     "video": "https://youtube.com/embed/91-yma3ZyL8"
   },
   {
@@ -39,22 +29,7 @@
     "tools": ["Adobe Photoshop"],
     "credits": [" RGBN", "SEODAEMUN-GU Office"],
     "accentColor": "#7DAB3A",
-    "overview": [
-      {
-        "type": "text",
-        "value": "A live performance in the Sinchon university district, the vibrant center of youth. We designed an interactive experience that guided the rhythm and energy of the stage, connecting deeply with the audience."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/SinchonBusking1.png"
-      }
-    ],
-    "video": "https://youtube.com/embed/_rr4DhjFNcg",
-    "outcomes": [
-      "Designed a promotional poster that effectively conveyed the performance’s tone and energy, contributing to audience engagement.",
-      "Delivered a cohesive performance integrating live sound, stage presence, and visual branding.",
-      "Attracted hundreds of spontaneous spectators, creating one of the largest audience gatherings in the area that afternoon."
-    ]
+    "video": "https://youtube.com/embed/_rr4DhjFNcg"
   },
   {
     "id": "aceofrock",
@@ -69,17 +44,7 @@
     "myRole": ["Director", "Composer", "Arranger", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore"],
     "credits": ["RGBN", "Club AOR"],
-    "video": "https://youtube.com/embed/xpGBMBD9_iM",
-    "overview": [
-      {
-        "type": "text",
-        "value": "Directed a dynamic 45-minute live set for a 140-attendee joint concert featuring four bands at a Hongdae club, crafting an immersive stage experience."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/AceOfRock1.png"
-      }
-    ]
+    "video": "https://youtube.com/embed/xpGBMBD9_iM"
   },
   {
     "id": "nayneigh",
@@ -94,16 +59,6 @@
     "category": "Performance",
     "keywords": ["Live Performance"],
     "credits": ["RGBN", "Radio GAGA"],
-    "video": "https://youtube.com/embed/G7sKivtgyTs",
-    "overview": [
-      {
-        "type": "text",
-        "value": "Hosted and headlined a three-band joint concert, delivering a climactic 80-minute performance. By architecting both the overall event flow and our band's live set, we crafted an immersive musical experience for the audience."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/NayNeigh1.png"
-      }
-    ]
+    "video": "https://youtube.com/embed/G7sKivtgyTs"
   }
 ]

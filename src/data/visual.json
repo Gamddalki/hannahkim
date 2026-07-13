@@ -12,20 +12,7 @@
     "keywords": ["Narrative"],
     "myRole": ["Writer", "Designer"],
     "tools": ["Adobe Photoshop"],
-    "credits": ["bookcns"],
-    "keyInsights": [],
-    "overview": [
-      {
-        "type": "text",
-        "value": "To Roger (A5, 154p) is an independently written and self-published fiction set in a zombie apocalypse, focusing on how humanity persists in desolation. Through iterative editing, visual prototyping, and self-publication, I shaped a cohesive narrative and aesthetic that reflects both the fragility and strength of love."
-      }
-    ],
-    "outcomes": [
-      "Authored a complete fiction",
-      "Designed full layout, typography, and cover art for print",
-      "Integrated text and visual composition to enhance thematic immersion",
-      "Self-published and distributed 70 copies through personal channels"
-    ]
+    "credits": ["bookcns"]
   },
   {
     "id": "RGBNslogan",
@@ -40,25 +27,6 @@
     "myRole": ["Creative Director", "Graphic Designer"],
     "tools": ["Adobe Photoshop", "Adobe Illustrator", "Figma"],
     "credits": ["Jaeseo Kim", "RGBN"],
-    "accentColor": "#008CF5",
-    "overview": [
-      {
-        "type": "text",
-        "value": "Serving as Creative Director and Graphic Designer, I led RGBN's brand renewal by redesigning the logo and producing custom merchandise like a signature towel slogan. As a result, we established a cohesive visual identity that unified our storytelling and strengthened audience recognition."
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/RGBNslogan1.jpg"
-      },
-      {
-        "type": "image",
-        "value": "/img/arts/RGBNslogan2.jpg"
-      }
-    ],
-    "outcomes": [
-      "Enhanced the band’s brand storytelling, allowing visual design and performance atmosphere to reinforce one another in conveying warmth, nostalgia, and vitality.",
-      "Established a cohesive visual identity that embodied the band’s emotional and thematic essence.",
-      "Created a renewed logo and towel slogan design that strengthened audience recognition and connection during live performances."
-    ]
+    "accentColor": "#008CF5"
   }
 ]
