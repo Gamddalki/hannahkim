@@ -45,7 +45,7 @@ function Footer({ isDarkMode, toggleTheme }) {
   return (
     <FooterDiv>
       <span>&copy; 2026 Hannah Kim</span>
-      <span>Last Updated: 2026.04</span>
+      <span>Last Updated: JUL 2026</span>
       <ThemeToggleButton onClick={toggleTheme} aria-label="Toggle Dark Mode">
         DARK{" "}
       </ThemeToggleButton>
