@@ -4,7 +4,6 @@ import PageContainer from "../Components/PageContainer";
 
 const BigIntroTitle = styled.h1`
   font-size: 3.2rem;
-  font-weight: 800;
   line-height: 1.25;
   color: ${(props) => props.theme.colors.black};
   margin-top: 40px;
