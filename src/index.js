@@ -75,7 +75,7 @@ button {
 h1{
   font-family: 'PlayfairDisplay', serif;
   color:#222222;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 55px;
   font-size: 80px;
   display: block;
@@ -88,7 +88,7 @@ h2{
   font-size: 12px;
   display: block;
 }
-span, p{
+span, p, ul, ol, li, td, th, blockquote{
   font-family: 'Figtree', -apple-system, sans-serif;
   font-weight: 300;
   color: #444444;
