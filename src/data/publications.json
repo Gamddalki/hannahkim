@@ -10,6 +10,7 @@
       "/img/publications/Prompirit2.jpg"
     ],
     "date": "Aug 2024",
+    "startDate": "2024-08",
     "category": "Publications",
     "keywords": [
       "Prompt Engineering",
@@ -48,6 +49,7 @@
     "thumbnail": "/img/publications/LoveintheBigCity.png",
     "images": ["/img/publications/LoveintheBigCity.png"],
     "date": "May 2025",
+    "startDate": "2025-05",
     "category": "Publication",
     "keywords": [
       "Narrative Analysis",

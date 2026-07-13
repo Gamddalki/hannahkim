@@ -5,6 +5,7 @@ import { useDataProcessing } from "../hooks/useDataProcessing";
 import About from "./About";
 import Featured from "./Featured";
 import News from "./News";
+import Archive from "./Archive";
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -71,6 +72,13 @@ const Home = memo(() => {
         <Main>
           <SectionTitle>Featured</SectionTitle>
           <Featured items={selectedWorks} />
+        </Main>
+      </AnchorDiv>
+
+      <AnchorDiv id="archive">
+        <Main>
+          <SectionTitle>Archive</SectionTitle>
+          <Archive />
         </Main>
       </AnchorDiv>
 
