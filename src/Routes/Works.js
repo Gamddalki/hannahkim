@@ -13,7 +13,7 @@ const Projects = memo(() => {
 
   const handleCardClick = useCallback(
     (project) => {
-      navigate(`/works/${project.id}`);
+      navigate(`/${project.id}`);
     },
     [navigate]
   );

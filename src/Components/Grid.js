@@ -169,9 +169,8 @@ const Grid = ({
     if (onItemClick) {
       onItemClick(item);
     } else {
-      const category = item.category || "works";
       const id = getKey ? getKey(item) : item.id;
-      navigate(`/${category}/${id}`);
+      navigate(`/${id}`);
     }
   };
 

@@ -1,17 +1,22 @@
-import React, { useEffect, useMemo, useCallback, memo } from "react";
+import React, { useEffect, useMemo, useState, memo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import workData from "../data/works.json";
 import publicationData from "../data/publications.json";
+import visualData from "../data/visual.json";
+import musicData from "../data/music.json";
+import performanceData from "../data/performance.json";
 import ReactMarkdown from "react-markdown";
 import LinkButtons from "../Components/LinkButtons";
-import RelatedProjects from "../Components/RelatedProjects";
 import OptimizedThumbnail from "../Components/OptimizedThumbnail";
 
-const DATA_MAP = {
-  works: workData,
-  publications: publicationData,
-};
+const DATA_SOURCES = [
+  { name: "works", data: workData },
+  { name: "publications", data: publicationData },
+  { name: "visual", data: visualData },
+  { name: "music", data: musicData },
+  { name: "performance", data: performanceData },
+];
 
 const Section = styled.section`
   display: flex;

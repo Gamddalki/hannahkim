@@ -194,10 +194,10 @@ const RelatedProjects = memo(
 
     const handleProjectClick = useCallback(
       (item) => {
-        navigate(`/${category}/${item.id}`);
+        navigate(`/${item.id}`);
         window.scrollTo(0, 0);
       },
-      [navigate, category]
+      [navigate]
     );
 
     if (relatedProjects.length === 0) {

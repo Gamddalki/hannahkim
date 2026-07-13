@@ -135,8 +135,7 @@ const Featured = memo(({ items }) => {
   const navigate = useNavigate();
 
   const handleCardClick = (item) => {
-    const category = (item.category || "works").toLowerCase();
-    navigate(`/${category}/${item.id}`);
+    navigate(`/${item.id}`);
   };
 
   return (

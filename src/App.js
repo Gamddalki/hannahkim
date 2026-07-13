@@ -45,7 +45,7 @@ function App() {
           <Route path="/works" element={<Works />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/studio" element={<Studio />} />
-          <Route path="/:category/:id" element={<Details />} />
+          <Route path="/:id" element={<Details />} />
         </Routes>
         <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />{" "}
       </Router>
