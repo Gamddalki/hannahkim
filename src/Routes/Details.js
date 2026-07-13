@@ -18,341 +18,196 @@ const DATA_SOURCES = [
   { name: "performance", data: performanceData },
 ];
 
-const Section = styled.section`
+const PageWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 80px;
+  max-width: 1200px;
   width: 100%;
-  padding: 0px 70px 30px 70px;
+  margin: 0 auto;
+  padding: 160px 40px 100px 40px;
   box-sizing: border-box;
-  position: relative;
   background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.text};
-  align-items: flex-start;
-
-  @media (max-width: 768px) {
-    padding: 0px 30px 30px 30px;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    color: ${(props) => props.theme.colors.text};
-    @media (max-width: 768px) {
-      font-size: 1.4rem;
-    }
-  }
-`;
-
-const InformationSection = styled(Section)`
-  box-sizing: border-box;
-  padding-top: 200px;
-  background-color: ${(props) => props.theme.colors.background};
-  align-items: flex-start;
-
-  @media (max-width: 768px) {
-    padding-top: 140px;
-    padding-bottom: 40px;
-  }
-`;
-
-const ThumbnailContainer = styled.div`
-  width: 100%;
-  margin: 0 auto 30px auto;
-  overflow: hidden;
-  aspect-ratio: 16/9;
-
-  @media (max-width: 768px) {
-    margin-bottom: 20px;
-  }
-`;
-
-const KeyInsightsSection = styled(Section)`
-  align-items: flex-start;
-  padding-top: 10px;
-`;
-
-const InsightContainer = styled.div`
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
 
   @media (max-width: 1024px) {
+    gap: 40px;
+    padding: 120px 30px 80px 30px;
+  }
+
+  @media (max-width: 768px) {
     flex-direction: column;
-    gap: 0px;
+    gap: 30px;
+    padding: 100px 20px 60px 20px;
   }
 `;
 
-const InsightImageContainer = styled.div`
-  flex: 0 0 500px;
-  max-width: 500px;
+const LeftSidebar = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  padding: 40px;
 
-  @media (max-width: 1024px) {
-    flex: 1;
+  @media (max-width: 768px) {
     width: 100%;
+    position: static;
+    height: auto;
+    padding: 15px;
   }
 `;
 
-const InsightTextContainer = styled.div`
+const RightContent = styled.div`
   flex: 1;
   min-width: 0;
-`;
-
-const ReflectionSection = styled(Section)`
-  align-items: flex-start;
-  padding-bottom: 40px;
-`;
-
-const RelatedProjectsSection = styled(Section)`
-  align-items: flex-start;
-  padding-top: 70px;
-  padding-bottom: 150px;
-
-  @media (max-width: 768px) {
-    padding-bottom: 150px;
-  }
+  display: flex;
+  flex-direction: column;
 `;
 
 const BackButton = styled.button`
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem;
-  color: ${(props) => props.theme.colors.text};
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: ${(props) => props.theme.colors.subText};
   background: transparent;
   border: none;
   padding: 8px 0;
-  margin-top: 40px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 350;
+  transition: color 0.2s ease;
   width: fit-content;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    text-decoration: line-through;
+    text-decoration-color: ${(props) => props.theme.colors.primary};
+    text-decoration-thickness: 2px;
   }
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     gap: 5px;
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
   }
 `;
 
-const ContentWrapper = styled.div`
-  max-width: 800px;
-  width: 100%;
-  text-align: left;
+const MetaHeader = styled.div`
+  margin-bottom: 12px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  position: relative;
-  z-index: 3;
+  gap: 4px;
+  text-align: right;
+
+  span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: ${(props) => props.theme.colors.subText};
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 2.2rem;
-  margin: 0 0 20px 0;
-  color: ${(props) => props.theme.colors.text};
-  line-height: 1.2;
+  font-size: 2.8rem;
+  margin: 0 0 25px 0;
+  color: ${(props) => props.theme.colors.black};
+  text-align: left;
+  line-height: 1.15;
 
   @media (max-width: 768px) {
-    font-size: 2rem;
-    margin: 0 0 6px 0;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
   }
 `;
 
-const MetaInfo = styled.div`
+const SubTitle = styled.span`
+  margin: 0 0 25px 0;
+  color: ${(props) => props.theme.colors.black};
+  text-align: left;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+`;
+
+const InfoList = styled.div`
+  width: 100%;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
+`;
+
+const InfoRow = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 auto 20px auto;
-  width: 100%;
+  align-items: baseline;
+  padding: 5px 0;
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
   @media (max-width: 768px) {
-    gap: 5px;
-    align-items: flex-end;
+    padding: 0;
   }
 `;
 
-const Where = styled.span`
-  font-size: 1rem;
+const InfoLabel = styled.span`
+  font-family: "Figtree", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: ${(props) => props.theme.colors.text};
-  text-align: left;
-  opacity: 0.7;
-  line-height: 1.4;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
 `;
 
-const Date = styled.span`
-  font-size: 1rem;
+const InfoValue = styled.span`
+  font-size: 0.8rem;
   color: ${(props) => props.theme.colors.text};
   text-align: right;
-  opacity: 0.7;
-  line-height: 1.4;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-    text-align: left;
-  }
 `;
 
-const InfoGrid = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(10px, 5vw, 100px);
-  justify-items: stretch;
-  margin: 0 auto;
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-`;
-
-const InfoBlock = styled.div`
-  text-align: left;
-
-  h4 {
-    margin: 0 0 10px 0;
-    font-size: 1rem;
-    font-weight: 600;
-    opacity: 0.7;
-
-    @media (max-width: 768px) {
-      font-size: 0.8rem;
-      margin-bottom: 5px;
-    }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    margin-bottom: 8px;
-    font-size: 1rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    font-weight: 350;
-    opacity: 0.7;
-
-    @media (max-width: 768px) {
-      font-size: 0.8rem;
-    }
-  }
-`;
-
-const InsightImage = styled(OptimizedThumbnail)`
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  margin: 10px 0;
-  display: block;
-`;
-
-const InsightTitle = styled.h2`
-  color: ${(props) => props.theme.colors.text};
-  text-align: left;
-  font-size: 1.7rem;
-  white-space: pre-line;
-  margin-bottom: 10px;
-
-  @media (max-width: 768px) {
-    font-size: 1.4rem;
-  }
-
-  strong {
-    color: ${(props) => props.accentColor || props.theme.colors.primary};
-    font-family: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-  }
-`;
-
-const StyledParagraph = styled.p`
-  margin: 0;
-  color: ${(props) => props.theme.colors.text};
-
-  font-size: 1rem;
-  line-height: 1.5rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-align: left;
-  white-space: pre-line;
-  margin-bottom: 10px;
-  font-weight: 350;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
-
-  strong {
-    font-weight: 600;
-    color: ${(props) => props.theme.colors.text};
-  }
-`;
-
-const InsightText = styled(StyledParagraph)`
-  margin-top: 20px;
-  @media (max-width: 1024px) {
-    margin-top: 0px;
-  }
-`;
-
-const OverviewImage = styled(OptimizedThumbnail)`
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-  display: block;
-`;
-
-const OutcomesContainer = styled.div`
+const SidebarLinkSection = styled.div`
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 12px;
+`;
+
+const ThumbnailContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   @media (max-width: 768px) {
     margin-bottom: 0px;
   }
 `;
 
-const OutcomesList = styled.div`
-  flex: 1;
-  min-width: 0;
-`;
-
-const OutcomeItem = styled.div`
+const OutcomesContainer = styled.div`
   display: flex;
-  align-items: flex-start;
-`;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
 
-const OutcomeBullet = styled.span`
-  margin-right: 10px;
-  color: ${(props) => props.theme.colors.text};
-  font-size: 1.2rem;
-`;
-
-const OutcomeContent = styled.div`
-  flex: 1;
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  }
 `;
 
 const PDFSection = styled.div`
@@ -363,16 +218,9 @@ const PDFSection = styled.div`
 const PDFViewer = styled.iframe`
   width: 100%;
   height: 50vh;
-  margin-bottom: 20px;
 
   @media (max-width: 1024px) {
-    width: 50vw;
-    height: 30vh;
-    margin: 0 auto 20px auto;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
-    margin: 0 auto 10px auto;
+    height: 35vh;
   }
 `;
 
@@ -384,341 +232,432 @@ const VideoSection = styled.div`
 const VideoViewer = styled.iframe`
   width: 100%;
   aspect-ratio: 16 / 9;
-  margin-bottom: 20px;
+`;
 
-  @media (max-width: 1024px) {
-    margin: 0 auto 20px auto;
+const MarkdownContainer = styled.div`
+  color: ${(props) => props.theme.colors.text};
+  text-align: left;
+  width: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Figtree", sans-serif;
+    color: ${(props) => props.theme.colors.black};
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.3;
+
+    @media (max-width: 768px) {
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
   }
-  @media (max-width: 768px) {
-    margin: 0 auto 10px auto;
+
+  h1 {
+    font-size: 2.2rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.9rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    border-bottom: 1px solid ${(props) => props.theme.colors.border};
+    padding-bottom: 8px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+      margin-top: 25px;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: ${(props) => props.theme.colors.text};
+
+    strong {
+      font-weight: 400;
+      color: ${(props) => props.theme.colors.black};
+    }
+
+    i {
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 5px;
+      }
+
+      &::before {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        top: 0.05em;
+      }
+
+      color: ${(props) => props.theme.colors.text};
+
+      strong {
+        font-weight: 400;
+        color: ${(props) => props.theme.colors.black};
+      }
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+
+    li {
+      display: list-item;
+      margin-bottom: 10px;
+      padding-left: 5px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 5px;
+      }
+
+      &::marker {
+        color: ${(props) => props.theme.colors.black};
+      }
+
+      color: ${(props) => props.theme.colors.text};
+
+      strong {
+        font-weight: 400;
+        color: ${(props) => props.theme.colors.black};
+      }
+    }
+  }
+
+  a {
+    color: ${(props) => props.theme.colors.text};
+    transition: all 0.2s ease;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: line-through;
+      text-decoration-style: 2px solid;
+      text-decoration-color: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    border: 1px solid ${(props) => props.theme.colors.border};
+
+    th,
+    td {
+      padding: 12px 15px;
+      border: 1px solid ${(props) => props.theme.colors.border};
+      text-align: left;
+    }
+
+    th {
+      background-color: ${(props) => props.theme.colors.border};
+      font-weight: 300;
+      color: ${(props) => props.theme.colors.black};
+    }
+
+    td {
+      font-size: 0.95rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid ${(props) => props.theme.colors.border};
+    margin: 40px 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 35px auto;
+    display: block;
+
+    @media (max-width: 768px) {
+      margin: 15px auto;
+    }
+  }
+
+  blockquote {
+    border-left: 2px solid ${(props) => props.theme.colors.black};
+    padding: 10px 0 10px 25px;
+    margin: 35px 0;
+    color: ${(props) => props.theme.colors.black};
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: inherit;
+      color: inherit;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+      padding: 8px 15px;
+    }
   }
 `;
 
-const LinkSection = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
-  justify-content: flex-start;
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 35px 0;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 25px 0;
+  }
+`;
+
+const GridColumn = styled.div`
+  min-width: 0;
+
+  img {
+    margin: 0 !important;
+  }
+
+  p {
+    margin-bottom: 0 !important;
+  }
 `;
 
 const Details = memo(() => {
-  const { category, id } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
-  const data = useMemo(() => {
-    return DATA_MAP[category] || null;
-  }, [category]);
+  const [markdownContent, setMarkdownContent] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  const item = useMemo(() => {
-    return data ? data.find((i) => i.id.toString() === id) : null;
-  }, [data, id]);
-
-  const accentColor = item?.accentColor;
-
-  // ReactMarkdown 컴포넌트를 메모이제이션
-  const markdownComponents = useMemo(
-    () => ({
-      p: (props) => <StyledParagraph {...props} accentColor={accentColor} />,
-    }),
-    [accentColor],
-  );
-
-  const renderMarkdownWithParagraph = useCallback(
-    (content) => (
-      <ReactMarkdown components={markdownComponents}>{content}</ReactMarkdown>
-    ),
-    [markdownComponents],
-  );
-
-  const renderInfoList = useCallback(
-    (title, list) => (
-      <InfoBlock>
-        <h4>{title}</h4>
-        <ul>
-          {(list || []).map((value, index) => (
-            <li key={index}>{value}</li>
-          ))}
-        </ul>
-      </InfoBlock>
-    ),
-    [],
-  );
-
-  // ReactMarkdown 컴포넌트들을 메모이제이션
-  const insightTitleComponents = useMemo(
-    () => ({
-      h1: (props) => <InsightTitle {...props} accentColor={accentColor} />,
-    }),
-    [accentColor],
-  );
-
-  const insightTextComponents = useMemo(
-    () => ({
-      p: (props) => <InsightText {...props} accentColor={accentColor} />,
-    }),
-    [accentColor],
-  );
-
-  const fallbackMarkdownComponents = useMemo(
-    () => ({
-      p: StyledParagraph,
-    }),
-    [],
-  );
-
-  // keyInsights를 메모이제이션으로 최적화
-  const processedKeyInsights = useMemo(() => {
-    if (!Array.isArray(item.keyInsights))
-      return { title: null, image: null, text: null };
-
-    const result = { title: null, image: null, text: null };
-    item.keyInsights.forEach((insight) => {
-      if (insight.type === "title") result.title = insight.value;
-      else if (insight.type === "image") result.image = insight.value;
-      else if (insight.type === "text") result.text = insight.value;
-    });
-    return result;
-  }, [item.keyInsights]);
-
-  const renderSectionContent = useCallback(
-    (content, altText) => {
-      if (Array.isArray(content)) {
-        return content.map((item, index) => {
-          if (typeof item === "string") {
-            return <div key={index}>{renderMarkdownWithParagraph(item)}</div>;
-          } else if (item.type === "text") {
-            return (
-              <div key={index}>{renderMarkdownWithParagraph(item.value)}</div>
-            );
-          } else if (item.type === "image") {
-            return (
-              <OverviewImage
-                key={index}
-                src={item.value}
-                alt={altText}
-                showOverlay={false}
-              />
-            );
-          }
-          return null;
-        });
+  const projectInfo = useMemo(() => {
+    if (!id) return null;
+    for (const source of DATA_SOURCES) {
+      const foundItem = source.data.find((i) => i.id.toString() === id);
+      if (foundItem) {
+        return { item: foundItem, category: source.name, allData: source.data };
       }
-      return renderMarkdownWithParagraph(content);
-    },
-    [renderMarkdownWithParagraph],
-  );
+    }
+    return null;
+  }, [id]);
+
+  const item = projectInfo?.item || null;
+  const category = projectInfo?.category || "";
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [category, id]);
+  }, [id]);
+
+  useEffect(() => {
+    if (!id || !category) return;
+    setLoading(true);
+    fetch(`/content/${category}/${id}.md`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to load markdown for ${id}`);
+        }
+        return res.text();
+      })
+      .then((text) => {
+        setMarkdownContent(text);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setMarkdownContent("");
+        setLoading(false);
+      });
+  }, [id, category]);
+
+  const renderMarkdownWithGrids = (text) => {
+    if (!text) return null;
+    const parts = text.split(/:::/g);
+    return parts.map((part, index) => {
+      const trimmed = part.trim();
+      if (trimmed.startsWith("col-split")) {
+        const content = trimmed.slice("col-split".length).trim();
+        const subParts = content.split("---").map((p) => p.trim());
+        return (
+          <GridContainer key={index}>
+            <GridColumn>
+              <ReactMarkdown>{subParts[0]}</ReactMarkdown>
+            </GridColumn>
+            <GridColumn>
+              <ReactMarkdown>{subParts[1]}</ReactMarkdown>
+            </GridColumn>
+          </GridContainer>
+        );
+      }
+      if (!trimmed) return null;
+      return <ReactMarkdown key={index}>{part}</ReactMarkdown>;
+    });
+  };
 
   if (!item) {
     return (
-      <Section>
-        <ContentWrapper>Can't find the details.</ContentWrapper>
-      </Section>
+      <PageWrapper
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "60vh",
+        }}
+      >
+        <div style={{ textAlign: "center" }}>
+          <p>Project not found.</p>
+          <BackButton
+            onClick={() => navigate(-1)}
+            style={{ marginTop: "20px" }}
+          >
+            Back
+          </BackButton>
+        </div>
+      </PageWrapper>
     );
   }
 
   return (
-    <div>
-      <InformationSection>
-        <ContentWrapper>
+    <PageWrapper>
+      <LeftSidebar>
+        <MetaHeader>
+          <span>{item.date}</span>
+        </MetaHeader>
+        <Title>{item.title}</Title>
+        <SubTitle>{item.subtitle}</SubTitle>
+
+        <InfoList>
+          {item.myRole && (
+            <InfoRow>
+              <InfoLabel>Role</InfoLabel>
+              <InfoValue>{item.myRole.join(", ")}</InfoValue>
+            </InfoRow>
+          )}
+          {item.tools && (
+            <InfoRow>
+              <InfoLabel>Tools</InfoLabel>
+              <InfoValue>{item.tools.join(", ")}</InfoValue>
+            </InfoRow>
+          )}
+          {item.credits && (
+            <InfoRow>
+              <InfoLabel>
+                {category === "publications" ? "Authors" : "Team"}
+              </InfoLabel>
+              <InfoValue>{item.credits.join(", ")}</InfoValue>
+            </InfoRow>
+          )}
+          {item.location && (
+            <InfoRow>
+              <InfoLabel>Location</InfoLabel>
+              <InfoValue>{item.location}</InfoValue>
+            </InfoRow>
+          )}
+        </InfoList>
+
+        {item.links && Array.isArray(item.links) && item.links.length > 0 && (
+          <SidebarLinkSection>
+            <LinkButtons links={item.links} />
+          </SidebarLinkSection>
+        )}
+      </LeftSidebar>
+
+      <RightContent>
+        {item.bignail && (
           <ThumbnailContainer>
             <OptimizedThumbnail
               src={item.bignail}
               alt={item.title}
-              priority={true}
               showOverlay={false}
             />
           </ThumbnailContainer>
-
-          <MetaInfo>
-            <Where>{item.where}</Where>
-            <Date>{item.date}</Date>
-          </MetaInfo>
-
-          <Title>{item.title}</Title>
-
-          <InfoGrid>
-            {category === "publications"
-              ? renderInfoList("Index Terms", item.indexTerms)
-              : renderInfoList("Category", item.category)}
-            {renderInfoList("Roles", item.myRole)}
-            {item.tools
-              ? renderInfoList("Tools", item.tools)
-              : renderInfoList("Framework", item.framework)}
-            {category === "publications"
-              ? renderInfoList("Authors", item.authors)
-              : renderInfoList("Credits", item.credits)}
-          </InfoGrid>
-        </ContentWrapper>
-      </InformationSection>
-
-      <KeyInsightsSection className="keyinsights-section">
-        <ContentWrapper>
-          {Array.isArray(item.keyInsights) ? (
-            <>
-              {processedKeyInsights.title && (
-                <div>
-                  <ReactMarkdown components={insightTitleComponents}>
-                    {processedKeyInsights.title}
-                  </ReactMarkdown>
-                </div>
-              )}
-
-              {processedKeyInsights.image && (
-                <InsightContainer>
-                  <InsightImageContainer>
-                    <InsightImage
-                      src={processedKeyInsights.image}
-                      alt="Key insight"
-                      showOverlay={false}
-                    />
-                  </InsightImageContainer>
-                  {processedKeyInsights.text && (
-                    <InsightTextContainer>
-                      <ReactMarkdown components={insightTextComponents}>
-                        {processedKeyInsights.text}
-                      </ReactMarkdown>
-                    </InsightTextContainer>
-                  )}
-                </InsightContainer>
-              )}
-            </>
-          ) : (
-            <ReactMarkdown components={fallbackMarkdownComponents}>
-              {item.keyInsights}
-            </ReactMarkdown>
-          )}
-        </ContentWrapper>
-      </KeyInsightsSection>
-
-      {item.overview && (
-        <Section className="overview-section">
-          <ContentWrapper>
-            <h2>Overview</h2>
-            {renderSectionContent(item.overview, "Overview image")}
-          </ContentWrapper>
-        </Section>
-      )}
-
-      {(item.motivation || item.abstract) && (
-        <Section className="motivation-section">
-          <ContentWrapper>
-            <h2>{category === "publications" ? "Abstract" : "Motivation"}</h2>
-            {renderSectionContent(
-              item.motivation || item.abstract,
-              category === "publications"
-                ? "Abstract image"
-                : "Motivation image",
-            )}
-          </ContentWrapper>
-        </Section>
-      )}
-
-      {item.approach && (
-        <Section className="approach-section">
-          <ContentWrapper>
-            <h2>Approach</h2>
-            {renderSectionContent(item.approach, "Approach image")}
-          </ContentWrapper>
-        </Section>
-      )}
-
-      {((item.outcomes &&
-        Array.isArray(item.outcomes) &&
-        item.outcomes.length > 0) ||
-        (item.contributions && Array.isArray(item.contributions)) ||
-        item.presentation ||
-        item.video ||
-        (item.links && Array.isArray(item.links) && item.links.length > 0)) && (
-          <Section className="outcomes-section">
-            <ContentWrapper>
-              <h2>
-                {category === "publications" ? "Contributions" : "Outcomes"}
-              </h2>
-
-              <OutcomesContainer>
-                {item.presentation && (
-                  <PDFSection>
-                    <PDFViewer
-                      src={`${item.presentation}`}
-                      title="PDF Document"
-                    />
-                  </PDFSection>
-                )}
-
-                {item.video && (
-                  <VideoSection>
-                    <VideoViewer
-                      src={`${item.video}?autoplay=1&mute=1`}
-                      title="Video"
-                      frameBorder="0"
-                      allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </VideoSection>
-                )}
-
-                {((item.outcomes &&
-                  Array.isArray(item.outcomes) &&
-                  item.outcomes.length > 0) ||
-                  (item.contributions && Array.isArray(item.contributions))) && (
-                    <OutcomesList>
-                      {item.links &&
-                        Array.isArray(item.links) &&
-                        item.links.length > 0 && (
-                          <LinkSection>
-                            <LinkButtons
-                              links={item.links}
-                              accentColor={item?.accentColor}
-                            />
-                          </LinkSection>
-                        )}
-
-                      {(category === "publications"
-                        ? item.contributions
-                        : item.outcomes
-                      )?.map((content, index) => (
-                        <OutcomeItem key={index}>
-                          <OutcomeBullet>•</OutcomeBullet>
-                          <OutcomeContent>
-                            {renderMarkdownWithParagraph(content)}
-                          </OutcomeContent>
-                        </OutcomeItem>
-                      ))}
-                    </OutcomesList>
-                  )}
-              </OutcomesContainer>
-            </ContentWrapper>
-          </Section>
         )}
 
-      {item.reflection && (
-        <ReflectionSection className="reflection-section">
-          <ContentWrapper>
-            <h2>Reflection</h2>
-            {renderMarkdownWithParagraph(item.reflection)}
-          </ContentWrapper>
-        </ReflectionSection>
-      )}
+        {/* Markdown Body Content Section */}
+        {!loading && markdownContent && (
+          <MarkdownContainer>
+            {renderMarkdownWithGrids(markdownContent)}
+          </MarkdownContainer>
+        )}
 
-      <RelatedProjectsSection>
-        <ContentWrapper>
-          <RelatedProjects
-            currentItem={item}
-            allData={data}
-            category={category}
-            maxItems={3}
-          />
-          <BackButton onClick={() => navigate(-1)}>
-            Back
-          </BackButton>
-        </ContentWrapper>
-      </RelatedProjectsSection>
-    </div>
+        {loading && (
+          <div style={{ padding: "40px 0", textAlign: "center" }}>
+            <p>Loading project details...</p>
+          </div>
+        )}
+
+        {/* PDF / Video Section */}
+        {(item.presentation || item.video) && (
+          <OutcomesContainer>
+            {item.presentation && (
+              <PDFSection>
+                <PDFViewer src={`${item.presentation}`} title="PDF Document" />
+              </PDFSection>
+            )}
+
+            {item.video && (
+              <VideoSection>
+                <VideoViewer
+                  src={`${item.video}?autoplay=1&mute=1`}
+                  title="Video"
+                  frameBorder="0"
+                  allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </VideoSection>
+            )}
+          </OutcomesContainer>
+        )}
+
+        <BackButton onClick={() => navigate(-1)} style={{ marginTop: "40px" }}>
+          Back
+        </BackButton>
+      </RightContent>
+    </PageWrapper>
   );
 });
 

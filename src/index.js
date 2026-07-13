@@ -99,13 +99,13 @@ span, p, ul, ol, li, td, th, blockquote{
 
 /* Prevent horizontal scroll */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
 #root {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 `;
