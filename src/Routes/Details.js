@@ -162,7 +162,6 @@ const InfoRow = styled.div`
 `;
 
 const InfoLabel = styled.span`
-  font-family: "Figtree", sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   text-transform: uppercase;

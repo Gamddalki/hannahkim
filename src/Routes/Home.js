@@ -35,6 +35,7 @@ const Main = styled.div`
 const SectionTitle = styled.h2`
   margin: 80px 0 50px 0;
   font-size: 2.5rem;
+  letter-spacing: -1px;
   color: ${(props) => props.theme.colors.black};
 
   @media (max-width: 768px) {

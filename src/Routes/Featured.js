@@ -100,6 +100,7 @@ const ImageWrapper = styled.div`
 const CardTitle = styled.h2`
   font-size: 1.8rem;
   margin: 0 0 12px 0;
+  letter-spacing: -1px;
   color: ${(props) => props.theme.colors.black};
   transition: color 0.2s ease;
 

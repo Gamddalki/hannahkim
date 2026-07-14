@@ -79,6 +79,7 @@ h1{
   line-height: 55px;
   font-size: 80px;
   display: block;
+  letter-spacing: -1px;
 }
 h2{
   font-family: 'PlayfairDisplay', serif;
