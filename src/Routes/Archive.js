@@ -39,8 +39,6 @@ const FilterButton = styled.button`
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  ${(props) =>
-    props.$active ? props.theme.colors.black : props.theme.colors.subText};
   color: ${(props) =>
     props.$active ? props.theme.colors.black : props.theme.colors.subText};
   transition: all 0.2s ease;
