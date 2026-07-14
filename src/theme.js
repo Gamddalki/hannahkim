@@ -1,6 +1,6 @@
 export const lightTheme = {
   colors: {
-    background: "#FFFFFF",
+    background: "#eeeeee",
     primary: "#FF2020",
     secondary: "DF5F5F",
     hover: "black",

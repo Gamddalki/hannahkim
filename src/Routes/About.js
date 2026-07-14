@@ -4,7 +4,7 @@ import PageContainer from "../Components/PageContainer";
 
 const BigIntroTitle = styled.h1`
   font-size: 3.2rem;
-  line-height: 1.25;
+  line-height: 1.1;
   color: ${(props) => props.theme.colors.black};
   margin-top: 40px;
   margin-bottom: 30px;
@@ -58,7 +58,7 @@ const FlatImageWrapper = styled.div`
     object-fit: cover;
     object-position: center 75%;
     filter: grayscale(100%);
-    transition: filter 0.5s ease;
+    transition: filter 0.2s ease;
 
     &:hover {
       filter: grayscale(0%);
