@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, memo } from "react";
+import React, { useState, useEffect, useCallback, useMemo, memo } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -267,6 +267,54 @@ const Header = memo(() => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [activeSection, setActiveSection] = useState(() => {
+    if (location.pathname === "/" && location.hash) {
+      return location.hash.replace("#", "");
+    }
+    return "about";
+  });
+
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    if (location.hash) {
+      setActiveSection(location.hash.replace("#", ""));
+    } else {
+      setActiveSection("about");
+    }
+
+    const sections = ["about", "featured", "archive", "news"];
+    const observerOptions = {
+      root: null,
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [location.pathname, location.hash]);
+
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
     setIsInfoOpen(false);
@@ -345,9 +393,7 @@ const Header = memo(() => {
         <MenuList>
           {navLinks.map(({ id, label }, index) => {
             const currentActive =
-              location.pathname === "/" &&
-              (location.hash === `#${id}` ||
-                (id === "about" && !location.hash));
+              location.pathname === "/" && activeSection === id;
             const formattedNum = `0${index + 1}.`;
 
             return (
