@@ -33,12 +33,12 @@ const Main = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  margin: 80px 0 40px 0;
+  margin: 80px 0 50px 0;
   font-size: 2.5rem;
   color: ${(props) => props.theme.colors.black};
 
   @media (max-width: 768px) {
-    margin: 50px 0 20px 0;
+    margin: 50px 0 30px 0;
     font-size: 2rem;
   }
 `;
@@ -68,21 +68,21 @@ const Home = memo(() => {
 
       <AnchorDiv id="featured">
         <Main>
-          <SectionTitle>Featured</SectionTitle>
+          <SectionTitle>FEATURED</SectionTitle>
           <Featured items={selectedWorks} />
         </Main>
       </AnchorDiv>
 
       <AnchorDiv id="archive">
         <Main>
-          <SectionTitle>Archive</SectionTitle>
+          <SectionTitle>ARCHIVE</SectionTitle>
           <Archive />
         </Main>
       </AnchorDiv>
 
       <AnchorDiv id="news">
         <Main>
-          <SectionTitle>News</SectionTitle>
+          <SectionTitle>NEWS</SectionTitle>
           <News />
         </Main>
       </AnchorDiv>
