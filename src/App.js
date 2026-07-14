@@ -5,8 +5,16 @@ import Footer from "./Components/Footer";
 import Home from "./Routes/Home";
 import Details from "./Routes/Details";
 import ScrollToTop from "./Components/ScrollToTop";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
+
+const ThemeGlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+`;
 
 function App() {
   const getInitialTheme = () => {
@@ -32,6 +40,7 @@ function App() {
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <ThemeGlobalStyle />
       <Router>
         <ScrollToTop />
         <Header />

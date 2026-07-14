@@ -25,7 +25,7 @@ const PageWrapper = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 160px 40px 100px 40px;
+  padding: 120px 40px 100px 40px;
   box-sizing: border-box;
   background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.text};
