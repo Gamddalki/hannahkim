@@ -87,14 +87,16 @@ const Archive = memo(() => {
         categoryName: "Performance",
       })),
     ];
-    return list.sort((a, b) => {
-      const startA = a.startDate || "";
-      const startB = b.startDate || "";
-      if (startA !== startB) {
-        return startB.localeCompare(startA);
-      }
-      return a.title.localeCompare(b.title);
-    });
+    return list
+      .filter((item) => !item.selected)
+      .sort((a, b) => {
+        const startA = a.startDate || "";
+        const startB = b.startDate || "";
+        if (startA !== startB) {
+          return startB.localeCompare(startA);
+        }
+        return a.title.localeCompare(b.title);
+      });
   }, []);
 
   const filteredItems = useMemo(() => {
