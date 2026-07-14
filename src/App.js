@@ -3,10 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Routes/Home";
-import About from "./Routes/About";
-import Works from "./Routes/Works";
-import Publications from "./Routes/Publications";
-import Studio from "./Routes/Studio";
 import Details from "./Routes/Details";
 import ScrollToTop from "./Components/ScrollToTop";
 import { ThemeProvider } from "styled-components";
@@ -41,10 +37,6 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/works" element={<Works />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/studio" element={<Studio />} />
           <Route path="/:id" element={<Details />} />
         </Routes>
         <Footer isDarkMode={isDarkMode} toggleTheme={toggleTheme} />{" "}
