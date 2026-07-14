@@ -21,7 +21,7 @@ const ThumbnailPreview = styled.div`
   }
 
   @media (max-width: 1200px) {
-    grid-column: 2;
+    grid-column: 3;
     left: 0%;
     transform: translate(0%, -50%);
   }
@@ -37,7 +37,7 @@ const MobileThumbnail = styled.div`
   @media (max-width: 768px) {
     display: block;
     width: 120px;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
 
     img {
@@ -60,7 +60,7 @@ const LeftContent = styled.div`
     ${(props) =>
       props.$isArchive
         ? `
-          height: 110px;
+          height: 100px;
           box-sizing: border-box;
           border-top: 1px solid ${props.theme.colors.border};
         `
