@@ -109,7 +109,7 @@ const About = memo(() => {
       </BigIntroTitle>
 
       <FlatImageWrapper>
-        <img src="/img/hannah.heic" alt="Hannah Kim horizontal B&W profile" />
+        <img src="/img/hannah.jpeg" alt="Hannah Kim horizontal B&W profile" />
       </FlatImageWrapper>
 
       <IntroDescription>
