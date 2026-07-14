@@ -12,7 +12,8 @@
     "date": "Aug 2024",
     "startDate": "2024-08",
     "category": "Publications",
-    "keywords": [
+    "keywords": ["Affective"],
+    "indexterms": [
       "Prompt Engineering",
       "Text-to-Image GenAI",
       "Emotional and Art Technology"
@@ -51,7 +52,8 @@
     "date": "May 2025",
     "startDate": "2025-05",
     "category": "Publication",
-    "keywords": [
+    "keywords": ["Narrative"],
+    "indexterms": [
       "Narrative Analysis",
       "Adaptation",
       "Queer Representation",

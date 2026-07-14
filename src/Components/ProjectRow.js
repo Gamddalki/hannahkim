@@ -144,7 +144,7 @@ const ProjectRow = memo(
   ({
     title,
     category,
-    keywords,
+    subtitle,
     year,
     icon,
     isNews = false,
@@ -208,7 +208,7 @@ const ProjectRow = memo(
                 <Column className="archive-category">
                   {icon && <IconImage src={icon} alt={category} />}
                 </Column>
-                <Column className="archive-keywords">{keywords}</Column>
+                <Column className="archive-subtitle">{subtitle}</Column>
               </MetaWrapper>
             </LeftContent>
 

@@ -2,7 +2,7 @@
   {
     "id": "springofyouth",
     "title": "Spring of Youth",
-    "subtitle": "2024 RGBN/Band HOYA/ABC joint performance",
+    "subtitle": "RGBN/Band HOYA/ABC joint performance",
     "where": "Studio Monghyang",
     "thumbnail": "/img/arts/SpringofYouth.jpg",
     "date": "3 Mar 2024",
@@ -10,7 +10,7 @@
     "myRole": ["Director", "Arranger", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore"],
     "category": "Performance",
-    "keywords": ["Live Performance"],
+    "keywords": ["Expressive", "Spatial"],
     "credits": ["RGBN", "Band HOYA", "ABC", "Studio Monghyang"],
     "accentColor": "#6FD467",
     "video": "https://youtube.com/embed/91-yma3ZyL8"
@@ -24,7 +24,7 @@
     "date": "1 Jun 2025",
     "startDate": "2025-06",
     "category": "Performance",
-    "keywords": ["Live Performance", "Visual Design"],
+    "keywords": ["Expressive", "Spatial"],
     "myRole": ["Director", "Graphic Designer", "Lead Guitarist"],
     "tools": ["Adobe Photoshop"],
     "credits": [" RGBN", "SEODAEMUN-GU Office"],
@@ -34,13 +34,13 @@
   {
     "id": "aceofrock",
     "title": "Ace Of Rock",
-    "subtitle": "2026 RGBN/s12n/?/? joint performance",
+    "subtitle": "RGBN/s12n/?/? joint performance",
     "where": "Club AOR",
     "thumbnail": "/img/arts/AceOfRock.jpg",
     "date": "1 Mar 2026",
     "startDate": "2026-03",
     "category": "Performance",
-    "keywords": ["Live Performance"],
+    "keywords": ["Expressive", "Spatial"],
     "myRole": ["Director", "Composer", "Arranger", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore"],
     "credits": ["RGBN", "Club AOR"],
@@ -57,7 +57,7 @@
     "myRole": ["Director", "Composer", "Arranger", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore"],
     "category": "Performance",
-    "keywords": ["Live Performance"],
+    "keywords": ["Expressive", "Spatial"],
     "credits": ["RGBN", "Radio GAGA"],
     "video": "https://youtube.com/embed/G7sKivtgyTs"
   }

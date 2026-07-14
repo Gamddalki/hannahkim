@@ -1,4 +1,4 @@
-import React, { useState, useMemo, memo } from "react";
+import React, { useState, useEffect, useCallback, useMemo, memo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import ProjectRow from "../Components/ProjectRow";
@@ -61,15 +61,6 @@ const TableBody = styled.div`
   position: relative;
 `;
 
-const CATEGORIES = [
-  "ALL",
-  "Works",
-  "Publications",
-  "Visual Design",
-  "Music",
-  "Performance",
-];
-
 const CATEGORY_ICONS = {
   "Works": "/img/icons/code.svg",
   "Publications": "/img/icons/paper.svg",
@@ -80,7 +71,7 @@ const CATEGORY_ICONS = {
 
 const Archive = memo(() => {
   const navigate = useNavigate();
-  const [activeCategory, setActiveCategory] = useState("ALL");
+  const [activeKeyword, setActiveKeyword] = useState("ALL");
 
   const allItems = useMemo(() => {
     const list = [
@@ -96,9 +87,7 @@ const Archive = memo(() => {
         categoryName: "Performance",
       })),
     ];
-    return list
-      .filter((item) => !item.selected)
-      .sort((a, b) => {
+    return list.sort((a, b) => {
         const startA = a.startDate || "";
         const startB = b.startDate || "";
         if (startA !== startB) {
@@ -108,38 +97,54 @@ const Archive = memo(() => {
       });
   }, []);
 
+  const uniqueKeywords = useMemo(() => {
+    const keysSet = new Set();
+    allItems.forEach((item) => {
+      if (item.keywords && Array.isArray(item.keywords)) {
+        item.keywords.forEach((kw) => keysSet.add(kw));
+      }
+    });
+    return ["ALL", ...Array.from(keysSet).sort()];
+  }, [allItems]);
+
   const filteredItems = useMemo(() => {
-    if (activeCategory === "ALL") return allItems;
-    return allItems.filter((item) => item.categoryName === activeCategory);
-  }, [activeCategory, allItems]);
+    if (activeKeyword === "ALL") return allItems;
+    return allItems.filter(
+      (item) => item.keywords && item.keywords.includes(activeKeyword)
+    );
+  }, [activeKeyword, allItems]);
+
 
   return (
     <ArchiveContainer>
       <FilterWrapper>
-        {CATEGORIES.map((cat) => (
+        {uniqueKeywords.map((kw) => (
           <FilterButton
-            key={cat}
-            $active={activeCategory === cat}
-            onClick={() => setActiveCategory(cat)}
+            key={kw}
+            $active={activeKeyword === kw}
+            onClick={() => {
+              setActiveKeyword(kw);
+              setShowAll(false);
+            }}
           >
-            {cat}
+            {kw}
           </FilterButton>
         ))}
       </FilterWrapper>
 
       <TableBody>
-        {filteredItems.map((item) => {
-          const keywords = item.keywords ? item.keywords.join(", ") : "—";
+        {visibleItems.map((item) => {
           return (
             <ProjectRow
               key={item.id}
               title={item.title}
               category={item.categoryName}
-              keywords={keywords}
+              subtitle={item.subtitle || "—"}
               clickable={true}
               onClick={() => navigate(`/${item.id}`)}
               thumbnail={item.thumbnail}
               icon={CATEGORY_ICONS[item.categoryName]}
+              isArchive={true}
             />
           );
         })}
