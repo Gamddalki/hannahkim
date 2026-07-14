@@ -30,7 +30,7 @@ const FilterWrapper = styled.div`
 
   @media (max-width: 768px) {
     padding: 10px 0;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
     gap: 5px;
   }
 `;
@@ -62,16 +62,27 @@ const TableBody = styled.div`
 `;
 
 const CATEGORY_ICONS = {
-  "Works": "/img/icons/code.svg",
-  "Publications": "/img/icons/paper.svg",
+  Works: "/img/icons/code.svg",
+  Publications: "/img/icons/paper.svg",
   "Visual Design": "/img/icons/design.svg",
-  "Music": "/img/icons/music.svg",
-  "Performance": "/img/icons/guitar.svg"
+  Music: "/img/icons/music.svg",
+  Performance: "/img/icons/guitar.svg",
 };
 
 const Archive = memo(() => {
   const navigate = useNavigate();
   const [activeKeyword, setActiveKeyword] = useState("ALL");
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const allItems = useMemo(() => {
     const list = [
@@ -88,13 +99,13 @@ const Archive = memo(() => {
       })),
     ];
     return list.sort((a, b) => {
-        const startA = a.startDate || "";
-        const startB = b.startDate || "";
-        if (startA !== startB) {
-          return startB.localeCompare(startA);
-        }
-        return a.title.localeCompare(b.title);
-      });
+      const startA = a.startDate || "";
+      const startB = b.startDate || "";
+      if (startA !== startB) {
+        return startB.localeCompare(startA);
+      }
+      return a.title.localeCompare(b.title);
+    });
   }, []);
 
   const uniqueKeywords = useMemo(() => {
@@ -110,10 +121,18 @@ const Archive = memo(() => {
   const filteredItems = useMemo(() => {
     if (activeKeyword === "ALL") return allItems;
     return allItems.filter(
-      (item) => item.keywords && item.keywords.includes(activeKeyword)
+      (item) => item.keywords && item.keywords.includes(activeKeyword),
     );
   }, [activeKeyword, allItems]);
 
+  const visibleItems = useMemo(() => {
+    if (!isMobile) return filteredItems;
+    return showAll ? filteredItems : filteredItems.slice(0, 5);
+  }, [isMobile, showAll, filteredItems]);
+
+  const handleToggleShowAll = useCallback(() => {
+    setShowAll((prev) => !prev);
+  }, []);
 
   return (
     <ArchiveContainer>
@@ -139,7 +158,7 @@ const Archive = memo(() => {
               key={item.id}
               title={item.title}
               category={item.categoryName}
-              subtitle={item.subtitle || "—"}
+              subtitle={item.shortSubtitle || "—"}
               clickable={true}
               onClick={() => navigate(`/${item.id}`)}
               thumbnail={item.thumbnail}

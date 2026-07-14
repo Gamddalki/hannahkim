@@ -31,20 +31,70 @@ const ThumbnailPreview = styled.div`
   }
 `;
 
+const MobileThumbnail = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 120px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+`;
+
+const LeftContent = styled.div`
+  display: contents;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 10px 0;
+    ${(props) =>
+      props.$isArchive
+        ? `
+          height: 110px;
+          box-sizing: border-box;
+          border-top: 1px solid ${props.theme.colors.border};
+        `
+        : `
+          padding: 15px 0;
+        `}
+  }
+`;
+
+const MetaWrapper = styled.div`
+  display: contents;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6px;
+  }
+`;
+
 const RowContainer = styled.div`
   position: relative;
   display: grid;
   grid-template-columns: ${(props) =>
-    props.$isNews ? "2fr 8fr" : "5fr 1fr 3fr"};
-  align-items: ${(props) => (props.$isNews ? "start" : "center")};
+    props.$isTrajectory ? "2fr 8fr" : "5fr 1fr 3fr"};
+  align-items: ${(props) => (props.$isTrajectory ? "start" : "center")};
   padding: 0px 20px;
 
   span {
-    font-size: ${(props) => (props.$isNews ? "1rem" : "1.2rem")};
+    font-size: ${(props) => (props.$isTrajectory ? "1rem" : "1.2rem")};
     color: ${(props) => props.theme.colors.text};
 
     @media (max-width: 768px) {
-      font-size: ${(props) => (props.$isNews ? "0.9rem" : "1rem")};
+      font-size: ${(props) => (props.$isTrajectory ? "0.9rem" : "1rem")};
     }
   }
 
@@ -54,7 +104,11 @@ const RowContainer = styled.div`
   &:hover {
     ${(props) =>
       props.$clickable &&
-      `border-bottom: 2px solid ${props.theme.colors.primary};`}
+      `
+      @media (min-width: 769px) {
+        border-bottom: 1.5px solid ${props.theme.colors.black};
+      }
+      `}
 
     .row-preview {
       opacity: 1;
@@ -63,14 +117,13 @@ const RowContainer = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: ${(props) => {
-      if (props.$isNews) return "2.5fr 7.5fr";
+      if (props.$isTrajectory) return "2.5fr 7.5fr";
       if (props.$isArchive) return "1fr 120px";
       return "2.5fr 0.5fr";
     }};
-    gap: ${(props) => (props.$isArchive || props.$isNews ? "15px" : "0")};
+    gap: ${(props) => (props.$isArchive || props.$isTrajectory ? "15px" : "0")};
     padding: ${(props) => (props.$isArchive ? "0 5px" : "2px 5px")};
-    align-items: ${(props) =>
-      props.$isArchive || props.$isNews ? "flex-start" : "center"};
+    align-items: flex-start;
   }
 `;
 
@@ -97,6 +150,33 @@ const Column = styled.span`
 
   @media (max-width: 768px) {
     ${(props) => props.$hideOnMobile && "display: none;"}
+
+    .archive-left-content & {
+      padding-right: 0;
+      white-space: normal;
+      word-break: keep-all;
+    }
+
+    &.archive-title {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      color: ${(props) => props.theme.colors.black};
+    }
+
+    &.archive-category {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &.archive-subtitle {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+      color: ${(props) => props.theme.colors.subText};
+    }
+  }
+`;
+
 const StyledLink = styled.a`
   color: ${(props) => props.theme.colors.black};
   text-decoration: none;
@@ -114,10 +194,11 @@ const IconImage = styled.img`
   width: auto;
   display: inline-block;
   flex-shrink: 0;
+  filter: ${(props) =>
+    props.theme.colors.background === "#121212" ? "invert(1)" : "none"};
 
   @media (max-width: 768px) {
     height: 1.2rem;
-    margin-top: 2px;
   }
 `;
 
@@ -137,6 +218,9 @@ const TitleWithIcon = styled.div`
     .title-text {
       font-size: 0.9rem;
     }
+    .trajectory-category {
+      margin-top: 2px;
+    }
   }
 `;
 
@@ -147,7 +231,7 @@ const ProjectRow = memo(
     subtitle,
     year,
     icon,
-    isNews = false,
+    isTrajectory = false,
     isArchive = false,
     clickable = false,
     onClick,
@@ -181,18 +265,24 @@ const ProjectRow = memo(
     return (
       <RowContainer
         $clickable={clickable}
-        $isNews={isNews}
+        $isTrajectory={isTrajectory}
         $isArchive={isArchive}
         onClick={clickable ? onClick : undefined}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        {isNews ? (
+        {isTrajectory ? (
           <>
             <Column $wrap>{year}</Column>
             <Column $wrap style={{ paddingRight: 0 }}>
               <TitleWithIcon>
-                {icon && <IconImage src={icon} alt={category} />}
+                {icon && (
+                  <IconImage
+                    className="trajectory-category"
+                    src={icon}
+                    alt={category}
+                  />
+                )}
                 <span className="title-text">{renderTitle(title, link)}</span>
               </TitleWithIcon>
             </Column>

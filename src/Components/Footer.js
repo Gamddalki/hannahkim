@@ -80,26 +80,37 @@ const EditorialRow = styled.a`
     margin: 0;
     line-height: 1;
     color: ${(props) => props.theme.colors.black};
-    transition: color 0.2s ease;
+    text-decoration: line-through;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 2px;
+    transition: text-decoration-color 0.25s ease;
   }
+
+  &:hover h1 {
+    text-decoration-color: ${(props) => props.theme.colors.primary};
+  }
+`;
+
+const SymbolWrapper = styled.span`
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
+    top: 60%;
     height: 2px;
     background-color: ${(props) => props.theme.colors.primary};
     transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
     pointer-events: none;
-    top: 68%;
-
-    @media (max-width: 768px) {
-      top: 60%;
-    }
   }
 
-  &:hover::after {
+  a:hover &::after {
     transform: scaleX(1);
   }
 `;
@@ -127,6 +138,14 @@ const Coordinates = styled.span`
   color: ${(props) => props.theme.colors.text};
   position: relative;
   top: 2px;
+  text-decoration: line-through;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1.5px;
+  transition: text-decoration-color 0.25s ease;
+
+  a:hover & {
+    text-decoration-color: ${(props) => props.theme.colors.primary};
+  }
 
   span + span {
     margin-top: -8px;
@@ -188,24 +207,6 @@ function Footer({ isDarkMode, toggleTheme }) {
     <FooterContainer>
       <FooterContent>
         <EditorialBlock>
-          {/* <EditorialRow
-            id="location"
-            href="https://www.google.com/maps/place/CCRMA+Stanford+Center+for+Computer+Research+in+Music+and+Acoustics/@37.4210115,-122.1749574,17z/data=!3m1!4b1!4m6!3m5!1s0x808fbad3423a5f69:0x817ca309c517ce7!8m2!3d37.4210115!4d-122.1723825!16s%2Fg%2F11b7k8bq2y?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <h1>Currently in</h1>
-            <Symbol
-              src="/img/icons/ca.svg"
-              alt="ca"
-              $isDarkMode={isDarkMode}
-            />
-            <Coordinates>
-              660 Lomita Ct <br />→ Stanford ←←
-            </Coordinates>
-            <h1>California</h1>
-          </EditorialRow> */}
-
           <EditorialRow
             id="location"
             href="https://www.google.com/maps/place/CCRMA+Stanford+Center+for+Computer+Research+in+Music+and+Acoustics/@37.4210115,-122.1749574,17z/data=!3m1!4b1!4m6!3m5!1s0x808fbad3423a5f69:0x817ca309c517ce7!8m2!3d37.4210115!4d-122.1723825!16s%2Fg%2F11b7k8bq2y?entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D"
@@ -213,11 +214,13 @@ function Footer({ isDarkMode, toggleTheme }) {
             rel="noreferrer"
           >
             <h1>Currently in</h1>
-            <Symbol
-              src="/img/icons/arrow.svg"
-              alt="arrow"
-              $isDarkMode={isDarkMode}
-            />
+            <SymbolWrapper>
+              <Symbol
+                src="/img/icons/arrow.svg"
+                alt="arrow"
+                $isDarkMode={isDarkMode}
+              />
+            </SymbolWrapper>
             <Coordinates>
               33 Daeshin-dong <br />
               Seodaemun-gu ←
@@ -228,11 +231,13 @@ function Footer({ isDarkMode, toggleTheme }) {
           <EditorialRowContainer>
             <EditorialRow id="email" href="mailto:khn@stanford.edu">
               <h1>khn</h1>
-              <Symbol
-                src="/img/icons/at.svg"
-                alt="at"
-                $isDarkMode={isDarkMode}
-              />
+              <SymbolWrapper>
+                <Symbol
+                  src="/img/icons/at.svg"
+                  alt="at"
+                  $isDarkMode={isDarkMode}
+                />
+              </SymbolWrapper>
               <h1>stanford.edu</h1>
             </EditorialRow>
 

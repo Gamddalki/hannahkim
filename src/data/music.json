@@ -3,6 +3,7 @@
     "id": "0505",
     "title": "0505",
     "subtitle": "Original Song Composition and M/V Production",
+    "shortSubtitle": "Original Song and M/V",
     "artist": "RGBN",
     "thumbnail": "/img/arts/0505.jpg",
     "date": "5 May 2023",
@@ -34,6 +35,7 @@
     "id": "runtimeerror",
     "title": "Runtime Error",
     "subtitle": "Original Song Composition",
+    "shortSubtitle": "Original Song",
     "artist": "RGBN",
     "thumbnail": "/img/arts/RuntimeError.jpg",
     "date": "3 March 2024",
@@ -44,15 +46,24 @@
     "tools": ["Logic Pro", "MuseScore"],
     "credits": ["RGBN", "Yeji Seo"],
     "accentColor": "#6306BE",
-    "soundcloud": "https://soundcloud.com/rgbn/runtime-error",
-    "video": "https://www.youtube.com/watch?v=LY1R1AoS0W0?si=GaX9vUt2fAykYur0",
-    "score": "https://drive.google.com/file/d/1Co3-LKg3Fu9sTjU-IHiJqJKkB6RqTDLB/view",
+    "links": [
+      {
+        "type": "SoundCloud",
+        "value": "https://soundcloud.com/rgbn/runtime-error"
+      },
+      {
+        "type": "Score",
+        "value": "https://drive.google.com/file/d/1Co3-LKg3Fu9sTjU-IHiJqJKkB6RqTDLB/view"
+      }
+    ],
+    "video": "https://www.youtube.com/embed/LY1R1AoS0W0?si=GaX9vUt2fAykYur0",
     "more": true
   },
   {
     "id": "dear",
     "title": "Dear",
     "subtitle": "Original Song Composition",
+    "shortSubtitle": "Original Song",
     "artist": "RGBN",
     "thumbnail": "/img/arts/Dear.jpg",
     "startDate": "2025-10",
@@ -62,14 +73,24 @@
     "tools": ["Logic Pro", "MuseScore"],
     "credits": ["RGBN", "Yeji Seo"],
     "accentColor": "#008CF5",
-    "soundcloud": "https://soundcloud.com/rgbn/",
-    "video": "https://youtube.com/watch?v=Gpcpr-hnivU",
-    "score": "https://drive.google.com/file/d/11OAY3KfmrAEFHM0b9oQIEgcFL9HvdHQe/view"
+    "links": [
+      {
+        "type": "SoundCloud",
+        "value": "https://soundcloud.com/rgbn/runtime-error"
+      },
+      {
+        "type": "Score",
+        "value": "https://drive.google.com/file/d/1Co3-LKg3Fu9sTjU-IHiJqJKkB6RqTDLB/view"
+      }
+    ],
+    "video": "https://www.youtube.com/embed/LY1R1AoS0W0?si=GaX9vUt2fAykYur0",
+    "more": true
   },
   {
     "id": "tbh",
     "title": "TBH",
-    "subtitle": "Original Song Composition and M/V Production",
+    "subtitle": "Original Song Composition",
+    "shortSubtitle": "Original Song",
     "artist": "RGBN",
     "thumbnail": "/img/arts/tbh.jpg",
     "date": "10 JAN 2026",
@@ -79,12 +100,13 @@
     "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
     "credits": ["RGBN"],
-    "video": "https://www.youtube.com/watch?v=ynvrt4IJaDg"
+    "video": "https://www.youtube.com/embed/ynvrt4IJaDg"
   },
   {
     "id": "nonfiction",
     "title": "Nonfiction",
-    "subtitle": "Original Song Composition and M/V Production",
+    "subtitle": "Original Song Composition",
+    "shortSubtitle": "Original Song",
     "artist": "RGBN",
     "thumbnail": "/img/arts/nonfiction.jpg",
     "date": "10 JAN 2026",
@@ -94,12 +116,13 @@
     "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
     "credits": ["RGBN"],
-    "video": "https://www.youtube.com/watch?v=iWgw-ectSaY"
+    "video": "https://www.youtube.com/embed/iWgw-ectSaY"
   },
   {
     "id": "middleofthemovie",
     "title": "Middle of the Movie",
-    "subtitle": "Original Song Composition and M/V Production",
+    "subtitle": "Original Song Composition",
+    "shortSubtitle": "Original Song",
     "artist": "RGBN",
     "thumbnail": "/img/arts/middleofthemovie.jpg",
     "date": "10 JAN 2026",
@@ -109,6 +132,6 @@
     "myRole": ["Creative Director", "Composer", "Lyricist", "Lead Guitarist"],
     "tools": ["Logic Pro", "MuseScore", "Adobe Premiere Pro"],
     "credits": ["RGBN"],
-    "video": "https://www.youtube.com/watch?v=GxRb1G-qiCw"
+    "video": "https://www.youtube.com/embed/GxRb1G-qiCw"
   }
 ]

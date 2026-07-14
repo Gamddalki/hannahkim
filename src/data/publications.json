@@ -3,6 +3,7 @@
     "id": "prompirit",
     "title": "Prompirit",
     "subtitle": ": Automatic Prompt Engineering Assistance for Improving AI-Generated Art Reflecting User Emotion",
+    "shortSubtitle": "IEEE IRI'24 Conference Proceedings",
     "where": "In Proceedings of the 2024 IEEE International Conference on Information Reuse and Integration for Data Science (IRI'24)",
     "thumbnail": "/img/publications/Prompirit1.png",
     "images": [
@@ -46,6 +47,7 @@
     "id": "loveinthebigcity",
     "title": "Three Voices Narrating “Love in the Big City”",
     "subtitle": ": A Comparative Study of Narrative Transformation and Character Reconstruction across Novel, Film, and Drama Series – Focusing on episode ‘Jaehee/Miae’",
+    "shortSubtitle": "Bachelor’s Thesis",
     "where": "Bachelor’s Thesis, Ewha Womans University, 2025",
     "thumbnail": "/img/publications/LoveintheBigCity.png",
     "images": ["/img/publications/LoveintheBigCity.png"],

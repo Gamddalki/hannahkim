@@ -22,6 +22,7 @@ const MoreButton = styled.button`
   @media (max-width: 768px) {
     font-size: 0.7rem;
     letter-spacing: 0.1em;
+    margin-top: 15px;
   }
 `;
 

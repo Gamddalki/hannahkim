@@ -2,7 +2,8 @@
   {
     "id": "springofyouth",
     "title": "Spring of Youth",
-    "subtitle": "RGBN/Band HOYA/ABC joint performance",
+    "subtitle": "ABC/Band HOYA/RGBN joint performance",
+    "shortSubtitle": "Joint Live Performance",
     "where": "Studio Monghyang",
     "thumbnail": "/img/arts/SpringofYouth.jpg",
     "date": "3 Mar 2024",
@@ -11,7 +12,7 @@
     "tools": ["Logic Pro", "MuseScore"],
     "category": "Performance",
     "keywords": ["Expressive", "Spatial"],
-    "credits": ["RGBN", "Band HOYA", "ABC", "Studio Monghyang"],
+    "credits": ["RGBN", "Studio Monghyang"],
     "accentColor": "#6FD467",
     "video": "https://youtube.com/embed/91-yma3ZyL8"
   },
@@ -19,6 +20,7 @@
     "id": "sinchonbusking",
     "title": "RGBN Sinchon Busking",
     "subtitle": "Directing and Performing at Sinchon",
+    "shortSubtitle": "Live Performance",
     "where": "Sinchon Myeongmul-gil",
     "thumbnail": "/img/arts/SinchonBusking.jpg",
     "date": "1 Jun 2025",
@@ -34,7 +36,8 @@
   {
     "id": "aceofrock",
     "title": "Ace Of Rock",
-    "subtitle": "RGBN/s12n/?/? joint performance",
+    "subtitle": "s12n/Jecheol/Project 403/RGBN joint performance",
+    "shortSubtitle": "Joint Live Performance",
     "where": "Club AOR",
     "thumbnail": "/img/arts/AceOfRock.jpg",
     "date": "1 Mar 2026",
@@ -49,7 +52,8 @@
   {
     "id": "nayneigh",
     "title": "Nay? Neigh! Giddy-up to Your Heart",
-    "subtitle": "2026 RGBN/AprilFools/Monsan? joint performance",
+    "subtitle": "AprilFools/MonsanBand/RGBN joint performance",
+    "shortSubtitle": "Joint Live Performance",
     "where": "Radio GAGA",
     "thumbnail": "/img/arts/NayNeigh.jpg",
     "date": "10 Jan 2026",
