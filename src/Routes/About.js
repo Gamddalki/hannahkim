@@ -63,6 +63,10 @@ const FlatImageWrapper = styled.div`
     &:hover {
       filter: grayscale(0%);
     }
+
+    @media (max-width: 768px) {
+      filter: none;
+    }
   }
 
   @media (max-width: 768px) {

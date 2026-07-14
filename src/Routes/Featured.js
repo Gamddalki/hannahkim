@@ -90,6 +90,10 @@ const ImageWrapper = styled.div`
     ${MagazineCard}:hover & {
       filter: grayscale(0%);
     }
+
+    @media (max-width: 768px) {
+      filter: none;
+    }
   }
 `;
 
