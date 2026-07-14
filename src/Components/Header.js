@@ -89,6 +89,7 @@ const Logo = styled.div`
 
   h2 {
     font-size: 1.6rem;
+    letter-spacing: -1px;
     color: ${(props) => props.theme.colors.black};
     margin: 0;
     line-height: 1;
@@ -165,27 +166,6 @@ const MenuItemContainer = styled.div`
   align-items: center;
 `;
 
-const MenuNumber = styled.span`
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: ${(props) => props.theme.colors.footerText};
-  margin-right: 25px;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  transition: color 0.2s ease;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-    margin-right: 10px;
-    width: 32px;
-    height: 32px;
-  }
-`;
-
 const MenuLinkText = styled.span`
   font-family: "PlayfairDisplay", serif;
   font-size: 3.8rem;
@@ -198,6 +178,7 @@ const MenuLinkText = styled.span`
     transform 0.2s ease;
   position: relative;
   display: inline-block;
+  margin-bottom: 20px;
 
   &:hover {
     text-decoration: line-through;
@@ -207,6 +188,7 @@ const MenuLinkText = styled.span`
 
   @media (max-width: 768px) {
     font-size: 2.2rem;
+    margin-bottom: 10px;
   }
 `;
 
@@ -301,7 +283,10 @@ const Header = memo(() => {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
 
     sections.forEach((id) => {
       const element = document.getElementById(id);
@@ -391,14 +376,12 @@ const Header = memo(() => {
       {/* Navigation Overlay */}
       <Overlay $isOpen={isMenuOpen}>
         <MenuList>
-          {navLinks.map(({ id, label }, index) => {
+          {navLinks.map(({ id, label }) => {
             const currentActive =
               location.pathname === "/" && activeSection === id;
-            const formattedNum = `0${index + 1}.`;
 
             return (
               <MenuItemContainer key={id}>
-                <MenuNumber>{formattedNum}</MenuNumber>
                 <MenuLinkText
                   $isActive={currentActive}
                   onClick={() => handleLinkClick(id)}
