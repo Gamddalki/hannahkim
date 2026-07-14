@@ -2,6 +2,7 @@ import React, { useState, useMemo, memo } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import ProjectRow from "../Components/ProjectRow";
+import MoreButton from "../Components/MoreButton";
 
 import worksData from "../data/works.json";
 import publicationsData from "../data/publications.json";
@@ -143,6 +144,11 @@ const Archive = memo(() => {
           );
         })}
       </TableBody>
+      {isMobile && filteredItems.length > 5 && (
+        <MoreButton onClick={handleToggleShowAll}>
+          {showAll ? "Hide" : "More"}
+        </MoreButton>
+      )}
     </ArchiveContainer>
   );
 });
