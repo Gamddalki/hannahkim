@@ -286,7 +286,7 @@ const Header = memo(() => {
       setActiveSection("about");
     }
 
-    const sections = ["about", "featured", "archive", "news"];
+    const sections = ["about", "featured", "archive", "trajectory"];
     const observerOptions = {
       root: null,
       rootMargin: "-40% 0px -40% 0px",
@@ -352,7 +352,7 @@ const Header = memo(() => {
       { id: "about", label: "ABOUT" },
       { id: "featured", label: "FEATURED" },
       { id: "archive", label: "ARCHIVE" },
-      { id: "news", label: "NEWS" },
+      { id: "trajectory", label: "TRAJECTORY" },
     ],
     [],
   );

@@ -2,7 +2,7 @@ import React, { useState, useCallback, memo } from "react";
 import styled from "styled-components";
 import ProjectRow from "../Components/ProjectRow";
 import MoreButton from "../Components/MoreButton";
-import journeyData from "../data/journey.json";
+import trajectoryData from "../data/trajectory.json";
 
 const INITIAL_ITEMS_COUNT = 7;
 
@@ -21,13 +21,13 @@ const ListContainer = styled.div`
   flex-direction: column;
 `;
 
-const News = memo(() => {
+const Trajectory = memo(() => {
   const [showAll, setShowAll] = useState(false);
-  const { journeyData: journeyItems } = journeyData;
+  const { journeyData: trajectoryItems } = trajectoryData;
 
   const visibleItems = showAll
-    ? journeyItems
-    : journeyItems.slice(0, INITIAL_ITEMS_COUNT);
+    ? trajectoryItems
+    : trajectoryItems.slice(0, INITIAL_ITEMS_COUNT);
 
   const handleToggleShowAll = useCallback(() => {
     setShowAll((prev) => !prev);
@@ -38,7 +38,7 @@ const News = memo(() => {
       <ListContainer>
         {visibleItems.map((item, index) => {
           const Icon =
-            item.icon || (journeyData.icons && journeyData.icons[item.type]);
+            item.icon || (trajectoryData.icons && trajectoryData.icons[item.type]);
           return (
             <ProjectRow
               key={index}
@@ -47,13 +47,13 @@ const News = memo(() => {
               category={item.type}
               link={item.link}
               icon={Icon}
-              isNews={true}
+              isTrajectory={true}
               clickable={false}
             />
           );
         })}
       </ListContainer>
-      {journeyItems.length > INITIAL_ITEMS_COUNT && (
+      {trajectoryItems.length > INITIAL_ITEMS_COUNT && (
         <MoreButton onClick={handleToggleShowAll}>
           {showAll ? "Hide" : "More"}
         </MoreButton>
@@ -62,6 +62,6 @@ const News = memo(() => {
   );
 });
 
-News.displayName = "News";
+Trajectory.displayName = "Trajectory";
 
-export default News;
+export default Trajectory;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useDataProcessing } from "../hooks/useDataProcessing";
 import About from "./About";
 import Featured from "./Featured";
-import News from "./News";
+import Trajectory from "./Trajectory";
 import Archive from "./Archive";
 
 const HomeContainer = styled.div`
@@ -80,10 +80,10 @@ const Home = memo(() => {
         </Main>
       </AnchorDiv>
 
-      <AnchorDiv id="news">
+      <AnchorDiv id="trajectory">
         <Main>
-          <SectionTitle>NEWS</SectionTitle>
-          <News />
+          <SectionTitle>TRAJECTORY</SectionTitle>
+          <Trajectory />
         </Main>
       </AnchorDiv>
     </HomeContainer>
