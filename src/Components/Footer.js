@@ -56,7 +56,7 @@ const EditorialRowContainer = styled.div`
 const EditorialRow = styled.a`
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: flex-end;
   font-size: 1.8rem;
   gap: 3px;
@@ -66,12 +66,8 @@ const EditorialRow = styled.a`
   cursor: pointer;
   width: fit-content;
 
-  @media (max-width: 1024px) {
-    font-size: 1.4rem;
-  }
-
   @media (max-width: 768px) {
-    font-size: 1.1rem;
+    font-size: min(5.5vw, 1.8rem);
     gap: 6px;
   }
 
@@ -80,37 +76,32 @@ const EditorialRow = styled.a`
     margin: 0;
     line-height: 1;
     color: ${(props) => props.theme.colors.black};
-    text-decoration: line-through;
-    text-decoration-color: transparent;
-    text-decoration-thickness: 2px;
-    transition: text-decoration-color 0.25s ease;
-  }
+    transition: color 0.2s ease;
+    white-space: nowrap;
 
-  &:hover h1 {
-    text-decoration-color: ${(props) => props.theme.colors.primary};
+    @media (max-width: 768px) {
+      font-size: 1.1em;
+    }
   }
-`;
-
-const SymbolWrapper = styled.span`
-  position: relative;
-  display: inline-flex;
-  align-items: flex-end;
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    top: 60%;
     height: 2px;
     background-color: ${(props) => props.theme.colors.primary};
     transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
+    transition: color 0.2s ease;
     pointer-events: none;
+    top: 68%;
+
+    @media (max-width: 768px) {
+      top: 63%;
+    }
   }
 
-  a:hover &::after {
+  &:hover::after {
     transform: scaleX(1);
   }
 `;
@@ -125,8 +116,9 @@ const Symbol = styled.img`
   top: 4.5px;
 
   @media (max-width: 768px) {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 3.5px;
   }
 `;
 
@@ -138,21 +130,14 @@ const Coordinates = styled.span`
   color: ${(props) => props.theme.colors.text};
   position: relative;
   top: 2px;
-  text-decoration: line-through;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 1.5px;
-  transition: text-decoration-color 0.25s ease;
-
-  a:hover & {
-    text-decoration-color: ${(props) => props.theme.colors.primary};
-  }
+  white-space: nowrap;
 
   span + span {
     margin-top: -8px;
   }
 
   @media (max-width: 768px) {
-    font-size: 0.6em;
+    font-size: 0.55em;
   }
 `;
 
@@ -214,13 +199,11 @@ function Footer({ isDarkMode, toggleTheme }) {
             rel="noreferrer"
           >
             <h1>Currently in</h1>
-            <SymbolWrapper>
-              <Symbol
-                src="/img/icons/arrow.svg"
-                alt="arrow"
-                $isDarkMode={isDarkMode}
-              />
-            </SymbolWrapper>
+            <Symbol
+              src="/img/icons/arrow.svg"
+              alt="arrow"
+              $isDarkMode={isDarkMode}
+            />
             <Coordinates>
               33 Daeshin-dong <br />
               Seodaemun-gu ←
@@ -231,13 +214,11 @@ function Footer({ isDarkMode, toggleTheme }) {
           <EditorialRowContainer>
             <EditorialRow id="email" href="mailto:khn@stanford.edu">
               <h1>khn</h1>
-              <SymbolWrapper>
-                <Symbol
-                  src="/img/icons/at.svg"
-                  alt="at"
-                  $isDarkMode={isDarkMode}
-                />
-              </SymbolWrapper>
+              <Symbol
+                src="/img/icons/at.svg"
+                alt="at"
+                $isDarkMode={isDarkMode}
+              />
               <h1>stanford.edu</h1>
             </EditorialRow>
 
