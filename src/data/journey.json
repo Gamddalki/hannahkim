@@ -1,116 +1,134 @@
 {
   "journeyData": [
     {
+      "year": "2026.04",
+      "type": "Research",
+      "icon": "/img/icons/research.svg",
+      "title": "Exhibited AIM Lab's Interactive Projects @ 2026 ITRC",
+      "link": "http://www.itrc.or.kr/sub/information/notice.asp?mode=view&bid=1&s_type=&s_keyword=&s_cate=&idx=3706&page=1"
+    },
+    {
       "year": "2025.10 - present",
       "type": "Research",
+      "icon": "/img/icons/research.svg",
       "title": "Research Internship @ Audio & Interactive Media (AIM) Lab (Prof. Woon Seung Yeo)",
       "link": "http://home.ewha.ac.kr/woony/"
     },
     {
       "year": "2025.07 - 2025.10",
       "type": "Activity",
-      "icon": "🌎",
+      "icon": "/img/icons/global.svg",
       "title": "Language Exchange Cafe Leader @ Culcom",
       "link": "https://culcomedu3.com/"
     },
     {
       "year": "2025.06 - 2025.08",
       "type": "Volunteer",
+      "icon": "/img/icons/shine.svg",
       "title": "“Penta Rockers” Information Team Lead @ 2025 Incheon Pentaport Rock Festival",
       "link": "https://pentaport.co.kr/"
     },
     {
       "year": "2024.09 - 2025.02",
       "type": "Education",
+      "icon": "/img/icons/school.svg",
       "title": "Exchange Student @ KU Leuven (Faculty of Arts)",
       "link": "https://www.kuleuven.be/english/kuleuven"
     },
     {
       "year": "2024.08",
       "type": "Research",
+      "icon": "/img/icons/research.svg",
       "title": "Presented an accepted paper @ IEEE IRI'24 in San Jose, USA",
       "link": "https://ieeexplore.ieee.org/document/10703854"
     },
     {
       "year": "2024.02 - 2024.07",
       "type": "Volunteer",
+      "icon": "/img/icons/shine.svg",
       "title": "Museum Docent @ Ewha Womans University Museum",
       "link": "https://museum.ewha.ac.kr/"
     },
     {
       "year": "2023.07",
       "type": "Activity",
-      "icon": "🎮",
+      "icon": "/img/icons/school.svg",
       "title": "EWHA-EPITA SUMMER IT PROGRAM — IT Trends in IoT & VR @ EPITA",
       "link": "https://www.epita.fr/en/"
     },
     {
       "year": "2023.02 - 2024.08",
       "type": "Scholarship",
+      "icon": "/img/icons/honor.svg",
       "title": "Dean's Scholarship for Academic Excellence @ Ewha Womans University"
     },
     {
       "year": "2022.09 - 2023.07",
       "type": "Club Activity",
-      "icon": "🌍",
+      "icon": "/img/icons/global.svg",
       "title": "Korean Language Tutoring & Cultural Exchange Club “Hangeulassi” @ Ewha Womans University"
     },
     {
       "year": "2022.05 - present",
       "type": "Activity",
-      "icon": "🎸",
+      "icon": "/img/icons/guitar.svg",
       "title": "Director, Composer, and Lead Guitarist @ band RGBN",
       "link": "https://www.youtube.com/@rgbnband"
     },
     {
       "year": "2021.11 - 2022.05",
       "type": "Work Experience",
+      "icon": "/img/icons/work.svg",
       "title": "Intern Researcher @ I Hate Flying Bugs Inc.",
       "link": "https://mildang.kr/"
     },
     {
       "year": "2021.03 - 2024.02",
       "type": "Club Activity",
-      "icon": "🎮",
+      "icon": "/img/icons/game.svg",
       "title": "Game Development Club “KING” @ Ewha Womans University"
     },
     {
       "year": "2020.07 - 2021.08",
       "type": "Research",
+      "icon": "/img/icons/research.svg",
       "title": "Research Internship @ HCIL EWHA (Prof. Uran Oh)",
       "link": "https://hcil-ewha.github.io/homepage/"
     },
     {
       "year": "2020.03 - 2026.02",
       "type": "Education",
+      "icon": "/img/icons/school.svg",
       "title": "B.S. in Computer Science and Engineering & B.A. in Humanities, Cultural Arts, and Media (Summa Cum Laude) @ Ewha Womans University",
       "link": "https://www.ewha.ac.kr/"
     },
     {
       "year": "2018.03 - 2018.07",
       "type": "Education",
+      "icon": "/img/icons/school.svg",
       "title": "Drone manufacturing and flight training program @ Seoul Polytechnic School",
       "link": "https://sis.sen.sc.kr/"
     },
     {
       "year": "2017.05 - 2019.07",
       "type": "Volunteer",
+      "icon": "/img/icons/shine.svg",
       "title": "Taught Scratch & micro:bit to 5 underprivileged children @ Human in Love"
     },
     {
       "year": "2017.03 - 2020.02",
       "type": "Club Activity",
-      "icon": "🎙️",
+      "icon": "/img/icons/mic.svg",
       "title": "Broadcast Club “JEBS” 41st @ Jinseon Girl's High School",
       "link": "https://jinseon.sen.hs.kr/"
     }
   ],
   "icons": {
-    "Education": "🎓",
-    "Work Experience": "💼",
-    "Scholarship": "🎖️",
-    "Volunteer": "🤝",
-    "Award": "🏆",
-    "Research": "🔬"
+    "Education": "/img/icons/school.svg",
+    "Work Experience": "/img/icons/work.svg",
+    "Scholarship": "/img/icons/honor.svg",
+    "Volunteer": "/img/icons/shine.svg",
+    "Award": "/img/icons/honor.svg",
+    "Research": "/img/icons/research.svg"
   }
 }

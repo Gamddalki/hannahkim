@@ -69,6 +69,14 @@ const CATEGORIES = [
   "Performance",
 ];
 
+const CATEGORY_ICONS = {
+  "Works": "/img/icons/code.svg",
+  "Publications": "/img/icons/paper.svg",
+  "Visual Design": "/img/icons/design.svg",
+  "Music": "/img/icons/music.svg",
+  "Performance": "/img/icons/guitar.svg"
+};
+
 const Archive = memo(() => {
   const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -130,6 +138,7 @@ const Archive = memo(() => {
               clickable={true}
               onClick={() => navigate(`/${item.id}`)}
               thumbnail={item.thumbnail}
+              icon={CATEGORY_ICONS[item.categoryName]}
             />
           );
         })}
