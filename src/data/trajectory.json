@@ -1,6 +1,13 @@
 {
   "journeyData": [
     {
+      "year": "2026.09 - present",
+      "type": "Education",
+      "icon": "/img/icons/school.svg",
+      "title": "M.A. in Music, Science, and Technology @ Stanford CCRMA",
+      "link": "https://ccrma.stanford.edu/"
+    },
+    {
       "year": "2026.04",
       "type": "Research",
       "icon": "/img/icons/research.svg",
@@ -8,7 +15,7 @@
       "link": "http://www.itrc.or.kr/sub/information/notice.asp?mode=view&bid=1&s_type=&s_keyword=&s_cate=&idx=3706&page=1"
     },
     {
-      "year": "2025.10 - present",
+      "year": "2025.10 - 2026.06",
       "type": "Research",
       "icon": "/img/icons/research.svg",
       "title": "Research Internship @ Audio & Interactive Media (AIM) Lab (Prof. Woon Seung Yeo)",

@@ -116,9 +116,9 @@ const Symbol = styled.img`
   top: 4.5px;
 
   @media (max-width: 768px) {
-    width: 1.5rem;
-    height: 1.5rem;
-    top: 3.5px;
+    width: 1.7rem;
+    height: 1.7rem;
+    top: 1px;
   }
 `;
 
@@ -199,16 +199,11 @@ function Footer({ isDarkMode, toggleTheme }) {
             rel="noreferrer"
           >
             <h1>Currently in</h1>
-            <Symbol
-              src="/img/icons/arrow.svg"
-              alt="arrow"
-              $isDarkMode={isDarkMode}
-            />
+            <Symbol src="/img/icons/ca.svg" alt="ca" $isDarkMode={isDarkMode} />
             <Coordinates>
-              33 Daeshin-dong <br />
-              Seodaemun-gu ←
+              660 Lomita Ct <br />→ Stanford ←←
             </Coordinates>
-            <h1>Seoul</h1>
+            <h1>California</h1>
           </EditorialRow>
 
           <EditorialRowContainer>
@@ -237,7 +232,7 @@ function Footer({ isDarkMode, toggleTheme }) {
         </EditorialBlock>
 
         <BottomRow>
-          <span>Last Updated: JUL 2026</span>
+          <span>Last Updated: SEP 2026</span>
           <span>&copy; 2026 Hannah Kim. All Rights Reserved.</span>
         </BottomRow>
       </FooterContent>
