@@ -28,7 +28,7 @@ const processData = () => {
   const selectedWorks = [
     ...processSelectedWorks(publicationsData, "publications"),
     ...processSelectedWorks(worksData, "works"),
-  ];
+  ].sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
   const moreWorks = [
     ...processMoreWorks(worksData, CATEGORY_MAPPING.works),
