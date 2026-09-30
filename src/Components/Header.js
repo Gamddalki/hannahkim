@@ -399,8 +399,8 @@ const Header = memo(() => {
       <Overlay $isOpen={isInfoOpen}>
         <InfoContent>
           <InfoLinks>
-            <InfoLinkItem href="mailto:khn@stanford.edu">
-              khn@stanford.edu
+            <InfoLinkItem href="mailto:khn@ccrma.stanford.edu">
+              khn@ccrma.stanford.edu
             </InfoLinkItem>
             <InfoLinkItem
               href="https://www.linkedin.com/in/hannahk01/"

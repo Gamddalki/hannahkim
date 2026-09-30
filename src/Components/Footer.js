@@ -198,7 +198,7 @@ function Footer({ isDarkMode, toggleTheme }) {
             target="_blank"
             rel="noreferrer"
           >
-            <h1>Currently in</h1>
+            <h1>Currently at</h1>
             <Symbol src="/img/icons/ca.svg" alt="ca" $isDarkMode={isDarkMode} />
             <Coordinates>
               660 Lomita Ct <br />→ Stanford ←←
@@ -207,14 +207,14 @@ function Footer({ isDarkMode, toggleTheme }) {
           </EditorialRow>
 
           <EditorialRowContainer>
-            <EditorialRow id="email" href="mailto:khn@stanford.edu">
+            <EditorialRow id="email" href="mailto:khn@ccrma.stanford.edu">
               <h1>khn</h1>
               <Symbol
                 src="/img/icons/at.svg"
                 alt="at"
                 $isDarkMode={isDarkMode}
               />
-              <h1>stanford.edu</h1>
+              <h1>ccrma.stanford.edu</h1>
             </EditorialRow>
 
             <ThemeToggleButton onClick={toggleTheme} aria-label="Toggle Theme">
