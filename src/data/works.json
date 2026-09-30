@@ -105,8 +105,7 @@
         "type": "soundcloud",
         "value": "https://soundcloud.com/llorjjrk/sets/sun-the-light"
       }
-    ],
-    "selected": true
+    ]
   },
   {
     "id": "vividnightmare",
@@ -169,8 +168,7 @@
     "tools": ["React", "JavaScript", "Firebase", "Figma"],
     "startDate": "2024-03",
     "date": "Mar 2024 - May 2024",
-    "accentColor": "#FF4B86",
-    "pinned": true
+    "accentColor": "#FF4B86"
   },
   {
     "id": "ihearyourstars",
@@ -222,7 +220,30 @@
         "type": "github",
         "value": "https://github.com/Gamddalki/Team_RealizationMarket"
       }
+    ]
+  },
+  {
+    "id": "presents",
+    "title": "PresentS (2026)",
+    "subtitle": "A Generative Audiovisual Work for Two Voices and Particle Systems",
+    "shortSubtitle": "Generative Audiovisual Work",
+    "where": "CCRMA Transitions 2026",
+    "thumbnail": "/img/projects/PresentS.gif",
+    "bignail": "/img/projects/PresentS.gif",
+    "myRole": ["Artist"],
+    "category": "Works",
+    "keywords": ["Expressive", "Narrative"],
+    "credits": ["Jaeseo Kim", "Woonseung Yeo"],
+    "tools": ["P5.js"],
+    "startDate": "2026-09",
+    "date": "Sep 2026",
+    "video": "https://www.youtube.com/embed/dbcyq41s3Rk",
+    "links": [
+      {
+        "type": "YouTube",
+        "value": "https://www.youtube.com/watch?v=dbcyq41s3Rk"
+      }
     ],
-    "pinned": true
+    "selected": true
   }
 ]
