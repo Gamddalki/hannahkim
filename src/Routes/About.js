@@ -119,7 +119,7 @@ const About = memo(() => {
         space, and interactive media. <br />
         Grounded in a dual background in Computer Science and Media, <br />I
         bridge artistic vision with engineering feasibility. <br />
-        <br /> As an incoming{" "}
+        <br /> As a{" "}
         <HighlightLink
           href="https://ccrma.stanford.edu/"
           target="_blank"
